@@ -12,6 +12,7 @@ import ShopeeDetail from '@/pages/ShopeeDetail';
 import MoMoDetail from '@/pages/MoMoDetail';
 import AdsCreatives from '@/pages/AdsCreatives';
 import Campaign from '@/pages/Campaign';
+import Analytics from '@/pages/Analytics';
 
 export default function App() {
   return (
@@ -34,7 +35,7 @@ export default function App() {
           <Route path="/campaign" element={<Campaign />} />
           <Route path="/products" element={<RoadmapPage name="商品資料" />} />
           <Route path="/upload" element={<RoadmapPage name="上傳報表" />} />
-          <Route path="/analytics" element={<RoadmapPage name="GA 分析" />} />
+          <Route path="/analytics" element={<Analytics />} />
           <Route path="/ads/meta" element={<RoadmapPage name="Meta 廣告" />} />
           <Route path="/ads/google" element={<RoadmapPage name="Google 廣告" />} />
           <Route path="/ads/creatives" element={<AdsCreatives />} />
