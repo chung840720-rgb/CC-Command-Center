@@ -201,28 +201,120 @@
     "shopline": { "y2025": [780, 580, 720, 600, 0], "y2026": [540, 500, 560, 480, 64.8] }
   },
   "shoplineDetail": {
-    "monthlyGmv": 648074,
+    "url": "demo.example-shop.com",
     "achievement": 7.4,
-    "ytdGmv": 20100000,
-    "roas": 2.03,
-    "uv": 29000,
-    "orders": 461,
-    "aov": 1406,
-    "adSpend": 320000,
-    "newCustomers": 156,
-    "vipCustomers": 1820,
-    "repurchaseRate": 28.4,
+    "achievementStatus": "落後",
+    "monthlyGmv": 648074,
+    "target": 8800000,
+    "internalTabs": [
+      { "key": "dashboard", "label": "業績儀錶板", "active": true },
+      { "key": "campaign", "label": "行銷活動" },
+      { "key": "product", "label": "產品銷量" },
+      { "key": "crm", "label": "CRM" },
+      { "key": "ops", "label": "通路經營" }
+    ],
+    "ytd": {
+      "gmv": 20099547,
+      "achievement": 58.9,
+      "orders": 14072,
+      "roas": 2.94,
+      "target": 34100000,
+      "gap": 14000453,
+      "note": "1 月到目前週取月份"
+    },
+    "kpiGrid": [
+      { "label": "月業績", "value": "NT$648,074", "mom": -84.8, "yoy": -91.1 },
+      { "label": "訂單數", "value": "461 筆", "mom": -84.9 },
+      { "label": "客單價 AOV", "value": "NT$1,406", "mom": 0.3 },
+      { "label": "月 UV", "value": "28,570", "mom": -83.8 },
+      { "label": "廣告費", "value": "NT$319,545", "mom": -81.7 },
+      { "label": "ROAS", "value": "2.03x", "mom": -17.1 },
+      { "label": "CPA", "value": "NT$693.2", "mom": -21.2 },
+      { "label": "YoY", "value": "-91.1%" }
+    ],
+    "trends": {
+      "gmv": [
+        { "month": "2月", "value": 620 },
+        { "month": "3月", "value": 580 },
+        { "month": "4月", "value": 600 },
+        { "month": "5月", "value": 64.8 },
+        { "month": "6月", "value": 0 },
+        { "month": "7月", "value": 0 },
+        { "month": "8月", "value": 0 },
+        { "month": "9月", "value": 0 },
+        { "month": "10月", "value": 0 },
+        { "month": "11月", "value": 0 },
+        { "month": "12月", "value": 0 }
+      ],
+      "orders": [
+        { "month": "2月", "value": 4500 },
+        { "month": "3月", "value": 4200 },
+        { "month": "4月", "value": 4380 },
+        { "month": "5月", "value": 461 },
+        { "month": "6月", "value": 0 },
+        { "month": "7月", "value": 0 },
+        { "month": "8月", "value": 0 },
+        { "month": "9月", "value": 0 },
+        { "month": "10月", "value": 0 },
+        { "month": "11月", "value": 0 },
+        { "month": "12月", "value": 0 }
+      ],
+      "aov": [
+        { "month": "2月", "value": 1400 },
+        { "month": "3月", "value": 1390 },
+        { "month": "4月", "value": 1402 },
+        { "month": "5月", "value": 1406 },
+        { "month": "6月", "value": 0 },
+        { "month": "7月", "value": 0 },
+        { "month": "8月", "value": 0 },
+        { "month": "9月", "value": 0 },
+        { "month": "10月", "value": 0 },
+        { "month": "11月", "value": 0 },
+        { "month": "12月", "value": 0 }
+      ],
+      "roas": [
+        { "month": "2月", "value": 2.4 },
+        { "month": "3月", "value": 2.5 },
+        { "month": "4月", "value": 2.45 },
+        { "month": "5月", "value": 2.03 },
+        { "month": "6月", "value": 0 },
+        { "month": "7月", "value": 0 },
+        { "month": "8月", "value": 0 },
+        { "month": "9月", "value": 0 },
+        { "month": "10月", "value": 0 },
+        { "month": "11月", "value": 0 },
+        { "month": "12月", "value": 0 }
+      ],
+      "uv": [
+        { "month": "2月", "value": 165000 },
+        { "month": "3月", "value": 180000 },
+        { "month": "4月", "value": 176000 },
+        { "month": "5月", "value": 28570 },
+        { "month": "6月", "value": 0 },
+        { "month": "7月", "value": 0 },
+        { "month": "8月", "value": 0 },
+        { "month": "9月", "value": 0 },
+        { "month": "10月", "value": 0 },
+        { "month": "11月", "value": 0 },
+        { "month": "12月", "value": 0 }
+      ]
+    },
+    "ga4Funnel": {
+      "label": "GA4 流量轉換（近 30 天）",
+      "stages": [
+        { "label": "工作階段", "value": 9729, "pct": 100 },
+        { "label": "瀏覽商品頁", "value": 21020, "pct": 216.1 },
+        { "label": "加入購物車", "value": 0, "pct": 0 },
+        { "label": "結帳流程", "value": 0, "pct": 0 },
+        { "label": "完成訂單", "value": 0, "pct": 0 }
+      ]
+    },
     "topProducts": [
       { "name": "洗衣精 1.5L 補充包", "gmv": 156000, "share": 24.1 },
       { "name": "柔濕巾 80 抽 x3", "gmv": 98000, "share": 15.1 },
       { "name": "除黴噴霧 500ml", "gmv": 87000, "share": 13.4 },
       { "name": "沐浴乳 450ml", "gmv": 76000, "share": 11.7 },
       { "name": "洗手液 250ml", "gmv": 54000, "share": 8.3 }
-    ],
-    "highlights": [
-      "VIP 客回購率 28.4%，高於整體 18%",
-      "三三補貨日（每月 3 號）為 GMV 主驅動",
-      "Meta 廣告 ROAS 從 4 月 2.4 → 5 月 2.03 衰退"
     ]
   }
 }
