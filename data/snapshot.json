@@ -760,6 +760,71 @@
         "gmv": 54000,
         "share": 8.3
       }
+    ],
+    "split": {
+      "organic": {
+        "gmv": 388844,
+        "orders": 277,
+        "uv": 19999,
+        "aov": 1404,
+        "sharePct": 60
+      },
+      "paid": {
+        "gmv": 259230,
+        "orders": 184,
+        "uv": 8571,
+        "spend": 319545,
+        "roas": 0.81,
+        "cpa": 1737,
+        "sharePct": 40
+      }
+    },
+    "organicSources": [
+      {
+        "name": "直接流量",
+        "uv": 8800,
+        "share": 30
+      },
+      {
+        "name": "自然搜尋",
+        "uv": 6500,
+        "share": 22
+      },
+      {
+        "name": "EDM/再行銷",
+        "uv": 4200,
+        "share": 14
+      },
+      {
+        "name": "LINE/社群",
+        "uv": 3500,
+        "share": 12
+      },
+      {
+        "name": "其他",
+        "uv": 1300,
+        "share": 4
+      }
+    ],
+    "paidChannels": [
+      {
+        "name": "Meta 廣告",
+        "spend": 165000,
+        "roas": 2.2,
+        "share": 52
+      },
+      {
+        "name": "Google 廣告",
+        "spend": 110000,
+        "roas": 1.85,
+        "share": 34
+      },
+      {
+        "name": "LINE 廣告",
+        "spend": 44000,
+        "roas": 1.1,
+        "share": 14
+      }
     ]
   },
   "shopeeDetail": {
@@ -1085,6 +1150,66 @@
         "gmv": 60000,
         "share": 9.7
       }
+    ],
+    "split": {
+      "organic": {
+        "gmv": 215454,
+        "orders": 219,
+        "uv": 20250,
+        "aov": 984,
+        "sharePct": 35
+      },
+      "paid": {
+        "gmv": 400128,
+        "orders": 408,
+        "uv": 24750,
+        "spend": 380000,
+        "roas": 1.05,
+        "cpa": 931,
+        "sharePct": 65
+      }
+    },
+    "organicSources": [
+      {
+        "name": "蝦皮搜尋",
+        "uv": 12000,
+        "share": 40
+      },
+      {
+        "name": "蝦皮排名（活動頁）",
+        "uv": 8500,
+        "share": 28
+      },
+      {
+        "name": "推薦/相關商品",
+        "uv": 5800,
+        "share": 19
+      },
+      {
+        "name": "直接進入賣場",
+        "uv": 3700,
+        "share": 13
+      }
+    ],
+    "paidChannels": [
+      {
+        "name": "蝦皮關鍵字廣告",
+        "spend": 230000,
+        "roas": 3.1,
+        "share": 60
+      },
+      {
+        "name": "蝦皮聯盟",
+        "spend": 95000,
+        "roas": 4.8,
+        "share": 25
+      },
+      {
+        "name": "Meta 導蝦皮",
+        "spend": 55000,
+        "roas": 2.4,
+        "share": 15
+      }
     ]
   },
   "momoDetail": {
@@ -1401,6 +1526,66 @@
         "name": "沐浴乳 450ml x2",
         "gmv": 9500,
         "share": 9.9
+      }
+    ],
+    "split": {
+      "organic": {
+        "gmv": 47994,
+        "orders": 300,
+        "uv": 22800,
+        "aov": 160,
+        "sharePct": 50
+      },
+      "paid": {
+        "gmv": 47993,
+        "orders": 300,
+        "uv": 15200,
+        "spend": 280000,
+        "roas": 0.17,
+        "cpa": 933,
+        "sharePct": 50
+      }
+    },
+    "organicSources": [
+      {
+        "name": "MoMo 站內搜尋",
+        "uv": 14000,
+        "share": 38
+      },
+      {
+        "name": "首頁/分類頁推薦",
+        "uv": 9500,
+        "share": 26
+      },
+      {
+        "name": "電視台/MoMo APP push",
+        "uv": 7200,
+        "share": 19
+      },
+      {
+        "name": "直接進入品牌頁",
+        "uv": 6300,
+        "share": 17
+      }
+    ],
+    "paidChannels": [
+      {
+        "name": "MoMo 站內廣告",
+        "spend": 180000,
+        "roas": 3.2,
+        "share": 65
+      },
+      {
+        "name": "Google 導 MoMo",
+        "spend": 65000,
+        "roas": 2.1,
+        "share": 23
+      },
+      {
+        "name": "Meta 導 MoMo",
+        "spend": 35000,
+        "roas": 1.9,
+        "share": 12
       }
     ]
   },
@@ -2303,6 +2488,55 @@
         "name": "沐浴乳 450ml",
         "gmv": 6500,
         "share": 15.5
+      }
+    ],
+    "split": {
+      "organic": {
+        "gmv": 10500,
+        "orders": 50,
+        "uv": 4200,
+        "aov": 210,
+        "sharePct": 25
+      },
+      "paid": {
+        "gmv": 31500,
+        "orders": 150,
+        "uv": 7800,
+        "spend": 120000,
+        "roas": 0.26,
+        "cpa": 800,
+        "sharePct": 75
+      }
+    },
+    "organicSources": [
+      {
+        "name": "蝦皮站內搜尋",
+        "uv": 4500,
+        "share": 50
+      },
+      {
+        "name": "蝦皮排名",
+        "uv": 2800,
+        "share": 31
+      },
+      {
+        "name": "直接進入",
+        "uv": 1700,
+        "share": 19
+      }
+    ],
+    "paidChannels": [
+      {
+        "name": "蝦皮關鍵字廣告",
+        "spend": 80000,
+        "roas": 2.6,
+        "share": 67
+      },
+      {
+        "name": "蝦皮聯盟（直營專屬）",
+        "spend": 40000,
+        "roas": 4.2,
+        "share": 33
       }
     ]
   },
