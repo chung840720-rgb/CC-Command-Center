@@ -516,5 +516,79 @@
       { "name": "除黴噴霧 500ml", "gmv": 12000, "share": 12.5 },
       { "name": "沐浴乳 450ml x2", "gmv": 9500, "share": 9.9 }
     ]
+  },
+  "adCreatives": {
+    "abTest": {
+      "title": "A/B 雙軌測試",
+      "subtitle": "問題解決型 vs 促購型",
+      "description": "用相同預算測試兩種方向，確認是痛點素材還是優惠素材更能拉動成交。",
+      "tracks": [
+        { "name": "問題解決型", "examples": "浴室水垢、嬰兒紅疹、衣物霉斑", "metric": "點擊率 +28%", "metricColor": "primary" },
+        { "name": "促購型", "examples": "母嬰節 7 折、滿千折百、三三補貨日", "metric": "下單率 +15%", "metricColor": "emerald" }
+      ]
+    },
+    "platformContribution": [
+      { "platform": "官網", "gmv": 648000, "roas": 2.03, "insight": "成交承接偏弱，素材點擊後要回頭看商品頁。" },
+      { "platform": "蝦皮", "gmv": 616000, "roas": 10.39, "insight": "促購型素材效果好，適合搭配活動檔期加碼。" },
+      { "platform": "MoMo", "gmv": 96000, "roas": 18.07, "insight": "量小但效率高，先找能放量的檔期和品項。" }
+    ],
+    "ranking": [
+      {
+        "name": "浴室水垢前後對比",
+        "description": "痛點清楚、前後對比強，適合延伸成蝦皮主圖與短影音腳本。",
+        "type": "問題解決型",
+        "platform": "Meta",
+        "spend": 82000, "gmv": 392000, "roas": 4.78, "ctr": 2.9, "orders": 287
+      },
+      {
+        "name": "媽媽快速打掃情境",
+        "description": "點擊穩但成交普通，建議測試更明確的 CTA。",
+        "type": "生活情境型",
+        "platform": "Meta",
+        "spend": 64000, "gmv": 246000, "roas": 3.84, "ctr": 2.2, "orders": 183
+      },
+      {
+        "name": "母嬰節限時 7 折",
+        "description": "檔期型素材，CTA 強，回收佳。",
+        "type": "促購型",
+        "platform": "Meta",
+        "spend": 58000, "gmv": 285000, "roas": 4.91, "ctr": 3.1, "orders": 245
+      },
+      {
+        "name": "三三補貨日預告",
+        "description": "私域導流效果好，建議多投放於 Google 搜尋。",
+        "type": "促購型",
+        "platform": "Google",
+        "spend": 38000, "gmv": 215000, "roas": 5.66, "ctr": 4.2, "orders": 168
+      },
+      {
+        "name": "嬰兒洗澡溫和測試",
+        "description": "教育型，信任度高但轉換慢。",
+        "type": "問題解決型",
+        "platform": "Meta",
+        "spend": 42000, "gmv": 168000, "roas": 4.0, "ctr": 2.5, "orders": 132
+      },
+      {
+        "name": "洗衣精成分透明展示",
+        "description": "教育型，適合 retargeting，不適合冷流量。",
+        "type": "教育型",
+        "platform": "Meta",
+        "spend": 45000, "gmv": 152000, "roas": 3.38, "ctr": 1.8, "orders": 124
+      },
+      {
+        "name": "母嬰品牌信任見證",
+        "description": "證言型素材，CTR 偏低但 LTV 高，建議搭配 VIP 受眾。",
+        "type": "證言型",
+        "platform": "Google",
+        "spend": 28000, "gmv": 95000, "roas": 3.39, "ctr": 1.9, "orders": 72
+      },
+      {
+        "name": "居家清潔挑戰 30 天",
+        "description": "短影音型，互動高但轉換差，可改投 IG Reels。",
+        "type": "生活情境型",
+        "platform": "Meta",
+        "spend": 32000, "gmv": 86000, "roas": 2.69, "ctr": 1.4, "orders": 65
+      }
+    ]
   }
 }
