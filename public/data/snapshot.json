@@ -1,0 +1,125 @@
+{
+  "_meta": {
+    "generatedAt": "2026-06-11T10:00:00+08:00",
+    "currency": "TWD",
+    "anonymizationFactor": 0.8,
+    "note": "Demo snapshot — 數字已 anonymize (打 80%)，不代表真實業績",
+    "dateRange": { "start": "2026-05-13", "end": "2026-06-11" }
+  },
+  "kpi": {
+    "monthlyGmv": { "value": 1359643, "currency": "TWD", "target": 12000000, "achievement": 11.4 },
+    "ytdGmv": { "value": 33426656, "target": 50000000, "achievement": 67.1 },
+    "monthlyOrders": 1165,
+    "roas": 3.54,
+    "adSpend": 384000
+  },
+  "alerts": [
+    {
+      "id": "alert-1",
+      "level": "red",
+      "title": "蝦皮商城 GMV 環比 -18%",
+      "platform": "shopee",
+      "tag": "優先修正",
+      "metric": { "name": "GMV", "current": 78200, "previous": 95400, "deltaPct": -18 }
+    },
+    {
+      "id": "alert-2",
+      "level": "yellow",
+      "title": "官網 ROAS 偏低（2.03 倍）",
+      "platform": "shopline",
+      "tag": "持續觀察",
+      "metric": { "name": "ROAS", "current": 2.03, "target": 3.0 }
+    },
+    {
+      "id": "alert-3",
+      "level": "green",
+      "title": "MOMO 回收效率最高（18.07 倍）",
+      "platform": "momo",
+      "tag": "加碼候選",
+      "metric": { "name": "ROAS", "current": 18.07, "previous": 16.2, "deltaPct": 11.5 }
+    }
+  ],
+  "channels": [
+    {
+      "id": "shopline",
+      "label": "官網 Shopline",
+      "icon": "globe",
+      "monthlyGmv": 648200,
+      "achievement": 7.4,
+      "yearlyGmv": 20100000,
+      "roas": 2.03,
+      "orders": 461,
+      "ytdShare": 60.1,
+      "characteristic": "官網反映品牌自有轉換能力，優先看投放與商品頁。",
+      "recommendation": "目前量體最大，但 ROAS 與每筆訂單成本需要優先修正。"
+    },
+    {
+      "id": "shopee",
+      "label": "蝦皮旗艦",
+      "icon": "shopping-bag",
+      "monthlyGmv": 615900,
+      "achievement": 24.6,
+      "yearlyGmv": 11840000,
+      "roas": 10.39,
+      "orders": 627,
+      "ytdShare": 35.4,
+      "characteristic": "蝦皮重點是活動、排名與爆品庫存能不能放大。",
+      "recommendation": "效率穩，適合用上傳報表追蹤可加碼品項。"
+    },
+    {
+      "id": "momo",
+      "label": "MoMo+",
+      "icon": "store",
+      "monthlyGmv": 96200,
+      "achievement": 16.0,
+      "yearlyGmv": 1480000,
+      "roas": 18.07,
+      "orders": 77,
+      "ytdShare": 4.4,
+      "characteristic": "MoMo 要同時看效率與量體，不只看回收倍數。",
+      "recommendation": "效率高但量體小，重點是找可放大的活動與商品。"
+    }
+  ],
+  "funnel": {
+    "platform": "shopline",
+    "stages": [
+      { "key": "impression", "label": "Meta 觸及", "value": 320000, "rate": null },
+      { "key": "session", "label": "進站流量", "value": 45000, "rate": 14.1 },
+      { "key": "addToCart", "label": "加購", "value": 24000, "rate": 53.3 },
+      { "key": "checkout", "label": "開結帳", "value": 5400, "rate": 22.5 },
+      { "key": "purchase", "label": "完成購買", "value": 4050, "rate": 75.0 }
+    ],
+    "benchmarks": {
+      "addToCartRate": { "yellow": 15, "red": 10 },
+      "purchaseRate": { "yellow": 50, "red": 40 }
+    }
+  },
+  "categories": [
+    { "name": "洗衣精", "shopline": 28, "shopee": 35, "momo": 22, "trend": "up", "summary": "跨平台領跑，母嬰節檔期推升" },
+    { "name": "柔濕巾", "shopline": -12, "shopee": -8, "momo": -15, "trend": "down", "summary": "618 排除策略導致衰退（預期內）" },
+    { "name": "除黴", "shopline": 5, "shopee": 12, "momo": 8, "trend": "up", "summary": "穩定成長，無大檔期驅動" },
+    { "name": "沐浴", "shopline": 15, "shopee": 20, "momo": 18, "trend": "up", "summary": "夏季旺季，蝦皮加碼有效" }
+  ],
+  "ads": {
+    "meta": {
+      "spend": 384000,
+      "impressions": 5200000,
+      "clicks": 38400,
+      "ctr": 0.74,
+      "cpc": 10.0,
+      "roas": 3.54,
+      "reach": 1800000
+    }
+  },
+  "agenda": [
+    "本月業績缺口要靠哪個通路補：官網修廣告、蝦皮加碼、MoMo 放活動",
+    "今天廣告預算要不要調整：先停掉低回收，再補到高回收通路",
+    "這檔活動為什麼有效或無效：優惠、商品、素材、通路各自留下結論",
+    "明天要看哪份資料：官網自動更新，蝦皮和 MoMo 用上傳報表補齊"
+  ],
+  "todayActions": [
+    { "owner": "饅頭", "status": "今日判斷", "task": "整理官網 ROAS 偏低的廣告組與素材" },
+    { "owner": "跳跳", "status": "可行動", "task": "確認蝦皮高效品項是否可加碼" },
+    { "owner": "雨昕", "status": "復盤中", "task": "把母親節活動整理成復盤紀錄" }
+  ]
+}

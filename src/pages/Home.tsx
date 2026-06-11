@@ -1,0 +1,282 @@
+import { useEffect, useState } from 'react';
+import type { Snapshot } from '@/types/dashboard';
+import { getSnapshot } from '@/lib/api';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Skeleton } from '@/components/ui/skeleton';
+import { KpiCard } from '@/components/dashboard/KpiCard';
+import { ChannelCard } from '@/components/dashboard/ChannelCard';
+import { formatCurrency, formatNumber } from '@/lib/utils';
+import {
+  Download,
+  Eye,
+  Target,
+  Sparkles,
+  Compass,
+  TrendingUp,
+  TrendingDown,
+  CheckCircle2,
+  ArrowRight,
+} from 'lucide-react';
+
+export default function Home() {
+  const [data, setData] = useState<Snapshot | null>(null);
+
+  useEffect(() => {
+    getSnapshot().then(setData);
+  }, []);
+
+  if (!data) {
+    return (
+      <div className="space-y-6">
+        <Skeleton className="h-72 w-full rounded-3xl" />
+        <div className="grid grid-cols-4 gap-4">
+          {[...Array(4)].map((_, i) => (
+            <Skeleton key={i} className="h-32 rounded-2xl" />
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  const kpi = data.kpi;
+  const monthLabel = `${new Date().getMonth() + 1}月`;
+
+  return (
+    <div className="space-y-8">
+      {/* Hero card */}
+      <section className="hero-gradient rounded-3xl border border-border/40 shadow-sm overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-6 p-8">
+          {/* Left */}
+          <div className="space-y-5">
+            <Badge variant="outline" className="bg-white/60 backdrop-blur rounded-full font-semibold text-xs">
+              官網・蝦皮・MoMo 3大電商通路
+            </Badge>
+            <h1 className="text-5xl font-black leading-tight tracking-tight">
+              <span className="text-primary">數位電商3大平台</span>
+              <br />
+              行銷增長作戰中心
+            </h1>
+            <p className="text-sm text-muted-foreground">
+              淨淨品牌核心營收來源，主力戰場
+            </p>
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              <Button className="rounded-full font-semibold gap-2">
+                <Download className="w-4 h-4" />
+                下載今日報表
+              </Button>
+              <Badge variant="secondary" className="bg-amber-100 text-amber-900 border-amber-200 rounded-full">
+                {new Date().toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' })}｜目前查看 5月月中累積
+              </Badge>
+            </div>
+          </div>
+
+          {/* Right */}
+          <div className="rounded-2xl bg-white/80 backdrop-blur p-5 space-y-4 border border-white/60 shadow-sm">
+            <div className="flex items-center justify-between">
+              <p className="font-bold text-sm">今日作戰摘要</p>
+              <p className="text-xs text-muted-foreground">數字、認知、經驗 ，決定行動</p>
+            </div>
+
+            <div className="space-y-3">
+              <div className="flex items-center justify-between border-b border-border/40 pb-3">
+                <span className="text-xs text-muted-foreground">5月業績</span>
+                <div className="text-right">
+                  <p className="text-base font-extrabold">{formatCurrency(kpi.monthlyGmv.value)}</p>
+                  <p className="text-[10px] text-muted-foreground">達成 {kpi.monthlyGmv.achievement}%</p>
+                </div>
+              </div>
+              <div className="flex items-center justify-between border-b border-border/40 pb-3">
+                <span className="text-xs text-muted-foreground">年度累計</span>
+                <div className="text-right">
+                  <p className="text-base font-extrabold">{formatCurrency(kpi.ytdGmv.value)}</p>
+                  <p className="text-[10px] text-muted-foreground">YTD 達成 {kpi.ytdGmv.achievement}%</p>
+                </div>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-xs text-muted-foreground">ROAS（廣告投報率）</span>
+                <div className="text-right">
+                  <p className="text-base font-extrabold">{kpi.roas} 倍</p>
+                  <p className="text-[10px] text-muted-foreground">花費 {formatCurrency(kpi.adSpend)}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-accent/60 rounded-xl px-3 py-2.5 text-xs font-medium text-accent-foreground">
+              會議節奏：看戰情、拆通路、開行動、做復盤。
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4 KPI grid */}
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <KpiCard
+          label={`${monthLabel}業績`}
+          value="136萬"
+          subValue={formatCurrency(kpi.monthlyGmv.value)}
+        />
+        <KpiCard
+          label="目標達成"
+          value={`${kpi.monthlyGmv.achievement}%`}
+          subValue={`還差 ${formatCurrency(kpi.monthlyGmv.target - kpi.monthlyGmv.value)}`}
+          highlight="destructive"
+        />
+        <KpiCard
+          label="年度累計業績"
+          value="3343萬"
+          subValue={`YTD ${kpi.ytdGmv.achievement}%`}
+        />
+        <KpiCard
+          label="訂單數"
+          value={`${formatNumber(kpi.monthlyOrders)} 筆`}
+          subValue="三通路合計"
+        />
+      </section>
+
+      {/* 3 警示 row */}
+      <section className="flex flex-wrap gap-x-8 gap-y-3 px-1">
+        <div className="flex items-center gap-2 text-sm">
+          <TrendingDown className="w-4 h-4 text-destructive" />
+          <span className="text-muted-foreground">優先修正</span>
+          <span className="font-semibold">官網 ROAS 偏低</span>
+        </div>
+        <div className="flex items-center gap-2 text-sm">
+          <TrendingUp className="w-4 h-4 text-primary" />
+          <span className="text-muted-foreground">加碼候選</span>
+          <span className="font-semibold">MOMO 回收最高</span>
+        </div>
+        <div className="flex items-center gap-2 text-sm">
+          <CheckCircle2 className="w-4 h-4 text-primary" />
+          <span className="text-muted-foreground">今日節奏</span>
+          <span className="font-semibold">判斷 → 行動 → 復盤</span>
+        </div>
+      </section>
+
+      {/* 通路儀錶板 */}
+      <section className="space-y-4">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 className="text-lg font-bold">電商通路儀錶板</h2>
+            <p className="text-xs text-muted-foreground mt-1">
+              綜合看總業績，再拆到各通路找原因：官網看轉換，蝦皮看活動與品項，MoMo 看檔期與量體。
+            </p>
+          </div>
+          <Button variant="ghost" size="sm" className="text-primary gap-1">
+            上傳蝦皮 / MoMo 報表 <ArrowRight className="w-3 h-3" />
+          </Button>
+        </div>
+
+        {/* Month tabs (visual only) */}
+        <div className="flex items-center gap-1 overflow-x-auto pb-2">
+          {['1月', '2月', '3月', '4月', '5月 MTD', '6月', '7月', '8月', '9月', '10月', '11月', '12月'].map(
+            (m, i) => (
+              <button
+                key={m}
+                className={`shrink-0 px-3 h-8 rounded-full text-xs font-semibold transition-colors ${
+                  i === 4
+                    ? 'bg-primary text-primary-foreground'
+                    : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                }`}
+              >
+                {m}
+                {i > 4 && i < 12 && <span className="ml-1.5 text-[9px] opacity-60">待匯入</span>}
+              </button>
+            )
+          )}
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          {data.channels.map((c) => (
+            <ChannelCard key={c.id} channel={c} />
+          ))}
+        </div>
+      </section>
+
+      {/* 議程 + 行動建議 */}
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div className="card-soft p-6 space-y-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <h3 className="text-base font-bold">作戰會議議程</h3>
+              <p className="text-xs text-muted-foreground mt-1">AI 分析議程建議</p>
+            </div>
+            <Button size="sm" variant="outline" className="gap-1 text-xs">
+              <Eye className="w-3 h-3" />
+              看戰情
+            </Button>
+          </div>
+          <div className="space-y-3">
+            {data.agenda.map((a, i) => (
+              <div key={i} className="flex gap-3 items-start">
+                <div className="w-5 h-5 rounded-full bg-primary/15 flex items-center justify-center shrink-0 mt-0.5">
+                  <span className="text-[10px] font-bold text-primary">{i + 1}</span>
+                </div>
+                <p className="text-sm leading-relaxed text-foreground/85">{a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="card-soft p-6 space-y-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <h3 className="text-base font-bold">今日行動建議</h3>
+              <p className="text-xs text-muted-foreground mt-1">有洞察，才有好策略 有執行，才有好結果</p>
+            </div>
+            <Button size="sm" variant="ghost" className="text-primary text-xs">看日誌</Button>
+          </div>
+          <div className="space-y-3">
+            {data.todayActions.map((act, i) => (
+              <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-secondary/40">
+                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                  <span className="text-xs font-bold text-primary">{act.owner}</span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-[10px] text-muted-foreground font-medium">{act.status}</p>
+                  <p className="text-sm font-medium truncate">{act.task}</p>
+                </div>
+                <Badge variant="outline" className="text-[10px] shrink-0">
+                  {act.status === '今日判斷' ? '今日判斷' : act.status === '可行動' ? '可行動' : '復盤中'}
+                </Badge>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 作戰路徑 */}
+      <section className="card-soft p-6 space-y-4">
+        <div className="flex items-center justify-between">
+          <div>
+            <h3 className="text-base font-bold">作戰路徑</h3>
+            <p className="text-xs text-muted-foreground mt-1">真正切頁靠左側，首頁只保留今天最常走的路徑。</p>
+          </div>
+          <Button variant="ghost" size="sm" className="gap-1 text-xs">
+            <Compass className="w-3 h-3" />
+            檢查串接狀態
+          </Button>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          {[
+            { label: '看戰情', desc: '業績、目標、ROAS、缺口', icon: Eye },
+            { label: '拆通路', desc: '官網、蝦皮、MoMo 各自診斷', icon: Target },
+            { label: '開行動', desc: '記錄誰要做什麼、何時檢查', icon: Sparkles },
+            { label: '做復盤', desc: '活動結束後留下下次可用的結論', icon: CheckCircle2 },
+          ].map(({ label, desc, icon: Icon }) => (
+            <div
+              key={label}
+              className="p-4 rounded-xl border border-border/60 hover:border-primary/40 hover:bg-accent/30 cursor-pointer transition-colors"
+            >
+              <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center mb-3">
+                <Icon className="w-4 h-4 text-accent-foreground" />
+              </div>
+              <p className="font-bold text-sm mb-1">{label}</p>
+              <p className="text-[11px] text-muted-foreground leading-relaxed">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+}
