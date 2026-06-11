@@ -23,6 +23,7 @@ import Upload from '@/pages/Upload';
 import Log from '@/pages/Log';
 import Wishpool from '@/pages/Wishpool';
 import ShopeeDirectDetail from '@/pages/ShopeeDirectDetail';
+import DataPipeline from '@/pages/DataPipeline';
 
 export default function App() {
   return (
@@ -53,6 +54,7 @@ export default function App() {
           <Route path="/log" element={<Log />} />
           <Route path="/wishpool" element={<Wishpool />} />
           <Route path="/connect" element={<Connect />} />
+          <Route path="/data-pipeline" element={<DataPipeline />} />
         </Route>
       </Routes>
     </HashRouter>

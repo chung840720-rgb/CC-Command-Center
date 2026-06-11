@@ -204,6 +204,38 @@ export default function Campaign() {
         </div>
       </section>
 
+      {/* 跨組活動 SOP Checklist (套用 cross-team-campaign-sop.md) */}
+      <section className="card-soft p-6 space-y-4">
+        <div className="flex items-center justify-between">
+          <div>
+            <h2 className="text-base font-bold flex items-center gap-2">
+              <LayoutGrid className="w-4 h-4 text-primary" />
+              跨組活動 SOP Checklist
+            </h2>
+            <p className="text-xs text-muted-foreground mt-1">套用自寫 <code className="px-1 bg-secondary rounded">cross-team-campaign-sop.md v1.0</code>，5 階段 D-30 ~ D+1 全流程</p>
+          </div>
+          <Badge variant="secondary" className="bg-primary/10 text-primary text-xs font-bold">📋 SOP Applied</Badge>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3">
+          {c.checklist.map((stage: any, i: number) => (
+            <div key={stage.category} className="rounded-xl border border-border/60 bg-secondary/20 p-4 space-y-2.5">
+              <div className="flex items-center gap-2 pb-2 border-b border-border/40">
+                <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-[10px] font-bold shrink-0">{i + 1}</div>
+                <p className="text-xs font-bold">{stage.category}</p>
+              </div>
+              <ul className="space-y-1.5">
+                {stage.items.map((it: string, j: number) => (
+                  <li key={j} className="flex items-start gap-1.5 text-[11px] leading-relaxed">
+                    <span className="text-primary mt-0.5">▸</span>
+                    <span className="text-foreground/80">{it}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Demo Report + Template */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <section className="card-soft p-6 space-y-4">

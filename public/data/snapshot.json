@@ -932,6 +932,13 @@
       { "title": "通路拆解",     "items": "官網、蝦皮、MoMo 各自表現問題" },
       { "title": "素材經驗",     "items": "哪些素材有效、哪些話法該換" },
       { "title": "下次行動",     "items": "保留、加碼、修改、不要再做" }
+    ],
+    "checklist": [
+      { "category": "D-30 規劃期", "items": ["定義活動目標 GMV / 客單 / 訂單", "鎖定主推 SKU + 組合包", "規劃通路曝光資源（官網 banner / 蝦皮主圖 / MoMo banner）", "設計 KPI 達成標準 vs 警戒線"] },
+      { "category": "D-14 素材期", "items": ["主視覺定稿（含 3 平台尺寸）", "EDM / LINE OA 文案 review", "蝦皮商品頁文案改版", "Meta / Google 廣告素材 A/B 兩版"] },
+      { "category": "D-7 上線前", "items": ["跨組對焦會（電商 / 設計 / 客服 / 物流）", "庫存盤點 + 補貨單", "客服 FAQ 預先準備", "Tag 與追蹤碼測試"] },
+      { "category": "D-day 啟動", "items": ["首日 09:00 全平台檢查", "LINE VIP 私訊推播", "Meta 廣告組正式 launch", "預設 12 小時內第一波檢視"] },
+      { "category": "D+1 ~ 復盤", "items": ["每日盯 ROAS / 客單", "中期素材輪替（疲乏即換）", "活動結束後 7 天內產出復盤報告"] }
     ]
   },
   "adCreatives": {
@@ -1006,6 +1013,19 @@
         "platform": "Meta",
         "spend": 32000, "gmv": 86000, "roas": 2.69, "ctr": 1.4, "orders": 65
       }
+    ],
+    "typeRoas": [
+      { "type": "問題解決型", "avgRoas": 4.39, "totalSpend": 124000, "color": "amber" },
+      { "type": "促購型", "avgRoas": 5.29, "totalSpend": 96000, "color": "rose" },
+      { "type": "生活情境型", "avgRoas": 3.27, "totalSpend": 96000, "color": "violet" },
+      { "type": "教育型", "avgRoas": 3.38, "totalSpend": 45000, "color": "blue" },
+      { "type": "證言型", "avgRoas": 3.39, "totalSpend": 28000, "color": "emerald" }
+    ],
+    "recommendation": [
+      { "action": "加碼", "target": "促購型 + Google 投放", "reason": "ROAS 5.66 倍 + CTR 4.2% 為全場最高，建議預算 +30%", "priority": "高" },
+      { "action": "複用", "target": "問題解決型「前後對比」素材", "reason": "ROAS 穩定 4.0+，跨平台都能跑，可延伸出蝦皮主圖與短影音", "priority": "高" },
+      { "action": "改投", "target": "居家清潔挑戰 30 天 → IG Reels", "reason": "FB 轉換不佳，但內容適合短影音，IG Reels 觸及更精準", "priority": "中" },
+      { "action": "砍", "target": "Lookalike 5% 受眾", "reason": "ROAS 1.12 < 1.5 警戒線，連續兩週低迷", "priority": "中" }
     ]
   }
 }

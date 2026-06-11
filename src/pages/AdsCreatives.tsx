@@ -249,6 +249,84 @@ export default function AdsCreatives() {
           排序依 ROAS 由高到低 — Top 1 標示 🏆，可進入「AI 決策建議」看素材複用 / 砍掉 / 加碼建議
         </p>
       </section>
+
+      {/* 素材類型 ROAS 比較 */}
+      <section className="card-soft p-6 space-y-4">
+        <div className="flex items-center gap-2">
+          <BarChart3 className="w-4 h-4 text-primary" />
+          <h2 className="text-base font-bold">素材類型 ROAS 比較</h2>
+        </div>
+        <p className="text-xs text-muted-foreground">看哪個類型在整體預算下最有效率 — 影響下一檔素材策略</p>
+        <div className="space-y-2.5">
+          {data.adCreatives.typeRoas.map((t: any) => {
+            const max = Math.max(...data.adCreatives.typeRoas.map((x: any) => x.avgRoas));
+            const widthPct = (t.avgRoas / max) * 100;
+            return (
+              <div key={t.type} className="grid grid-cols-[120px_1fr_120px] gap-3 items-center">
+                <span className="text-sm font-medium">{t.type}</span>
+                <div className="h-7 rounded-md bg-secondary overflow-hidden relative">
+                  <div className={cn(
+                    'h-full rounded-md transition-all',
+                    t.color === 'amber' && 'bg-amber-400',
+                    t.color === 'rose' && 'bg-rose-400',
+                    t.color === 'violet' && 'bg-violet-400',
+                    t.color === 'blue' && 'bg-blue-400',
+                    t.color === 'emerald' && 'bg-emerald-400'
+                  )} style={{ width: `${widthPct}%` }} />
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-bold">{t.avgRoas} 倍</span>
+                </div>
+                <span className="text-xs text-muted-foreground text-right">花費 NT${formatNumber(t.totalSpend)}</span>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* AI 行動建議 */}
+      <section className="card-soft p-6 space-y-4">
+        <div className="flex items-center justify-between">
+          <div>
+            <h2 className="text-base font-bold flex items-center gap-2">
+              <Trophy className="w-4 h-4 text-primary" />
+              AI 行動建議
+            </h2>
+            <p className="text-xs text-muted-foreground mt-1">套用 <code className="px-1 bg-secondary rounded">daily-report.md skill v2.10</code> 的「解讀 → 建議 → 升級判斷」3 段式</p>
+          </div>
+          <Badge variant="secondary" className="bg-primary/10 text-primary text-xs font-bold">📋 SOP Applied</Badge>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          {data.adCreatives.recommendation.map((r: any, i: number) => (
+            <div key={i} className={cn(
+              'rounded-xl border p-4 space-y-2',
+              r.action === '加碼' && 'border-emerald-200 bg-emerald-50/40',
+              r.action === '複用' && 'border-primary/30 bg-primary/5',
+              r.action === '改投' && 'border-amber-200 bg-amber-50/40',
+              r.action === '砍' && 'border-red-200 bg-red-50/40'
+            )}>
+              <div className="flex items-center justify-between">
+                <Badge variant="outline" className={cn(
+                  'text-[11px] font-bold rounded-md',
+                  r.action === '加碼' && 'bg-emerald-100 text-emerald-700 border-emerald-200',
+                  r.action === '複用' && 'bg-primary/15 text-primary border-primary/30',
+                  r.action === '改投' && 'bg-amber-100 text-amber-700 border-amber-200',
+                  r.action === '砍' && 'bg-red-100 text-red-700 border-red-200'
+                )}>
+                  {r.action}
+                </Badge>
+                <Badge variant="outline" className={cn(
+                  'text-[10px]',
+                  r.priority === '高' && 'bg-red-50 text-red-700 border-red-200',
+                  r.priority === '中' && 'bg-amber-50 text-amber-700 border-amber-200'
+                )}>
+                  優先 {r.priority}
+                </Badge>
+              </div>
+              <p className="text-sm font-bold">{r.target}</p>
+              <p className="text-xs text-muted-foreground leading-relaxed">{r.reason}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

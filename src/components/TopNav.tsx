@@ -82,6 +82,7 @@ const navConfig = [
       { label: '操作日誌', subtitle: 'team 互動紀錄', to: '/log' },
       { label: '願池', subtitle: '許願清單', to: '/wishpool' },
       { label: '平台串接', subtitle: 'API auth 管理', to: '/connect' },
+      { label: '資料管線架構', subtitle: '🚀 Playwright + CDP 反向工程', to: '/data-pipeline' },
     ],
   },
 ];
