@@ -517,6 +517,266 @@
       { "name": "沐浴乳 450ml x2", "gmv": 9500, "share": 9.9 }
     ]
   },
+  "connect": {
+    "platforms": [
+      {
+        "id": "shopline", "name": "Shopline API", "category": "電商平台", "status": "connected",
+        "description": "串接後可自動同步訂單、流量、會員、庫存資料",
+        "fields": [{ "label": "storeUrl", "value": "https://www.demo-shop.tw/" }]
+      },
+      {
+        "id": "shopee", "name": "蝦皮開放平台 API", "category": "電商平台", "status": "pending",
+        "description": "串接後可自動拉取訂單、廣告數據，免手動上傳 CSV",
+        "fields": [
+          { "label": "合作夥伴 ID (Partner ID)", "value": "123456", "hint": "蝦皮開放平台開發者後台取得" },
+          { "label": "App Key", "value": "••••••••••••••••", "secret": true },
+          { "label": "App Secret", "value": "••••••••••••••••", "secret": true }
+        ],
+        "warning": "蝦皮開放平台 API 需向蝦皮申請資格（Open API Onboarding），一般商家帳號尚未開放。申請通過後填入憑證即可啟用。"
+      },
+      {
+        "id": "ga4", "name": "Google Analytics 4", "category": "流量與廣告分析", "status": "connected",
+        "description": "串接後可查看官網流量、轉換漏斗、工作階段等即時數據",
+        "fields": [{ "label": "propertyId", "value": "260114136" }],
+        "note": "GA4 Service Account（JSON 憑證）需由技術人員設定至 Cloudflare Pages 環境變數 GA_SERVICE_ACCOUNT，完成後流量數據即可自動同步。"
+      },
+      {
+        "id": "meta", "name": "Meta 廣告（Facebook / Instagram）", "category": "流量與廣告分析", "status": "connected",
+        "description": "串接後可自動同步廣告花費、ROAS、曝光、點擊等數據",
+        "fields": [{ "label": "adAccountId", "value": "act_1322065504565230" }],
+        "note": "Access Token 建議使用系統用戶 Token（System User Token）。若 Meta 顯示 appsecret_proof 錯誤，請補填 Meta App Secret，系統會自動產生 proof。"
+      }
+    ]
+  },
+  "adsMeta": {
+    "kpi": {
+      "spend": 320000, "impressions": 4200000, "clicks": 28500, "ctr": 0.68, "cpc": 11.2, "roas": 3.24, "reach": 1450000
+    },
+    "campaigns": [
+      { "name": "618 預熱檔 - 廣泛受眾", "objective": "轉換", "status": "進行中", "spend": 86000, "roas": 4.12, "ctr": 0.82, "orders": 287 },
+      { "name": "三三補貨日 - VIP 再行銷", "objective": "轉換", "status": "進行中", "spend": 64000, "roas": 5.21, "ctr": 1.45, "orders": 245 },
+      { "name": "母嬰節組合包 - Lookalike 1%", "objective": "轉換", "status": "進行中", "spend": 58000, "roas": 3.85, "ctr": 0.92, "orders": 215 },
+      { "name": "新客體驗組 - 興趣母嬰", "objective": "轉換", "status": "已暫停", "spend": 42000, "roas": 1.45, "ctr": 0.55, "orders": 89 },
+      { "name": "品牌曝光 - Reels Boost", "objective": "曝光", "status": "進行中", "spend": 32000, "roas": null, "ctr": 1.85, "orders": 0 },
+      { "name": "Lookalike 5% - 寬鬆受眾", "objective": "轉換", "status": "已暫停", "spend": 38000, "roas": 1.12, "ctr": 0.45, "orders": 72 }
+    ],
+    "audiences": [
+      { "name": "VIP 再行銷（90 日）", "size": 12500, "ctr": 1.45, "cvr": 4.2, "rating": "優秀" },
+      { "name": "Lookalike 1% (母嬰購買)", "size": 280000, "ctr": 0.92, "cvr": 2.1, "rating": "良好" },
+      { "name": "興趣 - 母嬰用品", "size": 1200000, "ctr": 0.68, "cvr": 1.2, "rating": "普通" },
+      { "name": "Lookalike 5%", "size": 1400000, "ctr": 0.45, "cvr": 0.6, "rating": "偏低" }
+    ]
+  },
+  "adsGoogle": {
+    "kpi": {
+      "spend": 64000, "impressions": 580000, "clicks": 4800, "ctr": 0.83, "cpc": 13.3, "roas": 5.66, "conversions": 168
+    },
+    "split": [
+      { "type": "搜尋廣告", "spend": 42000, "roas": 6.21, "share": 65.6, "color": "primary" },
+      { "type": "多媒體廣告", "spend": 16000, "roas": 3.85, "share": 25.0, "color": "amber" },
+      { "type": "YouTube", "spend": 6000, "roas": 2.45, "share": 9.4, "color": "rose" }
+    ],
+    "keywords": [
+      { "keyword": "母嬰清潔", "matchType": "完全比對", "impressions": 28000, "clicks": 1840, "ctr": 6.5, "cpc": 9.5, "cvr": 4.2 },
+      { "keyword": "嬰兒洗衣精", "matchType": "詞組比對", "impressions": 18500, "clicks": 1120, "ctr": 6.0, "cpc": 11.2, "cvr": 3.8 },
+      { "keyword": "天然清潔劑", "matchType": "廣泛比對", "impressions": 45000, "clicks": 1850, "ctr": 4.1, "cpc": 8.4, "cvr": 2.5 },
+      { "keyword": "柔濕巾推薦", "matchType": "完全比對", "impressions": 12000, "clicks": 720, "ctr": 6.0, "cpc": 10.8, "cvr": 3.2 },
+      { "keyword": "除黴噴霧", "matchType": "詞組比對", "impressions": 8500, "clicks": 425, "ctr": 5.0, "cpc": 12.5, "cvr": 2.8 }
+    ]
+  },
+  "competitorAds": {
+    "summary": "Demo 母嬰清潔市場 6 月觀察：A 牌主打 618 第二件 6 折，廣告投放集中在 Reels；B 牌打「成分透明」教育型；C 牌走 KOL 開箱組合。",
+    "competitors": [
+      {
+        "name": "A 牌（市場領導者）",
+        "strategy": "促購主導",
+        "activeAds": 28,
+        "topAd": "618 第二件 6 折",
+        "creativeType": "短影音 / Reels",
+        "estimatedSpend": "120-180 萬",
+        "insight": "預算大 + 素材換頻繁，估計每週換 3-4 組新素材，主打折扣與「售完」緊迫感。"
+      },
+      {
+        "name": "B 牌（教育型挑戰者）",
+        "strategy": "教育型",
+        "activeAds": 15,
+        "topAd": "為什麼選對母嬰清潔劑這麼重要",
+        "creativeType": "長文 + 圖卡",
+        "estimatedSpend": "30-50 萬",
+        "insight": "投放成分透明 + 醫師推薦素材，受眾偏「新手媽媽」社團。CTR 中等但 LTV 高。"
+      },
+      {
+        "name": "C 牌（內容型）",
+        "strategy": "KOL 開箱組合",
+        "activeAds": 8,
+        "topAd": "我的母嬰清潔好物清單",
+        "creativeType": "KOL 開箱影片",
+        "estimatedSpend": "20-30 萬",
+        "insight": "依賴 KOL，廣告大量重投 KOL 影片，產品露出時間長但 CTA 弱。"
+      }
+    ],
+    "actions": [
+      "短影音 / Reels 投放預算 +30%，跟上 A 牌節奏",
+      "規劃 1-2 組「成分透明」教育型素材對打 B 牌",
+      "與 3-5 位母嬰 KOL 聯繫長期合作，建立內容護城河"
+    ]
+  },
+  "competitorWeb": {
+    "summary": "AI 解析 3 個競品官網結構 + 商品定位 + 促銷策略，每週自動爬取更新。",
+    "lastUpdated": "2026/06/10 14:00",
+    "competitors": [
+      {
+        "name": "A 牌官網",
+        "url": "demo-a.com.tw",
+        "category": "市場領導者",
+        "monthlyTraffic": "120 萬",
+        "skuCount": 85,
+        "avgPrice": "NT$ 350",
+        "promotions": ["618 第二件 6 折", "VIP 終身 9 折", "免運門檻 $599"],
+        "uxObservations": ["首頁主推組合包", "結帳流程 3 步", "有 LINE 客服浮窗"],
+        "aiSummary": "A 牌官網偏「促購導向」，首頁 80% 篇幅都是活動 banner 與組合包，商品頁簡潔不解釋成分。"
+      },
+      {
+        "name": "B 牌官網",
+        "url": "demo-b.com.tw",
+        "category": "教育型挑戰者",
+        "monthlyTraffic": "65 萬",
+        "skuCount": 42,
+        "avgPrice": "NT$ 420",
+        "promotions": ["新客首購 7 折", "訂閱制 9 折"],
+        "uxObservations": ["首頁主推品牌故事", "每個商品頁含成分解析", "Blog 每週更新"],
+        "aiSummary": "B 牌走「教育 + 信任」路線，網站結構像內容網站，商品頁包含成分、臨床測試、媽媽見證。"
+      },
+      {
+        "name": "C 牌官網",
+        "url": "demo-c.com.tw",
+        "category": "內容型",
+        "monthlyTraffic": "38 萬",
+        "skuCount": 28,
+        "avgPrice": "NT$ 380",
+        "promotions": ["KOL 折扣碼", "Instagram 限定優惠"],
+        "uxObservations": ["首頁嵌入 IG Feed", "商品頁有 KOL 短影音", "整體調性年輕"],
+        "aiSummary": "C 牌主打「KOL 共創」，網站像 IG 平面化，商品頁標配 KOL 開箱影片，缺乏深度文字內容。"
+      }
+    ],
+    "comparisonTable": {
+      "headers": ["維度", "A 牌", "B 牌", "C 牌", "Johnny demo"],
+      "rows": [
+        { "label": "月流量", "a": "120 萬", "b": "65 萬", "c": "38 萬", "us": "29K（待提升）" },
+        { "label": "平均價格", "a": "NT$ 350", "b": "NT$ 420", "c": "NT$ 380", "us": "NT$ 400" },
+        { "label": "SKU 數", "a": "85", "b": "42", "c": "28", "us": "32" },
+        { "label": "主策略", "a": "促購導向", "b": "成分透明", "c": "KOL 共創", "us": "VIP 私域 + 組合包" },
+        { "label": "弱點", "a": "促銷疲乏", "b": "新客成本高", "c": "規模小", "us": "ROAS 偏低" }
+      ]
+    }
+  },
+  "productsPage": {
+    "totalSku": 32,
+    "categoryBreakdown": [
+      { "name": "洗衣精", "count": 8, "gmv": 285000, "color": "amber" },
+      { "name": "柔濕巾", "count": 6, "gmv": 158000, "color": "primary" },
+      { "name": "除黴", "count": 5, "gmv": 142000, "color": "violet" },
+      { "name": "沐浴", "count": 7, "gmv": 196000, "color": "rose" },
+      { "name": "洗手", "count": 4, "gmv": 86000, "color": "emerald" },
+      { "name": "其他", "count": 2, "gmv": 32000, "color": "zinc" }
+    ],
+    "list": [
+      { "sku": "CC-LD-001", "name": "洗衣精 1.5L 補充包", "category": "洗衣精", "price": 380, "stock": 1450, "gmv": 156000, "trend": 28 },
+      { "sku": "CC-WT-003", "name": "柔濕巾 80 抽 x3", "category": "柔濕巾", "price": 450, "stock": 820, "gmv": 98000, "trend": -12 },
+      { "sku": "CC-MD-002", "name": "除黴噴霧 500ml", "category": "除黴", "price": 320, "stock": 620, "gmv": 87000, "trend": 5 },
+      { "sku": "CC-SH-005", "name": "沐浴乳 450ml", "category": "沐浴", "price": 280, "stock": 1180, "gmv": 76000, "trend": 15 },
+      { "sku": "CC-HW-001", "name": "洗手液 250ml", "category": "洗手", "price": 180, "stock": 950, "gmv": 54000, "trend": 8 },
+      { "sku": "CC-LD-005", "name": "洗衣精補充包 x3 組", "category": "洗衣精", "price": 980, "stock": 320, "gmv": 142000, "trend": 35 }
+    ]
+  },
+  "uploadPage": {
+    "supportedFormats": ["蝦皮 訂單報表 (.xlsx)", "MoMo 銷售報表 (.csv)", "Meta 廣告報表 (.csv)", "Google Ads 報表 (.csv)"],
+    "history": [
+      { "filename": "蝦皮_5月訂單_20260601.xlsx", "platform": "蝦皮", "uploadedAt": "2026/06/01 10:23", "rows": 5432, "status": "已處理" },
+      { "filename": "MoMo_5月訂單_20260601.csv", "platform": "MoMo", "uploadedAt": "2026/06/01 10:21", "rows": 892, "status": "已處理" },
+      { "filename": "Meta_廣告_週報_W22.csv", "platform": "Meta", "uploadedAt": "2026/05/31 09:15", "rows": 156, "status": "已處理" },
+      { "filename": "Google_Ads_週報_W22.csv", "platform": "Google", "uploadedAt": "2026/05/31 09:14", "rows": 89, "status": "處理中" }
+    ]
+  },
+  "logPage": {
+    "events": [
+      { "time": "2026/06/11 12:26", "actor": "饅頭", "action": "AI 診斷觸發", "page": "/analytics", "type": "ai", "comment": "找出三大問題並執行建議" },
+      { "time": "2026/06/11 11:54", "actor": "系統", "action": "GA4 數據同步", "page": "/analytics", "type": "system" },
+      { "time": "2026/06/11 10:42", "actor": "跳跳", "action": "MoMo 報表上傳", "page": "/upload", "type": "upload", "fileInfo": "MoMo_銷售_W23.csv" },
+      { "time": "2026/06/11 09:18", "actor": "雨昕", "action": "完成「母親節活動復盤」", "page": "/campaign", "type": "edit" },
+      { "time": "2026/06/11 08:40", "actor": "系統", "action": "三平台自動取數完成", "page": "/sales-battle", "type": "system" },
+      { "time": "2026/06/10 18:23", "actor": "饅頭", "action": "編輯首頁文案「下載今日報表」", "page": "/", "type": "edit" },
+      { "time": "2026/06/10 14:30", "actor": "饅頭", "action": "AI 解讀「蝦皮 GMV -18%」", "page": "/insights", "type": "ai", "comment": "採納建議，將 FB 預算 +10% 到商城" },
+      { "time": "2026/06/10 09:55", "actor": "跳跳", "action": "新增願望「想要競品價格自動監控」", "page": "/wishpool", "type": "wish" }
+    ]
+  },
+  "wishpoolPage": {
+    "wishes": [
+      {
+        "title": "想要競品價格自動監控",
+        "author": "跳跳", "date": "2026/06/10",
+        "description": "希望能每天自動爬蝦皮 / MoMo 競品同類商品價格，發現我方價格高於市場 5% 以上時主動 LINE 通知。",
+        "likes": 12, "comments": 4, "status": "規劃中", "priority": "高"
+      },
+      {
+        "title": "Slack 日報能直接帶圖",
+        "author": "雨昕", "date": "2026/06/08",
+        "description": "目前 Slack draft 都是純文字，希望可以自動帶截圖（KPI ring + 三通路卡），主管能一眼看完。",
+        "likes": 8, "comments": 2, "status": "已採納", "priority": "中"
+      },
+      {
+        "title": "AI 自動寫產品頁 SEO 標題",
+        "author": "饅頭", "date": "2026/06/05",
+        "description": "每次上新品都要花 30 分鐘寫 SEO 標題與描述，希望 AI 套用品牌口吻自動生成 3 版供選。",
+        "likes": 15, "comments": 6, "status": "進行中", "priority": "高"
+      },
+      {
+        "title": "推播時段 AI 推薦",
+        "author": "饅頭", "date": "2026/05/28",
+        "description": "LINE OA 推播時段太靠經驗，希望 AI 分析過去開信率，推薦每週最佳推播時段。",
+        "likes": 6, "comments": 1, "status": "已採納", "priority": "低"
+      }
+    ]
+  },
+  "shopeeDirectDetail": {
+    "url": "shopee.tw/demo-direct",
+    "achievement": 32.5,
+    "achievementStatus": "符合節奏",
+    "monthlyGmv": 42000,
+    "target": 130000,
+    "internalTabs": [
+      { "key": "dashboard", "label": "業績儀錶板", "active": true },
+      { "key": "control", "label": "戰略卡位" },
+      { "key": "ranking", "label": "商品排行" },
+      { "key": "ops", "label": "通路經營" }
+    ],
+    "ytd": {
+      "gmv": 168000, "achievement": 21, "orders": 165, "roas": 8.5, "target": 800000, "gap": 632000,
+      "note": "2026/3 開賣以來累計"
+    },
+    "kpiGrid": [
+      { "label": "月業績", "value": "NT$42,000", "mom": 18.2 },
+      { "label": "訂單數", "value": "45 筆", "mom": 12.5 },
+      { "label": "客單價 AOV", "value": "NT$933", "mom": 5.1 },
+      { "label": "瀏覽量", "value": "1,820", "mom": 22.4 },
+      { "label": "廣告費", "value": "NT$4,940", "mom": 8.0 },
+      { "label": "ROAS", "value": "8.50x", "mom": 9.8 },
+      { "label": "CPA", "value": "NT$110", "mom": -6.5 },
+      { "label": "戰略狀態", "value": "防禦卡位" }
+    ],
+    "trends": {
+      "gmv": [{"month":"3月","value":3.6},{"month":"4月","value":3.8},{"month":"5月","value":4.2},{"month":"6月","value":0},{"month":"7月","value":0},{"month":"8月","value":0},{"month":"9月","value":0},{"month":"10月","value":0},{"month":"11月","value":0},{"month":"12月","value":0}],
+      "orders": [{"month":"3月","value":35},{"month":"4月","value":40},{"month":"5月","value":45},{"month":"6月","value":0},{"month":"7月","value":0},{"month":"8月","value":0},{"month":"9月","value":0},{"month":"10月","value":0},{"month":"11月","value":0},{"month":"12月","value":0}],
+      "aov": [{"month":"3月","value":900},{"month":"4月","value":920},{"month":"5月","value":933},{"month":"6月","value":0},{"month":"7月","value":0},{"month":"8月","value":0},{"month":"9月","value":0},{"month":"10月","value":0},{"month":"11月","value":0},{"month":"12月","value":0}],
+      "roas": [{"month":"3月","value":7.5},{"month":"4月","value":8.0},{"month":"5月","value":8.5},{"month":"6月","value":0},{"month":"7月","value":0},{"month":"8月","value":0},{"month":"9月","value":0},{"month":"10月","value":0},{"month":"11月","value":0},{"month":"12月","value":0}]
+    },
+    "topProducts": [
+      { "name": "洗衣精 1.5L（戰略品）", "gmv": 16000, "share": 38.1 },
+      { "name": "除黴噴霧 500ml", "gmv": 11000, "share": 26.2 },
+      { "name": "柔濕巾 80 抽", "gmv": 8500, "share": 20.2 },
+      { "name": "沐浴乳 450ml", "gmv": 6500, "share": 15.5 }
+    ]
+  },
   "analytics": {
     "updatedAt": "2026/06/11 12:26:30",
     "ga4Connected": true,

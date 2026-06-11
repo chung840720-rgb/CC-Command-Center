@@ -13,6 +13,16 @@ import MoMoDetail from '@/pages/MoMoDetail';
 import AdsCreatives from '@/pages/AdsCreatives';
 import Campaign from '@/pages/Campaign';
 import Analytics from '@/pages/Analytics';
+import Connect from '@/pages/Connect';
+import AdsMeta from '@/pages/AdsMeta';
+import AdsGoogle from '@/pages/AdsGoogle';
+import AdsCompetitor from '@/pages/AdsCompetitor';
+import CompetitorWeb from '@/pages/CompetitorWeb';
+import Products from '@/pages/Products';
+import Upload from '@/pages/Upload';
+import Log from '@/pages/Log';
+import Wishpool from '@/pages/Wishpool';
+import ShopeeDirectDetail from '@/pages/ShopeeDirectDetail';
 
 export default function App() {
   return (
@@ -30,20 +40,19 @@ export default function App() {
           <Route path="/shopee" element={<ShopeeDetail />} />
           <Route path="/momo" element={<MoMoDetail />} />
 
-          {/* Roadmap placeholder */}
-          <Route path="/shopee-direct" element={<RoadmapPage name="蝦皮直營詳細" />} />
+          <Route path="/shopee-direct" element={<ShopeeDirectDetail />} />
           <Route path="/campaign" element={<Campaign />} />
-          <Route path="/products" element={<RoadmapPage name="商品資料" />} />
-          <Route path="/upload" element={<RoadmapPage name="上傳報表" />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/upload" element={<Upload />} />
           <Route path="/analytics" element={<Analytics />} />
-          <Route path="/ads/meta" element={<RoadmapPage name="Meta 廣告" />} />
-          <Route path="/ads/google" element={<RoadmapPage name="Google 廣告" />} />
+          <Route path="/ads/meta" element={<AdsMeta />} />
+          <Route path="/ads/google" element={<AdsGoogle />} />
           <Route path="/ads/creatives" element={<AdsCreatives />} />
-          <Route path="/ads/competitor" element={<RoadmapPage name="競品廣告" />} />
-          <Route path="/competitor-web" element={<RoadmapPage name="競品網站" />} />
-          <Route path="/log" element={<RoadmapPage name="操作日誌" />} />
-          <Route path="/wishpool" element={<RoadmapPage name="願池" />} />
-          <Route path="/connect" element={<RoadmapPage name="平台串接" />} />
+          <Route path="/ads/competitor" element={<AdsCompetitor />} />
+          <Route path="/competitor-web" element={<CompetitorWeb />} />
+          <Route path="/log" element={<Log />} />
+          <Route path="/wishpool" element={<Wishpool />} />
+          <Route path="/connect" element={<Connect />} />
         </Route>
       </Routes>
     </HashRouter>
