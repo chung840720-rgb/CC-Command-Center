@@ -25,6 +25,7 @@ import Wishpool from '@/pages/Wishpool';
 import ShopeeDirectDetail from '@/pages/ShopeeDirectDetail';
 import DataPipeline from '@/pages/DataPipeline';
 import Skills from '@/pages/Skills';
+import Changelog from '@/pages/Changelog';
 
 export default function App() {
   return (
@@ -57,6 +58,7 @@ export default function App() {
           <Route path="/connect" element={<Connect />} />
           <Route path="/data-pipeline" element={<DataPipeline />} />
           <Route path="/skills" element={<Skills />} />
+          <Route path="/changelog" element={<Changelog />} />
         </Route>
       </Routes>
     </HashRouter>

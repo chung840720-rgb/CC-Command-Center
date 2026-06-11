@@ -13,6 +13,7 @@ import {
   Clock,
   ArrowRight,
 } from 'lucide-react';
+import { SopBadge } from '@/components/dashboard/SopBadge';
 import { cn } from '@/lib/utils';
 
 const TIMELINE = [
@@ -43,6 +44,10 @@ export default function Alerts() {
         <p className="text-sm text-muted-foreground">
           每日 08:40 自動 ETL 後跑異常偵測，套用 daily-report skill 燈號規則（DoD ±10/15%）+ 業務脈絡防呆。
         </p>
+        <SopBadge skills={[
+          { name: 'daily-report.md', version: 'v2.10' },
+          { name: 'cleanclean-pm.md', version: 'v7.3' },
+        ]} className="mt-2" />
       </header>
 
       {/* 3 列 alert summary */}

@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
 import { KpiCard } from '@/components/dashboard/KpiCard';
 import { ChannelCard } from '@/components/dashboard/ChannelCard';
+import { SopBadge } from '@/components/dashboard/SopBadge';
 import { formatCurrency, formatNumber } from '@/lib/utils';
 import {
   Download,
@@ -44,7 +45,13 @@ export default function Home() {
   const monthLabel = `${new Date().getMonth() + 1}月`;
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
+      <SopBadge skills={[
+        { name: 'cleanclean-pm.md', version: 'v7.3' },
+        { name: 'monthly-report-mindset.md', version: 'v1.0' },
+        { name: '6-perspectives.md', version: 'v1.0' },
+      ]} />
+
       {/* Hero card */}
       <section className="hero-gradient rounded-3xl border border-white/60 shadow-[0_4px_30px_-8px_rgba(20,180,200,0.15)] overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-8 p-10">

@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
 import { toast } from 'sonner';
+import { SopBadge } from '@/components/dashboard/SopBadge';
 import {
   RefreshCw,
   ThumbsUp,
@@ -49,6 +50,11 @@ export default function Insights() {
         <p className="text-sm text-muted-foreground">
           每個異常自動套用 daily-report + ecommerce-pm SOP Skill，AI 產出「解讀 → 建議 → 升級判斷」三段式分析。
         </p>
+        <SopBadge skills={[
+          { name: 'daily-report.md', version: 'v2.10' },
+          { name: 'cleanclean-pm.md', version: 'v7.3' },
+          { name: 'daren-mindset.md', version: 'v1.0' },
+        ]} className="mt-2" />
       </header>
 
       <div className="space-y-4">

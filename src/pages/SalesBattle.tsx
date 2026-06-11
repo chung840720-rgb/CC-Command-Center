@@ -24,6 +24,7 @@ import { Badge } from '@/components/ui/badge';
 import { PageHeader } from '@/components/dashboard/PageHeader';
 import { KpiTile } from '@/components/dashboard/KpiTile';
 import { PlatformDetailCard } from '@/components/dashboard/PlatformDetailCard';
+import { SopBadge } from '@/components/dashboard/SopBadge';
 import { cn, formatCurrency, formatNumber } from '@/lib/utils';
 
 export default function SalesBattle() {
@@ -50,6 +51,10 @@ export default function SalesBattle() {
 
   return (
     <div className="space-y-6">
+      <SopBadge skills={[
+        { name: 'monthly-report-mindset.md', version: 'v1.0' },
+        { name: 'weekly-report-skill.md', version: 'v1.1' },
+      ]} />
       <PageHeader
         icon={BarChart3}
         iconBg="bg-amber-100 text-amber-700"

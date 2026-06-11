@@ -1,78 +1,124 @@
 # CC-Command-Center
 
-> **AI 自動化電商戰情系統** — 個人作品集 / Demo
+> **電商 AI 戰情中心** — 不是純 AI demo，是 18 個月電商 PM 實際工作工具的脫敏版
 >
 > 🌐 **Live**: [chung840720-rgb.github.io/CC-Command-Center](https://chung840720-rgb.github.io/CC-Command-Center/)
+> 📚 **20 份 SOP 索引**: [/skills](https://chung840720-rgb.github.io/CC-Command-Center/#/skills)
+> 🚀 **資料管線架構**: [/data-pipeline](https://chung840720-rgb.github.io/CC-Command-Center/#/data-pipeline)
+> 📝 **單日迭代軌跡**: [/changelog](https://chung840720-rgb.github.io/CC-Command-Center/#/changelog)
 
 ---
 
-## 🎯 專案介紹
+## 🎯 為什麼這份作品不一樣
 
-本專案為個人作品集，整合 18 個月的電商組組長實戰經驗 + AI 工具鏈，建構「會自主分析 + 給出可執行建議」的 AI 戰情中心。
+絕大多數電商 BI dashboard 的問題：
+- **視覺設計不錯，但靠手動上傳 Excel** — 因為 Shopline / 蝦皮 / MoMo 沒給開發者完整 API
+- **「自動同步」其實是組員每天手動下載報表** — 自動化是假的
+- **AI 功能只是 prompt 包裝** — 沒有真實業務脈絡
 
-**核心 narrative**：一般電商 PM 看 dashboard 只能看到「數字」，這個 dashboard 直接給出「**解讀 → 行動 → 升級判斷**」三段式分析，套用真實業務脈絡（業界 SOP Skills），讓 1 個組長的決策產能能放大成全自動 24 小時值班。
+**這份作品的差異化**：
+
+1. 🧠 **20 份 SOP Skills 是真實工作沉澱** — 從電商 PM 思考框架（cleanclean-pm）、達人心態（daren-mindset）、月會簡報心法（monthly-report-mindset）、活動跨組 SOP（cross-team-campaign-sop）到平台 API 反向工程（shopline-api v2.5 / shopee-api v1.1 / momo-api v1.1），全是我 18 個月任職期間寫的，每一份都標註觸發詞與應用場景。
+
+2. 🚀 **4 平台爬蟲不靠 API** — 用 **Playwright + Chrome DevTools Protocol + 背景真實 Chrome** 反偵測，繞過蝦皮 fingerprint、保持 MoMo JSESSIONID alive、處理 Shoplytics OTP 2-5 天過期問題。這是「會用 AI」與「能讓 AI 真正落地電商工作」的差距。
+
+3. 🎯 **每個 page header 顯示「📋 本頁套用 SOP」** — 點擊跳 /skills 索引，看完整描述與版本。Dashboard 從「AI demo」變成「**SOP 系統的可視化證據**」。
 
 ---
 
-## ✨ 核心功能（5 個實作頁面）
+## ✨ 完整功能清單（19 個 route）
 
-### 🏠 作戰總覽 (`/`)
-- 4 KPI 即時面板（業績 / 達成率 / 累計 / 訂單）
-- 3 通路儀錶板（官網 / 蝦皮 / MoMo+）含 KPI + 特性解讀 + 下一步建議
-- 議程式 dashboard（看戰情 → 拆通路 → 開行動 → 做復盤）
-- 今日行動建議卡（含團隊角色分配）
+### 作戰總覽
+- **`/`** 作戰中心 — Hero + 4 KPI + 3 通路儀錶板 + 議程 + 路徑（📋 cleanclean-pm.md + monthly-report-mindset.md）
+- **`/sales-battle`** 銷售戰情 — 5 KPI + 趨勢長條圖 + 達成率環 + 3 平台明細 + 廣告效益（📋 weekly-report-skill.md）
 
-### 🧠 AI 決策建議 (`/insights`) — 全場最殺
-每個業績異常自動套用自寫 SOP Skills（daily-report / ecommerce-pm），AI 產出三段式分析：
+### 電商通路（4 平台統一 PlatformDetailView 元件）
+- **`/shopline`** 官網 Shopline — 內部 5 tab + YTD + 8 KPI + 4 趨勢圖 + UV 大圖 + GA4 漏斗 + Top 5（📋 shopline-api.md v2.5）
+- **`/shopee`** 蝦皮旗艦 — 同上 + 檔期排程（📋 shopee-api.md + 蝦皮通路戰略.md）
+- **`/momo`** MoMo+ — 同上 + 站內關鍵字排名（📋 momo-api.md v1.1）
+- **`/shopee-direct`** 蝦皮直營 — 同上 + 戰略卡位脈絡（📋 蝦皮通路戰略.md + 蝦皮直營分類規格.md）
 
-```
-🧠 AI 解讀     → 1 句話含關鍵數字
-🎯 建議行動    → 3 條具體可執行
-🚨 升級判斷    → 什麼狀況要請主管裁示
-```
+### 數位廣告
+- **`/ads/meta`** Meta 廣告 — 7 KPI + 廣告組表 + 4 受眾分析卡
+- **`/ads/google`** Google 廣告 — 7 KPI + 類型分配 + 關鍵字成效
+- **`/ads/creatives`** 素材成效 — A/B 雙軌測試 + 8 素材排行榜 + 類型 ROAS 比較 + AI 行動建議（📋 daily-report.md v2.10）
+- **`/ads/competitor`** 競品廣告 — 3 競品策略拆解 + AI 行動建議
 
-**「重新生成」按鈕** 可切換不同切角的 AI 分析。
+### 行動與活動
+- **`/campaign`** 活動規劃 — 5 KPI + 3 欄 Kanban + 目前判讀 + 活動成效表 + 報告書 demo + 5 階段 SOP Checklist（📋 cross-team-campaign-sop.md）
+- **`/alerts`** 異常監測 — 3 列 + timeline（📋 daily-report.md v2.10）
+- **`/upload`** 上傳報表 — 拖曳上傳 + 歷史
 
-### 📊 行銷漏斗 (`/funnel`)
-整合 Meta 廣告 → GA4 進站 → 訂單 全鏈路漏斗監測。
+### 觀察分析
+- **`/insights`** AI 決策建議 — 9 預烤變體 + 重新生成（📋 daily-report.md + cleanclean-pm.md + daren-mindset.md）
+- **`/funnel`** 漏斗總覽 — 4 KPI + 視覺漏斗 + 燈號（📋 weekly-report-skill.md）
+- **`/category`** 品類熱度 — 4 品類 + AI 摘要（📋 品類分類規格.md v4.2）
+- **`/competitor-web`** 競品網站 AI 解析 — 3 競品 + 定位比較表
+- **`/analytics`** GA 分析 — GA4 漏斗 + 流量來源 + Clarity 安裝 + AI 診斷
 
-### 📈 品類熱度 (`/category`)
-跨平台品類分類 ETL 結果 + AI 摘要。
-
-### 🚨 異常監測 (`/alerts`)
-套用 daily-report skill 燈號規則（DoD ±10/15%）+ 業務脈絡防呆。
-
-### 💬 戰情 AI 助理（右下浮動）
-自然語言問答 dashboard（V2 開放真實 Claude 串接）。
+### 資料與設定
+- **`/products`** 商品資料 — 品類分布 + SKU 表
+- **`/log`** 操作日誌 — Timeline + filter
+- **`/wishpool`** 願池 — 許願卡 + like/comment
+- **`/connect`** 串接設定 — 4 平台 cards
+- **`/data-pipeline`** 🚀 資料管線架構 — Playwright + CDP 反向工程拆解
+- **`/skills`** 📚 SOP Skills 索引 — 20 份 SOP 分 5 類
+- **`/changelog`** 📝 迭代軌跡 — 單日 ship 13 個版本
 
 ---
 
 ## 🏗 技術架構
 
 ### Frontend
-- **Vite 8** + **React 18** + **TypeScript**
-- **Tailwind CSS 3.4** + **shadcn/ui** + **Radix UI**
-- **React Router 7 HashRouter**
-- **Recharts** + **Lucide React** + **Sonner**
+- **Vite 8** + **React 19** + **TypeScript**
+- **Tailwind CSS 3.4** + **shadcn/ui** + **Radix UI**（17 個元件）
+- **React Router 7 HashRouter**（GH Pages SPA 不 404）
+- **Recharts** 視覺化 + **Lucide React** + **Sonner**
 
-### Backend (V2 規劃中)
-- **Cloudflare Workers** — LLM proxy（藏 API key + rate limit）
-- **Anthropic Claude API** — Haiku 4.5
-- 完整 Worker code 已實作於 [`workers/insight.ts`](./workers/insight.ts)
+### Color System
+- Primary: **#b0906f** 奶茶色（HSL 31 29% 56%）
+- Hero gradient: warm cream + rose-pink radial
+- 字型: Inter（英數）+ Noto Sans TC（中文）
+
+### Backend（V2 規劃中，Worker code 在 repo 內）
+- **Cloudflare Workers** — LLM proxy（藏 Claude API key + rate limit）
+- **Anthropic Claude API** — Haiku 4.5 + 20 份 SOP 注入 system prompt
+- Worker code: [`workers/insight.ts`](./workers/insight.ts)
+
+### Data Pipeline（本人實作 — 詳見 /data-pipeline）
+```
+[Windows Task Scheduler @ 08:40 每天]
+  ├─ Shopline    (Playwright Persistent Profile + OTP refresh + SSO 健檢)
+  ├─ 蝦皮商城     (背景 Chrome :9222 + CDP 反偵測)
+  ├─ MoMo        (背景 Chrome :9224 + JSESSIONID 保活)
+  └─ 蝦皮直營     (沿用蝦皮架構)
+       ↓
+  Google Sheets / Notion / JSON snapshot
+       ↓
+[10:20 daily-report.md skill 套燈號]
+       ↓
+[10:55 Slack 3 份 draft → 操盤手審 → 11:00 手動 Send]
+```
 
 ---
 
-## 🔌 V1 (現在) ↔ V2 (規劃) 切換
-
-`src/lib/api.ts` 支援 env var 切換：
+## 🔌 V1 (Demo Mode) ↔ V2 (Real LLM) 切換
 
 ```bash
-# V1 — Demo mode
+# V1 — Demo mode (預設, 從 mock-ai-insights.json 取)
 VITE_USE_REAL_LLM=false
 
-# V2 — Live mode
+# V2 — Live mode (真實 Claude API via Cloudflare Workers)
 VITE_USE_REAL_LLM=true
 VITE_WORKER_URL=https://insight.your-name.workers.dev
+```
+
+V2 啟動流程：
+```bash
+cd workers
+npx wrangler secret put ANTHROPIC_API_KEY
+npx wrangler deploy
+VITE_USE_REAL_LLM=true VITE_WORKER_URL=... npm run deploy
 ```
 
 ---
@@ -81,7 +127,7 @@ VITE_WORKER_URL=https://insight.your-name.workers.dev
 
 - 所有展示數據（`public/data/snapshot.json`）皆為**虛構** demo 資料
 - 不包含任何來自實際雇主的商業敏感資料
-- 「DEMO」品牌為佔位名稱，無對應真實實體
+- 「Johnny demo」品牌為佔位名稱，無對應真實實體
 - 爬蟲程式碼僅展示技術架構，未對任何平台執行真實爬取於 production 環境
 
 ---
@@ -91,12 +137,52 @@ VITE_WORKER_URL=https://insight.your-name.workers.dev
 ```bash
 npm install --legacy-peer-deps
 npm run dev        # localhost:5173/CC-Command-Center/
-npm run build
-npm run deploy     # push to gh-pages
+npm run build      # 產出 dist/
+npm run deploy     # push to gh-pages branch
 ```
+
+---
+
+## 📂 專案結構
+
+```
+CC-Command-Center/
+├── public/data/
+│   ├── snapshot.json           # demo 數據（30 天業績 / 3 平台 / Top 商品 / 等）
+│   └── mock-ai-insights.json   # 9 個預烤 AI 回應變體
+├── src/
+│   ├── pages/                  # 24 個 page 元件
+│   ├── components/
+│   │   ├── ui/                 # shadcn/ui (17 個)
+│   │   ├── dashboard/          # 業務元件 (KpiCard / ChannelCard / PlatformDetailView / SopBadge / 等)
+│   │   ├── TopNav.tsx          # 水平 nav + 6 dropdown (含 icon + subtitle)
+│   │   ├── ChatBubble.tsx      # 浮動 chat (V2 用)
+│   │   └── Layout.tsx
+│   ├── lib/
+│   │   ├── api.ts              # dual mode API (demo / real-LLM)
+│   │   └── utils.ts            # cn + formatCurrency + formatNumber
+│   └── types/dashboard.ts
+└── workers/
+    └── insight.ts              # Cloudflare Worker proxy (Anthropic API)
+```
+
+---
+
+## 👤 關於作者
+
+**Johnny / chung840720** · 18 個月電商組組長（2024-12 ~ 2026-06）
+
+- 主導 MoMo（2025/3）+ 蝦皮直營（2026/3）兩條新通路從 0 到 1
+- 推動蝦皮升級商城旗艦店，帶動 **蝦皮通路 2025 YOY +117%**
+- 2025 整體線上通路 **YOY +24%**，全年 GMV ~1.22 億
+- 主導官網從 **91APP 遷移至 Shopline** 重大轉型專案
+- 沉澱 **20 份 Claude Code SOP Skills** + 4 平台全自動爬蟲
+
+📧 chung840720@gmail.com
+🔗 [GitHub](https://github.com/chung840720-rgb)
 
 ---
 
 ## 📜 License
 
-MIT
+MIT — 程式碼可自由參考學習

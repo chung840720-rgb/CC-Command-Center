@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
 import { KpiCard } from '@/components/dashboard/KpiCard';
 import { ArrowDown, Megaphone, MousePointerClick, ShoppingCart, CreditCard } from 'lucide-react';
+import { SopBadge } from '@/components/dashboard/SopBadge';
 import { cn, formatNumber } from '@/lib/utils';
 
 const STAGE_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -34,6 +35,10 @@ export default function Funnel() {
         <p className="text-sm text-muted-foreground">
           整合 Meta 廣告觸及 + GA4 進站行為 + Shopline 訂單，從廣告投放到完成購買全鏈路監測。
         </p>
+        <SopBadge skills={[
+          { name: 'weekly-report-skill.md', version: 'v1.1' },
+          { name: 'shopline-api.md', version: 'v2.5' },
+        ]} className="mt-2" />
       </header>
 
       {/* 4 KPI top */}

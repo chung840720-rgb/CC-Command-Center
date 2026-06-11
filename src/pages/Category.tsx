@@ -4,6 +4,7 @@ import { getSnapshot } from '@/lib/api';
 import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
 import { TrendingUp, TrendingDown, Sparkles } from 'lucide-react';
+import { SopBadge } from '@/components/dashboard/SopBadge';
 import { cn } from '@/lib/utils';
 
 export default function Category() {
@@ -22,6 +23,10 @@ export default function Category() {
         <p className="text-sm text-muted-foreground">
           整合官網 / 蝦皮 / MOMO 三平台 v4.1 品類分類 ETL，每月對齊度 99-100% 自動跑。
         </p>
+        <SopBadge skills={[
+          { name: '品類分類規格.md', version: 'v4.2' },
+          { name: 'shopee-api.md', version: 'v1.1' },
+        ]} className="mt-2" />
       </header>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
