@@ -22,8 +22,8 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { formatNumber, cn } from '@/lib/utils';
 
-const PRIMARY = 'hsl(357 28% 68%)';
-const PRIMARY_DARK = 'hsl(357 35% 58%)';
+const PRIMARY = 'hsl(31 29% 56%)';
+const PRIMARY_DARK = 'hsl(31 35% 46%)';
 
 const MONTHS = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
 
@@ -43,7 +43,7 @@ export default function ShoplineDetail() {
       <section className="card-soft p-6">
         <div className="flex flex-col lg:flex-row lg:items-start gap-5 justify-between">
           <div className="flex gap-4 flex-1">
-            <div className="w-14 h-14 rounded-2xl bg-rose-100 text-rose-700 flex items-center justify-center shrink-0">
+            <div className="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
               <Globe className="w-7 h-7" strokeWidth={2.2} />
             </div>
             <div className="flex-1 min-w-0">
@@ -131,7 +131,7 @@ export default function ShoplineDetail() {
 
         <div className="h-2.5 rounded-full bg-secondary overflow-hidden">
           <div
-            className="h-full bg-gradient-to-r from-primary to-rose-400 rounded-full"
+            className="h-full bg-gradient-to-r from-primary to-amber-400 rounded-full"
             style={{ width: `${sd.ytd.achievement}%` }}
           />
         </div>
@@ -200,7 +200,7 @@ export default function ShoplineDetail() {
                 <span className="text-xs text-muted-foreground">{stage.label}</span>
                 <div className="relative h-6 bg-secondary rounded-md overflow-hidden">
                   <div
-                    className="h-full bg-gradient-to-r from-primary to-rose-400 rounded-md transition-all"
+                    className="h-full bg-gradient-to-r from-primary to-amber-400 rounded-md transition-all"
                     style={{ width: `${widthPct}%` }}
                   />
                   <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-bold text-foreground">{formatNumber(stage.value)}</span>
@@ -226,11 +226,11 @@ export default function ShoplineDetail() {
         <div className="space-y-2">
           {sd.topProducts.map((p: any, i: number) => (
             <div key={p.name} className="flex items-center gap-3 p-3 rounded-xl bg-secondary/40">
-              <div className="w-7 h-7 rounded-full bg-rose-100 text-rose-700 flex items-center justify-center text-xs font-bold shrink-0">{i + 1}</div>
+              <div className="w-7 h-7 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xs font-bold shrink-0">{i + 1}</div>
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-bold truncate">{p.name}</p>
                 <div className="h-1.5 rounded-full bg-secondary mt-1.5 overflow-hidden">
-                  <div className="h-full bg-gradient-to-r from-primary to-rose-400 rounded-full" style={{ width: `${p.share * 2.5}%` }} />
+                  <div className="h-full bg-gradient-to-r from-primary to-amber-400 rounded-full" style={{ width: `${p.share * 2.5}%` }} />
                 </div>
               </div>
               <div className="text-right shrink-0">

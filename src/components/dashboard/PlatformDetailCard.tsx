@@ -21,19 +21,19 @@ interface PlatformDetail {
 const BORDER = {
   red: 'border-l-red-500',
   orange: 'border-l-orange-500',
-  cyan: 'border-l-rose-400',
+  cyan: 'border-l-amber-400',
 };
 
 const BAR = {
   red: 'bg-red-400',
   orange: 'bg-orange-400',
-  cyan: 'bg-rose-400',
+  cyan: 'bg-amber-400',
 };
 
 const BADGE_TOP = {
   red: 'bg-red-100 text-red-700',
   orange: 'bg-orange-100 text-orange-700',
-  cyan: 'bg-rose-100 text-rose-700',
+  cyan: 'bg-amber-100 text-amber-700',
 };
 
 const RATING_COLOR = {

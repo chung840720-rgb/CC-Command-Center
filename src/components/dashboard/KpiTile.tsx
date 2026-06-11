@@ -10,12 +10,12 @@ interface Props {
 }
 
 const COLORS = {
-  cyan: 'bg-rose-100 text-rose-700',
+  cyan: 'bg-amber-100 text-amber-700',
   green: 'bg-emerald-100 text-emerald-700',
   amber: 'bg-amber-100 text-amber-700',
   pink: 'bg-pink-100 text-pink-700',
   purple: 'bg-violet-100 text-violet-700',
-  rose: 'bg-rose-100 text-rose-700',
+  rose: 'bg-amber-100 text-amber-700',
 };
 
 export function KpiTile({ label, value, subValue, badge, icon: Icon, iconColor = 'cyan' }: Props) {

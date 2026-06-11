@@ -52,7 +52,7 @@ export default function SalesBattle() {
     <div className="space-y-6">
       <PageHeader
         icon={BarChart3}
-        iconBg="bg-rose-100 text-rose-700"
+        iconBg="bg-amber-100 text-amber-700"
         breadcrumb="作戰總覽"
         title="銷售戰情"
         subtitle="集中查看官網、蝦皮、MoMo 的業績、目標達成、訂單、客單價與廣告回收。"
@@ -84,7 +84,7 @@ export default function SalesBattle() {
 
       {/* Notification */}
       <div className="rounded-2xl bg-sky-50/60 border border-sky-200/60 px-5 py-3 flex items-center gap-3">
-        <Bell className="w-4 h-4 text-rose-500 shrink-0" />
+        <Bell className="w-4 h-4 text-amber-500 shrink-0" />
         <p className="text-sm text-sky-900/90">
           <span className="font-bold">本月重點：</span>持續追蹤蝦皮廣告 ROAS 優化，官網廣告費佔比偏高，建議優先調整投放策略。
         </p>
@@ -150,7 +150,7 @@ export default function SalesBattle() {
               <XAxis dataKey="month" axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#94a3b8' }} />
               <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#94a3b8' }} unit="萬" />
               <Bar dataKey="y2025" fill="#cbd5e1" radius={[6, 6, 0, 0]} barSize={14} />
-              <Bar dataKey="y2026" fill="hsl(357 28% 68%)" radius={[6, 6, 0, 0]} barSize={14} />
+              <Bar dataKey="y2026" fill="hsl(31 29% 56%)" radius={[6, 6, 0, 0]} barSize={14} />
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -221,7 +221,7 @@ export default function SalesBattle() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {['momo', 'shopee', 'shopline'].map((id) => {
             const labels = { momo: 'MoMo', shopee: '蝦皮', shopline: '官網' } as const;
-            const colors = { momo: '#ef4444', shopee: '#f97316', shopline: 'hsl(357 28% 68%)' } as const;
+            const colors = { momo: '#ef4444', shopee: '#f97316', shopline: 'hsl(31 29% 56%)' } as const;
             const chartData = data.platformMoM[id].y2025.map((y25: number, i: number) => ({
               month: ['1月','2月','3月','4月','5月'][i],
               y2025: y25,
@@ -275,8 +275,8 @@ function AdEffectCard({ data }: { data: any }) {
     red: 'bg-red-100 text-red-700 border-red-200',
     amber: 'bg-amber-100 text-amber-800 border-amber-200',
   };
-  const BAR = { red: 'bg-red-400', orange: 'bg-orange-400', cyan: 'bg-rose-400' };
-  const DOT = { red: 'bg-red-500', orange: 'bg-orange-500', cyan: 'bg-rose-400' };
+  const BAR = { red: 'bg-red-400', orange: 'bg-orange-400', cyan: 'bg-amber-400' };
+  const DOT = { red: 'bg-red-500', orange: 'bg-orange-500', cyan: 'bg-amber-400' };
   const ROAS_COLOR = data.roas >= 5 ? 'text-emerald-600' : data.roas >= 2.5 ? 'text-amber-600' : 'text-red-500';
   return (
     <div className="card-soft p-5 space-y-3">
