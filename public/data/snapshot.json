@@ -316,5 +316,205 @@
       { "name": "沐浴乳 450ml", "gmv": 76000, "share": 11.7 },
       { "name": "洗手液 250ml", "gmv": 54000, "share": 8.3 }
     ]
+  },
+  "shopeeDetail": {
+    "url": "shopee.tw/demo-flagship",
+    "achievement": 24.6,
+    "achievementStatus": "符合節奏",
+    "monthlyGmv": 615582,
+    "target": 2500000,
+    "internalTabs": [
+      { "key": "dashboard", "label": "業績儀錶板", "active": true },
+      { "key": "campaign", "label": "活動排程" },
+      { "key": "ranking", "label": "商品排行" },
+      { "key": "review", "label": "評價回應" },
+      { "key": "ops", "label": "通路經營" }
+    ],
+    "ytd": {
+      "gmv": 11840000,
+      "achievement": 39.5,
+      "orders": 12800,
+      "roas": 9.85,
+      "target": 30000000,
+      "gap": 18160000,
+      "note": "1 月到目前累計"
+    },
+    "kpiGrid": [
+      { "label": "月業績", "value": "NT$615,582", "mom": -23.5, "yoy": 117 },
+      { "label": "訂單數", "value": "627 筆", "mom": -18.2 },
+      { "label": "客單價 AOV", "value": "NT$982", "mom": 5.2 },
+      { "label": "流量訪客", "value": "14,000", "mom": -12.5 },
+      { "label": "廣告費", "value": "NT$59,269", "mom": 15.4 },
+      { "label": "ROAS", "value": "10.39x", "mom": -8.5 },
+      { "label": "CPA", "value": "NT$95", "mom": 12.1 },
+      { "label": "YoY", "value": "+117%", "yoy": 117 }
+    ],
+    "trends": {
+      "gmv": [
+        { "month": "2月", "value": 290 },
+        { "month": "3月", "value": 280 },
+        { "month": "4月", "value": 320 },
+        { "month": "5月", "value": 61.6 },
+        { "month": "6月", "value": 0 },
+        { "month": "7月", "value": 0 },
+        { "month": "8月", "value": 0 },
+        { "month": "9月", "value": 0 },
+        { "month": "10月", "value": 0 },
+        { "month": "11月", "value": 0 },
+        { "month": "12月", "value": 0 }
+      ],
+      "orders": [
+        { "month": "2月", "value": 2900 },
+        { "month": "3月", "value": 2850 },
+        { "month": "4月", "value": 3200 },
+        { "month": "5月", "value": 627 },
+        { "month": "6月", "value": 0 },
+        { "month": "7月", "value": 0 },
+        { "month": "8月", "value": 0 },
+        { "month": "9月", "value": 0 },
+        { "month": "10月", "value": 0 },
+        { "month": "11月", "value": 0 },
+        { "month": "12月", "value": 0 }
+      ],
+      "aov": [
+        { "month": "2月", "value": 980 },
+        { "month": "3月", "value": 970 },
+        { "month": "4月", "value": 985 },
+        { "month": "5月", "value": 982 },
+        { "month": "6月", "value": 0 },
+        { "month": "7月", "value": 0 },
+        { "month": "8月", "value": 0 },
+        { "month": "9月", "value": 0 },
+        { "month": "10月", "value": 0 },
+        { "month": "11月", "value": 0 },
+        { "month": "12月", "value": 0 }
+      ],
+      "roas": [
+        { "month": "2月", "value": 10.2 },
+        { "month": "3月", "value": 11.5 },
+        { "month": "4月", "value": 11.3 },
+        { "month": "5月", "value": 10.39 },
+        { "month": "6月", "value": 0 },
+        { "month": "7月", "value": 0 },
+        { "month": "8月", "value": 0 },
+        { "month": "9月", "value": 0 },
+        { "month": "10月", "value": 0 },
+        { "month": "11月", "value": 0 },
+        { "month": "12月", "value": 0 }
+      ]
+    },
+    "campaigns": [
+      { "name": "618 預熱檔", "status": "進行中", "start": "06-03", "end": "06-15", "performance": "+34%" },
+      { "name": "618 主檔", "status": "排程中", "start": "06-15", "end": "06-20", "performance": "—" },
+      { "name": "商城狂購節", "status": "已結束", "start": "05-25", "end": "05-28", "performance": "+22%" },
+      { "name": "會員日", "status": "已結束", "start": "05-18", "end": "05-18", "performance": "+18%" }
+    ],
+    "topProducts": [
+      { "name": "洗衣精 1.5L x3 組", "gmv": 142000, "share": 23.1 },
+      { "name": "母嬰清潔旅行組", "gmv": 95000, "share": 15.4 },
+      { "name": "柔濕巾 80 抽 x6 箱", "gmv": 86000, "share": 14.0 },
+      { "name": "除黴噴霧 500ml x2", "gmv": 72000, "share": 11.7 },
+      { "name": "全館滿千折百券", "gmv": 60000, "share": 9.7 }
+    ]
+  },
+  "momoDetail": {
+    "url": "momo.com.tw/demo-store",
+    "achievement": 16.0,
+    "achievementStatus": "符合節奏",
+    "monthlyGmv": 95987,
+    "target": 600000,
+    "internalTabs": [
+      { "key": "dashboard", "label": "業績儀錶板", "active": true },
+      { "key": "campaign", "label": "檔期排程" },
+      { "key": "ranking", "label": "商品排行" },
+      { "key": "search", "label": "站內排名" },
+      { "key": "ops", "label": "通路經營" }
+    ],
+    "ytd": {
+      "gmv": 1480000,
+      "achievement": 24.7,
+      "orders": 1200,
+      "roas": 16.5,
+      "target": 6000000,
+      "gap": 4520000,
+      "note": "1 月到目前累計"
+    },
+    "kpiGrid": [
+      { "label": "月業績", "value": "NT$95,987", "mom": 12.4, "yoy": 240 },
+      { "label": "訂單數", "value": "77 筆", "mom": 8.5 },
+      { "label": "客單價 AOV", "value": "NT$1,247", "mom": 3.6 },
+      { "label": "瀏覽量", "value": "2,418", "mom": 15.2 },
+      { "label": "廣告費", "value": "NT$5,312", "mom": 25.0 },
+      { "label": "ROAS", "value": "18.07x", "mom": 11.5 },
+      { "label": "CPA", "value": "NT$69", "mom": -8.2 },
+      { "label": "YoY", "value": "+240%", "yoy": 240 }
+    ],
+    "trends": {
+      "gmv": [
+        { "month": "2月", "value": 32 },
+        { "month": "3月", "value": 36 },
+        { "month": "4月", "value": 40 },
+        { "month": "5月", "value": 9.6 },
+        { "month": "6月", "value": 0 },
+        { "month": "7月", "value": 0 },
+        { "month": "8月", "value": 0 },
+        { "month": "9月", "value": 0 },
+        { "month": "10月", "value": 0 },
+        { "month": "11月", "value": 0 },
+        { "month": "12月", "value": 0 }
+      ],
+      "orders": [
+        { "month": "2月", "value": 280 },
+        { "month": "3月", "value": 320 },
+        { "month": "4月", "value": 360 },
+        { "month": "5月", "value": 77 },
+        { "month": "6月", "value": 0 },
+        { "month": "7月", "value": 0 },
+        { "month": "8月", "value": 0 },
+        { "month": "9月", "value": 0 },
+        { "month": "10月", "value": 0 },
+        { "month": "11月", "value": 0 },
+        { "month": "12月", "value": 0 }
+      ],
+      "aov": [
+        { "month": "2月", "value": 1200 },
+        { "month": "3月", "value": 1230 },
+        { "month": "4月", "value": 1245 },
+        { "month": "5月", "value": 1247 },
+        { "month": "6月", "value": 0 },
+        { "month": "7月", "value": 0 },
+        { "month": "8月", "value": 0 },
+        { "month": "9月", "value": 0 },
+        { "month": "10月", "value": 0 },
+        { "month": "11月", "value": 0 },
+        { "month": "12月", "value": 0 }
+      ],
+      "roas": [
+        { "month": "2月", "value": 14.5 },
+        { "month": "3月", "value": 16.0 },
+        { "month": "4月", "value": 16.2 },
+        { "month": "5月", "value": 18.07 },
+        { "month": "6月", "value": 0 },
+        { "month": "7月", "value": 0 },
+        { "month": "8月", "value": 0 },
+        { "month": "9月", "value": 0 },
+        { "month": "10月", "value": 0 },
+        { "month": "11月", "value": 0 },
+        { "month": "12月", "value": 0 }
+      ]
+    },
+    "searchRanking": [
+      { "keyword": "母嬰清潔", "rank": 3, "delta": "+2" },
+      { "keyword": "嬰兒洗衣精", "rank": 7, "delta": "+1" },
+      { "keyword": "柔濕巾", "rank": 12, "delta": "—" },
+      { "keyword": "天然清潔", "rank": 18, "delta": "-3" }
+    ],
+    "topProducts": [
+      { "name": "洗衣精 1.5L x2 箱購", "gmv": 28000, "share": 29.2 },
+      { "name": "母嬰旅行組", "gmv": 21000, "share": 21.9 },
+      { "name": "柔濕巾 80 抽 x4 箱", "gmv": 18500, "share": 19.3 },
+      { "name": "除黴噴霧 500ml", "gmv": 12000, "share": 12.5 },
+      { "name": "沐浴乳 450ml x2", "gmv": 9500, "share": 9.9 }
+    ]
   }
 }

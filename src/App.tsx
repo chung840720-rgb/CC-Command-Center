@@ -8,6 +8,8 @@ import Category from '@/pages/Category';
 import Alerts from '@/pages/Alerts';
 import SalesBattle from '@/pages/SalesBattle';
 import ShoplineDetail from '@/pages/ShoplineDetail';
+import ShopeeDetail from '@/pages/ShopeeDetail';
+import MoMoDetail from '@/pages/MoMoDetail';
 
 export default function App() {
   return (
@@ -22,10 +24,10 @@ export default function App() {
           <Route path="/category" element={<Category />} />
           <Route path="/alerts" element={<Alerts />} />
           <Route path="/shopline" element={<ShoplineDetail />} />
+          <Route path="/shopee" element={<ShopeeDetail />} />
+          <Route path="/momo" element={<MoMoDetail />} />
 
           {/* Roadmap placeholder */}
-          <Route path="/shopee" element={<RoadmapPage name="蝦皮旗艦詳細" />} />
-          <Route path="/momo" element={<RoadmapPage name="MoMo+ 詳細" />} />
           <Route path="/shopee-direct" element={<RoadmapPage name="蝦皮直營詳細" />} />
           <Route path="/campaign" element={<RoadmapPage name="活動規劃" />} />
           <Route path="/products" element={<RoadmapPage name="商品資料" />} />
