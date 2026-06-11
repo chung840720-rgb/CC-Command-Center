@@ -83,6 +83,7 @@ const navConfig = [
       { label: '願池', subtitle: '許願清單', to: '/wishpool' },
       { label: '平台串接', subtitle: 'API auth 管理', to: '/connect' },
       { label: '資料管線架構', subtitle: '🚀 Playwright + CDP 反向工程', to: '/data-pipeline' },
+      { label: 'SOP Skills 索引', subtitle: '📚 20 份 SOP — Johnny 的真實工作沉澱', to: '/skills' },
     ],
   },
 ];
