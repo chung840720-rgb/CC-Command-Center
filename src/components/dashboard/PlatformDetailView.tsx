@@ -176,24 +176,27 @@ export function PlatformDetailView({ data: sd, title, icon: Icon, iconColor = 'a
       {sd.trends.uv && (
         <section className="card-soft p-6">
           <h3 className="text-base font-bold mb-4">月 UV 流量趨勢</h3>
-          <ResponsiveContainer width="100%" height={200}>
-            <LineChart data={sd.trends.uv} margin={{ top: 6, right: 12, left: -8, bottom: 0 }}>
-              <XAxis dataKey="month" axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#94a3b8' }} />
-              <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#94a3b8' }} />
-              <Tooltip
-                contentStyle={{ borderRadius: 10, border: '1px solid #e5e7eb', fontSize: 12 }}
-                formatter={(v: any) => [Number(v).toLocaleString(), 'UV']}
-              />
-              <Line
-                type="monotone"
-                dataKey="value"
-                stroke={PRIMARY}
-                strokeWidth={2.5}
-                dot={{ r: 4, fill: PRIMARY, stroke: 'white', strokeWidth: 2 }}
-                activeDot={{ r: 6, fill: PRIMARY_DARK }}
-              />
-            </LineChart>
-          </ResponsiveContainer>
+          <div style={{ width: '100%', height: 220 }}>
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={sd.trends.uv} margin={{ top: 8, right: 16, left: 8, bottom: 4 }}>
+                <XAxis dataKey="month" axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#94a3b8' }} />
+                <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#94a3b8' }} width={50} />
+                <Tooltip
+                  contentStyle={{ borderRadius: 10, border: '1px solid #e5e7eb', fontSize: 12 }}
+                  formatter={(v: any) => [Number(v).toLocaleString(), 'UV']}
+                />
+                <Line
+                  type="monotone"
+                  dataKey="value"
+                  stroke={PRIMARY}
+                  strokeWidth={2.5}
+                  isAnimationActive={false}
+                  dot={{ r: 4, fill: PRIMARY, stroke: 'white', strokeWidth: 2 }}
+                  activeDot={{ r: 6, fill: PRIMARY_DARK }}
+                />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
         </section>
       )}
 
@@ -370,14 +373,23 @@ function TrendChart({ title, data, unit }: { title: string; data: any[]; unit: s
   return (
     <div className="card-soft p-5">
       <h4 className="text-sm font-bold mb-3">{title}</h4>
-      <ResponsiveContainer width="100%" height={140}>
-        <LineChart data={data} margin={{ top: 6, right: 10, left: -16, bottom: 0 }}>
-          <XAxis dataKey="month" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#94a3b8' }} />
-          <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#94a3b8' }} unit={unit} />
-          <Tooltip contentStyle={{ borderRadius: 10, border: '1px solid #e5e7eb', fontSize: 11 }} />
-          <Line type="monotone" dataKey="value" stroke={PRIMARY} strokeWidth={2} dot={{ r: 3, fill: PRIMARY, stroke: 'white', strokeWidth: 1.5 }} />
-        </LineChart>
-      </ResponsiveContainer>
+      <div style={{ width: '100%', height: 160 }}>
+        <ResponsiveContainer width="100%" height="100%">
+          <LineChart data={data} margin={{ top: 8, right: 12, left: 0, bottom: 4 }}>
+            <XAxis dataKey="month" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#94a3b8' }} />
+            <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#94a3b8' }} unit={unit} width={36} />
+            <Tooltip contentStyle={{ borderRadius: 10, border: '1px solid #e5e7eb', fontSize: 11 }} />
+            <Line
+              type="monotone"
+              dataKey="value"
+              stroke={PRIMARY}
+              strokeWidth={2}
+              isAnimationActive={false}
+              dot={{ r: 3, fill: PRIMARY, stroke: 'white', strokeWidth: 1.5 }}
+            />
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
     </div>
   );
 }
