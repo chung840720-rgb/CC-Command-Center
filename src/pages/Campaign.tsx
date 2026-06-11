@@ -3,7 +3,7 @@ import {
   CalendarClock,
   PlusCircle,
   FileDown,
-  Trello,
+  LayoutGrid,
   Brain,
   FileCheck,
   ListChecks,
@@ -81,7 +81,7 @@ export default function Campaign() {
         <section className="card-soft p-6 space-y-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Trello className="w-4 h-4 text-primary" />
+              <LayoutGrid className="w-4 h-4 text-primary" />
               <h2 className="text-base font-bold">導購活動進度表</h2>
             </div>
             <p className="text-xs text-muted-foreground">Trello 式看板：規劃中、進行中、已完成，歷史紀錄也保留。</p>
