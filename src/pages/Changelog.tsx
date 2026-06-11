@@ -13,6 +13,17 @@ interface Release {
 
 const RELEASES: Release[] = [
   {
+    version: 'v2.3', date: '2026-06-11', time: '19:00', type: 'major',
+    title: '策略轉變：Demo Only · 商業道德為 Selling Point',
+    items: [
+      '新增 /trust 信任聲明頁 — 對前雇主 + 未來雇主的 4 大承諾',
+      '主動披露「離職後不再有任何系統存取權」 — 把面試官的擔憂變成信任點',
+      '全站移除「V2 真實 LLM 串接」暗示（ChatBubble / Insights / Connect / DataPipeline）',
+      '改為「Demo Only 永久 — 不是技術限制，是職業道德選擇」narrative',
+      'README 改寫：聚焦「我留下 SOP + 帶走能力，留下你的真實資料」承諾',
+    ],
+  },
+  {
     version: 'v2.2', date: '2026-06-11', time: '18:30', type: 'major',
     title: 'SOP badges + changelog 頁',
     items: [

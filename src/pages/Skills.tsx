@@ -142,7 +142,10 @@ export default function Skills() {
           一般人問「Claude 能幹嘛」，給 prompt 玩。<br />
           我用 18 個月把 <strong>{SKILLS.length} 份 SOP 寫成可重複呼叫的「業務 skill」</strong>，
           每次 AI call 都自動套對應 skill — 從爬蟲、日報、活動規劃、戰略對焦到品類分析。<br />
-          這個 dashboard 就是這套 skill 系統的 <strong>可視化證據</strong>。
+          這個 dashboard 就是這套 skill 系統的 <strong>可視化證據</strong> — Demo Only 永不串真實系統。
+        </p>
+        <p className="text-xs text-muted-foreground mt-3">
+          為什麼選擇 Demo Only？<a href="#/trust" className="text-primary underline ml-1 font-semibold">看信任聲明</a>
         </p>
       </section>
     </div>

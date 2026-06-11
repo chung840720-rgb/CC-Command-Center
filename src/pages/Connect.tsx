@@ -105,7 +105,9 @@ export default function Connect() {
           <div>
             <p className="text-[11px] text-muted-foreground font-bold mb-1.5">資料與設定</p>
             <h1 className="text-3xl font-black tracking-tight">串接設定</h1>
-            <p className="text-sm text-muted-foreground mt-2">串接後自動同步數據，免手動上傳報表</p>
+            <p className="text-sm text-muted-foreground mt-2">
+              展示 UI 設計 — 此 dashboard 為 Demo Only，不會串接真實系統（職業道德選擇，<a href="#/trust" className="text-primary underline">詳見 /trust</a>）
+            </p>
           </div>
         </div>
       </section>
@@ -129,9 +131,12 @@ export default function Connect() {
           <Shield className="w-4 h-4" />
         </div>
         <div>
-          <p className="text-sm font-bold mb-1">安全說明</p>
+          <p className="text-sm font-bold mb-1">展示說明（Demo Only）</p>
           <p className="text-xs text-muted-foreground leading-relaxed">
-            所有 API 憑證均加密儲存於 Cloudflare KV，不會外洩。測試連線會向對應平台發送驗證請求以確認憑證有效。若需重新設定，點選「重新設定」即可覆蓋原有憑證。
+            此頁面展示我在前雇主任職期間實際建構的 4 平台串接架構 UI 設計。
+            <strong>離職後我不再保有任何系統的存取權</strong> — OTP、Service Account、API key 在最後工作日全數移除。
+            這個頁面顯示的「已串接」狀態為 Demo 示意，方便面試官了解架構規劃，不代表此 dashboard 真實連線到任何平台。
+            職業道德承諾詳見 <a href="#/trust" className="text-primary underline">信任聲明</a>。
           </p>
         </div>
       </section>

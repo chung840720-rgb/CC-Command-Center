@@ -28,7 +28,7 @@ export function ChatBubble() {
       {
         role: 'assistant',
         content:
-          '💡 此功能為 V2 真實 LLM 串接預覽。Cloudflare Workers + Claude API 程式碼已實作於 `workers/insight.ts` 與 `workers/chat.ts`，待 Anthropic 加值通過後啟用即可。',
+          '💡 此 dashboard 為 Demo Only — 不會串接真實系統（職業道德選擇，詳見 /trust）。Chat UI 為視覺示意，展示我對 chatbot 整合的能力規劃，實際串接會在面試時透過架構說明展示。',
       },
     ]);
     setInput('');
@@ -52,11 +52,11 @@ export function ChatBubble() {
             </div>
             <SheetTitle className="flex items-center gap-2">
               戰情 AI 助理
-              <Badge variant="secondary" className="text-[10px] font-normal">V2 Preview</Badge>
+              <Badge variant="secondary" className="text-[10px] font-normal">Demo</Badge>
             </SheetTitle>
           </div>
           <p className="text-xs text-muted-foreground mt-2">
-            問我關於 4 平台業績、異常、品類、廣告效率的任何問題。
+            Demo Only — 不串接真實系統。展示我對 chatbot 整合的能力規劃。
           </p>
         </SheetHeader>
 

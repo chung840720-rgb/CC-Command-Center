@@ -26,6 +26,7 @@ import ShopeeDirectDetail from '@/pages/ShopeeDirectDetail';
 import DataPipeline from '@/pages/DataPipeline';
 import Skills from '@/pages/Skills';
 import Changelog from '@/pages/Changelog';
+import Trust from '@/pages/Trust';
 
 export default function App() {
   return (
@@ -59,6 +60,7 @@ export default function App() {
           <Route path="/data-pipeline" element={<DataPipeline />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/changelog" element={<Changelog />} />
+          <Route path="/trust" element={<Trust />} />
         </Route>
       </Routes>
     </HashRouter>

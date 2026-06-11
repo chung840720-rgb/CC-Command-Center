@@ -42,9 +42,9 @@ export default function Insights() {
       <header className="space-y-2">
         <div className="flex items-center gap-2">
           <h1 className="text-2xl font-bold">AI 決策建議</h1>
-          <Badge variant={isLiveMode() ? 'default' : 'secondary'} className="gap-1">
+          <Badge variant="secondary" className="gap-1 bg-emerald-100 text-emerald-700 border-emerald-200">
             <Sparkles className="w-3 h-3" />
-            {isLiveMode() ? 'Live LLM' : 'Demo Mode'}
+            Demo Only
           </Badge>
         </div>
         <p className="text-sm text-muted-foreground">
@@ -84,7 +84,7 @@ function AlertInsightCard({ alert }: { alert: Alert }) {
     const r = await getInsight(alert, true);
     setInsight(r);
     setRegenerating(false);
-    toast.success('已重新生成', { description: 'AI 套用不同切角產生新建議' });
+    toast.success('已切換切角', { description: 'Demo: 從 3 個預烤 AI 切角輪流展示（職業道德選擇，詳見 /trust）' });
   }
 
   const isRed = alert.level === 'red';

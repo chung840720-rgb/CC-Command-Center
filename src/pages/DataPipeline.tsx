@@ -67,13 +67,14 @@ export default function DataPipeline() {
           </div>
           <div>
             <p className="text-[11px] text-muted-foreground font-bold mb-1.5">資料與設定</p>
-            <h1 className="text-3xl font-black tracking-tight">資料管線架構</h1>
+            <h1 className="text-3xl font-black tracking-tight">資料管線架構（過去工作沉澱）</h1>
             <p className="text-sm text-muted-foreground mt-2 max-w-prose">
-              一般電商 Dashboard 都靠手動上傳報表 — 我的 4 平台全自動 ETL 用 <strong>Playwright + CDP 反偵測爬蟲</strong>，每天 08:40 跑完取數，視覺化只是最後一哩。
+              一般電商 Dashboard 都靠手動上傳報表 — 我前 18 個月任職期間，用 <strong>Playwright + CDP 反偵測爬蟲</strong> 做了 4 平台全自動 ETL，每天 08:40 跑完取數。
+              <strong className="text-primary">這頁展示「我能做出什麼樣的系統」</strong>，code 與 SOP 都是過去工作沉澱可重複用的能力 — 但離職後不再執行於前雇主平台（<a href="#/trust" className="text-primary underline">職業道德承諾</a>）。
             </p>
             <div className="flex flex-wrap gap-2 mt-3">
-              <Badge className="bg-emerald-100 text-emerald-700 border-emerald-200 text-xs font-bold gap-1"><CheckCircle2 className="w-3 h-3" />全自動</Badge>
-              <Badge className="bg-primary/15 text-primary border-primary/30 text-xs font-bold">4 平台</Badge>
+              <Badge className="bg-emerald-100 text-emerald-700 border-emerald-200 text-xs font-bold gap-1"><CheckCircle2 className="w-3 h-3" />Demo 展示</Badge>
+              <Badge className="bg-primary/15 text-primary border-primary/30 text-xs font-bold">4 平台 · 過去實作</Badge>
               <Badge className="bg-amber-100 text-amber-700 border-amber-200 text-xs font-bold">7 個 endpoint</Badge>
               <Badge className="bg-violet-100 text-violet-700 border-violet-200 text-xs font-bold">5 份 SOP Skill</Badge>
             </div>

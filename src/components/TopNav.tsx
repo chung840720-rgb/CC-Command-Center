@@ -84,7 +84,8 @@ const navConfig = [
       { label: '平台串接', subtitle: 'API auth 管理', to: '/connect' },
       { label: '資料管線架構', subtitle: '🚀 Playwright + CDP 反向工程', to: '/data-pipeline' },
       { label: 'SOP Skills 索引', subtitle: '📚 20 份 SOP — Johnny 的真實工作沉澱', to: '/skills' },
-      { label: '迭代軌跡 Changelog', subtitle: '📝 單日 ship 13 個版本', to: '/changelog' },
+      { label: '迭代軌跡 Changelog', subtitle: '📝 單日 ship 14 個版本', to: '/changelog' },
+      { label: '🛡 信任聲明', subtitle: '為什麼這是 Demo Only — 商業道德承諾', to: '/trust' },
     ],
   },
 ];
