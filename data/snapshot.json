@@ -517,6 +517,59 @@
       { "name": "沐浴乳 450ml x2", "gmv": 9500, "share": 9.9 }
     ]
   },
+  "analytics": {
+    "updatedAt": "2026/06/11 12:26:30",
+    "ga4Connected": true,
+    "kpi": {
+      "sessions": 9785, "sessionsPeriod": "過去 30 天",
+      "users": 9570, "usersBounceRate": 0.4,
+      "pageviews": 21038, "avgDuration": "0 分 26 秒",
+      "purchaseCvr": 0.0, "orders": 0, "gmv": 0
+    },
+    "funnel": [
+      { "label": "工作階段", "value": 9785 },
+      { "label": "瀏覽量", "value": 21038 },
+      { "label": "交易數", "value": 0 }
+    ],
+    "devices": [
+      { "label": "手機", "value": 8893, "pct": 100 },
+      { "label": "桌機", "value": 828, "pct": 9 },
+      { "label": "平板", "value": 110, "pct": 1 }
+    ],
+    "topPages": [
+      { "path": "/8fbB9", "pageviews": 2967, "sessions": 1426 },
+      { "path": "/P5Z2p", "pageviews": 2305, "sessions": 1124 },
+      { "path": "/BxgVN", "pageviews": 1342, "sessions": 594 },
+      { "path": "/JhLgi", "pageviews": 1132, "sessions": 550 },
+      { "path": "/1gasm", "pageviews": 1042, "sessions": 498 },
+      { "path": "/ongCi", "pageviews": 719,  "sessions": 329 },
+      { "path": "/mIRF8", "pageviews": 618,  "sessions": 295 },
+      { "path": "/9yskQ", "pageviews": 608,  "sessions": 288 },
+      { "path": "/1Y1Nq", "pageviews": 598,  "sessions": 278 },
+      { "path": "/5WxTJ", "pageviews": 566,  "sessions": 263 }
+    ],
+    "trafficSources": [
+      { "channel": "Paid Social",    "color": "cyan",    "sessions": 2912, "orders": 0 },
+      { "channel": "Organic Social", "color": "orange",  "sessions": 2785, "orders": 0 },
+      { "channel": "Direct",         "color": "primary", "sessions": 2189, "orders": 0 },
+      { "channel": "Unassigned",     "color": "zinc",    "sessions": 1066, "orders": 0 },
+      { "channel": "Referral",       "color": "violet",  "sessions": 383,  "orders": 0 },
+      { "channel": "Paid Other",     "color": "rose",    "sessions": 250,  "orders": 0 },
+      { "channel": "Organic Search", "color": "emerald", "sessions": 72,   "orders": 0 },
+      { "channel": "Organic Video",  "color": "amber",   "sessions": 34,   "orders": 0 }
+    ],
+    "clarity": {
+      "status": "待安裝追蹤碼",
+      "projectId": "wni9wa1pw8",
+      "description": "追蹤碼安裝後，可查看用戶熱圖、錄影回放、點擊分析。",
+      "steps": [
+        "登入 Shopline 後台 → 網路商店 → 主題編輯 → 編輯 HTML/CSS",
+        "開啟 theme.liquid，找到 </head> 標籤",
+        "貼上以下追蹤碼，儲存"
+      ],
+      "code": "<script type=\"text/javascript\">\n  (function(c,l,a,r,i,t,y){\n    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};\n    t=l.createElement(r);t.async=1;t.src=\"https://www.clarity.ms/tag/\"+i;\n    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);\n  })(window, document, \"clarity\", \"script\", \"wni9wa1pw8\");\n</script>"
+    }
+  },
   "campaign": {
     "kpi": {
       "totalGmv": 5540000,
