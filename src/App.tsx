@@ -11,6 +11,7 @@ import ShoplineDetail from '@/pages/ShoplineDetail';
 import ShopeeDetail from '@/pages/ShopeeDetail';
 import MoMoDetail from '@/pages/MoMoDetail';
 import AdsCreatives from '@/pages/AdsCreatives';
+import Campaign from '@/pages/Campaign';
 
 export default function App() {
   return (
@@ -30,7 +31,7 @@ export default function App() {
 
           {/* Roadmap placeholder */}
           <Route path="/shopee-direct" element={<RoadmapPage name="蝦皮直營詳細" />} />
-          <Route path="/campaign" element={<RoadmapPage name="活動規劃" />} />
+          <Route path="/campaign" element={<Campaign />} />
           <Route path="/products" element={<RoadmapPage name="商品資料" />} />
           <Route path="/upload" element={<RoadmapPage name="上傳報表" />} />
           <Route path="/analytics" element={<RoadmapPage name="GA 分析" />} />

@@ -517,6 +517,110 @@
       { "name": "沐浴乳 450ml x2", "gmv": 9500, "share": 9.9 }
     ]
   },
+  "campaign": {
+    "kpi": {
+      "totalGmv": 5540000,
+      "totalOrders": 4328,
+      "avgAov": 1280,
+      "totalRoas": 6.34,
+      "totalSpend": 874000,
+      "bestCampaign": { "name": "5.5 活動檔", "roas": 11.76 }
+    },
+    "kanban": {
+      "planning": [
+        {
+          "name": "官網會員回購週",
+          "dateRange": "2026/06/20 ~ 2026/06/27",
+          "platforms": ["官網"],
+          "description": "目標：召回 60 天未回購會員。帶先 LINE VIP 私訊預告 + 補貨日券，配 EDM 兩波。"
+        },
+        {
+          "name": "MoMo 夏日家清週",
+          "dateRange": "2026/07/01 ~ 2026/07/10",
+          "platforms": ["MoMo"],
+          "description": "等平台確認檔期資源後上，準備 960 x 480 主視覺與商品組合銷售提案。"
+        }
+      ],
+      "inProgress": [
+        {
+          "name": "618 全通路除垢組合檔",
+          "dateRange": "2026/06/01 ~ 2026/06/18",
+          "platforms": ["全通路"],
+          "description": "蝦皮直營轉換超預期，MoMo 需要爭取版位曝光，官網組合包前 3 天表現強。",
+          "gmv": 129,
+          "aov": 1392
+        },
+        {
+          "name": "蝦皮月中免運加碼",
+          "dateRange": "2026/06/10 ~ 2026/06/15",
+          "platforms": ["蝦皮"],
+          "description": "訂單數高但客單偏低，建議補三入組或加購品提升 AOV。",
+          "gmv": 48.6,
+          "aov": 938
+        }
+      ],
+      "completed": [
+        {
+          "name": "母親節清深神隊友",
+          "dateRange": "2026/05/01 ~ 2026/05/12",
+          "platforms": ["全通路"],
+          "description": "全通路通推，組合 SET 賣得好。賣單與回購數雙提升。",
+          "gmv": 215,
+          "aov": 1398
+        },
+        {
+          "name": "蝦皮 5.5 活動檔",
+          "dateRange": "2026/05/05 ~ 2026/05/07",
+          "platforms": ["蝦皮"],
+          "description": "轉換好，客單偏低。",
+          "gmv": 68.2,
+          "aov": 914
+        },
+        {
+          "name": "官網春季除垢週",
+          "dateRange": "2026/04/15 ~ 2026/04/22",
+          "platforms": ["官網"],
+          "description": "客單價漂亮，但流量略不足。",
+          "gmv": 93.6,
+          "aov": 1550
+        }
+      ]
+    },
+    "judgement": [
+      { "label": "進行中主力", "color": "cyan", "text": "618 全通路檔目前達成 72%，蝦皮與官網有看，MoMo 需爭取版位曝光。" },
+      { "label": "客單偏問題", "color": "amber", "text": "蝦皮月中免運打單數高，但客單僅 NT$938，需補三入組或加購品設計。" },
+      { "label": "下一檔準備", "color": "primary", "text": "官網會員回購週要先完成名單、LINE 推播文案、組合包與活動席承接。" }
+    ],
+    "summary": [
+      { "name": "618 全通路除垢組合檔", "dateRange": "2026/06/01 ~ 2026/06/18", "status": "進行中", "platform": "全通路", "gmv": 1290000, "orders": 924, "aov": 1392, "spend": 216000, "roas": 5.95, "achievement": 72 },
+      { "name": "蝦皮月中免運加碼",     "dateRange": "2026/06/10 ~ 2026/06/15", "status": "進行中", "platform": "蝦皮",   "gmv": 486000,  "orders": 518, "aov": 938,  "spend": 42000,  "roas": 11.57, "achievement": 64 },
+      { "name": "官網會員回購週",       "dateRange": "2026/06/20 ~ 2026/06/27", "status": "規劃中", "platform": "官網",   "gmv": 0,       "orders": 0,   "aov": 0,    "spend": 36000,  "roas": null, "achievement": null },
+      { "name": "MoMo 夏日家清檔",     "dateRange": "2026/07/01 ~ 2026/07/10", "status": "規劃中", "platform": "MoMo",   "gmv": 0,       "orders": 0,   "aov": 0,    "spend": 28000,  "roas": null, "achievement": null },
+      { "name": "母親節清深神隊友",     "dateRange": "2026/05/01 ~ 2026/05/12", "status": "已完成", "platform": "全通路", "gmv": 2150000, "orders": 1536, "aov": 1398, "spend": 318000, "roas": 6.75, "achievement": 108 },
+      { "name": "蝦皮 5.5 活動檔",     "dateRange": "2026/05/05 ~ 2026/05/07", "status": "已完成", "platform": "蝦皮",   "gmv": 682000,  "orders": 746, "aov": 914,  "spend": 58000,  "roas": 11.76, "achievement": 124 },
+      { "name": "官網春季除垢週",       "dateRange": "2026/04/15 ~ 2026/04/22", "status": "已完成", "platform": "官網",   "gmv": 936000,  "orders": 604, "aov": 1550, "spend": 176000, "roas": 5.32, "achievement": 86 }
+    ],
+    "demoReport": {
+      "name": "母親節清深神隊友",
+      "dateRange": "2026/05/01 ~ 2026/05/12",
+      "platform": "全通路",
+      "owner": "饅頭",
+      "kpi": { "gmv": 2150000, "orders": 1536, "aov": 1398, "roas": 6.75 },
+      "sections": [
+        { "title": "成效摘要", "content": "活動達成率 108%，主力來自蝦皮「居家清潔組合檔」。業績回收都很穩，可作為下次全通路檔期的基準版本。" },
+        { "title": "關鍵結論", "content": "組合包比單品更能拉客單；下次可提前 7 天備素材，並把官網會員素材組件到 MoMo。" },
+        { "title": "下次催化", "content": "提前 7 天做素材測試；主視覺至少準備 3 版（官網、蝦皮、MoMo 三方尺寸）；活動中每天盯客單價。" },
+        { "title": "可複用資產", "content": "保留高效素材、商品組合、優惠機制、通路業績表，下一檔可直接複用調整。" }
+      ]
+    },
+    "reportTemplate": [
+      { "title": "活動基本資料", "items": "名稱、通路、日期、負責人、主打商品" },
+      { "title": "業績結果",     "items": "銷售業績、訂單數、客單價、廣告花費、廣告回收" },
+      { "title": "通路拆解",     "items": "官網、蝦皮、MoMo 各自表現問題" },
+      { "title": "素材經驗",     "items": "哪些素材有效、哪些話法該換" },
+      { "title": "下次行動",     "items": "保留、加碼、修改、不要再做" }
+    ]
+  },
   "adCreatives": {
     "abTest": {
       "title": "A/B 雙軌測試",
