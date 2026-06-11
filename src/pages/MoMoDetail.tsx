@@ -10,7 +10,11 @@ export default function MoMoDetail() {
   return (
     <div className="space-y-4">
       <SopBadge skills={[{ name: 'momo-api.md', version: 'v1.1' }]} />
-      <PlatformDetailView data={data?.momoDetail} title="MoMo+" icon={Store} iconColor="red" />
+      <PlatformDetailView
+        data={data?.momoDetail}
+        monthlyData={data?.monthlyByPlatform?.momo}
+        title="MoMo+" icon={Store} iconColor="red"
+      />
     </div>
   );
 }

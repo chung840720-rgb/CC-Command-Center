@@ -10,7 +10,11 @@ export default function ShoplineDetail() {
   return (
     <div className="space-y-4">
       <SopBadge skills={[{ name: 'shopline-api.md', version: 'v2.5' }]} />
-      <PlatformDetailView data={data?.shoplineDetail} title="官網 Shopline" icon={Globe} iconColor="amber" />
+      <PlatformDetailView
+        data={data?.shoplineDetail}
+        monthlyData={data?.monthlyByPlatform?.shopline}
+        title="官網 Shopline" icon={Globe} iconColor="amber"
+      />
     </div>
   );
 }

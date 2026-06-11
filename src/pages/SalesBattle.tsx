@@ -27,8 +27,11 @@ import { PlatformDetailCard } from '@/components/dashboard/PlatformDetailCard';
 import { SopBadge } from '@/components/dashboard/SopBadge';
 import { cn, formatCurrency, formatNumber } from '@/lib/utils';
 
+const MONTHS = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+
 export default function SalesBattle() {
   const [data, setData] = useState<any>(null);
+  const [activeMonthIdx, setActiveMonthIdx] = useState(4); // 預設 5月
 
   useEffect(() => {
     getSnapshot().then(setData);
@@ -47,7 +50,20 @@ export default function SalesBattle() {
     );
   }
 
-  const kpi = data.kpi;
+  const monthKey = MONTHS[activeMonthIdx];
+  const monthData = data.monthlyTotal?.[monthKey];
+  const hasMonthData = !!monthData;
+
+  // 動態 kpi: 若 1-5月有資料則用 monthlyTotal，否則回退到原 kpi（顯示為「待匯入」）
+  const kpi = hasMonthData
+    ? {
+        monthlyGmv: { value: monthData.gmv, target: monthData.target, achievement: monthData.achievement },
+        ytdGmv: data.kpi.ytdGmv,
+        monthlyOrders: monthData.orders,
+        roas: monthData.roas,
+        adSpend: monthData.adSpend,
+      }
+    : data.kpi;
 
   return (
     <div className="space-y-6">
@@ -64,19 +80,26 @@ export default function SalesBattle() {
         callout="目前為月中數據，適合看方向，不適合直接與整月比較。"
         rightSlot={
           <div className="grid grid-cols-6 gap-1.5">
-            {['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'].map((m, i) => (
-              <button
-                key={m}
-                className={cn(
-                  'h-8 px-3 rounded-full text-xs font-semibold transition-colors',
-                  i === 4
-                    ? 'bg-primary text-primary-foreground shadow-sm shadow-primary/30'
-                    : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
-                )}
-              >
-                {m}
-              </button>
-            ))}
+            {MONTHS.map((m, i) => {
+              const hasData = !!data.monthlyTotal?.[m];
+              return (
+                <button
+                  key={m}
+                  onClick={() => setActiveMonthIdx(i)}
+                  className={cn(
+                    'h-8 px-3 rounded-full text-xs font-semibold transition-colors',
+                    i === activeMonthIdx
+                      ? 'bg-primary text-primary-foreground shadow-sm shadow-primary/30'
+                      : hasData
+                        ? 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                        : 'bg-secondary/40 text-muted-foreground/60 hover:bg-secondary/60'
+                  )}
+                >
+                  {m}
+                  {!hasData && <span className="text-[8px] opacity-60 ml-0.5">待匯入</span>}
+                </button>
+              );
+            })}
           </div>
         }
       />
@@ -99,16 +122,16 @@ export default function SalesBattle() {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
         <KpiTile
           label="三平台合計業績"
-          value="136萬"
+          value={`${(kpi.monthlyGmv.value / 10000).toFixed(0)}萬`}
           subValue={`NT$${formatNumber(kpi.monthlyGmv.value)}`}
-          badge="月中數據 (MTD)"
+          badge={`${monthKey} 業績`}
           icon={CircleDollarSign}
           iconColor="cyan"
         />
         <KpiTile
           label="年度累計業績"
-          value="3,343萬"
-          subValue={`YTD 達成 ${kpi.ytdGmv.achievement}%`}
+          value={`${(data.kpi.ytdGmv.value / 10000).toFixed(0)}萬`}
+          subValue={`YTD 達成 ${data.kpi.ytdGmv.achievement}%`}
           badge="年度累計"
           icon={TrendingUp}
           iconColor="green"
@@ -162,8 +185,8 @@ export default function SalesBattle() {
 
         <div className="card-soft p-6">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-base font-bold">5月 達成率</h3>
-            <Badge variant="outline" className="text-[10px]">MTD</Badge>
+            <h3 className="text-base font-bold">{monthKey} 達成率</h3>
+            <Badge variant="outline" className="text-[10px]">{hasMonthData ? 'MTD' : '待匯入'}</Badge>
           </div>
           <p className="text-xs text-muted-foreground mb-4">三平台合計 vs 月目標</p>
           <div className="relative w-44 h-44 mx-auto">
@@ -200,13 +223,24 @@ export default function SalesBattle() {
         </div>
       </div>
 
-      {/* Platform detail cards */}
+      {/* Platform detail cards — 依 activeMonth 換資料 */}
       <section className="space-y-4">
-        <h2 className="text-base font-bold">各平台明細</h2>
+        <h2 className="text-base font-bold">各平台明細 ({monthKey})</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {data.platformDetail.map((p: any) => (
-            <PlatformDetailCard key={p.id} data={p} />
-          ))}
+          {data.platformDetail.map((p: any) => {
+            const m = data.monthlyByPlatform?.[p.id]?.[monthKey];
+            const merged = m ? {
+              ...p,
+              gmv: m.gmv, target: m.target,
+              achievementPct: m.achievement, achievementBar: m.achievement,
+              uv: m.traffic, orders: m.orders, aov: m.aov,
+              adSpend: m.adSpend, roas: m.roas, cpa: m.cpa,
+              rating: m.roas >= 8 ? '優秀' : m.roas >= 3 ? '良好' : '偏低',
+              ratingColor: m.roas >= 8 ? 'green' : m.roas >= 3 ? 'amber' : 'red',
+              adShareRatio: (monthData?.adSpend && m.adSpend) ? Math.round((m.adSpend / monthData.adSpend) * 1000) / 10 : p.adShareRatio,
+            } : p;
+            return <PlatformDetailCard key={p.id} data={merged} />;
+          })}
         </div>
       </section>
 

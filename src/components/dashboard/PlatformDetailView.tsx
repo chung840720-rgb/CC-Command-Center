@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   LineChart,
   Line,
@@ -27,6 +28,7 @@ const MONTHS = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','
 
 interface Props {
   data: any;
+  monthlyData?: Record<string, any>;  // monthlyByPlatform[platformKey] = { '1月': {...}, ..., '5月': {...} }
   title: string;
   icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
   iconColor?: 'amber' | 'orange' | 'red' | 'violet';
@@ -39,8 +41,32 @@ const ICON_BG = {
   violet: 'bg-violet-100 text-violet-700',
 };
 
-export function PlatformDetailView({ data: sd, title, icon: Icon, iconColor = 'amber' }: Props) {
-  if (!sd) return <Skeleton className="h-96 rounded-2xl" />;
+export function PlatformDetailView({ data: sdRaw, monthlyData, title, icon: Icon, iconColor = 'amber' }: Props) {
+  const [activeMonthIdx, setActiveMonthIdx] = useState(4);  // 預設 5月
+
+  if (!sdRaw) return <Skeleton className="h-96 rounded-2xl" />;
+
+  const monthKey = MONTHS[activeMonthIdx];
+  const mData = monthlyData?.[monthKey];
+
+  // 動態 sd：若該月有 monthlyData 則 swap kpiGrid + achievement，否則用原始 sd
+  const sd = mData ? {
+    ...sdRaw,
+    monthlyGmv: mData.gmv,
+    target: mData.target,
+    achievement: mData.achievement,
+    achievementStatus: mData.achievement >= 100 ? '達標' : mData.achievement >= 80 ? '符合節奏' : '落後',
+    kpiGrid: [
+      { label: '月業績', value: `NT$${formatNumber(mData.gmv)}`, mom: mData.mom },
+      { label: '訂單數', value: `${formatNumber(mData.orders)} 筆`, mom: mData.mom },
+      { label: '客單價 AOV', value: `NT$${formatNumber(mData.aov)}` },
+      { label: '流量訪客', value: formatNumber(mData.traffic) },
+      { label: '廣告費', value: `NT$${formatNumber(mData.adSpend)}` },
+      { label: 'ROAS', value: `${mData.roas}x` },
+      { label: 'CPA', value: `NT$${formatNumber(mData.cpa)}` },
+      { label: '占比', value: `${mData.sharePct}%` },
+    ],
+  } : sdRaw;
 
   return (
     <div className="space-y-6">
@@ -60,21 +86,28 @@ export function PlatformDetailView({ data: sd, title, icon: Icon, iconColor = 'a
             </div>
           </div>
           <div className="shrink-0 grid grid-cols-6 gap-1.5">
-            {MONTHS.map((m, i) => (
-              <button
-                key={m}
-                className={cn(
-                  'h-8 px-3 rounded-full text-xs font-semibold transition-colors flex items-center gap-1',
-                  i === 4
-                    ? 'bg-primary text-primary-foreground shadow-sm shadow-primary/30'
-                    : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
-                )}
-              >
-                {m}
-                {i === 4 && <span className="text-[8px] bg-primary-foreground/20 px-1 rounded">MTD</span>}
-                {i > 4 && <span className="text-[8px] opacity-60">待匯入</span>}
-              </button>
-            ))}
+            {MONTHS.map((m, i) => {
+              const hasData = !!monthlyData?.[m];
+              const isActive = i === activeMonthIdx;
+              return (
+                <button
+                  key={m}
+                  onClick={() => setActiveMonthIdx(i)}
+                  className={cn(
+                    'h-8 px-3 rounded-full text-xs font-semibold transition-colors flex items-center gap-1',
+                    isActive
+                      ? 'bg-primary text-primary-foreground shadow-sm shadow-primary/30'
+                      : hasData
+                        ? 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                        : 'bg-secondary/40 text-muted-foreground/60 hover:bg-secondary/60'
+                  )}
+                >
+                  {m}
+                  {isActive && hasData && <span className="text-[8px] bg-primary-foreground/20 px-1 rounded">MTD</span>}
+                  {!hasData && <span className="text-[8px] opacity-60">待匯入</span>}
+                </button>
+              );
+            })}
           </div>
         </div>
 
