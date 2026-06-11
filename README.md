@@ -125,10 +125,13 @@ VITE_USE_REAL_LLM=true VITE_WORKER_URL=... npm run deploy
 
 ## 🛡 商業道德聲明
 
-- 所有展示數據（`public/data/snapshot.json`）皆為**虛構** demo 資料
-- 不包含任何來自實際雇主的商業敏感資料
+- 展示數據（`public/data/snapshot.json`）為**真實業績結構 × random(0.65~0.95) anonymize**
+  - 不洩漏絕對值，但保留通路占比、月度趨勢、達成率等結構
+  - 確保 demo 看起來真實，又遵守雇主商業道德
+- ROAS / 客單價 / 占比等「比例」欄位保留（本身不洩漏絕對值）
 - 「Johnny demo」品牌為佔位名稱，無對應真實實體
 - 爬蟲程式碼僅展示技術架構，未對任何平台執行真實爬取於 production 環境
+- 來源 Sheet ID、API key 等敏感資訊均不在 repo 內
 
 ---
 

@@ -3,15 +3,29 @@
     "generatedAt": "2026-06-11T10:00:00+08:00",
     "currency": "TWD",
     "anonymizationFactor": 0.8,
-    "note": "Demo snapshot — 數字已 anonymize (打 80%)，不代表真實業績",
-    "dateRange": { "start": "2026-05-13", "end": "2026-06-11" }
+    "note": "Demo snapshot — 1-5月趨勢結構來自真實電商運營經驗，數字已 anonymize (×0.65-0.95 random factor)，不代表真實業績",
+    "dateRange": {
+      "start": "2026-05-13",
+      "end": "2026-06-11"
+    },
+    "dataPattern": "real-shape-anonymized",
+    "lastSync": "2026-06-11T05:42:21.746Z"
   },
   "kpi": {
-    "monthlyGmv": { "value": 1359643, "currency": "TWD", "target": 12000000, "achievement": 11.4 },
-    "ytdGmv": { "value": 33426656, "target": 50000000, "achievement": 67.1 },
-    "monthlyOrders": 1165,
-    "roas": 3.54,
-    "adSpend": 384000
+    "monthlyGmv": {
+      "value": 9213940,
+      "currency": "TWD",
+      "target": 8776189,
+      "achievement": 88
+    },
+    "ytdGmv": {
+      "value": 32220154,
+      "target": 100000000,
+      "achievement": 32.2
+    },
+    "monthlyOrders": 6584,
+    "roas": 4.4,
+    "adSpend": 1652597
   },
   "alerts": [
     {
@@ -20,7 +34,12 @@
       "title": "蝦皮商城 GMV 環比 -18%",
       "platform": "shopee",
       "tag": "優先修正",
-      "metric": { "name": "GMV", "current": 78200, "previous": 95400, "deltaPct": -18 }
+      "metric": {
+        "name": "GMV",
+        "current": 78200,
+        "previous": 95400,
+        "deltaPct": -18
+      }
     },
     {
       "id": "alert-2",
@@ -28,7 +47,11 @@
       "title": "官網 ROAS 偏低（2.03 倍）",
       "platform": "shopline",
       "tag": "持續觀察",
-      "metric": { "name": "ROAS", "current": 2.03, "target": 3.0 }
+      "metric": {
+        "name": "ROAS",
+        "current": 2.03,
+        "target": 3
+      }
     },
     {
       "id": "alert-3",
@@ -36,7 +59,12 @@
       "title": "MOMO 回收效率最高（18.07 倍）",
       "platform": "momo",
       "tag": "加碼候選",
-      "metric": { "name": "ROAS", "current": 18.07, "previous": 16.2, "deltaPct": 11.5 }
+      "metric": {
+        "name": "ROAS",
+        "current": 18.07,
+        "previous": 16.2,
+        "deltaPct": 11.5
+      }
     }
   ],
   "channels": [
@@ -44,12 +72,12 @@
       "id": "shopline",
       "label": "官網 Shopline",
       "icon": "globe",
-      "monthlyGmv": 648200,
-      "achievement": 7.4,
-      "yearlyGmv": 20100000,
-      "roas": 2.03,
-      "orders": 461,
-      "ytdShare": 60.1,
+      "monthlyGmv": 4528228,
+      "achievement": 74,
+      "yearlyGmv": 18195566,
+      "roas": 3.4,
+      "orders": 2825,
+      "ytdShare": 62,
       "characteristic": "官網反映品牌自有轉換能力，優先看投放與商品頁。",
       "recommendation": "目前量體最大，但 ROAS 與每筆訂單成本需要優先修正。"
     },
@@ -57,12 +85,12 @@
       "id": "shopee",
       "label": "蝦皮旗艦",
       "icon": "shopping-bag",
-      "monthlyGmv": 615900,
-      "achievement": 24.6,
-      "yearlyGmv": 11840000,
-      "roas": 10.39,
-      "orders": 627,
-      "ytdShare": 35.4,
+      "monthlyGmv": 2571807,
+      "achievement": 118,
+      "yearlyGmv": 11188566,
+      "roas": 7.1,
+      "orders": 2066,
+      "ytdShare": 28,
       "characteristic": "蝦皮重點是活動、排名與爆品庫存能不能放大。",
       "recommendation": "效率穩，適合用上傳報表追蹤可加碼品項。"
     },
@@ -70,12 +98,12 @@
       "id": "momo",
       "label": "MoMo+",
       "icon": "store",
-      "monthlyGmv": 96200,
-      "achievement": 16.0,
-      "yearlyGmv": 1480000,
-      "roas": 18.07,
-      "orders": 77,
-      "ytdShare": 4.4,
+      "monthlyGmv": 472276,
+      "achievement": 87,
+      "yearlyGmv": 1539369,
+      "roas": 15.9,
+      "orders": 371,
+      "ytdShare": 5,
       "characteristic": "MoMo 要同時看效率與量體，不只看回收倍數。",
       "recommendation": "效率高但量體小，重點是找可放大的活動與商品。"
     }
@@ -83,22 +111,81 @@
   "funnel": {
     "platform": "shopline",
     "stages": [
-      { "key": "impression", "label": "Meta 觸及", "value": 320000, "rate": null },
-      { "key": "session", "label": "進站流量", "value": 45000, "rate": 14.1 },
-      { "key": "addToCart", "label": "加購", "value": 24000, "rate": 53.3 },
-      { "key": "checkout", "label": "開結帳", "value": 5400, "rate": 22.5 },
-      { "key": "purchase", "label": "完成購買", "value": 4050, "rate": 75.0 }
+      {
+        "key": "impression",
+        "label": "Meta 觸及",
+        "value": 320000,
+        "rate": null
+      },
+      {
+        "key": "session",
+        "label": "進站流量",
+        "value": 45000,
+        "rate": 14.1
+      },
+      {
+        "key": "addToCart",
+        "label": "加購",
+        "value": 24000,
+        "rate": 53.3
+      },
+      {
+        "key": "checkout",
+        "label": "開結帳",
+        "value": 5400,
+        "rate": 22.5
+      },
+      {
+        "key": "purchase",
+        "label": "完成購買",
+        "value": 4050,
+        "rate": 75
+      }
     ],
     "benchmarks": {
-      "addToCartRate": { "yellow": 15, "red": 10 },
-      "purchaseRate": { "yellow": 50, "red": 40 }
+      "addToCartRate": {
+        "yellow": 15,
+        "red": 10
+      },
+      "purchaseRate": {
+        "yellow": 50,
+        "red": 40
+      }
     }
   },
   "categories": [
-    { "name": "洗衣精", "shopline": 28, "shopee": 35, "momo": 22, "trend": "up", "summary": "跨平台領跑，母嬰節檔期推升" },
-    { "name": "柔濕巾", "shopline": -12, "shopee": -8, "momo": -15, "trend": "down", "summary": "618 排除策略導致衰退（預期內）" },
-    { "name": "除黴", "shopline": 5, "shopee": 12, "momo": 8, "trend": "up", "summary": "穩定成長，無大檔期驅動" },
-    { "name": "沐浴", "shopline": 15, "shopee": 20, "momo": 18, "trend": "up", "summary": "夏季旺季，蝦皮加碼有效" }
+    {
+      "name": "洗衣精",
+      "shopline": 28,
+      "shopee": 35,
+      "momo": 22,
+      "trend": "up",
+      "summary": "跨平台領跑，母嬰節檔期推升"
+    },
+    {
+      "name": "柔濕巾",
+      "shopline": -12,
+      "shopee": -8,
+      "momo": -15,
+      "trend": "down",
+      "summary": "618 排除策略導致衰退（預期內）"
+    },
+    {
+      "name": "除黴",
+      "shopline": 5,
+      "shopee": 12,
+      "momo": 8,
+      "trend": "up",
+      "summary": "穩定成長，無大檔期驅動"
+    },
+    {
+      "name": "沐浴",
+      "shopline": 15,
+      "shopee": 20,
+      "momo": 18,
+      "trend": "up",
+      "summary": "夏季旺季，蝦皮加碼有效"
+    }
   ],
   "ads": {
     "meta": {
@@ -106,7 +193,7 @@
       "impressions": 5200000,
       "clicks": 38400,
       "ctr": 0.74,
-      "cpc": 10.0,
+      "cpc": 10,
       "roas": 3.54,
       "reach": 1800000
     }
@@ -118,87 +205,192 @@
     "明天要看哪份資料：官網自動更新，蝦皮和 MoMo 用上傳報表補齊"
   ],
   "todayActions": [
-    { "owner": "饅頭", "status": "今日判斷", "task": "整理官網 ROAS 偏低的廣告組與素材" },
-    { "owner": "跳跳", "status": "可行動", "task": "確認蝦皮高效品項是否可加碼" },
-    { "owner": "雨昕", "status": "復盤中", "task": "把母親節活動整理成復盤紀錄" }
+    {
+      "owner": "饅頭",
+      "status": "今日判斷",
+      "task": "整理官網 ROAS 偏低的廣告組與素材"
+    },
+    {
+      "owner": "跳跳",
+      "status": "可行動",
+      "task": "確認蝦皮高效品項是否可加碼"
+    },
+    {
+      "owner": "雨昕",
+      "status": "復盤中",
+      "task": "把母親節活動整理成復盤紀錄"
+    }
   ],
   "monthlyTrend": [
-    { "month": "1月",  "y2025": 820, "y2026": 880 },
-    { "month": "2月",  "y2025": 770, "y2026": 820 },
-    { "month": "3月",  "y2025": 850, "y2026": 890 },
-    { "month": "4月",  "y2025": 760, "y2026": 820 },
-    { "month": "5月*", "y2025": 0,   "y2026": 136 },
-    { "month": "6月",  "y2025": 0,   "y2026": 0 },
-    { "month": "7月",  "y2025": 0,   "y2026": 0 },
-    { "month": "8月",  "y2025": 0,   "y2026": 0 },
-    { "month": "9月",  "y2025": 0,   "y2026": 0 },
-    { "month": "10月", "y2025": 0,   "y2026": 0 },
-    { "month": "11月", "y2025": 0,   "y2026": 0 },
-    { "month": "12月", "y2025": 0,   "y2026": 0 }
+    {
+      "month": "1月",
+      "y2025": 495,
+      "y2026": 582
+    },
+    {
+      "month": "2月",
+      "y2025": 456,
+      "y2026": 536
+    },
+    {
+      "month": "3月",
+      "y2025": 438,
+      "y2026": 515
+    },
+    {
+      "month": "4月",
+      "y2025": 567,
+      "y2026": 667
+    },
+    {
+      "month": "5月",
+      "y2025": 783,
+      "y2026": 921
+    },
+    {
+      "month": "6月",
+      "y2025": 0,
+      "y2026": 0
+    },
+    {
+      "month": "7月",
+      "y2025": 0,
+      "y2026": 0
+    },
+    {
+      "month": "8月",
+      "y2025": 0,
+      "y2026": 0
+    },
+    {
+      "month": "9月",
+      "y2025": 0,
+      "y2026": 0
+    },
+    {
+      "month": "10月",
+      "y2025": 0,
+      "y2026": 0
+    },
+    {
+      "month": "11月",
+      "y2025": 0,
+      "y2026": 0
+    },
+    {
+      "month": "12月",
+      "y2025": 0,
+      "y2026": 0
+    }
   ],
   "platformDetail": [
     {
       "id": "momo",
       "label": "MoMo+",
       "color": "red",
-      "achievementPct": 7,
-      "gmv": 95987,
-      "achievementBar": 16.0,
-      "target": 600000,
-      "uv": 2418,
-      "orders": 77,
-      "aov": 1247,
-      "adSpend": 5312,
-      "roas": 18.07,
+      "achievementPct": 87,
+      "gmv": 472276,
+      "achievementBar": 87,
+      "target": 498041,
+      "uv": 13700,
+      "orders": 371,
+      "aov": 1174,
+      "adSpend": 24406,
+      "roas": 15.9,
       "rating": "優秀",
       "ratingColor": "green",
-      "adShareRatio": 1.4,
-      "cpa": 69,
-      "note": "規模小但 ROAS 極高，廣告投報效率最佳"
+      "adShareRatio": 1.5,
+      "cpa": 74,
+      "note": "效率高但量體小，重點是找可放大的活動與商品。"
     },
     {
       "id": "shopee",
       "label": "蝦皮",
       "color": "orange",
-      "achievementPct": 45.2,
-      "gmv": 615582,
-      "achievementBar": 24.6,
-      "target": 2500000,
-      "uv": 14000,
-      "orders": 627,
-      "aov": 982,
-      "adSpend": 59000,
-      "roas": 10.39,
-      "rating": "優秀",
-      "ratingColor": "green",
-      "adShareRatio": 15.4,
-      "cpa": 95,
-      "note": "主力平台，ROAS 穩定，訂單量最大"
+      "achievementPct": 118,
+      "gmv": 2571807,
+      "achievementBar": 118,
+      "target": 2053003,
+      "uv": 62148,
+      "orders": 2066,
+      "aov": 936,
+      "adSpend": 288576,
+      "roas": 7.1,
+      "rating": "良好",
+      "ratingColor": "amber",
+      "adShareRatio": 17.5,
+      "cpa": 132,
+      "note": "效率穩，適合用上傳報表追蹤可加碼品項。"
     },
     {
       "id": "shopline",
       "label": "官網",
       "color": "cyan",
-      "achievementPct": 47.5,
-      "gmv": 648074,
-      "achievementBar": 7.4,
-      "target": 8800000,
-      "uv": 29000,
-      "orders": 461,
-      "aov": 1406,
-      "adSpend": 320000,
-      "roas": 2.03,
-      "rating": "偏低",
-      "ratingColor": "red",
-      "adShareRatio": 83.2,
-      "cpa": 693,
-      "note": "ROAS 偏低，廣告費佔最多，需優化投放策略"
+      "achievementPct": 74,
+      "gmv": 4528228,
+      "achievementBar": 74,
+      "target": 6202676,
+      "uv": 170039,
+      "orders": 2825,
+      "aov": 1570,
+      "adSpend": 1625136,
+      "roas": 3.4,
+      "rating": "良好",
+      "ratingColor": "amber",
+      "adShareRatio": 98.3,
+      "cpa": 461,
+      "note": "目前量體最大，但 ROAS 與每筆訂單成本需要優先修正。"
     }
   ],
   "platformMoM": {
-    "momo":     { "y2025": [28, 24, 32, 38, 0], "y2026": [30, 32, 36, 40, 9.6] },
-    "shopee":   { "y2025": [180, 200, 220, 240, 0], "y2026": [310, 290, 280, 320, 61.6] },
-    "shopline": { "y2025": [780, 580, 720, 600, 0], "y2026": [540, 500, 560, 480, 64.8] }
+    "shopline": {
+      "y2025": [
+        309,
+        340,
+        272,
+        241,
+        385
+      ],
+      "y2026": [
+        363,
+        400,
+        320,
+        284,
+        453
+      ]
+    },
+    "shopee": {
+      "y2025": [
+        199,
+        183,
+        157,
+        194,
+        218
+      ],
+      "y2026": [
+        234,
+        215,
+        185,
+        228,
+        257
+      ]
+    },
+    "momo": {
+      "y2025": [
+        17,
+        17,
+        28,
+        30,
+        40
+      ],
+      "y2026": [
+        20,
+        20,
+        33,
+        35,
+        47
+      ]
+    }
   },
   "shoplineDetail": {
     "url": "demo.example-shop.com",
@@ -207,11 +399,27 @@
     "monthlyGmv": 648074,
     "target": 8800000,
     "internalTabs": [
-      { "key": "dashboard", "label": "業績儀錶板", "active": true },
-      { "key": "campaign", "label": "行銷活動" },
-      { "key": "product", "label": "產品銷量" },
-      { "key": "crm", "label": "CRM" },
-      { "key": "ops", "label": "通路經營" }
+      {
+        "key": "dashboard",
+        "label": "業績儀錶板",
+        "active": true
+      },
+      {
+        "key": "campaign",
+        "label": "行銷活動"
+      },
+      {
+        "key": "product",
+        "label": "產品銷量"
+      },
+      {
+        "key": "crm",
+        "label": "CRM"
+      },
+      {
+        "key": "ops",
+        "label": "通路經營"
+      }
     ],
     "ytd": {
       "gmv": 20099547,
@@ -223,98 +431,335 @@
       "note": "1 月到目前週取月份"
     },
     "kpiGrid": [
-      { "label": "月業績", "value": "NT$648,074", "mom": -84.8, "yoy": -91.1 },
-      { "label": "訂單數", "value": "461 筆", "mom": -84.9 },
-      { "label": "客單價 AOV", "value": "NT$1,406", "mom": 0.3 },
-      { "label": "月 UV", "value": "28,570", "mom": -83.8 },
-      { "label": "廣告費", "value": "NT$319,545", "mom": -81.7 },
-      { "label": "ROAS", "value": "2.03x", "mom": -17.1 },
-      { "label": "CPA", "value": "NT$693.2", "mom": -21.2 },
-      { "label": "YoY", "value": "-91.1%" }
+      {
+        "label": "月業績",
+        "value": "NT$648,074",
+        "mom": -84.8,
+        "yoy": -91.1
+      },
+      {
+        "label": "訂單數",
+        "value": "461 筆",
+        "mom": -84.9
+      },
+      {
+        "label": "客單價 AOV",
+        "value": "NT$1,406",
+        "mom": 0.3
+      },
+      {
+        "label": "月 UV",
+        "value": "28,570",
+        "mom": -83.8
+      },
+      {
+        "label": "廣告費",
+        "value": "NT$319,545",
+        "mom": -81.7
+      },
+      {
+        "label": "ROAS",
+        "value": "2.03x",
+        "mom": -17.1
+      },
+      {
+        "label": "CPA",
+        "value": "NT$693.2",
+        "mom": -21.2
+      },
+      {
+        "label": "YoY",
+        "value": "-91.1%"
+      }
     ],
     "trends": {
       "gmv": [
-        { "month": "2月", "value": 620 },
-        { "month": "3月", "value": 580 },
-        { "month": "4月", "value": 600 },
-        { "month": "5月", "value": 64.8 },
-        { "month": "6月", "value": 0 },
-        { "month": "7月", "value": 0 },
-        { "month": "8月", "value": 0 },
-        { "month": "9月", "value": 0 },
-        { "month": "10月", "value": 0 },
-        { "month": "11月", "value": 0 },
-        { "month": "12月", "value": 0 }
+        {
+          "month": "2月",
+          "value": 620
+        },
+        {
+          "month": "3月",
+          "value": 580
+        },
+        {
+          "month": "4月",
+          "value": 600
+        },
+        {
+          "month": "5月",
+          "value": 64.8
+        },
+        {
+          "month": "6月",
+          "value": 0
+        },
+        {
+          "month": "7月",
+          "value": 0
+        },
+        {
+          "month": "8月",
+          "value": 0
+        },
+        {
+          "month": "9月",
+          "value": 0
+        },
+        {
+          "month": "10月",
+          "value": 0
+        },
+        {
+          "month": "11月",
+          "value": 0
+        },
+        {
+          "month": "12月",
+          "value": 0
+        }
       ],
       "orders": [
-        { "month": "2月", "value": 4500 },
-        { "month": "3月", "value": 4200 },
-        { "month": "4月", "value": 4380 },
-        { "month": "5月", "value": 461 },
-        { "month": "6月", "value": 0 },
-        { "month": "7月", "value": 0 },
-        { "month": "8月", "value": 0 },
-        { "month": "9月", "value": 0 },
-        { "month": "10月", "value": 0 },
-        { "month": "11月", "value": 0 },
-        { "month": "12月", "value": 0 }
+        {
+          "month": "2月",
+          "value": 4500
+        },
+        {
+          "month": "3月",
+          "value": 4200
+        },
+        {
+          "month": "4月",
+          "value": 4380
+        },
+        {
+          "month": "5月",
+          "value": 461
+        },
+        {
+          "month": "6月",
+          "value": 0
+        },
+        {
+          "month": "7月",
+          "value": 0
+        },
+        {
+          "month": "8月",
+          "value": 0
+        },
+        {
+          "month": "9月",
+          "value": 0
+        },
+        {
+          "month": "10月",
+          "value": 0
+        },
+        {
+          "month": "11月",
+          "value": 0
+        },
+        {
+          "month": "12月",
+          "value": 0
+        }
       ],
       "aov": [
-        { "month": "2月", "value": 1400 },
-        { "month": "3月", "value": 1390 },
-        { "month": "4月", "value": 1402 },
-        { "month": "5月", "value": 1406 },
-        { "month": "6月", "value": 0 },
-        { "month": "7月", "value": 0 },
-        { "month": "8月", "value": 0 },
-        { "month": "9月", "value": 0 },
-        { "month": "10月", "value": 0 },
-        { "month": "11月", "value": 0 },
-        { "month": "12月", "value": 0 }
+        {
+          "month": "2月",
+          "value": 1400
+        },
+        {
+          "month": "3月",
+          "value": 1390
+        },
+        {
+          "month": "4月",
+          "value": 1402
+        },
+        {
+          "month": "5月",
+          "value": 1406
+        },
+        {
+          "month": "6月",
+          "value": 0
+        },
+        {
+          "month": "7月",
+          "value": 0
+        },
+        {
+          "month": "8月",
+          "value": 0
+        },
+        {
+          "month": "9月",
+          "value": 0
+        },
+        {
+          "month": "10月",
+          "value": 0
+        },
+        {
+          "month": "11月",
+          "value": 0
+        },
+        {
+          "month": "12月",
+          "value": 0
+        }
       ],
       "roas": [
-        { "month": "2月", "value": 2.4 },
-        { "month": "3月", "value": 2.5 },
-        { "month": "4月", "value": 2.45 },
-        { "month": "5月", "value": 2.03 },
-        { "month": "6月", "value": 0 },
-        { "month": "7月", "value": 0 },
-        { "month": "8月", "value": 0 },
-        { "month": "9月", "value": 0 },
-        { "month": "10月", "value": 0 },
-        { "month": "11月", "value": 0 },
-        { "month": "12月", "value": 0 }
+        {
+          "month": "2月",
+          "value": 2.4
+        },
+        {
+          "month": "3月",
+          "value": 2.5
+        },
+        {
+          "month": "4月",
+          "value": 2.45
+        },
+        {
+          "month": "5月",
+          "value": 2.03
+        },
+        {
+          "month": "6月",
+          "value": 0
+        },
+        {
+          "month": "7月",
+          "value": 0
+        },
+        {
+          "month": "8月",
+          "value": 0
+        },
+        {
+          "month": "9月",
+          "value": 0
+        },
+        {
+          "month": "10月",
+          "value": 0
+        },
+        {
+          "month": "11月",
+          "value": 0
+        },
+        {
+          "month": "12月",
+          "value": 0
+        }
       ],
       "uv": [
-        { "month": "2月", "value": 165000 },
-        { "month": "3月", "value": 180000 },
-        { "month": "4月", "value": 176000 },
-        { "month": "5月", "value": 28570 },
-        { "month": "6月", "value": 0 },
-        { "month": "7月", "value": 0 },
-        { "month": "8月", "value": 0 },
-        { "month": "9月", "value": 0 },
-        { "month": "10月", "value": 0 },
-        { "month": "11月", "value": 0 },
-        { "month": "12月", "value": 0 }
+        {
+          "month": "2月",
+          "value": 165000
+        },
+        {
+          "month": "3月",
+          "value": 180000
+        },
+        {
+          "month": "4月",
+          "value": 176000
+        },
+        {
+          "month": "5月",
+          "value": 28570
+        },
+        {
+          "month": "6月",
+          "value": 0
+        },
+        {
+          "month": "7月",
+          "value": 0
+        },
+        {
+          "month": "8月",
+          "value": 0
+        },
+        {
+          "month": "9月",
+          "value": 0
+        },
+        {
+          "month": "10月",
+          "value": 0
+        },
+        {
+          "month": "11月",
+          "value": 0
+        },
+        {
+          "month": "12月",
+          "value": 0
+        }
       ]
     },
     "ga4Funnel": {
       "label": "GA4 流量轉換（近 30 天）",
       "stages": [
-        { "label": "工作階段", "value": 9729, "pct": 100 },
-        { "label": "瀏覽商品頁", "value": 21020, "pct": 216.1 },
-        { "label": "加入購物車", "value": 0, "pct": 0 },
-        { "label": "結帳流程", "value": 0, "pct": 0 },
-        { "label": "完成訂單", "value": 0, "pct": 0 }
+        {
+          "label": "工作階段",
+          "value": 9729,
+          "pct": 100
+        },
+        {
+          "label": "瀏覽商品頁",
+          "value": 21020,
+          "pct": 216.1
+        },
+        {
+          "label": "加入購物車",
+          "value": 0,
+          "pct": 0
+        },
+        {
+          "label": "結帳流程",
+          "value": 0,
+          "pct": 0
+        },
+        {
+          "label": "完成訂單",
+          "value": 0,
+          "pct": 0
+        }
       ]
     },
     "topProducts": [
-      { "name": "洗衣精 1.5L 補充包", "gmv": 156000, "share": 24.1 },
-      { "name": "柔濕巾 80 抽 x3", "gmv": 98000, "share": 15.1 },
-      { "name": "除黴噴霧 500ml", "gmv": 87000, "share": 13.4 },
-      { "name": "沐浴乳 450ml", "gmv": 76000, "share": 11.7 },
-      { "name": "洗手液 250ml", "gmv": 54000, "share": 8.3 }
+      {
+        "name": "洗衣精 1.5L 補充包",
+        "gmv": 156000,
+        "share": 24.1
+      },
+      {
+        "name": "柔濕巾 80 抽 x3",
+        "gmv": 98000,
+        "share": 15.1
+      },
+      {
+        "name": "除黴噴霧 500ml",
+        "gmv": 87000,
+        "share": 13.4
+      },
+      {
+        "name": "沐浴乳 450ml",
+        "gmv": 76000,
+        "share": 11.7
+      },
+      {
+        "name": "洗手液 250ml",
+        "gmv": 54000,
+        "share": 8.3
+      }
     ]
   },
   "shopeeDetail": {
@@ -324,11 +769,27 @@
     "monthlyGmv": 615582,
     "target": 2500000,
     "internalTabs": [
-      { "key": "dashboard", "label": "業績儀錶板", "active": true },
-      { "key": "campaign", "label": "活動排程" },
-      { "key": "ranking", "label": "商品排行" },
-      { "key": "review", "label": "評價回應" },
-      { "key": "ops", "label": "通路經營" }
+      {
+        "key": "dashboard",
+        "label": "業績儀錶板",
+        "active": true
+      },
+      {
+        "key": "campaign",
+        "label": "活動排程"
+      },
+      {
+        "key": "ranking",
+        "label": "商品排行"
+      },
+      {
+        "key": "review",
+        "label": "評價回應"
+      },
+      {
+        "key": "ops",
+        "label": "通路經營"
+      }
     ],
     "ytd": {
       "gmv": 11840000,
@@ -340,95 +801,320 @@
       "note": "1 月到目前累計"
     },
     "kpiGrid": [
-      { "label": "月業績", "value": "NT$615,582", "mom": -23.5, "yoy": 117 },
-      { "label": "訂單數", "value": "627 筆", "mom": -18.2 },
-      { "label": "客單價 AOV", "value": "NT$982", "mom": 5.2 },
-      { "label": "流量訪客", "value": "14,000", "mom": -12.5 },
-      { "label": "廣告費", "value": "NT$59,269", "mom": 15.4 },
-      { "label": "ROAS", "value": "10.39x", "mom": -8.5 },
-      { "label": "CPA", "value": "NT$95", "mom": 12.1 },
-      { "label": "YoY", "value": "+117%", "yoy": 117 }
+      {
+        "label": "月業績",
+        "value": "NT$615,582",
+        "mom": -23.5,
+        "yoy": 117
+      },
+      {
+        "label": "訂單數",
+        "value": "627 筆",
+        "mom": -18.2
+      },
+      {
+        "label": "客單價 AOV",
+        "value": "NT$982",
+        "mom": 5.2
+      },
+      {
+        "label": "流量訪客",
+        "value": "14,000",
+        "mom": -12.5
+      },
+      {
+        "label": "廣告費",
+        "value": "NT$59,269",
+        "mom": 15.4
+      },
+      {
+        "label": "ROAS",
+        "value": "10.39x",
+        "mom": -8.5
+      },
+      {
+        "label": "CPA",
+        "value": "NT$95",
+        "mom": 12.1
+      },
+      {
+        "label": "YoY",
+        "value": "+117%",
+        "yoy": 117
+      }
     ],
     "trends": {
       "gmv": [
-        { "month": "2月", "value": 290 },
-        { "month": "3月", "value": 280 },
-        { "month": "4月", "value": 320 },
-        { "month": "5月", "value": 61.6 },
-        { "month": "6月", "value": 0 },
-        { "month": "7月", "value": 0 },
-        { "month": "8月", "value": 0 },
-        { "month": "9月", "value": 0 },
-        { "month": "10月", "value": 0 },
-        { "month": "11月", "value": 0 },
-        { "month": "12月", "value": 0 }
+        {
+          "month": "2月",
+          "value": 290
+        },
+        {
+          "month": "3月",
+          "value": 280
+        },
+        {
+          "month": "4月",
+          "value": 320
+        },
+        {
+          "month": "5月",
+          "value": 61.6
+        },
+        {
+          "month": "6月",
+          "value": 0
+        },
+        {
+          "month": "7月",
+          "value": 0
+        },
+        {
+          "month": "8月",
+          "value": 0
+        },
+        {
+          "month": "9月",
+          "value": 0
+        },
+        {
+          "month": "10月",
+          "value": 0
+        },
+        {
+          "month": "11月",
+          "value": 0
+        },
+        {
+          "month": "12月",
+          "value": 0
+        }
       ],
       "orders": [
-        { "month": "2月", "value": 2900 },
-        { "month": "3月", "value": 2850 },
-        { "month": "4月", "value": 3200 },
-        { "month": "5月", "value": 627 },
-        { "month": "6月", "value": 0 },
-        { "month": "7月", "value": 0 },
-        { "month": "8月", "value": 0 },
-        { "month": "9月", "value": 0 },
-        { "month": "10月", "value": 0 },
-        { "month": "11月", "value": 0 },
-        { "month": "12月", "value": 0 }
+        {
+          "month": "2月",
+          "value": 2900
+        },
+        {
+          "month": "3月",
+          "value": 2850
+        },
+        {
+          "month": "4月",
+          "value": 3200
+        },
+        {
+          "month": "5月",
+          "value": 627
+        },
+        {
+          "month": "6月",
+          "value": 0
+        },
+        {
+          "month": "7月",
+          "value": 0
+        },
+        {
+          "month": "8月",
+          "value": 0
+        },
+        {
+          "month": "9月",
+          "value": 0
+        },
+        {
+          "month": "10月",
+          "value": 0
+        },
+        {
+          "month": "11月",
+          "value": 0
+        },
+        {
+          "month": "12月",
+          "value": 0
+        }
       ],
       "aov": [
-        { "month": "2月", "value": 980 },
-        { "month": "3月", "value": 970 },
-        { "month": "4月", "value": 985 },
-        { "month": "5月", "value": 982 },
-        { "month": "6月", "value": 0 },
-        { "month": "7月", "value": 0 },
-        { "month": "8月", "value": 0 },
-        { "month": "9月", "value": 0 },
-        { "month": "10月", "value": 0 },
-        { "month": "11月", "value": 0 },
-        { "month": "12月", "value": 0 }
+        {
+          "month": "2月",
+          "value": 980
+        },
+        {
+          "month": "3月",
+          "value": 970
+        },
+        {
+          "month": "4月",
+          "value": 985
+        },
+        {
+          "month": "5月",
+          "value": 982
+        },
+        {
+          "month": "6月",
+          "value": 0
+        },
+        {
+          "month": "7月",
+          "value": 0
+        },
+        {
+          "month": "8月",
+          "value": 0
+        },
+        {
+          "month": "9月",
+          "value": 0
+        },
+        {
+          "month": "10月",
+          "value": 0
+        },
+        {
+          "month": "11月",
+          "value": 0
+        },
+        {
+          "month": "12月",
+          "value": 0
+        }
       ],
       "roas": [
-        { "month": "2月", "value": 10.2 },
-        { "month": "3月", "value": 11.5 },
-        { "month": "4月", "value": 11.3 },
-        { "month": "5月", "value": 10.39 },
-        { "month": "6月", "value": 0 },
-        { "month": "7月", "value": 0 },
-        { "month": "8月", "value": 0 },
-        { "month": "9月", "value": 0 },
-        { "month": "10月", "value": 0 },
-        { "month": "11月", "value": 0 },
-        { "month": "12月", "value": 0 }
+        {
+          "month": "2月",
+          "value": 10.2
+        },
+        {
+          "month": "3月",
+          "value": 11.5
+        },
+        {
+          "month": "4月",
+          "value": 11.3
+        },
+        {
+          "month": "5月",
+          "value": 10.39
+        },
+        {
+          "month": "6月",
+          "value": 0
+        },
+        {
+          "month": "7月",
+          "value": 0
+        },
+        {
+          "month": "8月",
+          "value": 0
+        },
+        {
+          "month": "9月",
+          "value": 0
+        },
+        {
+          "month": "10月",
+          "value": 0
+        },
+        {
+          "month": "11月",
+          "value": 0
+        },
+        {
+          "month": "12月",
+          "value": 0
+        }
       ]
     },
     "campaigns": [
-      { "name": "618 預熱檔", "status": "進行中", "start": "06-03", "end": "06-15", "performance": "+34%" },
-      { "name": "618 主檔", "status": "排程中", "start": "06-15", "end": "06-20", "performance": "—" },
-      { "name": "商城狂購節", "status": "已結束", "start": "05-25", "end": "05-28", "performance": "+22%" },
-      { "name": "會員日", "status": "已結束", "start": "05-18", "end": "05-18", "performance": "+18%" }
+      {
+        "name": "618 預熱檔",
+        "status": "進行中",
+        "start": "06-03",
+        "end": "06-15",
+        "performance": "+34%"
+      },
+      {
+        "name": "618 主檔",
+        "status": "排程中",
+        "start": "06-15",
+        "end": "06-20",
+        "performance": "—"
+      },
+      {
+        "name": "商城狂購節",
+        "status": "已結束",
+        "start": "05-25",
+        "end": "05-28",
+        "performance": "+22%"
+      },
+      {
+        "name": "會員日",
+        "status": "已結束",
+        "start": "05-18",
+        "end": "05-18",
+        "performance": "+18%"
+      }
     ],
     "topProducts": [
-      { "name": "洗衣精 1.5L x3 組", "gmv": 142000, "share": 23.1 },
-      { "name": "母嬰清潔旅行組", "gmv": 95000, "share": 15.4 },
-      { "name": "柔濕巾 80 抽 x6 箱", "gmv": 86000, "share": 14.0 },
-      { "name": "除黴噴霧 500ml x2", "gmv": 72000, "share": 11.7 },
-      { "name": "全館滿千折百券", "gmv": 60000, "share": 9.7 }
+      {
+        "name": "洗衣精 1.5L x3 組",
+        "gmv": 142000,
+        "share": 23.1
+      },
+      {
+        "name": "母嬰清潔旅行組",
+        "gmv": 95000,
+        "share": 15.4
+      },
+      {
+        "name": "柔濕巾 80 抽 x6 箱",
+        "gmv": 86000,
+        "share": 14
+      },
+      {
+        "name": "除黴噴霧 500ml x2",
+        "gmv": 72000,
+        "share": 11.7
+      },
+      {
+        "name": "全館滿千折百券",
+        "gmv": 60000,
+        "share": 9.7
+      }
     ]
   },
   "momoDetail": {
     "url": "momo.com.tw/demo-store",
-    "achievement": 16.0,
+    "achievement": 16,
     "achievementStatus": "符合節奏",
     "monthlyGmv": 95987,
     "target": 600000,
     "internalTabs": [
-      { "key": "dashboard", "label": "業績儀錶板", "active": true },
-      { "key": "campaign", "label": "檔期排程" },
-      { "key": "ranking", "label": "商品排行" },
-      { "key": "search", "label": "站內排名" },
-      { "key": "ops", "label": "通路經營" }
+      {
+        "key": "dashboard",
+        "label": "業績儀錶板",
+        "active": true
+      },
+      {
+        "key": "campaign",
+        "label": "檔期排程"
+      },
+      {
+        "key": "ranking",
+        "label": "商品排行"
+      },
+      {
+        "key": "search",
+        "label": "站內排名"
+      },
+      {
+        "key": "ops",
+        "label": "通路經營"
+      }
     ],
     "ytd": {
       "gmv": 1480000,
@@ -440,148 +1126,530 @@
       "note": "1 月到目前累計"
     },
     "kpiGrid": [
-      { "label": "月業績", "value": "NT$95,987", "mom": 12.4, "yoy": 240 },
-      { "label": "訂單數", "value": "77 筆", "mom": 8.5 },
-      { "label": "客單價 AOV", "value": "NT$1,247", "mom": 3.6 },
-      { "label": "瀏覽量", "value": "2,418", "mom": 15.2 },
-      { "label": "廣告費", "value": "NT$5,312", "mom": 25.0 },
-      { "label": "ROAS", "value": "18.07x", "mom": 11.5 },
-      { "label": "CPA", "value": "NT$69", "mom": -8.2 },
-      { "label": "YoY", "value": "+240%", "yoy": 240 }
+      {
+        "label": "月業績",
+        "value": "NT$95,987",
+        "mom": 12.4,
+        "yoy": 240
+      },
+      {
+        "label": "訂單數",
+        "value": "77 筆",
+        "mom": 8.5
+      },
+      {
+        "label": "客單價 AOV",
+        "value": "NT$1,247",
+        "mom": 3.6
+      },
+      {
+        "label": "瀏覽量",
+        "value": "2,418",
+        "mom": 15.2
+      },
+      {
+        "label": "廣告費",
+        "value": "NT$5,312",
+        "mom": 25
+      },
+      {
+        "label": "ROAS",
+        "value": "18.07x",
+        "mom": 11.5
+      },
+      {
+        "label": "CPA",
+        "value": "NT$69",
+        "mom": -8.2
+      },
+      {
+        "label": "YoY",
+        "value": "+240%",
+        "yoy": 240
+      }
     ],
     "trends": {
       "gmv": [
-        { "month": "2月", "value": 32 },
-        { "month": "3月", "value": 36 },
-        { "month": "4月", "value": 40 },
-        { "month": "5月", "value": 9.6 },
-        { "month": "6月", "value": 0 },
-        { "month": "7月", "value": 0 },
-        { "month": "8月", "value": 0 },
-        { "month": "9月", "value": 0 },
-        { "month": "10月", "value": 0 },
-        { "month": "11月", "value": 0 },
-        { "month": "12月", "value": 0 }
+        {
+          "month": "2月",
+          "value": 32
+        },
+        {
+          "month": "3月",
+          "value": 36
+        },
+        {
+          "month": "4月",
+          "value": 40
+        },
+        {
+          "month": "5月",
+          "value": 9.6
+        },
+        {
+          "month": "6月",
+          "value": 0
+        },
+        {
+          "month": "7月",
+          "value": 0
+        },
+        {
+          "month": "8月",
+          "value": 0
+        },
+        {
+          "month": "9月",
+          "value": 0
+        },
+        {
+          "month": "10月",
+          "value": 0
+        },
+        {
+          "month": "11月",
+          "value": 0
+        },
+        {
+          "month": "12月",
+          "value": 0
+        }
       ],
       "orders": [
-        { "month": "2月", "value": 280 },
-        { "month": "3月", "value": 320 },
-        { "month": "4月", "value": 360 },
-        { "month": "5月", "value": 77 },
-        { "month": "6月", "value": 0 },
-        { "month": "7月", "value": 0 },
-        { "month": "8月", "value": 0 },
-        { "month": "9月", "value": 0 },
-        { "month": "10月", "value": 0 },
-        { "month": "11月", "value": 0 },
-        { "month": "12月", "value": 0 }
+        {
+          "month": "2月",
+          "value": 280
+        },
+        {
+          "month": "3月",
+          "value": 320
+        },
+        {
+          "month": "4月",
+          "value": 360
+        },
+        {
+          "month": "5月",
+          "value": 77
+        },
+        {
+          "month": "6月",
+          "value": 0
+        },
+        {
+          "month": "7月",
+          "value": 0
+        },
+        {
+          "month": "8月",
+          "value": 0
+        },
+        {
+          "month": "9月",
+          "value": 0
+        },
+        {
+          "month": "10月",
+          "value": 0
+        },
+        {
+          "month": "11月",
+          "value": 0
+        },
+        {
+          "month": "12月",
+          "value": 0
+        }
       ],
       "aov": [
-        { "month": "2月", "value": 1200 },
-        { "month": "3月", "value": 1230 },
-        { "month": "4月", "value": 1245 },
-        { "month": "5月", "value": 1247 },
-        { "month": "6月", "value": 0 },
-        { "month": "7月", "value": 0 },
-        { "month": "8月", "value": 0 },
-        { "month": "9月", "value": 0 },
-        { "month": "10月", "value": 0 },
-        { "month": "11月", "value": 0 },
-        { "month": "12月", "value": 0 }
+        {
+          "month": "2月",
+          "value": 1200
+        },
+        {
+          "month": "3月",
+          "value": 1230
+        },
+        {
+          "month": "4月",
+          "value": 1245
+        },
+        {
+          "month": "5月",
+          "value": 1247
+        },
+        {
+          "month": "6月",
+          "value": 0
+        },
+        {
+          "month": "7月",
+          "value": 0
+        },
+        {
+          "month": "8月",
+          "value": 0
+        },
+        {
+          "month": "9月",
+          "value": 0
+        },
+        {
+          "month": "10月",
+          "value": 0
+        },
+        {
+          "month": "11月",
+          "value": 0
+        },
+        {
+          "month": "12月",
+          "value": 0
+        }
       ],
       "roas": [
-        { "month": "2月", "value": 14.5 },
-        { "month": "3月", "value": 16.0 },
-        { "month": "4月", "value": 16.2 },
-        { "month": "5月", "value": 18.07 },
-        { "month": "6月", "value": 0 },
-        { "month": "7月", "value": 0 },
-        { "month": "8月", "value": 0 },
-        { "month": "9月", "value": 0 },
-        { "month": "10月", "value": 0 },
-        { "month": "11月", "value": 0 },
-        { "month": "12月", "value": 0 }
+        {
+          "month": "2月",
+          "value": 14.5
+        },
+        {
+          "month": "3月",
+          "value": 16
+        },
+        {
+          "month": "4月",
+          "value": 16.2
+        },
+        {
+          "month": "5月",
+          "value": 18.07
+        },
+        {
+          "month": "6月",
+          "value": 0
+        },
+        {
+          "month": "7月",
+          "value": 0
+        },
+        {
+          "month": "8月",
+          "value": 0
+        },
+        {
+          "month": "9月",
+          "value": 0
+        },
+        {
+          "month": "10月",
+          "value": 0
+        },
+        {
+          "month": "11月",
+          "value": 0
+        },
+        {
+          "month": "12月",
+          "value": 0
+        }
       ]
     },
     "searchRanking": [
-      { "keyword": "母嬰清潔", "rank": 3, "delta": "+2" },
-      { "keyword": "嬰兒洗衣精", "rank": 7, "delta": "+1" },
-      { "keyword": "柔濕巾", "rank": 12, "delta": "—" },
-      { "keyword": "天然清潔", "rank": 18, "delta": "-3" }
+      {
+        "keyword": "母嬰清潔",
+        "rank": 3,
+        "delta": "+2"
+      },
+      {
+        "keyword": "嬰兒洗衣精",
+        "rank": 7,
+        "delta": "+1"
+      },
+      {
+        "keyword": "柔濕巾",
+        "rank": 12,
+        "delta": "—"
+      },
+      {
+        "keyword": "天然清潔",
+        "rank": 18,
+        "delta": "-3"
+      }
     ],
     "topProducts": [
-      { "name": "洗衣精 1.5L x2 箱購", "gmv": 28000, "share": 29.2 },
-      { "name": "母嬰旅行組", "gmv": 21000, "share": 21.9 },
-      { "name": "柔濕巾 80 抽 x4 箱", "gmv": 18500, "share": 19.3 },
-      { "name": "除黴噴霧 500ml", "gmv": 12000, "share": 12.5 },
-      { "name": "沐浴乳 450ml x2", "gmv": 9500, "share": 9.9 }
+      {
+        "name": "洗衣精 1.5L x2 箱購",
+        "gmv": 28000,
+        "share": 29.2
+      },
+      {
+        "name": "母嬰旅行組",
+        "gmv": 21000,
+        "share": 21.9
+      },
+      {
+        "name": "柔濕巾 80 抽 x4 箱",
+        "gmv": 18500,
+        "share": 19.3
+      },
+      {
+        "name": "除黴噴霧 500ml",
+        "gmv": 12000,
+        "share": 12.5
+      },
+      {
+        "name": "沐浴乳 450ml x2",
+        "gmv": 9500,
+        "share": 9.9
+      }
     ]
   },
   "connect": {
     "platforms": [
       {
-        "id": "shopline", "name": "Shopline API", "category": "電商平台", "status": "connected",
+        "id": "shopline",
+        "name": "Shopline API",
+        "category": "電商平台",
+        "status": "connected",
         "description": "串接後可自動同步訂單、流量、會員、庫存資料",
-        "fields": [{ "label": "storeUrl", "value": "https://www.demo-shop.tw/" }]
+        "fields": [
+          {
+            "label": "storeUrl",
+            "value": "https://www.demo-shop.tw/"
+          }
+        ]
       },
       {
-        "id": "shopee", "name": "蝦皮開放平台 API", "category": "電商平台", "status": "pending",
+        "id": "shopee",
+        "name": "蝦皮開放平台 API",
+        "category": "電商平台",
+        "status": "pending",
         "description": "串接後可自動拉取訂單、廣告數據，免手動上傳 CSV",
         "fields": [
-          { "label": "合作夥伴 ID (Partner ID)", "value": "123456", "hint": "蝦皮開放平台開發者後台取得" },
-          { "label": "App Key", "value": "••••••••••••••••", "secret": true },
-          { "label": "App Secret", "value": "••••••••••••••••", "secret": true }
+          {
+            "label": "合作夥伴 ID (Partner ID)",
+            "value": "123456",
+            "hint": "蝦皮開放平台開發者後台取得"
+          },
+          {
+            "label": "App Key",
+            "value": "••••••••••••••••",
+            "secret": true
+          },
+          {
+            "label": "App Secret",
+            "value": "••••••••••••••••",
+            "secret": true
+          }
         ],
         "warning": "蝦皮開放平台 API 需向蝦皮申請資格（Open API Onboarding），一般商家帳號尚未開放。申請通過後填入憑證即可啟用。"
       },
       {
-        "id": "ga4", "name": "Google Analytics 4", "category": "流量與廣告分析", "status": "connected",
+        "id": "ga4",
+        "name": "Google Analytics 4",
+        "category": "流量與廣告分析",
+        "status": "connected",
         "description": "串接後可查看官網流量、轉換漏斗、工作階段等即時數據",
-        "fields": [{ "label": "propertyId", "value": "260114136" }],
+        "fields": [
+          {
+            "label": "propertyId",
+            "value": "260114136"
+          }
+        ],
         "note": "GA4 Service Account（JSON 憑證）需由技術人員設定至 Cloudflare Pages 環境變數 GA_SERVICE_ACCOUNT，完成後流量數據即可自動同步。"
       },
       {
-        "id": "meta", "name": "Meta 廣告（Facebook / Instagram）", "category": "流量與廣告分析", "status": "connected",
+        "id": "meta",
+        "name": "Meta 廣告（Facebook / Instagram）",
+        "category": "流量與廣告分析",
+        "status": "connected",
         "description": "串接後可自動同步廣告花費、ROAS、曝光、點擊等數據",
-        "fields": [{ "label": "adAccountId", "value": "act_1322065504565230" }],
+        "fields": [
+          {
+            "label": "adAccountId",
+            "value": "act_1322065504565230"
+          }
+        ],
         "note": "Access Token 建議使用系統用戶 Token（System User Token）。若 Meta 顯示 appsecret_proof 錯誤，請補填 Meta App Secret，系統會自動產生 proof。"
       }
     ]
   },
   "adsMeta": {
     "kpi": {
-      "spend": 320000, "impressions": 4200000, "clicks": 28500, "ctr": 0.68, "cpc": 11.2, "roas": 3.24, "reach": 1450000
+      "spend": 320000,
+      "impressions": 4200000,
+      "clicks": 28500,
+      "ctr": 0.68,
+      "cpc": 11.2,
+      "roas": 3.24,
+      "reach": 1450000
     },
     "campaigns": [
-      { "name": "618 預熱檔 - 廣泛受眾", "objective": "轉換", "status": "進行中", "spend": 86000, "roas": 4.12, "ctr": 0.82, "orders": 287 },
-      { "name": "三三補貨日 - VIP 再行銷", "objective": "轉換", "status": "進行中", "spend": 64000, "roas": 5.21, "ctr": 1.45, "orders": 245 },
-      { "name": "母嬰節組合包 - Lookalike 1%", "objective": "轉換", "status": "進行中", "spend": 58000, "roas": 3.85, "ctr": 0.92, "orders": 215 },
-      { "name": "新客體驗組 - 興趣母嬰", "objective": "轉換", "status": "已暫停", "spend": 42000, "roas": 1.45, "ctr": 0.55, "orders": 89 },
-      { "name": "品牌曝光 - Reels Boost", "objective": "曝光", "status": "進行中", "spend": 32000, "roas": null, "ctr": 1.85, "orders": 0 },
-      { "name": "Lookalike 5% - 寬鬆受眾", "objective": "轉換", "status": "已暫停", "spend": 38000, "roas": 1.12, "ctr": 0.45, "orders": 72 }
+      {
+        "name": "618 預熱檔 - 廣泛受眾",
+        "objective": "轉換",
+        "status": "進行中",
+        "spend": 86000,
+        "roas": 4.12,
+        "ctr": 0.82,
+        "orders": 287
+      },
+      {
+        "name": "三三補貨日 - VIP 再行銷",
+        "objective": "轉換",
+        "status": "進行中",
+        "spend": 64000,
+        "roas": 5.21,
+        "ctr": 1.45,
+        "orders": 245
+      },
+      {
+        "name": "母嬰節組合包 - Lookalike 1%",
+        "objective": "轉換",
+        "status": "進行中",
+        "spend": 58000,
+        "roas": 3.85,
+        "ctr": 0.92,
+        "orders": 215
+      },
+      {
+        "name": "新客體驗組 - 興趣母嬰",
+        "objective": "轉換",
+        "status": "已暫停",
+        "spend": 42000,
+        "roas": 1.45,
+        "ctr": 0.55,
+        "orders": 89
+      },
+      {
+        "name": "品牌曝光 - Reels Boost",
+        "objective": "曝光",
+        "status": "進行中",
+        "spend": 32000,
+        "roas": null,
+        "ctr": 1.85,
+        "orders": 0
+      },
+      {
+        "name": "Lookalike 5% - 寬鬆受眾",
+        "objective": "轉換",
+        "status": "已暫停",
+        "spend": 38000,
+        "roas": 1.12,
+        "ctr": 0.45,
+        "orders": 72
+      }
     ],
     "audiences": [
-      { "name": "VIP 再行銷（90 日）", "size": 12500, "ctr": 1.45, "cvr": 4.2, "rating": "優秀" },
-      { "name": "Lookalike 1% (母嬰購買)", "size": 280000, "ctr": 0.92, "cvr": 2.1, "rating": "良好" },
-      { "name": "興趣 - 母嬰用品", "size": 1200000, "ctr": 0.68, "cvr": 1.2, "rating": "普通" },
-      { "name": "Lookalike 5%", "size": 1400000, "ctr": 0.45, "cvr": 0.6, "rating": "偏低" }
+      {
+        "name": "VIP 再行銷（90 日）",
+        "size": 12500,
+        "ctr": 1.45,
+        "cvr": 4.2,
+        "rating": "優秀"
+      },
+      {
+        "name": "Lookalike 1% (母嬰購買)",
+        "size": 280000,
+        "ctr": 0.92,
+        "cvr": 2.1,
+        "rating": "良好"
+      },
+      {
+        "name": "興趣 - 母嬰用品",
+        "size": 1200000,
+        "ctr": 0.68,
+        "cvr": 1.2,
+        "rating": "普通"
+      },
+      {
+        "name": "Lookalike 5%",
+        "size": 1400000,
+        "ctr": 0.45,
+        "cvr": 0.6,
+        "rating": "偏低"
+      }
     ]
   },
   "adsGoogle": {
     "kpi": {
-      "spend": 64000, "impressions": 580000, "clicks": 4800, "ctr": 0.83, "cpc": 13.3, "roas": 5.66, "conversions": 168
+      "spend": 64000,
+      "impressions": 580000,
+      "clicks": 4800,
+      "ctr": 0.83,
+      "cpc": 13.3,
+      "roas": 5.66,
+      "conversions": 168
     },
     "split": [
-      { "type": "搜尋廣告", "spend": 42000, "roas": 6.21, "share": 65.6, "color": "primary" },
-      { "type": "多媒體廣告", "spend": 16000, "roas": 3.85, "share": 25.0, "color": "amber" },
-      { "type": "YouTube", "spend": 6000, "roas": 2.45, "share": 9.4, "color": "rose" }
+      {
+        "type": "搜尋廣告",
+        "spend": 42000,
+        "roas": 6.21,
+        "share": 65.6,
+        "color": "primary"
+      },
+      {
+        "type": "多媒體廣告",
+        "spend": 16000,
+        "roas": 3.85,
+        "share": 25,
+        "color": "amber"
+      },
+      {
+        "type": "YouTube",
+        "spend": 6000,
+        "roas": 2.45,
+        "share": 9.4,
+        "color": "rose"
+      }
     ],
     "keywords": [
-      { "keyword": "母嬰清潔", "matchType": "完全比對", "impressions": 28000, "clicks": 1840, "ctr": 6.5, "cpc": 9.5, "cvr": 4.2 },
-      { "keyword": "嬰兒洗衣精", "matchType": "詞組比對", "impressions": 18500, "clicks": 1120, "ctr": 6.0, "cpc": 11.2, "cvr": 3.8 },
-      { "keyword": "天然清潔劑", "matchType": "廣泛比對", "impressions": 45000, "clicks": 1850, "ctr": 4.1, "cpc": 8.4, "cvr": 2.5 },
-      { "keyword": "柔濕巾推薦", "matchType": "完全比對", "impressions": 12000, "clicks": 720, "ctr": 6.0, "cpc": 10.8, "cvr": 3.2 },
-      { "keyword": "除黴噴霧", "matchType": "詞組比對", "impressions": 8500, "clicks": 425, "ctr": 5.0, "cpc": 12.5, "cvr": 2.8 }
+      {
+        "keyword": "母嬰清潔",
+        "matchType": "完全比對",
+        "impressions": 28000,
+        "clicks": 1840,
+        "ctr": 6.5,
+        "cpc": 9.5,
+        "cvr": 4.2
+      },
+      {
+        "keyword": "嬰兒洗衣精",
+        "matchType": "詞組比對",
+        "impressions": 18500,
+        "clicks": 1120,
+        "ctr": 6,
+        "cpc": 11.2,
+        "cvr": 3.8
+      },
+      {
+        "keyword": "天然清潔劑",
+        "matchType": "廣泛比對",
+        "impressions": 45000,
+        "clicks": 1850,
+        "ctr": 4.1,
+        "cpc": 8.4,
+        "cvr": 2.5
+      },
+      {
+        "keyword": "柔濕巾推薦",
+        "matchType": "完全比對",
+        "impressions": 12000,
+        "clicks": 720,
+        "ctr": 6,
+        "cpc": 10.8,
+        "cvr": 3.2
+      },
+      {
+        "keyword": "除黴噴霧",
+        "matchType": "詞組比對",
+        "impressions": 8500,
+        "clicks": 425,
+        "ctr": 5,
+        "cpc": 12.5,
+        "cvr": 2.8
+      }
     ]
   },
   "competitorAds": {
@@ -632,8 +1700,16 @@
         "monthlyTraffic": "120 萬",
         "skuCount": 85,
         "avgPrice": "NT$ 350",
-        "promotions": ["618 第二件 6 折", "VIP 終身 9 折", "免運門檻 $599"],
-        "uxObservations": ["首頁主推組合包", "結帳流程 3 步", "有 LINE 客服浮窗"],
+        "promotions": [
+          "618 第二件 6 折",
+          "VIP 終身 9 折",
+          "免運門檻 $599"
+        ],
+        "uxObservations": [
+          "首頁主推組合包",
+          "結帳流程 3 步",
+          "有 LINE 客服浮窗"
+        ],
         "aiSummary": "A 牌官網偏「促購導向」，首頁 80% 篇幅都是活動 banner 與組合包，商品頁簡潔不解釋成分。"
       },
       {
@@ -643,8 +1719,15 @@
         "monthlyTraffic": "65 萬",
         "skuCount": 42,
         "avgPrice": "NT$ 420",
-        "promotions": ["新客首購 7 折", "訂閱制 9 折"],
-        "uxObservations": ["首頁主推品牌故事", "每個商品頁含成分解析", "Blog 每週更新"],
+        "promotions": [
+          "新客首購 7 折",
+          "訂閱制 9 折"
+        ],
+        "uxObservations": [
+          "首頁主推品牌故事",
+          "每個商品頁含成分解析",
+          "Blog 每週更新"
+        ],
         "aiSummary": "B 牌走「教育 + 信任」路線，網站結構像內容網站，商品頁包含成分、臨床測試、媽媽見證。"
       },
       {
@@ -654,87 +1737,304 @@
         "monthlyTraffic": "38 萬",
         "skuCount": 28,
         "avgPrice": "NT$ 380",
-        "promotions": ["KOL 折扣碼", "Instagram 限定優惠"],
-        "uxObservations": ["首頁嵌入 IG Feed", "商品頁有 KOL 短影音", "整體調性年輕"],
+        "promotions": [
+          "KOL 折扣碼",
+          "Instagram 限定優惠"
+        ],
+        "uxObservations": [
+          "首頁嵌入 IG Feed",
+          "商品頁有 KOL 短影音",
+          "整體調性年輕"
+        ],
         "aiSummary": "C 牌主打「KOL 共創」，網站像 IG 平面化，商品頁標配 KOL 開箱影片，缺乏深度文字內容。"
       }
     ],
     "comparisonTable": {
-      "headers": ["維度", "A 牌", "B 牌", "C 牌", "Johnny demo"],
+      "headers": [
+        "維度",
+        "A 牌",
+        "B 牌",
+        "C 牌",
+        "Johnny demo"
+      ],
       "rows": [
-        { "label": "月流量", "a": "120 萬", "b": "65 萬", "c": "38 萬", "us": "29K（待提升）" },
-        { "label": "平均價格", "a": "NT$ 350", "b": "NT$ 420", "c": "NT$ 380", "us": "NT$ 400" },
-        { "label": "SKU 數", "a": "85", "b": "42", "c": "28", "us": "32" },
-        { "label": "主策略", "a": "促購導向", "b": "成分透明", "c": "KOL 共創", "us": "VIP 私域 + 組合包" },
-        { "label": "弱點", "a": "促銷疲乏", "b": "新客成本高", "c": "規模小", "us": "ROAS 偏低" }
+        {
+          "label": "月流量",
+          "a": "120 萬",
+          "b": "65 萬",
+          "c": "38 萬",
+          "us": "29K（待提升）"
+        },
+        {
+          "label": "平均價格",
+          "a": "NT$ 350",
+          "b": "NT$ 420",
+          "c": "NT$ 380",
+          "us": "NT$ 400"
+        },
+        {
+          "label": "SKU 數",
+          "a": "85",
+          "b": "42",
+          "c": "28",
+          "us": "32"
+        },
+        {
+          "label": "主策略",
+          "a": "促購導向",
+          "b": "成分透明",
+          "c": "KOL 共創",
+          "us": "VIP 私域 + 組合包"
+        },
+        {
+          "label": "弱點",
+          "a": "促銷疲乏",
+          "b": "新客成本高",
+          "c": "規模小",
+          "us": "ROAS 偏低"
+        }
       ]
     }
   },
   "productsPage": {
     "totalSku": 32,
     "categoryBreakdown": [
-      { "name": "洗衣精", "count": 8, "gmv": 285000, "color": "amber" },
-      { "name": "柔濕巾", "count": 6, "gmv": 158000, "color": "primary" },
-      { "name": "除黴", "count": 5, "gmv": 142000, "color": "violet" },
-      { "name": "沐浴", "count": 7, "gmv": 196000, "color": "rose" },
-      { "name": "洗手", "count": 4, "gmv": 86000, "color": "emerald" },
-      { "name": "其他", "count": 2, "gmv": 32000, "color": "zinc" }
+      {
+        "name": "洗衣精",
+        "count": 8,
+        "gmv": 285000,
+        "color": "amber"
+      },
+      {
+        "name": "柔濕巾",
+        "count": 6,
+        "gmv": 158000,
+        "color": "primary"
+      },
+      {
+        "name": "除黴",
+        "count": 5,
+        "gmv": 142000,
+        "color": "violet"
+      },
+      {
+        "name": "沐浴",
+        "count": 7,
+        "gmv": 196000,
+        "color": "rose"
+      },
+      {
+        "name": "洗手",
+        "count": 4,
+        "gmv": 86000,
+        "color": "emerald"
+      },
+      {
+        "name": "其他",
+        "count": 2,
+        "gmv": 32000,
+        "color": "zinc"
+      }
     ],
     "list": [
-      { "sku": "CC-LD-001", "name": "洗衣精 1.5L 補充包", "category": "洗衣精", "price": 380, "stock": 1450, "gmv": 156000, "trend": 28 },
-      { "sku": "CC-WT-003", "name": "柔濕巾 80 抽 x3", "category": "柔濕巾", "price": 450, "stock": 820, "gmv": 98000, "trend": -12 },
-      { "sku": "CC-MD-002", "name": "除黴噴霧 500ml", "category": "除黴", "price": 320, "stock": 620, "gmv": 87000, "trend": 5 },
-      { "sku": "CC-SH-005", "name": "沐浴乳 450ml", "category": "沐浴", "price": 280, "stock": 1180, "gmv": 76000, "trend": 15 },
-      { "sku": "CC-HW-001", "name": "洗手液 250ml", "category": "洗手", "price": 180, "stock": 950, "gmv": 54000, "trend": 8 },
-      { "sku": "CC-LD-005", "name": "洗衣精補充包 x3 組", "category": "洗衣精", "price": 980, "stock": 320, "gmv": 142000, "trend": 35 }
+      {
+        "sku": "CC-LD-001",
+        "name": "洗衣精 1.5L 補充包",
+        "category": "洗衣精",
+        "price": 380,
+        "stock": 1450,
+        "gmv": 156000,
+        "trend": 28
+      },
+      {
+        "sku": "CC-WT-003",
+        "name": "柔濕巾 80 抽 x3",
+        "category": "柔濕巾",
+        "price": 450,
+        "stock": 820,
+        "gmv": 98000,
+        "trend": -12
+      },
+      {
+        "sku": "CC-MD-002",
+        "name": "除黴噴霧 500ml",
+        "category": "除黴",
+        "price": 320,
+        "stock": 620,
+        "gmv": 87000,
+        "trend": 5
+      },
+      {
+        "sku": "CC-SH-005",
+        "name": "沐浴乳 450ml",
+        "category": "沐浴",
+        "price": 280,
+        "stock": 1180,
+        "gmv": 76000,
+        "trend": 15
+      },
+      {
+        "sku": "CC-HW-001",
+        "name": "洗手液 250ml",
+        "category": "洗手",
+        "price": 180,
+        "stock": 950,
+        "gmv": 54000,
+        "trend": 8
+      },
+      {
+        "sku": "CC-LD-005",
+        "name": "洗衣精補充包 x3 組",
+        "category": "洗衣精",
+        "price": 980,
+        "stock": 320,
+        "gmv": 142000,
+        "trend": 35
+      }
     ]
   },
   "uploadPage": {
-    "supportedFormats": ["蝦皮 訂單報表 (.xlsx)", "MoMo 銷售報表 (.csv)", "Meta 廣告報表 (.csv)", "Google Ads 報表 (.csv)"],
+    "supportedFormats": [
+      "蝦皮 訂單報表 (.xlsx)",
+      "MoMo 銷售報表 (.csv)",
+      "Meta 廣告報表 (.csv)",
+      "Google Ads 報表 (.csv)"
+    ],
     "history": [
-      { "filename": "蝦皮_5月訂單_20260601.xlsx", "platform": "蝦皮", "uploadedAt": "2026/06/01 10:23", "rows": 5432, "status": "已處理" },
-      { "filename": "MoMo_5月訂單_20260601.csv", "platform": "MoMo", "uploadedAt": "2026/06/01 10:21", "rows": 892, "status": "已處理" },
-      { "filename": "Meta_廣告_週報_W22.csv", "platform": "Meta", "uploadedAt": "2026/05/31 09:15", "rows": 156, "status": "已處理" },
-      { "filename": "Google_Ads_週報_W22.csv", "platform": "Google", "uploadedAt": "2026/05/31 09:14", "rows": 89, "status": "處理中" }
+      {
+        "filename": "蝦皮_5月訂單_20260601.xlsx",
+        "platform": "蝦皮",
+        "uploadedAt": "2026/06/01 10:23",
+        "rows": 5432,
+        "status": "已處理"
+      },
+      {
+        "filename": "MoMo_5月訂單_20260601.csv",
+        "platform": "MoMo",
+        "uploadedAt": "2026/06/01 10:21",
+        "rows": 892,
+        "status": "已處理"
+      },
+      {
+        "filename": "Meta_廣告_週報_W22.csv",
+        "platform": "Meta",
+        "uploadedAt": "2026/05/31 09:15",
+        "rows": 156,
+        "status": "已處理"
+      },
+      {
+        "filename": "Google_Ads_週報_W22.csv",
+        "platform": "Google",
+        "uploadedAt": "2026/05/31 09:14",
+        "rows": 89,
+        "status": "處理中"
+      }
     ]
   },
   "logPage": {
     "events": [
-      { "time": "2026/06/11 12:26", "actor": "饅頭", "action": "AI 診斷觸發", "page": "/analytics", "type": "ai", "comment": "找出三大問題並執行建議" },
-      { "time": "2026/06/11 11:54", "actor": "系統", "action": "GA4 數據同步", "page": "/analytics", "type": "system" },
-      { "time": "2026/06/11 10:42", "actor": "跳跳", "action": "MoMo 報表上傳", "page": "/upload", "type": "upload", "fileInfo": "MoMo_銷售_W23.csv" },
-      { "time": "2026/06/11 09:18", "actor": "雨昕", "action": "完成「母親節活動復盤」", "page": "/campaign", "type": "edit" },
-      { "time": "2026/06/11 08:40", "actor": "系統", "action": "三平台自動取數完成", "page": "/sales-battle", "type": "system" },
-      { "time": "2026/06/10 18:23", "actor": "饅頭", "action": "編輯首頁文案「下載今日報表」", "page": "/", "type": "edit" },
-      { "time": "2026/06/10 14:30", "actor": "饅頭", "action": "AI 解讀「蝦皮 GMV -18%」", "page": "/insights", "type": "ai", "comment": "採納建議，將 FB 預算 +10% 到商城" },
-      { "time": "2026/06/10 09:55", "actor": "跳跳", "action": "新增願望「想要競品價格自動監控」", "page": "/wishpool", "type": "wish" }
+      {
+        "time": "2026/06/11 12:26",
+        "actor": "饅頭",
+        "action": "AI 診斷觸發",
+        "page": "/analytics",
+        "type": "ai",
+        "comment": "找出三大問題並執行建議"
+      },
+      {
+        "time": "2026/06/11 11:54",
+        "actor": "系統",
+        "action": "GA4 數據同步",
+        "page": "/analytics",
+        "type": "system"
+      },
+      {
+        "time": "2026/06/11 10:42",
+        "actor": "跳跳",
+        "action": "MoMo 報表上傳",
+        "page": "/upload",
+        "type": "upload",
+        "fileInfo": "MoMo_銷售_W23.csv"
+      },
+      {
+        "time": "2026/06/11 09:18",
+        "actor": "雨昕",
+        "action": "完成「母親節活動復盤」",
+        "page": "/campaign",
+        "type": "edit"
+      },
+      {
+        "time": "2026/06/11 08:40",
+        "actor": "系統",
+        "action": "三平台自動取數完成",
+        "page": "/sales-battle",
+        "type": "system"
+      },
+      {
+        "time": "2026/06/10 18:23",
+        "actor": "饅頭",
+        "action": "編輯首頁文案「下載今日報表」",
+        "page": "/",
+        "type": "edit"
+      },
+      {
+        "time": "2026/06/10 14:30",
+        "actor": "饅頭",
+        "action": "AI 解讀「蝦皮 GMV -18%」",
+        "page": "/insights",
+        "type": "ai",
+        "comment": "採納建議，將 FB 預算 +10% 到商城"
+      },
+      {
+        "time": "2026/06/10 09:55",
+        "actor": "跳跳",
+        "action": "新增願望「想要競品價格自動監控」",
+        "page": "/wishpool",
+        "type": "wish"
+      }
     ]
   },
   "wishpoolPage": {
     "wishes": [
       {
         "title": "想要競品價格自動監控",
-        "author": "跳跳", "date": "2026/06/10",
+        "author": "跳跳",
+        "date": "2026/06/10",
         "description": "希望能每天自動爬蝦皮 / MoMo 競品同類商品價格，發現我方價格高於市場 5% 以上時主動 LINE 通知。",
-        "likes": 12, "comments": 4, "status": "規劃中", "priority": "高"
+        "likes": 12,
+        "comments": 4,
+        "status": "規劃中",
+        "priority": "高"
       },
       {
         "title": "Slack 日報能直接帶圖",
-        "author": "雨昕", "date": "2026/06/08",
+        "author": "雨昕",
+        "date": "2026/06/08",
         "description": "目前 Slack draft 都是純文字，希望可以自動帶截圖（KPI ring + 三通路卡），主管能一眼看完。",
-        "likes": 8, "comments": 2, "status": "已採納", "priority": "中"
+        "likes": 8,
+        "comments": 2,
+        "status": "已採納",
+        "priority": "中"
       },
       {
         "title": "AI 自動寫產品頁 SEO 標題",
-        "author": "饅頭", "date": "2026/06/05",
+        "author": "饅頭",
+        "date": "2026/06/05",
         "description": "每次上新品都要花 30 分鐘寫 SEO 標題與描述，希望 AI 套用品牌口吻自動生成 3 版供選。",
-        "likes": 15, "comments": 6, "status": "進行中", "priority": "高"
+        "likes": 15,
+        "comments": 6,
+        "status": "進行中",
+        "priority": "高"
       },
       {
         "title": "推播時段 AI 推薦",
-        "author": "饅頭", "date": "2026/05/28",
+        "author": "饅頭",
+        "date": "2026/05/28",
         "description": "LINE OA 推播時段太靠經驗，希望 AI 分析過去開信率，推薦每週最佳推播時段。",
-        "likes": 6, "comments": 1, "status": "已採納", "priority": "低"
+        "likes": 6,
+        "comments": 1,
+        "status": "已採納",
+        "priority": "低"
       }
     ]
   },
@@ -745,78 +2045,413 @@
     "monthlyGmv": 42000,
     "target": 130000,
     "internalTabs": [
-      { "key": "dashboard", "label": "業績儀錶板", "active": true },
-      { "key": "control", "label": "戰略卡位" },
-      { "key": "ranking", "label": "商品排行" },
-      { "key": "ops", "label": "通路經營" }
+      {
+        "key": "dashboard",
+        "label": "業績儀錶板",
+        "active": true
+      },
+      {
+        "key": "control",
+        "label": "戰略卡位"
+      },
+      {
+        "key": "ranking",
+        "label": "商品排行"
+      },
+      {
+        "key": "ops",
+        "label": "通路經營"
+      }
     ],
     "ytd": {
-      "gmv": 168000, "achievement": 21, "orders": 165, "roas": 8.5, "target": 800000, "gap": 632000,
+      "gmv": 168000,
+      "achievement": 21,
+      "orders": 165,
+      "roas": 8.5,
+      "target": 800000,
+      "gap": 632000,
       "note": "2026/3 開賣以來累計"
     },
     "kpiGrid": [
-      { "label": "月業績", "value": "NT$42,000", "mom": 18.2 },
-      { "label": "訂單數", "value": "45 筆", "mom": 12.5 },
-      { "label": "客單價 AOV", "value": "NT$933", "mom": 5.1 },
-      { "label": "瀏覽量", "value": "1,820", "mom": 22.4 },
-      { "label": "廣告費", "value": "NT$4,940", "mom": 8.0 },
-      { "label": "ROAS", "value": "8.50x", "mom": 9.8 },
-      { "label": "CPA", "value": "NT$110", "mom": -6.5 },
-      { "label": "戰略狀態", "value": "防禦卡位" }
+      {
+        "label": "月業績",
+        "value": "NT$42,000",
+        "mom": 18.2
+      },
+      {
+        "label": "訂單數",
+        "value": "45 筆",
+        "mom": 12.5
+      },
+      {
+        "label": "客單價 AOV",
+        "value": "NT$933",
+        "mom": 5.1
+      },
+      {
+        "label": "瀏覽量",
+        "value": "1,820",
+        "mom": 22.4
+      },
+      {
+        "label": "廣告費",
+        "value": "NT$4,940",
+        "mom": 8
+      },
+      {
+        "label": "ROAS",
+        "value": "8.50x",
+        "mom": 9.8
+      },
+      {
+        "label": "CPA",
+        "value": "NT$110",
+        "mom": -6.5
+      },
+      {
+        "label": "戰略狀態",
+        "value": "防禦卡位"
+      }
     ],
     "trends": {
-      "gmv": [{"month":"3月","value":3.6},{"month":"4月","value":3.8},{"month":"5月","value":4.2},{"month":"6月","value":0},{"month":"7月","value":0},{"month":"8月","value":0},{"month":"9月","value":0},{"month":"10月","value":0},{"month":"11月","value":0},{"month":"12月","value":0}],
-      "orders": [{"month":"3月","value":35},{"month":"4月","value":40},{"month":"5月","value":45},{"month":"6月","value":0},{"month":"7月","value":0},{"month":"8月","value":0},{"month":"9月","value":0},{"month":"10月","value":0},{"month":"11月","value":0},{"month":"12月","value":0}],
-      "aov": [{"month":"3月","value":900},{"month":"4月","value":920},{"month":"5月","value":933},{"month":"6月","value":0},{"month":"7月","value":0},{"month":"8月","value":0},{"month":"9月","value":0},{"month":"10月","value":0},{"month":"11月","value":0},{"month":"12月","value":0}],
-      "roas": [{"month":"3月","value":7.5},{"month":"4月","value":8.0},{"month":"5月","value":8.5},{"month":"6月","value":0},{"month":"7月","value":0},{"month":"8月","value":0},{"month":"9月","value":0},{"month":"10月","value":0},{"month":"11月","value":0},{"month":"12月","value":0}]
+      "gmv": [
+        {
+          "month": "3月",
+          "value": 3.6
+        },
+        {
+          "month": "4月",
+          "value": 3.8
+        },
+        {
+          "month": "5月",
+          "value": 4.2
+        },
+        {
+          "month": "6月",
+          "value": 0
+        },
+        {
+          "month": "7月",
+          "value": 0
+        },
+        {
+          "month": "8月",
+          "value": 0
+        },
+        {
+          "month": "9月",
+          "value": 0
+        },
+        {
+          "month": "10月",
+          "value": 0
+        },
+        {
+          "month": "11月",
+          "value": 0
+        },
+        {
+          "month": "12月",
+          "value": 0
+        }
+      ],
+      "orders": [
+        {
+          "month": "3月",
+          "value": 35
+        },
+        {
+          "month": "4月",
+          "value": 40
+        },
+        {
+          "month": "5月",
+          "value": 45
+        },
+        {
+          "month": "6月",
+          "value": 0
+        },
+        {
+          "month": "7月",
+          "value": 0
+        },
+        {
+          "month": "8月",
+          "value": 0
+        },
+        {
+          "month": "9月",
+          "value": 0
+        },
+        {
+          "month": "10月",
+          "value": 0
+        },
+        {
+          "month": "11月",
+          "value": 0
+        },
+        {
+          "month": "12月",
+          "value": 0
+        }
+      ],
+      "aov": [
+        {
+          "month": "3月",
+          "value": 900
+        },
+        {
+          "month": "4月",
+          "value": 920
+        },
+        {
+          "month": "5月",
+          "value": 933
+        },
+        {
+          "month": "6月",
+          "value": 0
+        },
+        {
+          "month": "7月",
+          "value": 0
+        },
+        {
+          "month": "8月",
+          "value": 0
+        },
+        {
+          "month": "9月",
+          "value": 0
+        },
+        {
+          "month": "10月",
+          "value": 0
+        },
+        {
+          "month": "11月",
+          "value": 0
+        },
+        {
+          "month": "12月",
+          "value": 0
+        }
+      ],
+      "roas": [
+        {
+          "month": "3月",
+          "value": 7.5
+        },
+        {
+          "month": "4月",
+          "value": 8
+        },
+        {
+          "month": "5月",
+          "value": 8.5
+        },
+        {
+          "month": "6月",
+          "value": 0
+        },
+        {
+          "month": "7月",
+          "value": 0
+        },
+        {
+          "month": "8月",
+          "value": 0
+        },
+        {
+          "month": "9月",
+          "value": 0
+        },
+        {
+          "month": "10月",
+          "value": 0
+        },
+        {
+          "month": "11月",
+          "value": 0
+        },
+        {
+          "month": "12月",
+          "value": 0
+        }
+      ]
     },
     "topProducts": [
-      { "name": "洗衣精 1.5L（戰略品）", "gmv": 16000, "share": 38.1 },
-      { "name": "除黴噴霧 500ml", "gmv": 11000, "share": 26.2 },
-      { "name": "柔濕巾 80 抽", "gmv": 8500, "share": 20.2 },
-      { "name": "沐浴乳 450ml", "gmv": 6500, "share": 15.5 }
+      {
+        "name": "洗衣精 1.5L（戰略品）",
+        "gmv": 16000,
+        "share": 38.1
+      },
+      {
+        "name": "除黴噴霧 500ml",
+        "gmv": 11000,
+        "share": 26.2
+      },
+      {
+        "name": "柔濕巾 80 抽",
+        "gmv": 8500,
+        "share": 20.2
+      },
+      {
+        "name": "沐浴乳 450ml",
+        "gmv": 6500,
+        "share": 15.5
+      }
     ]
   },
   "analytics": {
     "updatedAt": "2026/06/11 12:26:30",
     "ga4Connected": true,
     "kpi": {
-      "sessions": 9785, "sessionsPeriod": "過去 30 天",
-      "users": 9570, "usersBounceRate": 0.4,
-      "pageviews": 21038, "avgDuration": "0 分 26 秒",
-      "purchaseCvr": 0.0, "orders": 0, "gmv": 0
+      "sessions": 9785,
+      "sessionsPeriod": "過去 30 天",
+      "users": 9570,
+      "usersBounceRate": 0.4,
+      "pageviews": 21038,
+      "avgDuration": "0 分 26 秒",
+      "purchaseCvr": 0,
+      "orders": 0,
+      "gmv": 0
     },
     "funnel": [
-      { "label": "工作階段", "value": 9785 },
-      { "label": "瀏覽量", "value": 21038 },
-      { "label": "交易數", "value": 0 }
+      {
+        "label": "工作階段",
+        "value": 9785
+      },
+      {
+        "label": "瀏覽量",
+        "value": 21038
+      },
+      {
+        "label": "交易數",
+        "value": 0
+      }
     ],
     "devices": [
-      { "label": "手機", "value": 8893, "pct": 100 },
-      { "label": "桌機", "value": 828, "pct": 9 },
-      { "label": "平板", "value": 110, "pct": 1 }
+      {
+        "label": "手機",
+        "value": 8893,
+        "pct": 100
+      },
+      {
+        "label": "桌機",
+        "value": 828,
+        "pct": 9
+      },
+      {
+        "label": "平板",
+        "value": 110,
+        "pct": 1
+      }
     ],
     "topPages": [
-      { "path": "/8fbB9", "pageviews": 2967, "sessions": 1426 },
-      { "path": "/P5Z2p", "pageviews": 2305, "sessions": 1124 },
-      { "path": "/BxgVN", "pageviews": 1342, "sessions": 594 },
-      { "path": "/JhLgi", "pageviews": 1132, "sessions": 550 },
-      { "path": "/1gasm", "pageviews": 1042, "sessions": 498 },
-      { "path": "/ongCi", "pageviews": 719,  "sessions": 329 },
-      { "path": "/mIRF8", "pageviews": 618,  "sessions": 295 },
-      { "path": "/9yskQ", "pageviews": 608,  "sessions": 288 },
-      { "path": "/1Y1Nq", "pageviews": 598,  "sessions": 278 },
-      { "path": "/5WxTJ", "pageviews": 566,  "sessions": 263 }
+      {
+        "path": "/8fbB9",
+        "pageviews": 2967,
+        "sessions": 1426
+      },
+      {
+        "path": "/P5Z2p",
+        "pageviews": 2305,
+        "sessions": 1124
+      },
+      {
+        "path": "/BxgVN",
+        "pageviews": 1342,
+        "sessions": 594
+      },
+      {
+        "path": "/JhLgi",
+        "pageviews": 1132,
+        "sessions": 550
+      },
+      {
+        "path": "/1gasm",
+        "pageviews": 1042,
+        "sessions": 498
+      },
+      {
+        "path": "/ongCi",
+        "pageviews": 719,
+        "sessions": 329
+      },
+      {
+        "path": "/mIRF8",
+        "pageviews": 618,
+        "sessions": 295
+      },
+      {
+        "path": "/9yskQ",
+        "pageviews": 608,
+        "sessions": 288
+      },
+      {
+        "path": "/1Y1Nq",
+        "pageviews": 598,
+        "sessions": 278
+      },
+      {
+        "path": "/5WxTJ",
+        "pageviews": 566,
+        "sessions": 263
+      }
     ],
     "trafficSources": [
-      { "channel": "Paid Social",    "color": "cyan",    "sessions": 2912, "orders": 0 },
-      { "channel": "Organic Social", "color": "orange",  "sessions": 2785, "orders": 0 },
-      { "channel": "Direct",         "color": "primary", "sessions": 2189, "orders": 0 },
-      { "channel": "Unassigned",     "color": "zinc",    "sessions": 1066, "orders": 0 },
-      { "channel": "Referral",       "color": "violet",  "sessions": 383,  "orders": 0 },
-      { "channel": "Paid Other",     "color": "rose",    "sessions": 250,  "orders": 0 },
-      { "channel": "Organic Search", "color": "emerald", "sessions": 72,   "orders": 0 },
-      { "channel": "Organic Video",  "color": "amber",   "sessions": 34,   "orders": 0 }
+      {
+        "channel": "Paid Social",
+        "color": "cyan",
+        "sessions": 2912,
+        "orders": 0
+      },
+      {
+        "channel": "Organic Social",
+        "color": "orange",
+        "sessions": 2785,
+        "orders": 0
+      },
+      {
+        "channel": "Direct",
+        "color": "primary",
+        "sessions": 2189,
+        "orders": 0
+      },
+      {
+        "channel": "Unassigned",
+        "color": "zinc",
+        "sessions": 1066,
+        "orders": 0
+      },
+      {
+        "channel": "Referral",
+        "color": "violet",
+        "sessions": 383,
+        "orders": 0
+      },
+      {
+        "channel": "Paid Other",
+        "color": "rose",
+        "sessions": 250,
+        "orders": 0
+      },
+      {
+        "channel": "Organic Search",
+        "color": "emerald",
+        "sessions": 72,
+        "orders": 0
+      },
+      {
+        "channel": "Organic Video",
+        "color": "amber",
+        "sessions": 34,
+        "orders": 0
+      }
     ],
     "clarity": {
       "status": "待安裝追蹤碼",
@@ -837,20 +2472,27 @@
       "avgAov": 1280,
       "totalRoas": 6.34,
       "totalSpend": 874000,
-      "bestCampaign": { "name": "5.5 活動檔", "roas": 11.76 }
+      "bestCampaign": {
+        "name": "5.5 活動檔",
+        "roas": 11.76
+      }
     },
     "kanban": {
       "planning": [
         {
           "name": "官網會員回購週",
           "dateRange": "2026/06/20 ~ 2026/06/27",
-          "platforms": ["官網"],
+          "platforms": [
+            "官網"
+          ],
           "description": "目標：召回 60 天未回購會員。帶先 LINE VIP 私訊預告 + 補貨日券，配 EDM 兩波。"
         },
         {
           "name": "MoMo 夏日家清週",
           "dateRange": "2026/07/01 ~ 2026/07/10",
-          "platforms": ["MoMo"],
+          "platforms": [
+            "MoMo"
+          ],
           "description": "等平台確認檔期資源後上，準備 960 x 480 主視覺與商品組合銷售提案。"
         }
       ],
@@ -858,7 +2500,9 @@
         {
           "name": "618 全通路除垢組合檔",
           "dateRange": "2026/06/01 ~ 2026/06/18",
-          "platforms": ["全通路"],
+          "platforms": [
+            "全通路"
+          ],
           "description": "蝦皮直營轉換超預期，MoMo 需要爭取版位曝光，官網組合包前 3 天表現強。",
           "gmv": 129,
           "aov": 1392
@@ -866,7 +2510,9 @@
         {
           "name": "蝦皮月中免運加碼",
           "dateRange": "2026/06/10 ~ 2026/06/15",
-          "platforms": ["蝦皮"],
+          "platforms": [
+            "蝦皮"
+          ],
           "description": "訂單數高但客單偏低，建議補三入組或加購品提升 AOV。",
           "gmv": 48.6,
           "aov": 938
@@ -876,7 +2522,9 @@
         {
           "name": "母親節清深神隊友",
           "dateRange": "2026/05/01 ~ 2026/05/12",
-          "platforms": ["全通路"],
+          "platforms": [
+            "全通路"
+          ],
           "description": "全通路通推，組合 SET 賣得好。賣單與回購數雙提升。",
           "gmv": 215,
           "aov": 1398
@@ -884,7 +2532,9 @@
         {
           "name": "蝦皮 5.5 活動檔",
           "dateRange": "2026/05/05 ~ 2026/05/07",
-          "platforms": ["蝦皮"],
+          "platforms": [
+            "蝦皮"
+          ],
           "description": "轉換好，客單偏低。",
           "gmv": 68.2,
           "aov": 914
@@ -892,7 +2542,9 @@
         {
           "name": "官網春季除垢週",
           "dateRange": "2026/04/15 ~ 2026/04/22",
-          "platforms": ["官網"],
+          "platforms": [
+            "官網"
+          ],
           "description": "客單價漂亮，但流量略不足。",
           "gmv": 93.6,
           "aov": 1550
@@ -900,45 +2552,205 @@
       ]
     },
     "judgement": [
-      { "label": "進行中主力", "color": "cyan", "text": "618 全通路檔目前達成 72%，蝦皮與官網有看，MoMo 需爭取版位曝光。" },
-      { "label": "客單偏問題", "color": "amber", "text": "蝦皮月中免運打單數高，但客單僅 NT$938，需補三入組或加購品設計。" },
-      { "label": "下一檔準備", "color": "primary", "text": "官網會員回購週要先完成名單、LINE 推播文案、組合包與活動席承接。" }
+      {
+        "label": "進行中主力",
+        "color": "cyan",
+        "text": "618 全通路檔目前達成 72%，蝦皮與官網有看，MoMo 需爭取版位曝光。"
+      },
+      {
+        "label": "客單偏問題",
+        "color": "amber",
+        "text": "蝦皮月中免運打單數高，但客單僅 NT$938，需補三入組或加購品設計。"
+      },
+      {
+        "label": "下一檔準備",
+        "color": "primary",
+        "text": "官網會員回購週要先完成名單、LINE 推播文案、組合包與活動席承接。"
+      }
     ],
     "summary": [
-      { "name": "618 全通路除垢組合檔", "dateRange": "2026/06/01 ~ 2026/06/18", "status": "進行中", "platform": "全通路", "gmv": 1290000, "orders": 924, "aov": 1392, "spend": 216000, "roas": 5.95, "achievement": 72 },
-      { "name": "蝦皮月中免運加碼",     "dateRange": "2026/06/10 ~ 2026/06/15", "status": "進行中", "platform": "蝦皮",   "gmv": 486000,  "orders": 518, "aov": 938,  "spend": 42000,  "roas": 11.57, "achievement": 64 },
-      { "name": "官網會員回購週",       "dateRange": "2026/06/20 ~ 2026/06/27", "status": "規劃中", "platform": "官網",   "gmv": 0,       "orders": 0,   "aov": 0,    "spend": 36000,  "roas": null, "achievement": null },
-      { "name": "MoMo 夏日家清檔",     "dateRange": "2026/07/01 ~ 2026/07/10", "status": "規劃中", "platform": "MoMo",   "gmv": 0,       "orders": 0,   "aov": 0,    "spend": 28000,  "roas": null, "achievement": null },
-      { "name": "母親節清深神隊友",     "dateRange": "2026/05/01 ~ 2026/05/12", "status": "已完成", "platform": "全通路", "gmv": 2150000, "orders": 1536, "aov": 1398, "spend": 318000, "roas": 6.75, "achievement": 108 },
-      { "name": "蝦皮 5.5 活動檔",     "dateRange": "2026/05/05 ~ 2026/05/07", "status": "已完成", "platform": "蝦皮",   "gmv": 682000,  "orders": 746, "aov": 914,  "spend": 58000,  "roas": 11.76, "achievement": 124 },
-      { "name": "官網春季除垢週",       "dateRange": "2026/04/15 ~ 2026/04/22", "status": "已完成", "platform": "官網",   "gmv": 936000,  "orders": 604, "aov": 1550, "spend": 176000, "roas": 5.32, "achievement": 86 }
+      {
+        "name": "618 全通路除垢組合檔",
+        "dateRange": "2026/06/01 ~ 2026/06/18",
+        "status": "進行中",
+        "platform": "全通路",
+        "gmv": 1290000,
+        "orders": 924,
+        "aov": 1392,
+        "spend": 216000,
+        "roas": 5.95,
+        "achievement": 72
+      },
+      {
+        "name": "蝦皮月中免運加碼",
+        "dateRange": "2026/06/10 ~ 2026/06/15",
+        "status": "進行中",
+        "platform": "蝦皮",
+        "gmv": 486000,
+        "orders": 518,
+        "aov": 938,
+        "spend": 42000,
+        "roas": 11.57,
+        "achievement": 64
+      },
+      {
+        "name": "官網會員回購週",
+        "dateRange": "2026/06/20 ~ 2026/06/27",
+        "status": "規劃中",
+        "platform": "官網",
+        "gmv": 0,
+        "orders": 0,
+        "aov": 0,
+        "spend": 36000,
+        "roas": null,
+        "achievement": null
+      },
+      {
+        "name": "MoMo 夏日家清檔",
+        "dateRange": "2026/07/01 ~ 2026/07/10",
+        "status": "規劃中",
+        "platform": "MoMo",
+        "gmv": 0,
+        "orders": 0,
+        "aov": 0,
+        "spend": 28000,
+        "roas": null,
+        "achievement": null
+      },
+      {
+        "name": "母親節清深神隊友",
+        "dateRange": "2026/05/01 ~ 2026/05/12",
+        "status": "已完成",
+        "platform": "全通路",
+        "gmv": 2150000,
+        "orders": 1536,
+        "aov": 1398,
+        "spend": 318000,
+        "roas": 6.75,
+        "achievement": 108
+      },
+      {
+        "name": "蝦皮 5.5 活動檔",
+        "dateRange": "2026/05/05 ~ 2026/05/07",
+        "status": "已完成",
+        "platform": "蝦皮",
+        "gmv": 682000,
+        "orders": 746,
+        "aov": 914,
+        "spend": 58000,
+        "roas": 11.76,
+        "achievement": 124
+      },
+      {
+        "name": "官網春季除垢週",
+        "dateRange": "2026/04/15 ~ 2026/04/22",
+        "status": "已完成",
+        "platform": "官網",
+        "gmv": 936000,
+        "orders": 604,
+        "aov": 1550,
+        "spend": 176000,
+        "roas": 5.32,
+        "achievement": 86
+      }
     ],
     "demoReport": {
       "name": "母親節清深神隊友",
       "dateRange": "2026/05/01 ~ 2026/05/12",
       "platform": "全通路",
       "owner": "饅頭",
-      "kpi": { "gmv": 2150000, "orders": 1536, "aov": 1398, "roas": 6.75 },
+      "kpi": {
+        "gmv": 2150000,
+        "orders": 1536,
+        "aov": 1398,
+        "roas": 6.75
+      },
       "sections": [
-        { "title": "成效摘要", "content": "活動達成率 108%，主力來自蝦皮「居家清潔組合檔」。業績回收都很穩，可作為下次全通路檔期的基準版本。" },
-        { "title": "關鍵結論", "content": "組合包比單品更能拉客單；下次可提前 7 天備素材，並把官網會員素材組件到 MoMo。" },
-        { "title": "下次催化", "content": "提前 7 天做素材測試；主視覺至少準備 3 版（官網、蝦皮、MoMo 三方尺寸）；活動中每天盯客單價。" },
-        { "title": "可複用資產", "content": "保留高效素材、商品組合、優惠機制、通路業績表，下一檔可直接複用調整。" }
+        {
+          "title": "成效摘要",
+          "content": "活動達成率 108%，主力來自蝦皮「居家清潔組合檔」。業績回收都很穩，可作為下次全通路檔期的基準版本。"
+        },
+        {
+          "title": "關鍵結論",
+          "content": "組合包比單品更能拉客單；下次可提前 7 天備素材，並把官網會員素材組件到 MoMo。"
+        },
+        {
+          "title": "下次催化",
+          "content": "提前 7 天做素材測試；主視覺至少準備 3 版（官網、蝦皮、MoMo 三方尺寸）；活動中每天盯客單價。"
+        },
+        {
+          "title": "可複用資產",
+          "content": "保留高效素材、商品組合、優惠機制、通路業績表，下一檔可直接複用調整。"
+        }
       ]
     },
     "reportTemplate": [
-      { "title": "活動基本資料", "items": "名稱、通路、日期、負責人、主打商品" },
-      { "title": "業績結果",     "items": "銷售業績、訂單數、客單價、廣告花費、廣告回收" },
-      { "title": "通路拆解",     "items": "官網、蝦皮、MoMo 各自表現問題" },
-      { "title": "素材經驗",     "items": "哪些素材有效、哪些話法該換" },
-      { "title": "下次行動",     "items": "保留、加碼、修改、不要再做" }
+      {
+        "title": "活動基本資料",
+        "items": "名稱、通路、日期、負責人、主打商品"
+      },
+      {
+        "title": "業績結果",
+        "items": "銷售業績、訂單數、客單價、廣告花費、廣告回收"
+      },
+      {
+        "title": "通路拆解",
+        "items": "官網、蝦皮、MoMo 各自表現問題"
+      },
+      {
+        "title": "素材經驗",
+        "items": "哪些素材有效、哪些話法該換"
+      },
+      {
+        "title": "下次行動",
+        "items": "保留、加碼、修改、不要再做"
+      }
     ],
     "checklist": [
-      { "category": "D-30 規劃期", "items": ["定義活動目標 GMV / 客單 / 訂單", "鎖定主推 SKU + 組合包", "規劃通路曝光資源（官網 banner / 蝦皮主圖 / MoMo banner）", "設計 KPI 達成標準 vs 警戒線"] },
-      { "category": "D-14 素材期", "items": ["主視覺定稿（含 3 平台尺寸）", "EDM / LINE OA 文案 review", "蝦皮商品頁文案改版", "Meta / Google 廣告素材 A/B 兩版"] },
-      { "category": "D-7 上線前", "items": ["跨組對焦會（電商 / 設計 / 客服 / 物流）", "庫存盤點 + 補貨單", "客服 FAQ 預先準備", "Tag 與追蹤碼測試"] },
-      { "category": "D-day 啟動", "items": ["首日 09:00 全平台檢查", "LINE VIP 私訊推播", "Meta 廣告組正式 launch", "預設 12 小時內第一波檢視"] },
-      { "category": "D+1 ~ 復盤", "items": ["每日盯 ROAS / 客單", "中期素材輪替（疲乏即換）", "活動結束後 7 天內產出復盤報告"] }
+      {
+        "category": "D-30 規劃期",
+        "items": [
+          "定義活動目標 GMV / 客單 / 訂單",
+          "鎖定主推 SKU + 組合包",
+          "規劃通路曝光資源（官網 banner / 蝦皮主圖 / MoMo banner）",
+          "設計 KPI 達成標準 vs 警戒線"
+        ]
+      },
+      {
+        "category": "D-14 素材期",
+        "items": [
+          "主視覺定稿（含 3 平台尺寸）",
+          "EDM / LINE OA 文案 review",
+          "蝦皮商品頁文案改版",
+          "Meta / Google 廣告素材 A/B 兩版"
+        ]
+      },
+      {
+        "category": "D-7 上線前",
+        "items": [
+          "跨組對焦會（電商 / 設計 / 客服 / 物流）",
+          "庫存盤點 + 補貨單",
+          "客服 FAQ 預先準備",
+          "Tag 與追蹤碼測試"
+        ]
+      },
+      {
+        "category": "D-day 啟動",
+        "items": [
+          "首日 09:00 全平台檢查",
+          "LINE VIP 私訊推播",
+          "Meta 廣告組正式 launch",
+          "預設 12 小時內第一波檢視"
+        ]
+      },
+      {
+        "category": "D+1 ~ 復盤",
+        "items": [
+          "每日盯 ROAS / 客單",
+          "中期素材輪替（疲乏即換）",
+          "活動結束後 7 天內產出復盤報告"
+        ]
+      }
     ]
   },
   "adCreatives": {
@@ -947,14 +2759,39 @@
       "subtitle": "問題解決型 vs 促購型",
       "description": "用相同預算測試兩種方向，確認是痛點素材還是優惠素材更能拉動成交。",
       "tracks": [
-        { "name": "問題解決型", "examples": "浴室水垢、嬰兒紅疹、衣物霉斑", "metric": "點擊率 +28%", "metricColor": "primary" },
-        { "name": "促購型", "examples": "母嬰節 7 折、滿千折百、三三補貨日", "metric": "下單率 +15%", "metricColor": "emerald" }
+        {
+          "name": "問題解決型",
+          "examples": "浴室水垢、嬰兒紅疹、衣物霉斑",
+          "metric": "點擊率 +28%",
+          "metricColor": "primary"
+        },
+        {
+          "name": "促購型",
+          "examples": "母嬰節 7 折、滿千折百、三三補貨日",
+          "metric": "下單率 +15%",
+          "metricColor": "emerald"
+        }
       ]
     },
     "platformContribution": [
-      { "platform": "官網", "gmv": 648000, "roas": 2.03, "insight": "成交承接偏弱，素材點擊後要回頭看商品頁。" },
-      { "platform": "蝦皮", "gmv": 616000, "roas": 10.39, "insight": "促購型素材效果好，適合搭配活動檔期加碼。" },
-      { "platform": "MoMo", "gmv": 96000, "roas": 18.07, "insight": "量小但效率高，先找能放量的檔期和品項。" }
+      {
+        "platform": "官網",
+        "gmv": 648000,
+        "roas": 2.03,
+        "insight": "成交承接偏弱，素材點擊後要回頭看商品頁。"
+      },
+      {
+        "platform": "蝦皮",
+        "gmv": 616000,
+        "roas": 10.39,
+        "insight": "促購型素材效果好，適合搭配活動檔期加碼。"
+      },
+      {
+        "platform": "MoMo",
+        "gmv": 96000,
+        "roas": 18.07,
+        "insight": "量小但效率高，先找能放量的檔期和品項。"
+      }
     ],
     "ranking": [
       {
@@ -962,70 +2799,147 @@
         "description": "痛點清楚、前後對比強，適合延伸成蝦皮主圖與短影音腳本。",
         "type": "問題解決型",
         "platform": "Meta",
-        "spend": 82000, "gmv": 392000, "roas": 4.78, "ctr": 2.9, "orders": 287
+        "spend": 82000,
+        "gmv": 392000,
+        "roas": 4.78,
+        "ctr": 2.9,
+        "orders": 287
       },
       {
         "name": "媽媽快速打掃情境",
         "description": "點擊穩但成交普通，建議測試更明確的 CTA。",
         "type": "生活情境型",
         "platform": "Meta",
-        "spend": 64000, "gmv": 246000, "roas": 3.84, "ctr": 2.2, "orders": 183
+        "spend": 64000,
+        "gmv": 246000,
+        "roas": 3.84,
+        "ctr": 2.2,
+        "orders": 183
       },
       {
         "name": "母嬰節限時 7 折",
         "description": "檔期型素材，CTA 強，回收佳。",
         "type": "促購型",
         "platform": "Meta",
-        "spend": 58000, "gmv": 285000, "roas": 4.91, "ctr": 3.1, "orders": 245
+        "spend": 58000,
+        "gmv": 285000,
+        "roas": 4.91,
+        "ctr": 3.1,
+        "orders": 245
       },
       {
         "name": "三三補貨日預告",
         "description": "私域導流效果好，建議多投放於 Google 搜尋。",
         "type": "促購型",
         "platform": "Google",
-        "spend": 38000, "gmv": 215000, "roas": 5.66, "ctr": 4.2, "orders": 168
+        "spend": 38000,
+        "gmv": 215000,
+        "roas": 5.66,
+        "ctr": 4.2,
+        "orders": 168
       },
       {
         "name": "嬰兒洗澡溫和測試",
         "description": "教育型，信任度高但轉換慢。",
         "type": "問題解決型",
         "platform": "Meta",
-        "spend": 42000, "gmv": 168000, "roas": 4.0, "ctr": 2.5, "orders": 132
+        "spend": 42000,
+        "gmv": 168000,
+        "roas": 4,
+        "ctr": 2.5,
+        "orders": 132
       },
       {
         "name": "洗衣精成分透明展示",
         "description": "教育型，適合 retargeting，不適合冷流量。",
         "type": "教育型",
         "platform": "Meta",
-        "spend": 45000, "gmv": 152000, "roas": 3.38, "ctr": 1.8, "orders": 124
+        "spend": 45000,
+        "gmv": 152000,
+        "roas": 3.38,
+        "ctr": 1.8,
+        "orders": 124
       },
       {
         "name": "母嬰品牌信任見證",
         "description": "證言型素材，CTR 偏低但 LTV 高，建議搭配 VIP 受眾。",
         "type": "證言型",
         "platform": "Google",
-        "spend": 28000, "gmv": 95000, "roas": 3.39, "ctr": 1.9, "orders": 72
+        "spend": 28000,
+        "gmv": 95000,
+        "roas": 3.39,
+        "ctr": 1.9,
+        "orders": 72
       },
       {
         "name": "居家清潔挑戰 30 天",
         "description": "短影音型，互動高但轉換差，可改投 IG Reels。",
         "type": "生活情境型",
         "platform": "Meta",
-        "spend": 32000, "gmv": 86000, "roas": 2.69, "ctr": 1.4, "orders": 65
+        "spend": 32000,
+        "gmv": 86000,
+        "roas": 2.69,
+        "ctr": 1.4,
+        "orders": 65
       }
     ],
     "typeRoas": [
-      { "type": "問題解決型", "avgRoas": 4.39, "totalSpend": 124000, "color": "amber" },
-      { "type": "促購型", "avgRoas": 5.29, "totalSpend": 96000, "color": "rose" },
-      { "type": "生活情境型", "avgRoas": 3.27, "totalSpend": 96000, "color": "violet" },
-      { "type": "教育型", "avgRoas": 3.38, "totalSpend": 45000, "color": "blue" },
-      { "type": "證言型", "avgRoas": 3.39, "totalSpend": 28000, "color": "emerald" }
+      {
+        "type": "問題解決型",
+        "avgRoas": 4.39,
+        "totalSpend": 124000,
+        "color": "amber"
+      },
+      {
+        "type": "促購型",
+        "avgRoas": 5.29,
+        "totalSpend": 96000,
+        "color": "rose"
+      },
+      {
+        "type": "生活情境型",
+        "avgRoas": 3.27,
+        "totalSpend": 96000,
+        "color": "violet"
+      },
+      {
+        "type": "教育型",
+        "avgRoas": 3.38,
+        "totalSpend": 45000,
+        "color": "blue"
+      },
+      {
+        "type": "證言型",
+        "avgRoas": 3.39,
+        "totalSpend": 28000,
+        "color": "emerald"
+      }
     ],
     "recommendation": [
-      { "action": "加碼", "target": "促購型 + Google 投放", "reason": "ROAS 5.66 倍 + CTR 4.2% 為全場最高，建議預算 +30%", "priority": "高" },
-      { "action": "複用", "target": "問題解決型「前後對比」素材", "reason": "ROAS 穩定 4.0+，跨平台都能跑，可延伸出蝦皮主圖與短影音", "priority": "高" },
-      { "action": "改投", "target": "居家清潔挑戰 30 天 → IG Reels", "reason": "FB 轉換不佳，但內容適合短影音，IG Reels 觸及更精準", "priority": "中" },
-      { "action": "砍", "target": "Lookalike 5% 受眾", "reason": "ROAS 1.12 < 1.5 警戒線，連續兩週低迷", "priority": "中" }
+      {
+        "action": "加碼",
+        "target": "促購型 + Google 投放",
+        "reason": "ROAS 5.66 倍 + CTR 4.2% 為全場最高，建議預算 +30%",
+        "priority": "高"
+      },
+      {
+        "action": "複用",
+        "target": "問題解決型「前後對比」素材",
+        "reason": "ROAS 穩定 4.0+，跨平台都能跑，可延伸出蝦皮主圖與短影音",
+        "priority": "高"
+      },
+      {
+        "action": "改投",
+        "target": "居家清潔挑戰 30 天 → IG Reels",
+        "reason": "FB 轉換不佳，但內容適合短影音，IG Reels 觸及更精準",
+        "priority": "中"
+      },
+      {
+        "action": "砍",
+        "target": "Lookalike 5% 受眾",
+        "reason": "ROAS 1.12 < 1.5 警戒線，連續兩週低迷",
+        "priority": "中"
+      }
     ]
   }
 }

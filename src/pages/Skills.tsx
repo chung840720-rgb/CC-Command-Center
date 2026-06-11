@@ -68,7 +68,8 @@ export default function Skills() {
             <p className="text-sm text-muted-foreground mt-2 max-w-prose leading-relaxed">
               這個 dashboard <strong>不是純 AI demo</strong> — 它是我 18 個月電商組組長期間實際使用的工作工具（脫敏 demo 版）。
               下面 <strong>{SKILLS.length} 份 SOP Skills</strong> 是我寫的，整個 dashboard 的業務邏輯、AI 判讀、分析框架都繞著它們轉。
-              這是「會用 AI」與「能讓 AI 真正落地電商工作」的差別。
+              <strong className="text-primary">數字部分為真實業績結構 × random(0.65~0.95) anonymize</strong>，
+              不洩漏絕對值但保留趨勢與通路占比 — 確保 demo 看起來真實，又遵守商業道德。
             </p>
             <div className="flex flex-wrap gap-2 mt-3">
               <Badge className="bg-primary text-primary-foreground text-xs font-bold gap-1"><Sparkles className="w-3 h-3" />18 個月實戰沉澱</Badge>
