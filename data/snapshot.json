@@ -3,29 +3,29 @@
     "generatedAt": "2026-06-11T10:00:00+08:00",
     "currency": "TWD",
     "anonymizationFactor": 0.8,
-    "note": "Demo snapshot — 1-5月趨勢結構來自真實電商運營經驗，數字已 anonymize (×0.65-0.95 random factor)，不代表真實業績",
+    "note": "Demo snapshot — 1-5月趨勢結構來自真實電商運營經驗，數字已 anonymize（per platform per month 單一 factor，保留 achievement / ROAS / 占比等所有 ratio）",
     "dateRange": {
       "start": "2026-05-13",
       "end": "2026-06-11"
     },
-    "dataPattern": "real-shape-anonymized",
-    "lastSync": "2026-06-11T05:42:21.746Z"
+    "dataPattern": "real-shape-anonymized-ratio-preserved",
+    "lastSync": "2026-06-11T05:59:43.658Z"
   },
   "kpi": {
     "monthlyGmv": {
-      "value": 9213940,
+      "value": 8485524,
       "currency": "TWD",
-      "target": 8776189,
+      "target": 9636108,
       "achievement": 88
     },
     "ytdGmv": {
-      "value": 32220154,
+      "value": 34524034,
       "target": 100000000,
-      "achievement": 32.2
+      "achievement": 34.5
     },
-    "monthlyOrders": 6584,
+    "monthlyOrders": 6293,
     "roas": 4.4,
-    "adSpend": 1652597
+    "adSpend": 1920229
   },
   "alerts": [
     {
@@ -72,11 +72,11 @@
       "id": "shopline",
       "label": "官網 Shopline",
       "icon": "globe",
-      "monthlyGmv": 4528228,
+      "monthlyGmv": 4742230,
       "achievement": 74,
-      "yearlyGmv": 18195566,
+      "yearlyGmv": 19030436,
       "roas": 3.4,
-      "orders": 2825,
+      "orders": 3021,
       "ytdShare": 62,
       "characteristic": "官網反映品牌自有轉換能力，優先看投放與商品頁。",
       "recommendation": "目前量體最大，但 ROAS 與每筆訂單成本需要優先修正。"
@@ -85,11 +85,11 @@
       "id": "shopee",
       "label": "蝦皮旗艦",
       "icon": "shopping-bag",
-      "monthlyGmv": 2571807,
+      "monthlyGmv": 2122298,
       "achievement": 118,
-      "yearlyGmv": 11188566,
+      "yearlyGmv": 10871917,
       "roas": 7.1,
-      "orders": 2066,
+      "orders": 2266,
       "ytdShare": 28,
       "characteristic": "蝦皮重點是活動、排名與爆品庫存能不能放大。",
       "recommendation": "效率穩，適合用上傳報表追蹤可加碼品項。"
@@ -98,11 +98,11 @@
       "id": "momo",
       "label": "MoMo+",
       "icon": "store",
-      "monthlyGmv": 472276,
+      "monthlyGmv": 440372,
       "achievement": 87,
-      "yearlyGmv": 1539369,
+      "yearlyGmv": 1543915,
       "roas": 15.9,
-      "orders": 371,
+      "orders": 375,
       "ytdShare": 5,
       "characteristic": "MoMo 要同時看效率與量體，不只看回收倍數。",
       "recommendation": "效率高但量體小，重點是找可放大的活動與商品。"
@@ -224,28 +224,28 @@
   "monthlyTrend": [
     {
       "month": "1月",
-      "y2025": 495,
-      "y2026": 582
+      "y2025": 554,
+      "y2026": 652
     },
     {
       "month": "2月",
-      "y2025": 456,
-      "y2026": 536
-    },
-    {
-      "month": "3月",
-      "y2025": 438,
-      "y2026": 515
-    },
-    {
-      "month": "4月",
       "y2025": 567,
       "y2026": 667
     },
     {
+      "month": "3月",
+      "y2025": 618,
+      "y2026": 727
+    },
+    {
+      "month": "4月",
+      "y2025": 474,
+      "y2026": 558
+    },
+    {
       "month": "5月",
-      "y2025": 783,
-      "y2026": 921
+      "y2025": 721,
+      "y2026": 849
     },
     {
       "month": "6月",
@@ -289,17 +289,17 @@
       "label": "MoMo+",
       "color": "red",
       "achievementPct": 87,
-      "gmv": 472276,
+      "gmv": 440372,
       "achievementBar": 87,
-      "target": 498041,
-      "uv": 13700,
-      "orders": 371,
+      "target": 505769,
+      "uv": 12453,
+      "orders": 375,
       "aov": 1174,
-      "adSpend": 24406,
+      "adSpend": 27692,
       "roas": 15.9,
       "rating": "優秀",
       "ratingColor": "green",
-      "adShareRatio": 1.5,
+      "adShareRatio": 1.4,
       "cpa": 74,
       "note": "效率高但量體小，重點是找可放大的活動與商品。"
     },
@@ -308,17 +308,17 @@
       "label": "蝦皮",
       "color": "orange",
       "achievementPct": 118,
-      "gmv": 2571807,
+      "gmv": 2122298,
       "achievementBar": 118,
-      "target": 2053003,
-      "uv": 62148,
-      "orders": 2066,
+      "target": 1795952,
+      "uv": 68149,
+      "orders": 2266,
       "aov": 936,
-      "adSpend": 288576,
+      "adSpend": 299902,
       "roas": 7.1,
       "rating": "良好",
       "ratingColor": "amber",
-      "adShareRatio": 17.5,
+      "adShareRatio": 15.6,
       "cpa": 132,
       "note": "效率穩，適合用上傳報表追蹤可加碼品項。"
     },
@@ -327,17 +327,17 @@
       "label": "官網",
       "color": "cyan",
       "achievementPct": 74,
-      "gmv": 4528228,
+      "gmv": 4742230,
       "achievementBar": 74,
-      "target": 6202676,
-      "uv": 170039,
-      "orders": 2825,
+      "target": 6373776,
+      "uv": 141734,
+      "orders": 3021,
       "aov": 1570,
-      "adSpend": 1625136,
+      "adSpend": 1391399,
       "roas": 3.4,
       "rating": "良好",
       "ratingColor": "amber",
-      "adShareRatio": 98.3,
+      "adShareRatio": 72.5,
       "cpa": 461,
       "note": "目前量體最大，但 ROAS 與每筆訂單成本需要優先修正。"
     }
@@ -345,50 +345,50 @@
   "platformMoM": {
     "shopline": {
       "y2025": [
-        309,
-        340,
-        272,
-        241,
-        385
+        344,
+        330,
+        274,
+        266,
+        403
       ],
       "y2026": [
-        363,
-        400,
-        320,
-        284,
-        453
+        405,
+        388,
+        322,
+        313,
+        474
       ]
     },
     "shopee": {
       "y2025": [
-        199,
-        183,
-        157,
-        194,
-        218
+        181,
+        167,
+        177,
+        219,
+        180
       ],
       "y2026": [
-        234,
-        215,
-        185,
-        228,
-        257
+        213,
+        196,
+        208,
+        258,
+        212
       ]
     },
     "momo": {
       "y2025": [
         17,
-        17,
-        28,
+        20,
         30,
-        40
+        27,
+        37
       ],
       "y2026": [
         20,
-        20,
-        33,
+        24,
         35,
-        47
+        32,
+        44
       ]
     }
   },
@@ -2941,5 +2941,280 @@
         "priority": "中"
       }
     ]
+  },
+  "monthlyByPlatform": {
+    "shopline": {
+      "1月": {
+        "gmv": 4051486,
+        "target": 5023826,
+        "achievement": 81,
+        "orders": 2814,
+        "traffic": 208122,
+        "aov": 1440,
+        "adSpend": 1350480,
+        "roas": 3,
+        "cpa": 480,
+        "sharePct": 61,
+        "mom": 11,
+        "yoy": -31
+      },
+      "2月": {
+        "gmv": 3884249,
+        "target": 4166349,
+        "achievement": 93,
+        "orders": 2698,
+        "traffic": 95864,
+        "aov": 1440,
+        "adSpend": 1012808,
+        "roas": 3.8,
+        "cpa": 375,
+        "sharePct": 64,
+        "mom": -4,
+        "yoy": -17
+      },
+      "3月": {
+        "gmv": 3222707,
+        "target": 5253289,
+        "achievement": 61,
+        "orders": 2251,
+        "traffic": 123103,
+        "aov": 1431,
+        "adSpend": 1125094,
+        "roas": 2.9,
+        "cpa": 500,
+        "sharePct": 60,
+        "mom": -8,
+        "yoy": -33
+      },
+      "4月": {
+        "gmv": 3129764,
+        "target": 4024153,
+        "achievement": 78,
+        "orders": 2233,
+        "traffic": 128810,
+        "aov": 1402,
+        "adSpend": 1277541,
+        "roas": 2.4,
+        "cpa": 572,
+        "sharePct": 51,
+        "mom": -9,
+        "yoy": -25
+      },
+      "5月": {
+        "gmv": 4742230,
+        "target": 6373776,
+        "achievement": 74,
+        "orders": 3021,
+        "traffic": 141734,
+        "aov": 1570,
+        "adSpend": 1391399,
+        "roas": 3.4,
+        "cpa": 461,
+        "sharePct": 62,
+        "mom": 53,
+        "yoy": -10
+      }
+    },
+    "shopee": {
+      "1月": {
+        "gmv": 2133222,
+        "target": 2095451,
+        "achievement": 102,
+        "orders": 2374,
+        "traffic": 82235,
+        "aov": 899,
+        "adSpend": 316517,
+        "roas": 6.7,
+        "cpa": 133,
+        "sharePct": 35,
+        "mom": -1,
+        "yoy": 173
+      },
+      "2月": {
+        "gmv": 1958189,
+        "target": 1534694,
+        "achievement": 128,
+        "orders": 2037,
+        "traffic": 91789,
+        "aov": 962,
+        "adSpend": 286172,
+        "roas": 6.8,
+        "cpa": 141,
+        "sharePct": 32,
+        "mom": -16,
+        "yoy": 137
+      },
+      "3月": {
+        "gmv": 2080719,
+        "target": 2031883,
+        "achievement": 102,
+        "orders": 2152,
+        "traffic": 89606,
+        "aov": 967,
+        "adSpend": 315408,
+        "roas": 6.6,
+        "cpa": 147,
+        "sharePct": 33,
+        "mom": 0,
+        "yoy": 121
+      },
+      "4月": {
+        "gmv": 2577489,
+        "target": 2947386,
+        "achievement": 87,
+        "orders": 2769,
+        "traffic": 94669,
+        "aov": 931,
+        "adSpend": 357517,
+        "roas": 7.2,
+        "cpa": 129,
+        "sharePct": 37,
+        "mom": 20,
+        "yoy": 120
+      },
+      "5月": {
+        "gmv": 2122298,
+        "target": 1795952,
+        "achievement": 118,
+        "orders": 2266,
+        "traffic": 68149,
+        "aov": 936,
+        "adSpend": 299902,
+        "roas": 7.1,
+        "cpa": 132,
+        "sharePct": 28,
+        "mom": -3,
+        "yoy": 131
+      }
+    },
+    "momo": {
+      "1月": {
+        "gmv": 197843,
+        "target": 234487,
+        "achievement": 84,
+        "orders": 189,
+        "traffic": 5712,
+        "aov": 1047,
+        "adSpend": 4966,
+        "roas": 39.8,
+        "cpa": 26,
+        "sharePct": 3,
+        "mom": -25,
+        "yoy": null
+      },
+      "2月": {
+        "gmv": 242766,
+        "target": 221358,
+        "achievement": 110,
+        "orders": 228,
+        "traffic": 7592,
+        "aov": 1063,
+        "adSpend": 15163,
+        "roas": 16,
+        "cpa": 66,
+        "sharePct": 3,
+        "mom": -7,
+        "yoy": 7173
+      },
+      "3月": {
+        "gmv": 347815,
+        "target": 572746,
+        "achievement": 61,
+        "orders": 307,
+        "traffic": 9758,
+        "aov": 1134,
+        "adSpend": 29272,
+        "roas": 11.9,
+        "cpa": 95,
+        "sharePct": 5,
+        "mom": 44,
+        "yoy": 22
+      },
+      "4月": {
+        "gmv": 315119,
+        "target": 296918,
+        "achievement": 106,
+        "orders": 261,
+        "traffic": 8690,
+        "aov": 1209,
+        "adSpend": 24525,
+        "roas": 12.8,
+        "cpa": 94,
+        "sharePct": 5,
+        "mom": 8,
+        "yoy": 8
+      },
+      "5月": {
+        "gmv": 440372,
+        "target": 505769,
+        "achievement": 87,
+        "orders": 375,
+        "traffic": 12453,
+        "aov": 1174,
+        "adSpend": 27692,
+        "roas": 15.9,
+        "cpa": 74,
+        "sharePct": 5,
+        "mom": 23,
+        "yoy": 91
+      }
+    }
+  },
+  "monthlyTotal": {
+    "1月": {
+      "gmv": 6517757,
+      "target": 7478303,
+      "achievement": 87,
+      "orders": 5545,
+      "traffic": 300393,
+      "aov": 1175,
+      "adSpend": 1679604,
+      "roas": 3.9,
+      "cpa": 303
+    },
+    "2月": {
+      "gmv": 6667983,
+      "target": 6497233,
+      "achievement": 103,
+      "orders": 5427,
+      "traffic": 213564,
+      "aov": 1229,
+      "adSpend": 1447895,
+      "roas": 4.6,
+      "cpa": 267
+    },
+    "3月": {
+      "gmv": 7270770,
+      "target": 10064310,
+      "achievement": 72,
+      "orders": 5840,
+      "traffic": 279910,
+      "aov": 1245,
+      "adSpend": 1920473,
+      "roas": 3.8,
+      "cpa": 329
+    },
+    "4月": {
+      "gmv": 5582000,
+      "target": 6308722,
+      "achievement": 88,
+      "orders": 4491,
+      "traffic": 201461,
+      "aov": 1243,
+      "adSpend": 1478969,
+      "roas": 3.8,
+      "cpa": 329
+    },
+    "5月": {
+      "gmv": 8485524,
+      "target": 9636108,
+      "achievement": 88,
+      "orders": 6293,
+      "traffic": 247238,
+      "aov": 1348,
+      "adSpend": 1920229,
+      "roas": 4.4,
+      "cpa": 305
+    }
   }
 }
