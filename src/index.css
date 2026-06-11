@@ -6,25 +6,26 @@
 
 @layer base {
   :root {
-    --background: 0 0% 99.5%;
-    --foreground: 210 15% 22%;
+    /* Primary palette: dusty rose #C49799 (HSL 357 28% 68%) */
+    --background: 30 30% 99%;
+    --foreground: 350 15% 22%;
     --card: 0 0% 100%;
-    --card-foreground: 210 15% 22%;
+    --card-foreground: 350 15% 22%;
     --popover: 0 0% 100%;
-    --popover-foreground: 210 15% 22%;
-    --primary: 188 65% 50%;
-    --primary-foreground: 0 0% 99%;
-    --secondary: 210 12% 96%;
-    --secondary-foreground: 210 25% 35%;
-    --muted: 210 10% 96%;
-    --muted-foreground: 210 18% 50%;
-    --accent: 188 30% 94%;
-    --accent-foreground: 210 60% 30%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 99%;
-    --border: 210 12% 91%;
-    --input: 210 12% 91%;
-    --ring: 188 65% 50%;
+    --popover-foreground: 350 15% 22%;
+    --primary: 357 28% 68%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 30 18% 96%;
+    --secondary-foreground: 350 20% 30%;
+    --muted: 30 12% 95%;
+    --muted-foreground: 350 12% 50%;
+    --accent: 357 40% 95%;
+    --accent-foreground: 357 45% 30%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 350 18% 90%;
+    --input: 350 18% 90%;
+    --ring: 357 28% 68%;
     --radius: 0.625rem;
   }
 }
@@ -49,9 +50,9 @@
 
 .hero-gradient {
   background:
-    radial-gradient(ellipse at top left, hsl(188 80% 92%) 0%, transparent 60%),
-    radial-gradient(ellipse at bottom right, hsl(220 70% 95%) 0%, transparent 60%),
-    linear-gradient(135deg, hsl(190 60% 97%) 0%, hsl(210 50% 96%) 50%, hsl(220 50% 97%) 100%);
+    radial-gradient(ellipse at top left, hsl(357 65% 93%) 0%, transparent 55%),
+    radial-gradient(ellipse at bottom right, hsl(30 55% 95%) 0%, transparent 55%),
+    linear-gradient(135deg, hsl(357 50% 97%) 0%, hsl(20 40% 97%) 50%, hsl(35 40% 97%) 100%);
 }
 
 .card-soft {

@@ -6,15 +6,16 @@ interface Props {
   subValue?: string;
   badge?: string;
   icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
-  iconColor?: 'cyan' | 'green' | 'amber' | 'pink' | 'purple';
+  iconColor?: 'cyan' | 'green' | 'amber' | 'pink' | 'purple' | 'rose';
 }
 
 const COLORS = {
-  cyan: 'bg-cyan-100 text-cyan-700',
+  cyan: 'bg-rose-100 text-rose-700',
   green: 'bg-emerald-100 text-emerald-700',
   amber: 'bg-amber-100 text-amber-700',
   pink: 'bg-pink-100 text-pink-700',
   purple: 'bg-violet-100 text-violet-700',
+  rose: 'bg-rose-100 text-rose-700',
 };
 
 export function KpiTile({ label, value, subValue, badge, icon: Icon, iconColor = 'cyan' }: Props) {

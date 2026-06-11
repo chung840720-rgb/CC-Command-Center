@@ -99,7 +99,7 @@ export function TopNav() {
           </div>
           <div className="flex flex-col leading-tight">
             <span className="text-sm font-extrabold tracking-tight">電商作戰中心</span>
-            <span className="text-[10px] tracking-[2px] text-muted-foreground font-bold">DEMO COMMAND</span>
+            <span className="text-[10px] tracking-[2px] text-muted-foreground font-bold">JOHNNY DEMO</span>
           </div>
         </Link>
 

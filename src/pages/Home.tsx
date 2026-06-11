@@ -56,19 +56,19 @@ export default function Home() {
                 官網・蝦皮・MoMo 3大電商通路
               </Badge>
               <h1 className="text-[3.5rem] font-black leading-[1.05] tracking-tight">
-                <span className="bg-gradient-to-r from-primary via-sky-500 to-blue-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-primary via-rose-400 to-rose-500 bg-clip-text text-transparent">
                   數位電商3大平台
                 </span>
                 <br />
                 <span className="text-foreground">行銷增長作戰中心</span>
               </h1>
               <p className="text-sm text-muted-foreground">
-                DEMO 品牌核心營收來源，主力戰場
+                Johnny demo 品牌核心營收來源，主力戰場
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <Button
-                className="rounded-full font-semibold gap-2 px-6 h-11 shadow-lg shadow-primary/25 bg-gradient-to-br from-primary to-sky-600 hover:from-primary/90 hover:to-sky-600/90 border-0"
+                className="rounded-full font-semibold gap-2 px-6 h-11 shadow-lg shadow-primary/25 bg-gradient-to-br from-primary to-rose-500 hover:from-primary/90 hover:to-rose-500/90 border-0"
               >
                 <Download className="w-4 h-4" />
                 下載今日報表
