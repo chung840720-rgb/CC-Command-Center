@@ -10,6 +10,7 @@ import SalesBattle from '@/pages/SalesBattle';
 import ShoplineDetail from '@/pages/ShoplineDetail';
 import ShopeeDetail from '@/pages/ShopeeDetail';
 import MoMoDetail from '@/pages/MoMoDetail';
+import AdsCreatives from '@/pages/AdsCreatives';
 
 export default function App() {
   return (
@@ -35,7 +36,7 @@ export default function App() {
           <Route path="/analytics" element={<RoadmapPage name="GA 分析" />} />
           <Route path="/ads/meta" element={<RoadmapPage name="Meta 廣告" />} />
           <Route path="/ads/google" element={<RoadmapPage name="Google 廣告" />} />
-          <Route path="/ads/creatives" element={<RoadmapPage name="廣告素材" />} />
+          <Route path="/ads/creatives" element={<AdsCreatives />} />
           <Route path="/ads/competitor" element={<RoadmapPage name="競品廣告" />} />
           <Route path="/competitor-web" element={<RoadmapPage name="競品網站" />} />
           <Route path="/log" element={<RoadmapPage name="操作日誌" />} />
