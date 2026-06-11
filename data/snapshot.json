@@ -3450,5 +3450,144 @@
       "roas": 4.4,
       "cpa": 305
     }
+  },
+  "weekOverWeek": {
+    "shopline": {
+      "last7": {
+        "gmv": 712017,
+        "traffic": 36212,
+        "cr": 1.49,
+        "aov": 1302,
+        "roas": 2
+      },
+      "prev7": {
+        "gmv": 931817,
+        "traffic": 46482,
+        "cr": 1.73,
+        "aov": 1318,
+        "roas": 2.4
+      },
+      "insight": "🚨 流量與轉換率同步下滑，建議暫停低效素材，重新審視商品競爭力與定價",
+      "actionPriority": "red"
+    },
+    "shopee": {
+      "last7": {
+        "gmv": 593886,
+        "traffic": 22147,
+        "cr": 5.5,
+        "aov": 921,
+        "roas": 6.6
+      },
+      "prev7": {
+        "gmv": 674982,
+        "traffic": 26512,
+        "cr": 4.96,
+        "aov": 966,
+        "roas": 6.5
+      },
+      "insight": "🎯 流量↓但轉換率↑（5.50%），流量精準但量不足，建議擴大受眾或增加版位放大規模",
+      "actionPriority": "amber"
+    },
+    "momo": {
+      "last7": {
+        "gmv": 102295,
+        "traffic": 2132,
+        "cr": 7.81,
+        "aov": 1203,
+        "roas": 23.9
+      },
+      "prev7": {
+        "gmv": 107620,
+        "traffic": 2240,
+        "cr": 7.04,
+        "aov": 1157,
+        "roas": 22
+      },
+      "insight": "🚀 ROAS 23.9（週增 +8.6%），有條件加碼廣告預算擴大規模",
+      "actionPriority": "green"
+    }
+  },
+  "categoryContribution": {
+    "weekStart": "2026-06-05",
+    "weekEnd": "2026-06-11",
+    "prevWeekStart": "2026-05-29",
+    "prevWeekEnd": "2026-06-04",
+    "categories": [
+      {
+        "name": "洗衣精",
+        "icon": "🧺",
+        "totalGmv": 1248000,
+        "sharePct": 38,
+        "wowPct": 28,
+        "platforms": {
+          "shopline": 480000,
+          "shopee": 520000,
+          "momo": 168000,
+          "shopeeDirect": 80000
+        },
+        "adAction": "Meta 加碼母嬰節廣告組（5/28 起）",
+        "reaction": "蝦皮 +35% / 官網 +28% / MoMo +22%"
+      },
+      {
+        "name": "沐浴用品",
+        "icon": "🧴",
+        "totalGmv": 758000,
+        "sharePct": 23,
+        "wowPct": 18,
+        "platforms": {
+          "shopline": 220000,
+          "shopee": 380000,
+          "momo": 120000,
+          "shopeeDirect": 38000
+        },
+        "adAction": "蝦皮關鍵字廣告加碼 \"沐浴 SET\"（6/1 起）",
+        "reaction": "蝦皮 +20% / MoMo +12% / 官網 +8%"
+      },
+      {
+        "name": "柔濕巾",
+        "icon": "🧻",
+        "totalGmv": 412000,
+        "sharePct": 12,
+        "wowPct": -13,
+        "platforms": {
+          "shopline": 168000,
+          "shopee": 152000,
+          "momo": 72000,
+          "shopeeDirect": 20000
+        },
+        "adAction": "618 前主動排除廣告（節省預算回流主力品類）",
+        "reaction": "官網 -12% / 蝦皮 -15% / MoMo -10%（預期內）"
+      },
+      {
+        "name": "除黴/清潔",
+        "icon": "🫧",
+        "totalGmv": 528000,
+        "sharePct": 16,
+        "wowPct": 14,
+        "platforms": {
+          "shopline": 145000,
+          "shopee": 220000,
+          "momo": 110000,
+          "shopeeDirect": 53000
+        },
+        "adAction": "蝦皮關鍵字 \"除黴噴霧\" 競價提升 25%",
+        "reaction": "蝦皮 +12% / 整體 +14%"
+      },
+      {
+        "name": "其他/配件",
+        "icon": "📦",
+        "totalGmv": 354000,
+        "sharePct": 11,
+        "wowPct": 4,
+        "platforms": {
+          "shopline": 95000,
+          "shopee": 145000,
+          "momo": 78000,
+          "shopeeDirect": 36000
+        },
+        "adAction": "無重大廣告動作（保留預算）",
+        "reaction": "緩升 +4%"
+      }
+    ]
   }
 }
