@@ -121,5 +121,108 @@
     { "owner": "饅頭", "status": "今日判斷", "task": "整理官網 ROAS 偏低的廣告組與素材" },
     { "owner": "跳跳", "status": "可行動", "task": "確認蝦皮高效品項是否可加碼" },
     { "owner": "雨昕", "status": "復盤中", "task": "把母親節活動整理成復盤紀錄" }
-  ]
+  ],
+  "monthlyTrend": [
+    { "month": "1月",  "y2025": 820, "y2026": 880 },
+    { "month": "2月",  "y2025": 770, "y2026": 820 },
+    { "month": "3月",  "y2025": 850, "y2026": 890 },
+    { "month": "4月",  "y2025": 760, "y2026": 820 },
+    { "month": "5月*", "y2025": 0,   "y2026": 136 },
+    { "month": "6月",  "y2025": 0,   "y2026": 0 },
+    { "month": "7月",  "y2025": 0,   "y2026": 0 },
+    { "month": "8月",  "y2025": 0,   "y2026": 0 },
+    { "month": "9月",  "y2025": 0,   "y2026": 0 },
+    { "month": "10月", "y2025": 0,   "y2026": 0 },
+    { "month": "11月", "y2025": 0,   "y2026": 0 },
+    { "month": "12月", "y2025": 0,   "y2026": 0 }
+  ],
+  "platformDetail": [
+    {
+      "id": "momo",
+      "label": "MoMo+",
+      "color": "red",
+      "achievementPct": 7,
+      "gmv": 95987,
+      "achievementBar": 16.0,
+      "target": 600000,
+      "uv": 2418,
+      "orders": 77,
+      "aov": 1247,
+      "adSpend": 5312,
+      "roas": 18.07,
+      "rating": "優秀",
+      "ratingColor": "green",
+      "adShareRatio": 1.4,
+      "cpa": 69,
+      "note": "規模小但 ROAS 極高，廣告投報效率最佳"
+    },
+    {
+      "id": "shopee",
+      "label": "蝦皮",
+      "color": "orange",
+      "achievementPct": 45.2,
+      "gmv": 615582,
+      "achievementBar": 24.6,
+      "target": 2500000,
+      "uv": 14000,
+      "orders": 627,
+      "aov": 982,
+      "adSpend": 59000,
+      "roas": 10.39,
+      "rating": "優秀",
+      "ratingColor": "green",
+      "adShareRatio": 15.4,
+      "cpa": 95,
+      "note": "主力平台，ROAS 穩定，訂單量最大"
+    },
+    {
+      "id": "shopline",
+      "label": "官網",
+      "color": "cyan",
+      "achievementPct": 47.5,
+      "gmv": 648074,
+      "achievementBar": 7.4,
+      "target": 8800000,
+      "uv": 29000,
+      "orders": 461,
+      "aov": 1406,
+      "adSpend": 320000,
+      "roas": 2.03,
+      "rating": "偏低",
+      "ratingColor": "red",
+      "adShareRatio": 83.2,
+      "cpa": 693,
+      "note": "ROAS 偏低，廣告費佔最多，需優化投放策略"
+    }
+  ],
+  "platformMoM": {
+    "momo":     { "y2025": [28, 24, 32, 38, 0], "y2026": [30, 32, 36, 40, 9.6] },
+    "shopee":   { "y2025": [180, 200, 220, 240, 0], "y2026": [310, 290, 280, 320, 61.6] },
+    "shopline": { "y2025": [780, 580, 720, 600, 0], "y2026": [540, 500, 560, 480, 64.8] }
+  },
+  "shoplineDetail": {
+    "monthlyGmv": 648074,
+    "achievement": 7.4,
+    "ytdGmv": 20100000,
+    "roas": 2.03,
+    "uv": 29000,
+    "orders": 461,
+    "aov": 1406,
+    "adSpend": 320000,
+    "newCustomers": 156,
+    "vipCustomers": 1820,
+    "repurchaseRate": 28.4,
+    "topProducts": [
+      { "name": "洗衣精 1.5L 補充包", "gmv": 156000, "share": 24.1 },
+      { "name": "柔濕巾 80 抽 x3", "gmv": 98000, "share": 15.1 },
+      { "name": "除黴噴霧 500ml", "gmv": 87000, "share": 13.4 },
+      { "name": "沐浴乳 450ml", "gmv": 76000, "share": 11.7 },
+      { "name": "洗手液 250ml", "gmv": 54000, "share": 8.3 }
+    ],
+    "highlights": [
+      "VIP 客回購率 28.4%，高於整體 18%",
+      "三三補貨日（每月 3 號）為 GMV 主驅動",
+      "Meta 廣告 ROAS 從 4 月 2.4 → 5 月 2.03 衰退"
+    ]
+  }
 }

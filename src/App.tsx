@@ -6,6 +6,8 @@ import Insights from '@/pages/Insights';
 import Funnel from '@/pages/Funnel';
 import Category from '@/pages/Category';
 import Alerts from '@/pages/Alerts';
+import SalesBattle from '@/pages/SalesBattle';
+import ShoplineDetail from '@/pages/ShoplineDetail';
 
 export default function App() {
   return (
@@ -14,17 +16,17 @@ export default function App() {
         <Route element={<Layout />}>
           {/* V1 完整實作 */}
           <Route path="/" element={<Home />} />
+          <Route path="/sales-battle" element={<SalesBattle />} />
           <Route path="/insights" element={<Insights />} />
           <Route path="/funnel" element={<Funnel />} />
           <Route path="/category" element={<Category />} />
           <Route path="/alerts" element={<Alerts />} />
+          <Route path="/shopline" element={<ShoplineDetail />} />
 
           {/* Roadmap placeholder */}
-          <Route path="/shopline" element={<RoadmapPage name="官網 Shopline 詳細" />} />
           <Route path="/shopee" element={<RoadmapPage name="蝦皮旗艦詳細" />} />
           <Route path="/momo" element={<RoadmapPage name="MoMo+ 詳細" />} />
           <Route path="/shopee-direct" element={<RoadmapPage name="蝦皮直營詳細" />} />
-          <Route path="/sales" element={<RoadmapPage name="業績全景" />} />
           <Route path="/campaign" element={<RoadmapPage name="活動規劃" />} />
           <Route path="/products" element={<RoadmapPage name="商品資料" />} />
           <Route path="/upload" element={<RoadmapPage name="上傳報表" />} />

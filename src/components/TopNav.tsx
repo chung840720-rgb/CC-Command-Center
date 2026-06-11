@@ -15,11 +15,20 @@ import {
   Calendar,
   Search,
   Settings,
+  BarChart3,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navConfig = [
-  { type: 'link' as const, label: '作戰總覽', to: '/', icon: Gauge },
+  {
+    type: 'dropdown' as const,
+    label: '作戰總覽',
+    icon: Gauge,
+    items: [
+      { label: '作戰中心', subtitle: '總覽、今日重點與行動入口', to: '/' },
+      { label: '銷售戰情', subtitle: '三通路業績與目標缺口', to: '/sales-battle' },
+    ],
+  },
   {
     type: 'dropdown' as const,
     label: '電商通路',
@@ -97,32 +106,17 @@ export function TopNav() {
         <nav className="flex items-center gap-0.5 ml-2">
           {navConfig.map((item) => {
             const ItemIcon = item.icon;
-            if (item.type === 'link') {
-              return (
-                <Button
-                  key={item.label}
-                  asChild
-                  variant={isActive(item.to) ? 'default' : 'ghost'}
-                  size="sm"
-                  className={cn(
-                    'h-10 rounded-full font-semibold text-xs px-4 gap-1.5',
-                    isActive(item.to) && 'shadow-md shadow-primary/25'
-                  )}
-                >
-                  <Link to={item.to}>
-                    {ItemIcon && <ItemIcon className="w-3.5 h-3.5" strokeWidth={2.4} />}
-                    {item.label}
-                  </Link>
-                </Button>
-              );
-            }
+            const anyActive = item.items.some((sub) => isActive(sub.to));
             return (
               <DropdownMenu key={item.label}>
                 <DropdownMenuTrigger asChild>
                   <Button
-                    variant="ghost"
+                    variant={anyActive ? 'default' : 'ghost'}
                     size="sm"
-                    className="h-10 rounded-full font-semibold text-xs px-3 gap-1.5"
+                    className={cn(
+                      'h-10 rounded-full font-semibold text-xs px-3 gap-1.5',
+                      anyActive && 'shadow-md shadow-primary/25'
+                    )}
                   >
                     {ItemIcon && <ItemIcon className="w-3.5 h-3.5" strokeWidth={2.4} />}
                     {item.label}
