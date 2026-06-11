@@ -9,7 +9,6 @@ import { ChannelCard } from '@/components/dashboard/ChannelCard';
 import { SopBadge } from '@/components/dashboard/SopBadge';
 import { formatCurrency, formatNumber } from '@/lib/utils';
 import {
-  Download,
   Eye,
   Target,
   Sparkles,
@@ -21,8 +20,11 @@ import {
   Gauge,
 } from 'lucide-react';
 
+const MONTHS = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+
 export default function Home() {
   const [data, setData] = useState<Snapshot | null>(null);
+  const [activeMonthIdx, setActiveMonthIdx] = useState(4);  // 預設 5月
 
   useEffect(() => {
     getSnapshot().then(setData);
@@ -41,8 +43,33 @@ export default function Home() {
     );
   }
 
-  const kpi = data.kpi;
-  const monthLabel = `${new Date().getMonth() + 1}月`;
+  // 依 activeMonthIdx 取對應月份 KPI
+  const monthKey = MONTHS[activeMonthIdx];
+  const monthTotal = (data as any).monthlyTotal?.[monthKey];
+  const kpi = monthTotal
+    ? {
+        monthlyGmv: { value: monthTotal.gmv, target: monthTotal.target, achievement: monthTotal.achievement },
+        ytdGmv: data.kpi.ytdGmv,
+        monthlyOrders: monthTotal.orders,
+        roas: monthTotal.roas,
+        adSpend: monthTotal.adSpend,
+      }
+    : data.kpi;
+  const monthLabel = monthKey;
+
+  // 依 activeMonthIdx swap 各通路卡資料
+  const channels = data.channels.map((c: any) => {
+    const m = (data as any).monthlyByPlatform?.[c.id]?.[monthKey];
+    if (!m) return c;
+    return {
+      ...c,
+      monthlyGmv: m.gmv,
+      achievement: m.achievement,
+      roas: m.roas,
+      orders: m.orders,
+      ytdShare: m.sharePct,
+    };
+  });
 
   return (
     <div className="space-y-6">
@@ -73,17 +100,8 @@ export default function Home() {
                 Johnny demo 品牌核心營收來源，主力戰場
               </p>
             </div>
-            <div className="flex flex-wrap items-center gap-3 pt-2">
-              <Button
-                className="rounded-full font-semibold gap-2 px-6 h-11 shadow-lg shadow-primary/25 bg-gradient-to-br from-primary to-amber-500 hover:from-primary/90 hover:to-amber-500/90 border-0"
-              >
-                <Download className="w-4 h-4" />
-                下載今日報表
-              </Button>
-              <span className="text-xs text-muted-foreground">功能切換已移到畫面最上方。</span>
-            </div>
             <Badge variant="secondary" className="bg-amber-100/70 text-amber-900 border-amber-200/60 rounded-full px-3 py-1 text-xs font-semibold w-fit">
-              {new Date().toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' })}｜目前查看 5月月中累積
+              {new Date().toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' })}｜目前查看 {MONTHS[activeMonthIdx]} 累積
             </Badge>
           </div>
 
@@ -99,7 +117,7 @@ export default function Home() {
 
             <div className="space-y-2.5">
               <div className="rounded-xl bg-gradient-to-br from-white to-secondary/30 p-3.5 border border-border/40">
-                <p className="text-[11px] text-muted-foreground font-medium mb-1">5月業績</p>
+                <p className="text-[11px] text-muted-foreground font-medium mb-1">{monthKey}業績</p>
                 <p className="text-xl font-extrabold tracking-tight">{formatCurrency(kpi.monthlyGmv.value)}</p>
                 <p className="text-[11px] text-muted-foreground mt-0.5">達成 {kpi.monthlyGmv.achievement}%</p>
               </div>
@@ -126,18 +144,18 @@ export default function Home() {
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <KpiCard
           label={`${monthLabel}業績`}
-          value="136萬"
+          value={`${(kpi.monthlyGmv.value / 10000).toFixed(0)}萬`}
           subValue={formatCurrency(kpi.monthlyGmv.value)}
         />
         <KpiCard
           label="目標達成"
           value={`${kpi.monthlyGmv.achievement}%`}
-          subValue={`還差 ${formatCurrency(kpi.monthlyGmv.target - kpi.monthlyGmv.value)}`}
-          highlight="destructive"
+          subValue={`還差 ${formatCurrency(Math.max(0, kpi.monthlyGmv.target - kpi.monthlyGmv.value))}`}
+          highlight={kpi.monthlyGmv.achievement >= 100 ? undefined : "destructive"}
         />
         <KpiCard
           label="年度累計業績"
-          value="3343萬"
+          value={`${(kpi.ytdGmv.value / 10000).toFixed(0)}萬`}
           subValue={`YTD ${kpi.ytdGmv.achievement}%`}
         />
         <KpiCard
@@ -180,27 +198,33 @@ export default function Home() {
           </Button>
         </div>
 
-        {/* Month tabs (visual only) */}
+        {/* Month tabs (functional) */}
         <div className="flex items-center gap-1 overflow-x-auto pb-2">
-          {['1月', '2月', '3月', '4月', '5月 MTD', '6月', '7月', '8月', '9月', '10月', '11月', '12月'].map(
-            (m, i) => (
+          {MONTHS.map((m, i) => {
+            const hasData = !!(data as any).monthlyTotal?.[m];
+            const isActive = i === activeMonthIdx;
+            return (
               <button
                 key={m}
+                onClick={() => setActiveMonthIdx(i)}
                 className={`shrink-0 px-3 h-8 rounded-full text-xs font-semibold transition-colors ${
-                  i === 4
+                  isActive
                     ? 'bg-primary text-primary-foreground'
-                    : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                    : hasData
+                      ? 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                      : 'bg-secondary/40 text-muted-foreground/60 hover:bg-secondary/60'
                 }`}
               >
                 {m}
-                {i > 4 && i < 12 && <span className="ml-1.5 text-[9px] opacity-60">待匯入</span>}
+                {isActive && hasData && <span className="ml-1.5 text-[9px] opacity-80">MTD</span>}
+                {!hasData && <span className="ml-1.5 text-[9px] opacity-60">待匯入</span>}
               </button>
-            )
-          )}
+            );
+          })}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          {data.channels.map((c) => (
+          {channels.map((c) => (
             <ChannelCard key={c.id} channel={c} />
           ))}
         </div>
