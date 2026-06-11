@@ -17,6 +17,7 @@ import {
   TrendingDown,
   CheckCircle2,
   ArrowRight,
+  Gauge,
 } from 'lucide-react';
 
 export default function Home() {
@@ -45,64 +46,69 @@ export default function Home() {
   return (
     <div className="space-y-8">
       {/* Hero card */}
-      <section className="hero-gradient rounded-3xl border border-border/40 shadow-sm overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-6 p-8">
+      <section className="hero-gradient rounded-3xl border border-white/60 shadow-[0_4px_30px_-8px_rgba(20,180,200,0.15)] overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-8 p-10">
           {/* Left */}
-          <div className="space-y-5">
-            <Badge variant="outline" className="bg-white/60 backdrop-blur rounded-full font-semibold text-xs">
-              官網・蝦皮・MoMo 3大電商通路
-            </Badge>
-            <h1 className="text-5xl font-black leading-tight tracking-tight">
-              <span className="text-primary">數位電商3大平台</span>
-              <br />
-              行銷增長作戰中心
-            </h1>
-            <p className="text-sm text-muted-foreground">
-              淨淨品牌核心營收來源，主力戰場
-            </p>
+          <div className="space-y-5 flex flex-col justify-between">
+            <div className="space-y-5">
+              <Badge variant="outline" className="bg-white/70 backdrop-blur rounded-full font-semibold text-xs gap-1.5 py-1 px-3 shadow-sm border-white/80">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                官網・蝦皮・MoMo 3大電商通路
+              </Badge>
+              <h1 className="text-[3.5rem] font-black leading-[1.05] tracking-tight">
+                <span className="bg-gradient-to-r from-primary via-sky-500 to-blue-600 bg-clip-text text-transparent">
+                  數位電商3大平台
+                </span>
+                <br />
+                <span className="text-foreground">行銷增長作戰中心</span>
+              </h1>
+              <p className="text-sm text-muted-foreground">
+                DEMO 品牌核心營收來源，主力戰場
+              </p>
+            </div>
             <div className="flex flex-wrap items-center gap-3 pt-2">
-              <Button className="rounded-full font-semibold gap-2">
+              <Button
+                className="rounded-full font-semibold gap-2 px-6 h-11 shadow-lg shadow-primary/25 bg-gradient-to-br from-primary to-sky-600 hover:from-primary/90 hover:to-sky-600/90 border-0"
+              >
                 <Download className="w-4 h-4" />
                 下載今日報表
               </Button>
-              <Badge variant="secondary" className="bg-amber-100 text-amber-900 border-amber-200 rounded-full">
-                {new Date().toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' })}｜目前查看 5月月中累積
-              </Badge>
+              <span className="text-xs text-muted-foreground">功能切換已移到畫面最上方。</span>
             </div>
+            <Badge variant="secondary" className="bg-amber-100/70 text-amber-900 border-amber-200/60 rounded-full px-3 py-1 text-xs font-semibold w-fit">
+              {new Date().toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' })}｜目前查看 5月月中累積
+            </Badge>
           </div>
 
-          {/* Right */}
-          <div className="rounded-2xl bg-white/80 backdrop-blur p-5 space-y-4 border border-white/60 shadow-sm">
+          {/* Right — KPI panel */}
+          <div className="rounded-2xl bg-white/85 backdrop-blur-md p-5 space-y-4 border border-white/80 shadow-[0_8px_30px_-12px_rgba(20,180,200,0.25)]">
             <div className="flex items-center justify-between">
               <p className="font-bold text-sm">今日作戰摘要</p>
-              <p className="text-xs text-muted-foreground">數字、認知、經驗 ，決定行動</p>
+              <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <Gauge className="w-4 h-4 text-primary" />
+              </div>
             </div>
+            <p className="text-base font-bold text-foreground/85">數字、認知、經驗 ，決定行動</p>
 
-            <div className="space-y-3">
-              <div className="flex items-center justify-between border-b border-border/40 pb-3">
-                <span className="text-xs text-muted-foreground">5月業績</span>
-                <div className="text-right">
-                  <p className="text-base font-extrabold">{formatCurrency(kpi.monthlyGmv.value)}</p>
-                  <p className="text-[10px] text-muted-foreground">達成 {kpi.monthlyGmv.achievement}%</p>
-                </div>
+            <div className="space-y-2.5">
+              <div className="rounded-xl bg-gradient-to-br from-white to-secondary/30 p-3.5 border border-border/40">
+                <p className="text-[11px] text-muted-foreground font-medium mb-1">5月業績</p>
+                <p className="text-xl font-extrabold tracking-tight">{formatCurrency(kpi.monthlyGmv.value)}</p>
+                <p className="text-[11px] text-muted-foreground mt-0.5">達成 {kpi.monthlyGmv.achievement}%</p>
               </div>
-              <div className="flex items-center justify-between border-b border-border/40 pb-3">
-                <span className="text-xs text-muted-foreground">年度累計</span>
-                <div className="text-right">
-                  <p className="text-base font-extrabold">{formatCurrency(kpi.ytdGmv.value)}</p>
-                  <p className="text-[10px] text-muted-foreground">YTD 達成 {kpi.ytdGmv.achievement}%</p>
-                </div>
+              <div className="rounded-xl bg-gradient-to-br from-white to-secondary/30 p-3.5 border border-border/40">
+                <p className="text-[11px] text-muted-foreground font-medium mb-1">年度累計</p>
+                <p className="text-xl font-extrabold tracking-tight">{formatCurrency(kpi.ytdGmv.value)}</p>
+                <p className="text-[11px] text-muted-foreground mt-0.5">YTD 達成 {kpi.ytdGmv.achievement}%</p>
               </div>
-              <div className="flex items-center justify-between">
-                <span className="text-xs text-muted-foreground">ROAS（廣告投報率）</span>
-                <div className="text-right">
-                  <p className="text-base font-extrabold">{kpi.roas} 倍</p>
-                  <p className="text-[10px] text-muted-foreground">花費 {formatCurrency(kpi.adSpend)}</p>
-                </div>
+              <div className="rounded-xl bg-gradient-to-br from-white to-secondary/30 p-3.5 border border-border/40">
+                <p className="text-[11px] text-muted-foreground font-medium mb-1">ROAS（廣告投報率）</p>
+                <p className="text-xl font-extrabold tracking-tight">{kpi.roas} 倍</p>
+                <p className="text-[11px] text-muted-foreground mt-0.5">花費 {formatCurrency(kpi.adSpend)}</p>
               </div>
             </div>
 
-            <div className="bg-accent/60 rounded-xl px-3 py-2.5 text-xs font-medium text-accent-foreground">
+            <div className="bg-accent/50 rounded-xl px-3 py-2.5 text-xs font-medium text-accent-foreground/90">
               會議節奏：看戰情、拆通路、開行動、做復盤。
             </div>
           </div>

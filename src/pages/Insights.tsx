@@ -47,7 +47,7 @@ export default function Insights() {
           </Badge>
         </div>
         <p className="text-sm text-muted-foreground">
-          每個異常自動套用 daily-report + cleanclean-pm SOP Skill，AI 產出「解讀 → 建議 → 升級判斷」三段式分析。
+          每個異常自動套用 daily-report + ecommerce-pm SOP Skill，AI 產出「解讀 → 建議 → 升級判斷」三段式分析。
         </p>
       </header>
 
