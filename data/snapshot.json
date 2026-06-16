@@ -4258,7 +4258,7 @@
       "critical": 3,
       "healthy": 18,
       "excess": 14,
-      "deadStock": 12
+      "dead": 12
     },
     "items": [
       {
