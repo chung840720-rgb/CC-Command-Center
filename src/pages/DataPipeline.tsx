@@ -204,7 +204,7 @@ export default function DataPipeline() {
             <p className="text-[10px] font-bold uppercase tracking-wider text-emerald-700 mb-2">🚀 完全原創的 4 點</p>
             <ul className="space-y-1.5 text-[11px] text-foreground/80">
               <li className="flex gap-1.5"><span>1.</span><span><strong>6 切角 PM 思考框架</strong>（對應老闆 9 字方針）</span></li>
-              <li className="flex gap-1.5"><span>2.</span><span><strong>21 份 SOP</strong>（含老闆 dashboard 沒有的踩雷沉澱）</span></li>
+              <li className="flex gap-1.5"><span>2.</span><span><strong>19 份 SOP</strong>（含老闆 dashboard 沒有的踩雷沉澱）</span></li>
               <li className="flex gap-1.5"><span>3.</span><span><strong>解題進度看板</strong>（不只找問題、追蹤已解 vs 待解）</span></li>
               <li className="flex gap-1.5"><span>4.</span><span><strong>Trust 信任聲明頁</strong>（主動披露 Demo Only）</span></li>
             </ul>

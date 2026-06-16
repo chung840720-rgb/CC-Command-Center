@@ -46,7 +46,7 @@ const SKILLS: Skill[] = [
 const CATEGORY_META = {
   mindset:  { label: '🧠 核心思考框架', count: 0, icon: BookOpen,    color: 'bg-violet-100 text-violet-700' },
   workflow: { label: '📋 工作流 SOP',   count: 0, icon: Briefcase,    color: 'bg-amber-100 text-amber-700' },
-  platform: { label: '🔧 平台 API 反向工程', count: 0, icon: Code2,   color: 'bg-emerald-100 text-emerald-700' },
+  platform: { label: '🔧 平台 ETL + MCP × AI', count: 0, icon: Code2,   color: 'bg-emerald-100 text-emerald-700' },
   business: { label: '📚 業務知識',     count: 0, icon: Megaphone,    color: 'bg-rose-100 text-rose-700' },
   strategy: { label: '🎯 戰略框架',     count: 0, icon: Globe,        color: 'bg-cyan-100 text-cyan-700' },
 };
@@ -83,7 +83,7 @@ export default function Skills() {
                 <div>
                   <p className="font-bold text-foreground mb-1">🧑 Johnny（我）寫的：</p>
                   <ul className="space-y-0.5 text-foreground/80 list-disc list-inside">
-                    <li>21 份 SOP 的<strong>業務邏輯</strong>（4 平台戰略、命名規則、踩雷沉澱）</li>
+                    <li>19 份 SOP 的<strong>業務邏輯</strong>（4 平台戰略、命名規則、踩雷沉澱）</li>
                     <li>所有<strong>業務判斷</strong>（哪個 KPI 重要、紅綠燈閾值、員旅特例）</li>
                     <li>每條 SOP 的<strong>架構決定</strong>與適用情境</li>
                     <li>UX 判斷（哪頁該有什麼、4 階段哲學的順序）</li>

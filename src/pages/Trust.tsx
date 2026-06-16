@@ -42,7 +42,7 @@ export default function Trust() {
           {[
             { icon: Lock, title: '不存取任何系統', desc: 'Shopline / 蝦皮 / MoMo 的後台 OTP、Service Account、API key 在最後一日全數移除，不留備份。' },
             { icon: Eye, title: '不外流任何商業資料', desc: 'Dashboard 內所有業績數字皆 anonymized — per platform per month 用隨機 factor (×0.65~0.95)，不洩漏絕對值。' },
-            { icon: FileText, title: 'SOP 概念可外帶，數據不可', desc: '21 份 SOP Skills 是我寫的個人能力沉澱（可外帶），對應的真實業績、SKU 細節、銷售排行（不可外帶）。' },
+            { icon: FileText, title: 'SOP 概念可外帶，數據不可', desc: '19 份 SOP Skills 是我寫的個人能力沉澱（可外帶），對應的真實業績、SKU 細節、銷售排行（不可外帶）。' },
             { icon: ShieldCheck, title: '爬蟲 code 公開但不執行', desc: 'GitHub 上的 Playwright + CDP code 是過去工作沉澱，但離職後再執行針對前雇主即構成不當存取，不會做。' },
           ].map((it, i) => (
             <div key={i} className="rounded-xl bg-white/60 border border-border/40 p-4 space-y-2">
@@ -67,7 +67,7 @@ export default function Trust() {
         <div className="space-y-3">
           {[
             { num: 1, title: '同樣的尊重會延伸到你', desc: '在貴司任職期間，我會像在前公司那樣沉澱 SOP / 寫 Skill / 反向工程平台 API，但離職那天，所有系統存取權限歸還，所有真實資料留下。' },
-            { num: 2, title: '我會留下類似深度的工作沉澱', desc: '18 個月寫了 21 份 SOP + 4 平台爬蟲，這個密度可重複。你雇用我，預期有同等規模的能力沉澱可繼承。' },
+            { num: 2, title: '我會留下類似深度的工作沉澱', desc: '18 個月寫了 19 份 SOP + 4 平台爬蟲，這個密度可重複。你雇用我，預期有同等規模的能力沉澱可繼承。' },
             { num: 3, title: '你的資料永遠是你的', desc: '我的 portfolio 永遠只會放「概念框架 + Demo」，不會放真實業績截圖、員工本名、老闆 quote、KOL 真實名稱（全 anonymized）。' },
             { num: 4, title: '不帶技術棧、只帶能力', desc: '這個 dashboard 的 Playwright + CDP + Claude Code + GH Pages 是個人 demo 用，不會原封不動搬到貴司。貴司用什麼工具我就用什麼 — 我帶的是「PM 思考方法」+「沉澱 SOP 的能力」。' },
             { num: 5, title: '優先 anchor metric，不沉迷工具', desc: '我會優先問你「成功的定義是什麼」，把工具服務這個 anchor，不是反過來。如果你定義「3 個月內補回業績 X%」，我會用最簡單的工具達成，不會花 1 個月把 dashboard 做漂亮。' },
@@ -93,7 +93,7 @@ export default function Trust() {
           <div>
             <h2 className="text-lg font-extrabold tracking-tight">📚 Pick a SOP, Ask Me Anything</h2>
             <p className="text-[11px] text-muted-foreground mt-0.5">
-              不信 23 份 SOP 是我寫的？挑這 7 份問細節 — 我能 5 分鐘講完背景 / 當時情境 / 為什麼這樣設計 / 踩了哪個雷。
+              不信 19 份 SOP 是我寫的？挑這 7 份問細節 — 我能 5 分鐘講完背景 / 當時情境 / 為什麼這樣設計 / 踩了哪個雷。
             </p>
           </div>
         </div>
@@ -138,7 +138,7 @@ export default function Trust() {
           </p>
           <p>
             <strong className="text-primary">3. 證明我是「能讓 AI 落地工作」的人，不是「玩 prompt」的人。</strong>
-            21 份 SOP Skills、4 平台反向工程爬蟲、完整 Workers 架構 code 都在 GitHub repo 內 —
+            19 份 SOP Skills、4 平台反向工程爬蟲、完整 Workers 架構 code 都在 GitHub repo 內 —
             純粹的能力證明，不依賴任何真實業績數據。
           </p>
         </div>
@@ -149,12 +149,12 @@ export default function Trust() {
         <Sparkles className="w-8 h-8 text-primary mx-auto" />
         <h2 className="text-xl font-bold">想看真實能力？</h2>
         <p className="text-sm text-muted-foreground max-w-xl mx-auto">
-          我把 18 個月的電商 PM 工作脈絡用 demo 形式攤開給你看 — 21 份 SOP / 4 平台爬蟲架構 / 完整迭代軌跡 / AI 業務脈絡套用。<br />
+          我把 18 個月的電商 PM 工作脈絡用 demo 形式攤開給你看 — 19 份 SOP / 4 平台爬蟲架構 / 完整迭代軌跡 / AI 業務脈絡套用。<br />
           剩下的，我們面試聊聊。
         </p>
         <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
           <Button asChild className="rounded-full gap-2 font-semibold bg-gradient-to-br from-primary to-amber-500 border-0 shadow-lg shadow-primary/25">
-            <Link to="/skills">看 21 份 SOP <ArrowRight className="w-4 h-4" /></Link>
+            <Link to="/skills">看 19 份 SOP <ArrowRight className="w-4 h-4" /></Link>
           </Button>
           <Button asChild variant="outline" className="rounded-full gap-2 font-semibold">
             <Link to="/data-pipeline">看爬蟲架構 <ArrowRight className="w-4 h-4" /></Link>

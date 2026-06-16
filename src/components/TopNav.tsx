@@ -64,7 +64,7 @@ const navConfig = [
     icon: Brain,
     perspective: '成長觀察員',
     items: [
-      { label: '📚 SOP Skills 索引', subtitle: '22 份個人能力沉澱', to: '/skills' },
+      { label: '📚 SOP Skills 索引', subtitle: '19 份個人能力沉澱（2 master + 17 SOP）', to: '/skills' },
       { label: '💬 PM Prompt 庫', subtitle: '🆕 50 個 Shopline MCP × PM 範本', to: '/pm-prompts' },
       { label: '🚀 資料管線架構', subtitle: '4 平台反向工程（過去沉澱）', to: '/data-pipeline' },
       { label: '📝 迭代軌跡', subtitle: '單日 14+ 個版本', to: '/changelog' },
