@@ -1661,14 +1661,9 @@
   },
   "adsMeta": {
     "source": {
-      "method": "Meta Ads MCP via Claude Code (direct call)",
-      "mcpUrl": "https://mcp.facebook.com/ads",
-      "pulledAt": "2026-06-16T16:00:00+08:00",
-      "realPeriod": "2026-06-09 ~ 2026-06-15 (近 7 天)",
-      "adAccount": "act_REDACTED（淨淨 CleanClean，幣別 TWD）",
-      "note": "Demo Only — 數字已 anonymize（0.82 factor 保留 ROAS/CTR/CPM/分布比例）+ KOL 名稱 generic 化；原始數字為公司資產",
-      "apiCallDuration": "2 calls（field verification + entity fetch）",
-      "workflow": "1. ads_get_field_context (verify spend/roas fields) → 2. ads_get_ad_entities (level=adset, date_preset=last_7d, limit=100)"
+      "method": "Meta Ads MCP (Demo 架構)",
+      "workflow": "ads_get_field_context → ads_get_ad_entities → 本地脫敏",
+      "note": "Demo Only · 數字依 0.82 factor 脫敏"
     },
     "kpi": {
       "spend": 196206,
@@ -1744,7 +1739,7 @@
       },
       {
         "rank": 6,
-        "name": "(KOL-KOL-A)洗衣精_影片10秒_排：已購買洗衣精",
+        "name": "(KOL-A 素材)洗衣精_影片10秒_排：已購買洗衣精",
         "audience": "RT-溫熱",
         "roas": 4.6,
         "spend": 6508,
@@ -1756,7 +1751,7 @@
       },
       {
         "rank": 7,
-        "name": "(我們不一樣+實測影片)洗衣精_影片10秒_排：已購買洗衣精_L500",
+        "name": "(品牌主張+實測影片)洗衣精_影片10秒_排：已購買洗衣精_L500",
         "audience": "RT-溫熱",
         "roas": 4.4,
         "spend": 8526,
@@ -1768,7 +1763,7 @@
       },
       {
         "rank": 8,
-        "name": "(原生圖文+影片+KOC)洗面乳三部曲_影片10秒_排：已購買洗面乳三部曲",
+        "name": "(KOC 素材組合)洗面乳三部曲_影片10秒_排：已購買洗面乳三部曲",
         "audience": "RT-溫熱",
         "roas": 3.54,
         "spend": 2831,
@@ -1780,7 +1775,7 @@
       },
       {
         "rank": 9,
-        "name": "(KOL組合+KOC)洗衣精_影片10秒_排：已購買洗衣精",
+        "name": "(KOL+KOC 組合)洗衣精_影片10秒_排：已購買洗衣精",
         "audience": "RT-溫熱",
         "roas": 3.35,
         "spend": 2546,
@@ -1792,7 +1787,7 @@
       },
       {
         "rank": 10,
-        "name": "(原生圖文+KOC圖文)家事皂_影片10秒_排：已購買家事皂",
+        "name": "(KOC 素材)家事皂_影片10秒_排：已購買家事皂",
         "audience": "RT-溫熱",
         "roas": 2.92,
         "spend": 3418,
@@ -1842,7 +1837,7 @@
     ],
     "redFlags": [
       {
-        "adSet": "(KOL-B KOL)洗衣相關+延伸興趣＿排：全 RT_L1000",
+        "adSet": "(KOL-B 興趣)洗衣相關+延伸興趣＿排：全 RT_L1000",
         "campaign": "07：洗衣精_NEW(冷+興趣)_CPA",
         "spend": 32828,
         "roas": 0.02,
@@ -1870,7 +1865,7 @@
       ],
       "actionItems": [
         {
-          "text": "⛔ 暫停 (KOL-B) NT$40k/ROAS 0.02 紅旗組",
+          "text": "⛔ 暫停 (KOL-B 興趣組) NT$40k/ROAS 0.02 紅旗組",
           "linkedAd": "AD-006"
         },
         {
