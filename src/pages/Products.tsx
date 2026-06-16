@@ -1,11 +1,18 @@
 import { useEffect, useState } from 'react';
-import { Package, Search, TrendingUp, TrendingDown } from 'lucide-react';
+import { Package, Search, TrendingUp, TrendingDown, AlertTriangle, Skull, CheckCircle2, AlertCircle } from 'lucide-react';
 import { getSnapshot } from '@/lib/api';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Badge } from '@/components/ui/badge';
 import { SopBadge } from '@/components/dashboard/SopBadge';
 import { DateRangeSwitcher } from '@/components/dashboard/DateRangeSwitcher';
 import { formatNumber, cn } from '@/lib/utils';
+
+const INV_STATUS = {
+  critical: { label: '🚨 缺貨', color: 'bg-red-100 text-red-700 border-red-200', icon: AlertTriangle },
+  healthy:  { label: '✓ 健康', color: 'bg-emerald-100 text-emerald-700 border-emerald-200', icon: CheckCircle2 },
+  excess:   { label: '⚠ 偏多', color: 'bg-amber-100 text-amber-700 border-amber-200', icon: AlertCircle },
+  dead:     { label: '💀 滯銷', color: 'bg-stone-200 text-stone-700 border-stone-300', icon: Skull },
+};
 
 const CAT_COLOR: Record<string, string> = {
   primary: 'bg-primary',
@@ -68,6 +75,84 @@ export default function Products() {
           ))}
         </div>
       </section>
+
+      {/* 🆕 滯銷預警 / 庫存燈號 — 套 Shopline MCP prompt E1+E2 */}
+      {data.productInventory && (
+        <section className="card-soft p-6 space-y-4">
+          <div className="flex items-start justify-between gap-3 flex-wrap">
+            <div>
+              <h2 className="text-base font-extrabold tracking-tight flex items-center gap-2">
+                📉 滯銷預警 + 庫存日數燈號
+              </h2>
+              <p className="text-xs text-muted-foreground mt-1">套 <code className="px-1 bg-secondary rounded text-[10px]">shopline-pm-prompts.md E1+E2</code> 自動產出 — 庫存 ÷ 日均訂單 = 庫存日數</p>
+            </div>
+            <Badge variant="outline" className="bg-stone-50 text-stone-700 text-[10px] font-bold">📦 透過 Shopline MCP</Badge>
+          </div>
+
+          {/* 4 級燈號 summary */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {Object.entries(data.productInventory.summary).map(([k, v]: any) => {
+              const cfg = INV_STATUS[k as keyof typeof INV_STATUS];
+              return (
+                <div key={k} className={cn('rounded-xl border p-3 text-center', cfg.color)}>
+                  <p className="text-[10px] font-bold uppercase tracking-wider">{cfg.label}</p>
+                  <p className="text-2xl font-extrabold mt-1">{v as number}</p>
+                  <p className="text-[10px] mt-0.5">{k === 'critical' ? '< 7 天' : k === 'healthy' ? '7-30 天' : k === 'excess' ? '30-90 天' : '> 90 天'}</p>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* 11 SKU 預警表 */}
+          <div className="overflow-x-auto rounded-xl border border-border/40">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-secondary/40 text-[10px] text-muted-foreground uppercase tracking-wider">
+                  <th className="text-left font-bold px-3 py-2.5">SKU</th>
+                  <th className="text-left font-bold px-2 py-2.5">商品</th>
+                  <th className="text-left font-bold px-2 py-2.5">品類</th>
+                  <th className="text-right font-bold px-2 py-2.5">庫存</th>
+                  <th className="text-right font-bold px-2 py-2.5">30d 日均</th>
+                  <th className="text-right font-bold px-2 py-2.5">庫存日數</th>
+                  <th className="text-left font-bold px-2 py-2.5">狀態 + 建議</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data.productInventory.items.map((item: any) => {
+                  const cfg = INV_STATUS[item.status as keyof typeof INV_STATUS];
+                  return (
+                    <tr key={item.sku} className="border-t border-border/40 hover:bg-secondary/20">
+                      <td className="px-3 py-2.5 font-mono text-[11px]">{item.sku}</td>
+                      <td className="px-2 py-2.5 font-bold text-xs">{item.name}</td>
+                      <td className="px-2 py-2.5"><Badge variant="outline" className="text-[10px]">{item.category}</Badge></td>
+                      <td className="px-2 py-2.5 text-right font-mono">{formatNumber(item.stock)}</td>
+                      <td className="px-2 py-2.5 text-right font-mono text-muted-foreground">{item.daily30d}</td>
+                      <td className={cn('px-2 py-2.5 text-right font-extrabold font-mono',
+                        item.status === 'critical' && 'text-red-600',
+                        item.status === 'dead' && 'text-stone-600'
+                      )}>
+                        {item.daysLeft >= 999 ? '∞' : item.daysLeft.toFixed(1)} 天
+                      </td>
+                      <td className="px-2 py-2.5">
+                        <div className="flex items-center gap-2">
+                          <Badge variant="outline" className={cn('text-[10px] font-bold', cfg.color)}>{cfg.label}</Badge>
+                          <span className="text-[11px] text-foreground/80">{item.action}</span>
+                        </div>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+
+          {/* AI 建議 */}
+          <div className="p-3 rounded-lg bg-amber-50/60 border border-amber-200/40 text-xs leading-relaxed">
+            <strong className="font-bold">💡 AI 建議：</strong>{data.productInventory.recommendation}
+            <span className="ml-2 font-extrabold text-amber-700">滯銷庫存價值：NT$ {formatNumber(data.productInventory.totalDeadStockValue)}</span>
+          </div>
+        </section>
+      )}
 
       <section className="card-soft p-6 space-y-4">
         <div className="flex items-center justify-between gap-3 flex-wrap">

@@ -51,9 +51,11 @@ const navConfig = [
     perspective: '執行操盤手 + 內部關係官',
     items: [
       { label: '🏷️ 品類貢獻度', subtitle: 'PM 撥動業績的核心 — 廣告動作 ↔ 品類反應', to: '/category' },
-      { label: '📘 廣告效率', subtitle: 'Meta MCP + Google + 素材分析 + AI 行動建議', to: '/ads/meta' },
-      { label: '商品 SKU', subtitle: '品類分布 + SKU 級資料', to: '/products' },
-      { label: '活動規劃', subtitle: 'Kanban + 5 階段 SOP', to: '/campaign' },
+      { label: '📘 廣告效率', subtitle: 'Meta MCP + Google + 素材分析', to: '/ads/meta' },
+      { label: '👑 VIP 會員行為', subtitle: '🆕 3 等級 + 升級試算（Shopline MCP）', to: '/vip' },
+      { label: '👥 自動受眾包', subtitle: '🆕 CRM × AI 跨 MCP 工作流 · 8 包', to: '/audience-packs' },
+      { label: '商品 SKU + 滯銷', subtitle: '🆕 庫存日數燈號（Shopline MCP）', to: '/products' },
+      { label: '活動 + ROI 排行', subtitle: '🆕 6 個月 ROI 排行（Shopline MCP）', to: '/campaign' },
     ],
   },
   {
@@ -62,7 +64,8 @@ const navConfig = [
     icon: Brain,
     perspective: '成長觀察員',
     items: [
-      { label: '📚 SOP Skills 索引', subtitle: '21 份個人能力沉澱', to: '/skills' },
+      { label: '📚 SOP Skills 索引', subtitle: '22 份個人能力沉澱', to: '/skills' },
+      { label: '💬 PM Prompt 庫', subtitle: '🆕 50 個 Shopline MCP × PM 範本', to: '/pm-prompts' },
       { label: '🚀 資料管線架構', subtitle: '4 平台反向工程（過去沉澱）', to: '/data-pipeline' },
       { label: '📝 迭代軌跡', subtitle: '單日 14+ 個版本', to: '/changelog' },
       { label: '🛡 信任聲明', subtitle: '為什麼 Demo Only — 商業道德承諾', to: '/trust' },

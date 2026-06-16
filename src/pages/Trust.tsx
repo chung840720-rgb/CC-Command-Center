@@ -71,6 +71,7 @@ export default function Trust() {
             { num: 3, title: '你的資料永遠是你的', desc: '我的 portfolio 永遠只會放「概念框架 + Demo」，不會放真實業績截圖、員工本名、老闆 quote、KOL 真實名稱（全 anonymized）。' },
             { num: 4, title: '不帶技術棧、只帶能力', desc: '這個 dashboard 的 Playwright + CDP + Claude Code + GH Pages 是個人 demo 用，不會原封不動搬到貴司。貴司用什麼工具我就用什麼 — 我帶的是「PM 思考方法」+「沉澱 SOP 的能力」。' },
             { num: 5, title: '優先 anchor metric，不沉迷工具', desc: '我會優先問你「成功的定義是什麼」，把工具服務這個 anchor，不是反過來。如果你定義「3 個月內補回業績 X%」，我會用最簡單的工具達成，不會花 1 個月把 dashboard 做漂亮。' },
+            { num: 6, title: 'AI 不替人發送 — 道德底線', desc: '所有 CRM 受眾包推播 / 客服訊息 / 廣告投放 draft，AI 只產出建議，最終必須人類審核 + 手動 Send。這條底線比技術能力重要 — 防 AI 代發踩雷，保護客戶信任。' },
           ].map((it) => (
             <div key={it.num} className="flex gap-3 p-4 rounded-xl bg-secondary/30">
               <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center shrink-0 font-bold text-sm">
@@ -92,7 +93,7 @@ export default function Trust() {
           <div>
             <h2 className="text-lg font-extrabold tracking-tight">📚 Pick a SOP, Ask Me Anything</h2>
             <p className="text-[11px] text-muted-foreground mt-0.5">
-              不信 21 份 SOP 是我寫的？挑這 5 份問細節 — 我能 5 分鐘講完背景 / 當時情境 / 為什麼這樣設計 / 踩了哪個雷。
+              不信 23 份 SOP 是我寫的？挑這 7 份問細節 — 我能 5 分鐘講完背景 / 當時情境 / 為什麼這樣設計 / 踩了哪個雷。
             </p>
           </div>
         </div>
@@ -103,6 +104,8 @@ export default function Trust() {
             { skill: 'cross-team-campaign-sop.md v1.0', bait: '8 階段活動 SOP 哪一段最容易卡？L1-L4 怎麼判定？', area: '跨組協作' },
             { skill: 'meta-ads-mcp.md v1.1', bait: 'purchase_roas API 端不可排序你怎麼解？OAuth callback URL 流程是什麼？', area: 'MCP 串接' },
             { skill: '蝦皮通路戰略.md v1.0', bait: 'TA 分流四象限是怎麼推導出來的？跟蝦皮商城 PM 怎麼對焦？', area: '通路戰略' },
+            { skill: 'shopline-pm-prompts.md v1.0', bait: '50 個 prompt 哪 1 個最常用？怎麼套 brand-voice 自動產推播 draft？', area: 'AI × PM' },
+            { skill: 'crm-ai-audience-packs.md v1.0', bait: '8 個受眾包怎麼設計？為什麼 AI 不能直接發推播？跨 MCP 工作流 8 stages 各做什麼？', area: 'CRM × AI 殺手級' },
             { skill: 'monthly-report-mindset.md v1.0', bait: '月會簡報「5 必加要素」每一項怎麼來？對老闆的「不安心感」怎麼消除？', area: '向上溝通' },
           ].map((q, i) => (
             <div key={i} className="card-soft p-3 bg-white/70 border border-border/40">

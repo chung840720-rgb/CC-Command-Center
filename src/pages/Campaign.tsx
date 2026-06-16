@@ -77,6 +77,80 @@ export default function Campaign() {
         <KpiTile label="最佳活動" value={c.kpi.bestCampaign.name} subValue={`${c.kpi.bestCampaign.roas} 倍`} icon={Trophy} iconColor="pink" />
       </div>
 
+      {/* 🆕 活動 ROI 排行榜 — 套 Shopline MCP prompt C1 */}
+      {data.campaignRoiRanking && (
+        <section className="card-soft p-6 space-y-4">
+          <div className="flex items-start justify-between gap-3 flex-wrap">
+            <div>
+              <h2 className="text-base font-extrabold tracking-tight flex items-center gap-2">
+                📊 活動 ROI 排行榜（近 6 個月）
+              </h2>
+              <p className="text-xs text-muted-foreground mt-1">套 <code className="px-1 bg-secondary rounded text-[10px]">shopline-pm-prompts.md C1+C2</code> 自動產出 — promotion_items 反查每檔 ROI</p>
+            </div>
+            <Badge variant="outline" className="bg-rose-50 text-rose-700 text-[10px] font-bold">📦 透過 Shopline MCP</Badge>
+          </div>
+
+          <div className="space-y-2.5">
+            {data.campaignRoiRanking.campaigns.map((cm: any, i: number) => {
+              const VERDICT_BADGE = {
+                top1: { label: '🏆 Top 1', color: 'bg-amber-100 text-amber-800 border-amber-300' },
+                top2: { label: '🥈 Top 2', color: 'bg-stone-100 text-stone-700 border-stone-300' },
+                top3: { label: '🥉 Top 3', color: 'bg-amber-50 text-amber-700 border-amber-200' },
+                good: { label: '✓ 良好',   color: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
+                flop: { label: '💥 失敗',   color: 'bg-red-50 text-red-700 border-red-200' },
+              };
+              const v = VERDICT_BADGE[cm.verdict as keyof typeof VERDICT_BADGE];
+              const roasColor = cm.roas >= 4 ? 'text-emerald-600' : cm.roas >= 2.5 ? 'text-amber-600' : 'text-red-500';
+              return (
+                <div key={cm.name} className="rounded-xl border border-border/40 p-4 hover:bg-secondary/20 transition-colors">
+                  <div className="flex items-start justify-between gap-3 mb-2 flex-wrap">
+                    <div className="flex items-center gap-2.5">
+                      <span className="text-lg font-extrabold text-muted-foreground">#{i + 1}</span>
+                      <div>
+                        <p className="text-sm font-extrabold">{cm.name}</p>
+                        <p className="text-[10px] text-muted-foreground">{cm.period}</p>
+                      </div>
+                    </div>
+                    <Badge variant="outline" className={cn('text-[10px] font-bold', v?.color)}>{v?.label}</Badge>
+                  </div>
+                  <div className="grid grid-cols-2 md:grid-cols-6 gap-2 mb-2">
+                    <div className="rounded bg-secondary/30 px-2 py-1.5">
+                      <p className="text-[9px] text-muted-foreground">花費</p>
+                      <p className="text-xs font-bold">NT${(cm.spend / 1000).toFixed(0)}k</p>
+                    </div>
+                    <div className="rounded bg-secondary/30 px-2 py-1.5">
+                      <p className="text-[9px] text-muted-foreground">GMV</p>
+                      <p className="text-xs font-bold">NT${(cm.gmv / 10000).toFixed(0)}萬</p>
+                    </div>
+                    <div className="rounded bg-secondary/30 px-2 py-1.5">
+                      <p className="text-[9px] text-muted-foreground">ROAS</p>
+                      <p className={cn('text-xs font-extrabold', roasColor)}>{cm.roas}x</p>
+                    </div>
+                    <div className="rounded bg-secondary/30 px-2 py-1.5">
+                      <p className="text-[9px] text-muted-foreground">訂單</p>
+                      <p className="text-xs font-bold">{cm.orders}</p>
+                    </div>
+                    <div className="rounded bg-secondary/30 px-2 py-1.5">
+                      <p className="text-[9px] text-muted-foreground">新客</p>
+                      <p className="text-xs font-bold">{cm.newCustomers}</p>
+                    </div>
+                    <div className="rounded bg-secondary/30 px-2 py-1.5">
+                      <p className="text-[9px] text-muted-foreground">折扣率</p>
+                      <p className="text-xs font-bold">{cm.discountRate}%</p>
+                    </div>
+                  </div>
+                  <p className="text-[11px] text-foreground/80 italic">💡 {cm.insight}</p>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="p-3 rounded-lg bg-primary/5 border border-primary/10 text-xs leading-relaxed">
+            <strong className="font-bold">🎯 整體洞察：</strong>{data.campaignRoiRanking.insight}
+          </div>
+        </section>
+      )}
+
       {/* Kanban + 判讀 */}
       <div className="grid grid-cols-1 lg:grid-cols-[2.2fr_1fr] gap-4">
         <section className="card-soft p-6 space-y-4">

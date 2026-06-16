@@ -27,6 +27,9 @@ import DataPipeline from '@/pages/DataPipeline';
 import Skills from '@/pages/Skills';
 import Changelog from '@/pages/Changelog';
 import Trust from '@/pages/Trust';
+import Vip from '@/pages/Vip';
+import PmPrompts from '@/pages/PmPrompts';
+import AudiencePacks from '@/pages/AudiencePacks';
 
 export default function App() {
   return (
@@ -61,6 +64,9 @@ export default function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/changelog" element={<Changelog />} />
           <Route path="/trust" element={<Trust />} />
+          <Route path="/vip" element={<Vip />} />
+          <Route path="/pm-prompts" element={<PmPrompts />} />
+          <Route path="/audience-packs" element={<AudiencePacks />} />
         </Route>
       </Routes>
     </HashRouter>
