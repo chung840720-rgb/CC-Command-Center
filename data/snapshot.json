@@ -1661,196 +1661,229 @@
   },
   "adsMeta": {
     "source": {
-      "method": "Meta Ads MCP via Claude.ai",
+      "method": "Meta Ads MCP via Claude Code (direct call)",
       "mcpUrl": "https://mcp.facebook.com/ads",
-      "pulledAt": "2026-06-16",
+      "pulledAt": "2026-06-16T16:00:00+08:00",
       "realPeriod": "2026-06-09 ~ 2026-06-15 (近 7 天)",
       "adAccount": "act_REDACTED（淨淨 CleanClean，幣別 TWD）",
-      "note": "Demo Only — 數字已 anonymize（保留 ROAS/CTR/CPM/分布比例），原始數字為公司資產"
+      "note": "Demo Only — 數字已 anonymize（0.82 factor 保留 ROAS/CTR/CPM/分布比例）+ KOL 名稱 generic 化；原始數字為公司資產",
+      "apiCallDuration": "2 calls（field verification + entity fetch）",
+      "workflow": "1. ads_get_field_context (verify spend/roas fields) → 2. ads_get_ad_entities (level=adset, date_preset=last_7d, limit=100)"
     },
     "kpi": {
-      "spend": 114800,
-      "impressions": 2870000,
-      "clicks": 18040,
-      "ctr": 0.63,
-      "cpm": 40,
-      "cpc": 6.4,
+      "spend": 196206,
+      "impressions": 1886000,
+      "clicks": 13940,
+      "ctr": 0.74,
+      "cpm": 85,
+      "cpc": 14,
       "roas": 4.18,
-      "conversions": 279,
+      "conversions": 312,
       "period": "last_7d"
     },
     "topAdSets": [
       {
         "rank": 1,
         "name": "常態｜加入購物車30天未購買",
-        "campaign": "00：目錄銷售_DPA",
+        "audience": "RT",
         "roas": 10.66,
         "spend": 3460,
         "ctr": 1.37,
-        "cpm": 111,
-        "conversions": 27,
-        "audience": "RT"
+        "cpm": 91,
+        "impressions": 31286,
+        "clicks": 427,
+        "campaign": "(by adset query — campaign info needs separate call)"
       },
       {
         "rank": 2,
-        "name": "全站已購買名單_排：已購買清潔皂",
-        "campaign": "01：清潔皂_RT(已購買名單)_CPA",
+        "name": "全站已購買名單_排：已購買清潔皂名單",
+        "audience": "RT",
         "roas": 8.45,
         "spend": 4098,
         "ctr": 0.41,
-        "cpm": 78,
-        "conversions": 21,
-        "audience": "RT"
+        "cpm": 64,
+        "impressions": 52835,
+        "clicks": 216,
+        "campaign": "(by adset query — campaign info needs separate call)"
       },
       {
         "rank": 3,
         "name": "全站已購買名單_排：已購買潔顏三部曲",
-        "campaign": "09：洗面乳_RT(已購買名單)_CPA",
+        "audience": "RT",
         "roas": 8.09,
         "spend": 5812,
         "ctr": 0.42,
-        "cpm": 75,
-        "conversions": 36,
-        "audience": "RT"
+        "cpm": 61,
+        "impressions": 77212,
+        "clicks": 327,
+        "campaign": "(by adset query — campaign info needs separate call)"
       },
       {
         "rank": 4,
-        "name": "全站已購買名單_排：已購買胺基酸沐浴",
-        "campaign": "02：胺基酸沐浴_RT(已購買名單)_CPA",
+        "name": "全站已購買名單_排：已購買胺基酸沐浴系列",
+        "audience": "RT",
         "roas": 7.67,
         "spend": 4045,
         "ctr": 1.42,
-        "cpm": 130,
-        "conversions": 24,
-        "audience": "RT"
+        "cpm": 107,
+        "impressions": 31199,
+        "clicks": 443,
+        "campaign": "(by adset query — campaign info needs separate call)"
       },
       {
         "rank": 5,
-        "name": "全站已購買名單_排：已購買水凝乳",
-        "campaign": "11：身體乳_RT(已購買名單)_CPA",
+        "name": "全站已購買名單_排：已購買水凝乳名單",
+        "audience": "RT",
         "roas": 6.41,
         "spend": 11484,
         "ctr": 0.96,
-        "cpm": 122,
-        "conversions": 50,
-        "audience": "RT"
+        "cpm": 100,
+        "impressions": 94229,
+        "clicks": 908,
+        "campaign": "(by adset query — campaign info needs separate call)"
       },
       {
         "rank": 6,
-        "name": "(喬伊)洗衣精_影片10秒_排：已購買洗衣精",
-        "campaign": "07：洗衣精_RT(溫+熱)_CPA",
+        "name": "(KOL-喬伊)洗衣精_影片10秒_排：已購買洗衣精",
+        "audience": "RT-溫熱",
         "roas": 4.6,
         "spend": 6508,
         "ctr": 2.94,
-        "cpm": 287,
-        "conversions": 26,
-        "audience": "RT-溫熱"
+        "cpm": 235,
+        "impressions": 22647,
+        "clicks": 666,
+        "campaign": "(by adset query — campaign info needs separate call)"
       },
       {
         "rank": 7,
-        "name": "(達人推薦)母嬰節清潔組_排：站內互動",
-        "campaign": "07：洗衣精_RT(溫+熱)_CPA",
-        "roas": 4.21,
-        "spend": 5084,
-        "ctr": 2.1,
-        "cpm": 245,
-        "conversions": 23,
-        "audience": "RT-溫熱"
+        "name": "(我們不一樣+實測影片)洗衣精_影片10秒_排：已購買洗衣精_L500",
+        "audience": "RT-溫熱",
+        "roas": 4.4,
+        "spend": 8526,
+        "ctr": 0.93,
+        "cpm": 96,
+        "impressions": 72762,
+        "clicks": 676,
+        "campaign": "(by adset query — campaign info needs separate call)"
       },
       {
         "rank": 8,
-        "name": "(媽媽推薦)沐浴乳_影片15秒_排：已加購未買",
-        "campaign": "02：胺基酸沐浴_RT(已購買名單)_CPA",
-        "roas": 3.92,
-        "spend": 3936,
-        "ctr": 1.75,
-        "cpm": 195,
-        "conversions": 18,
-        "audience": "RT"
+        "name": "(原生圖文+影片+KOC)洗面乳三部曲_影片10秒_排：已購買洗面乳三部曲",
+        "audience": "RT-溫熱",
+        "roas": 3.54,
+        "spend": 2831,
+        "ctr": 0.87,
+        "cpm": 54,
+        "impressions": 42841,
+        "clicks": 375,
+        "campaign": "(by adset query — campaign info needs separate call)"
       },
       {
         "rank": 9,
-        "name": "(菌落+貼膚+小赫+圓+KOC)洗衣精_排：已購買",
-        "campaign": "07：洗衣精_RT(溫+熱)_CPA",
+        "name": "(KOL組合+KOC)洗衣精_影片10秒_排：已購買洗衣精",
+        "audience": "RT-溫熱",
         "roas": 3.35,
         "spend": 2546,
         "ctr": 0.76,
-        "cpm": 100,
-        "conversions": 9,
-        "audience": "RT-溫熱"
+        "cpm": 82,
+        "impressions": 25396,
+        "clicks": 192,
+        "campaign": "(by adset query — campaign info needs separate call)"
       },
       {
         "rank": 10,
-        "name": "(沒有太陽也不怕)洗衣精_排：已購買洗衣精",
-        "campaign": "07：洗衣精_RT(溫+熱)_CPA",
-        "roas": 2.98,
-        "spend": 4673,
-        "ctr": 1.49,
-        "cpm": 119,
-        "conversions": 13,
-        "audience": "RT-溫熱"
+        "name": "(原生圖文+KOC圖文)家事皂_影片10秒_排：已購買家事皂",
+        "audience": "RT-溫熱",
+        "roas": 2.92,
+        "spend": 3418,
+        "ctr": 0.81,
+        "cpm": 71,
+        "impressions": 39290,
+        "clicks": 317,
+        "campaign": "(by adset query — campaign info needs separate call)"
       }
     ],
     "audienceBreakdown": [
       {
         "type": "RT 已購買名單",
-        "count": 22,
-        "totalSpend": 47560,
-        "avgRoas": 6.85,
-        "note": "Mid-funnel 主力 — ROAS 最穩 5-10x"
-      },
-      {
-        "type": "RT 溫熱站內互動",
-        "count": 6,
-        "totalSpend": 22960,
-        "avgRoas": 3.42,
-        "note": "次主力 — 補回 Top of mind"
-      },
-      {
-        "type": "NEW 冷受眾 互動型",
         "count": 8,
-        "totalSpend": 36900,
-        "avgRoas": null,
-        "note": "11 組 ROAS 無回傳（互動型 ≠ 購買歸因）— 觀察 reach + CPM"
+        "totalSpend": 49200,
+        "avgRoas": 7.3,
+        "note": "主力 — 5 組進 Top 10，ROAS 6-10x 穩定回收"
       },
       {
-        "type": "實體門市導流",
-        "count": 3,
-        "totalSpend": 7380,
+        "type": "RT 溫熱+KOC素材",
+        "count": 7,
+        "totalSpend": 36900,
+        "avgRoas": 3.5,
+        "note": "次主力 — 影片素材帶動 CTR 較高（0.76-2.94%）"
+      },
+      {
+        "type": "NEW LL10% 未轉換",
+        "count": 11,
+        "totalSpend": 98400,
         "avgRoas": null,
-        "note": "線下歸因，不入排序"
+        "note": "11 組 ROAS 不可用 — LL10% lookalike 拉新但購買歸因 0"
+      },
+      {
+        "type": "地推/實體門市導流",
+        "count": 2,
+        "totalSpend": 8200,
+        "avgRoas": null,
+        "note": "桃園台茂 / 竹南門市，線下導流不入 ROAS"
+      },
+      {
+        "type": "冷受眾興趣",
+        "count": 4,
+        "totalSpend": 16400,
+        "avgRoas": 0.55,
+        "note": "25+ 女性 / 20+ 全 / 住家興趣 — ROAS 偏低"
       }
     ],
     "redFlags": [
       {
-        "adSet": "(廣告 KOL)洗衣精 RT_L1000",
-        "campaign": "07：洗衣精_RT(冷+互動型影片)_CPA",
+        "adSet": "(方瑪詠 KOL)洗衣相關+延伸興趣＿排：全 RT_L1000",
+        "campaign": "07：洗衣精_NEW(冷+興趣)_CPA",
         "spend": 32828,
         "roas": 0.02,
         "ctr": 0.17,
-        "issue": "7 天最大單組花費 + ROAS 0.02 + CTR 0.17%",
-        "action": "建議立刻暫停 / 切素材重投",
+        "issue": "7 天最大單組花費 NT$40k / ROAS 0.02 / CTR 0.17% — 三項全紅",
+        "action": "⛔ 立刻暫停。預算移轉到 Top 5 已購買名單 RT 組（ROAS 6-10x）",
+        "severity": "critical"
+      },
+      {
+        "adSet": "購買除黴名單_LL10%＿排：全 RT",
+        "campaign": "07：除黴_NEW(LL10%)_CPA",
+        "spend": 11174,
+        "roas": 0.0572,
+        "ctr": 1.02,
+        "issue": "$13k 花費但 ROAS < 0.1 — LL10% 沒轉換",
+        "action": "暫停，或改用更窄的 LL3% 受眾",
         "severity": "critical"
       }
     ],
     "insight": {
-      "summary": "近 7 天 Meta 廣告組 Top 10 全為 RT（再行銷），符合預期 — RT 受眾本來 ROAS 就高於冷受眾。如要評估真正「拉新效率」，建議把這份榜單跟冷受眾（NEW）廣告組分開看。",
+      "summary": "近 7 天 21 個有 ROAS 廣告組中，Top 10 由「全站已購買名單 RT」主導（5 組進前 5）— 符合預期但缺新客增量。LL10% lookalike 拉新組（11 個）全部 ROAS 不可用，建議檢視歸因設定或收窄受眾。",
       "traceTo": [
         "C-2606-01",
         "C-2606-06"
       ],
       "actionItems": [
         {
-          "text": "暫停 RT_L1000（NT$40k 花費 / ROAS 0.02）",
+          "text": "⛔ 暫停 (方瑪詠) NT$40k/ROAS 0.02 紅旗組",
           "linkedAd": "AD-006"
         },
         {
-          "text": "07：洗衣精 RT(溫+熱) 5 組全進 Top 10 — 建議下週把這組擴大投放",
+          "text": "✅ Top 5 已購買名單 RT 組（ROAS 6-10x）下週預算 +30%",
           "linkedAd": "AD-001"
         },
         {
-          "text": "11：身體乳 RT 單組 NT$14k 但 ROAS 6.41 — 預算還能往上加，建議下週 +30%",
+          "text": "🔍 11 組 LL10% lookalike ROAS 不可用 — 提報技術組檢視 Meta Pixel 購買事件歸因",
           "linkedAd": null
+        },
+        {
+          "text": "🧪 影片素材組 CTR 顯著（0.76-2.94%）— 建議下週把 KOC 素材複用到冷受眾測試",
+          "linkedAd": "AD-001"
         }
       ]
     },
@@ -1858,28 +1891,33 @@
       "pattern": "{流水號}：{品類}_{受眾類型}({細分})_{出價策略}",
       "examples": [
         {
-          "name": "00：目錄銷售_DPA",
-          "meaning": "DPA 動態商品廣告"
+          "name": "常態｜加入購物車30天未購買",
+          "meaning": "常態組 / 加購未購 30 天 RT"
         },
         {
-          "name": "01：清潔皂_RT(已購買名單)_CPA",
-          "meaning": "清潔皂 再行銷已購買 CPA 出價"
+          "name": "全站已購買名單_排：已購買{品類}",
+          "meaning": "已購買名單 RT（漏斗最深）"
         },
         {
-          "name": "07：洗衣精_RT(溫+熱)_CPA",
-          "meaning": "洗衣精 RT 溫熱受眾 CPA"
+          "name": "(KOL名)洗衣精_影片10秒_排：已購買洗衣精",
+          "meaning": "KOL 影片素材 × 已購買 RT 排除"
         },
         {
-          "name": "07：洗衣精_NEW(冷+互動型影片)_CPA",
-          "meaning": "洗衣精 冷受眾 互動型素材 CPA"
+          "name": "購買{品類}名單_LL10%_排：全 RT",
+          "meaning": "Lookalike 10% 拉新 + RT 排除"
+        },
+        {
+          "name": "{地址}40公里_-6/30_L500",
+          "meaning": "地推實體門市導流（距離+期限+L值）"
         }
       ],
       "audienceLayers": [
-        "NEW 冷受眾",
+        "NEW 冷受眾興趣",
+        "LL10% lookalike",
         "溫(站內互動)",
         "熱(已加購)",
         "RT(已購買名單)",
-        "DPA(目錄)"
+        "加購未購 30 天 RT"
       ]
     }
   },
