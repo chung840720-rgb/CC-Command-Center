@@ -206,12 +206,12 @@
   ],
   "todayActions": [
     {
-      "owner": "饅頭",
+      "owner": "Johnny",
       "status": "今日判斷",
       "task": "整理官網 ROAS 偏低的廣告組與素材"
     },
     {
-      "owner": "跳跳",
+      "owner": "林小美",
       "status": "可行動",
       "task": "確認蝦皮高效品項是否可加碼"
     },
@@ -1744,7 +1744,7 @@
       },
       {
         "rank": 6,
-        "name": "(KOL-喬伊)洗衣精_影片10秒_排：已購買洗衣精",
+        "name": "(KOL-KOL-A)洗衣精_影片10秒_排：已購買洗衣精",
         "audience": "RT-溫熱",
         "roas": 4.6,
         "spend": 6508,
@@ -1842,7 +1842,7 @@
     ],
     "redFlags": [
       {
-        "adSet": "(方瑪詠 KOL)洗衣相關+延伸興趣＿排：全 RT_L1000",
+        "adSet": "(KOL-B KOL)洗衣相關+延伸興趣＿排：全 RT_L1000",
         "campaign": "07：洗衣精_NEW(冷+興趣)_CPA",
         "spend": 32828,
         "roas": 0.02,
@@ -1870,7 +1870,7 @@
       ],
       "actionItems": [
         {
-          "text": "⛔ 暫停 (方瑪詠) NT$40k/ROAS 0.02 紅旗組",
+          "text": "⛔ 暫停 (KOL-B) NT$40k/ROAS 0.02 紅旗組",
           "linkedAd": "AD-006"
         },
         {
@@ -2025,10 +2025,10 @@
         "positioning": "療癒生活 / 香氛調性",
         "adSpendEst": "NT$ 180 萬/月",
         "mainPlatform": "Meta + Instagram",
-        "latestMove": "6/1 推「家事香氛系列」， KOL Reels 重押（蔡阿嘎夫婦剛接他們的業配）",
+        "latestMove": "6/1 推「家事香氛系列」， KOL Reels 重押（名人 KOL-A剛接他們的業配）",
         "strategy": "視覺包裝 + KOL 生活情境 + IG 重投",
         "threat": "high",
-        "ourCounter": "我們也有蔡阿嘎夫婦合作，且品牌承諾「真療癒」更貼合 — 可加強 IG/Threads 投放"
+        "ourCounter": "我們也有名人 KOL-A合作，且品牌承諾「真療癒」更貼合 — 可加強 IG/Threads 投放"
       },
       {
         "name": "DUDA CLEAN",
@@ -2061,7 +2061,7 @@
       },
       {
         "priority": "high",
-        "text": "【針對漫享】Threads/IG 投放預算 +20% — 利用蔡阿嘎夫婦既有合作做差異化",
+        "text": "【針對漫享】Threads/IG 投放預算 +20% — 利用名人 KOL-A既有合作做差異化",
         "traceTo": "AD-001"
       },
       {
@@ -2260,7 +2260,7 @@
     "events": [
       {
         "time": "2026/06/11 12:26",
-        "actor": "饅頭",
+        "actor": "Johnny",
         "action": "AI 診斷觸發",
         "page": "/analytics",
         "type": "ai",
@@ -2275,7 +2275,7 @@
       },
       {
         "time": "2026/06/11 10:42",
-        "actor": "跳跳",
+        "actor": "林小美",
         "action": "MoMo 報表上傳",
         "page": "/upload",
         "type": "upload",
@@ -2297,14 +2297,14 @@
       },
       {
         "time": "2026/06/10 18:23",
-        "actor": "饅頭",
+        "actor": "Johnny",
         "action": "編輯首頁文案「下載今日報表」",
         "page": "/",
         "type": "edit"
       },
       {
         "time": "2026/06/10 14:30",
-        "actor": "饅頭",
+        "actor": "Johnny",
         "action": "AI 解讀「蝦皮 GMV -18%」",
         "page": "/insights",
         "type": "ai",
@@ -2312,7 +2312,7 @@
       },
       {
         "time": "2026/06/10 09:55",
-        "actor": "跳跳",
+        "actor": "林小美",
         "action": "新增願望「想要競品價格自動監控」",
         "page": "/wishpool",
         "type": "wish"
@@ -2323,7 +2323,7 @@
     "wishes": [
       {
         "title": "想要競品價格自動監控",
-        "author": "跳跳",
+        "author": "林小美",
         "date": "2026/06/10",
         "description": "希望能每天自動爬蝦皮 / MoMo 競品同類商品價格，發現我方價格高於市場 5% 以上時主動 LINE 通知。",
         "likes": 12,
@@ -2343,7 +2343,7 @@
       },
       {
         "title": "AI 自動寫產品頁 SEO 標題",
-        "author": "饅頭",
+        "author": "Johnny",
         "date": "2026/06/05",
         "description": "每次上新品都要花 30 分鐘寫 SEO 標題與描述，希望 AI 套用品牌口吻自動生成 3 版供選。",
         "likes": 15,
@@ -2353,7 +2353,7 @@
       },
       {
         "title": "推播時段 AI 推薦",
-        "author": "饅頭",
+        "author": "Johnny",
         "date": "2026/05/28",
         "description": "LINE OA 推播時段太靠經驗，希望 AI 分析過去開信率，推薦每週最佳推播時段。",
         "likes": 6,
@@ -3032,7 +3032,7 @@
       "name": "母親節清深神隊友",
       "dateRange": "2026/05/01 ~ 2026/05/12",
       "platform": "全通路",
-      "owner": "饅頭",
+      "owner": "Johnny",
       "kpi": {
         "gmv": 2150000,
         "orders": 1536,
@@ -3766,7 +3766,7 @@
       "name": "母嬰節擴大投放",
       "period": "5/28 ~ 6/12",
       "status": "進行中",
-      "owner": "饅頭+冠達(廣告代操)",
+      "owner": "Johnny+外包代操 A(廣告代操)",
       "platform": [
         "shopline",
         "shopee",
@@ -3781,7 +3781,7 @@
       "name": "蝦皮 618 預熱",
       "period": "6/8 ~ 6/18",
       "status": "進行中",
-      "owner": "羽芯",
+      "owner": "王大明",
       "platform": [
         "shopee",
         "shopeeDirect"
@@ -3795,7 +3795,7 @@
       "name": "沉睡會員喚醒（柔濕巾免費試用）",
       "period": "5/25 ~ 6/15",
       "status": "進行中",
-      "owner": "饅頭+媛媛(CRM)",
+      "owner": "Johnny+宋小芳(CRM)",
       "platform": [
         "shopline"
       ],
@@ -3808,7 +3808,7 @@
       "name": "MoMo 站內競價提升",
       "period": "6/1 ~ 6/30",
       "status": "進行中",
-      "owner": "跳跳",
+      "owner": "林小美",
       "platform": [
         "momo"
       ],
@@ -3837,7 +3837,7 @@
       "name": "柔濕巾 618 排除策略",
       "period": "6/8 ~ 6/20",
       "status": "進行中",
-      "owner": "饅頭",
+      "owner": "Johnny",
       "platform": [
         "shopline",
         "shopee",
@@ -3900,14 +3900,14 @@
       {
         "priority": 1,
         "title": "11:00 跑日報 Cowork",
-        "detail": "羽芯 + 跳跳已填 Sheets，按 SOP 跑 3 份 Slack draft（群組 + DM x2）",
+        "detail": "王大明 + 林小美已填 Sheets，按 SOP 跑 3 份 Slack draft（群組 + DM x2）",
         "perspective": "數據觀測員",
         "linkedCampaign": "C-2606-02",
         "sopRef": "daily-report.md v2.10"
       },
       {
         "priority": 2,
-        "title": "跟羽芯確認 618 預熱（C-2606-02）進度",
+        "title": "跟王大明確認 618 預熱（C-2606-02）進度",
         "detail": "蝦皮「沐浴 SET」廣告 ROAS 是否達 3.0x、聯盟分潤 +5% 是否已生效",
         "perspective": "執行操盤手 + 內部關係官",
         "linkedCampaign": "C-2606-02",
@@ -3925,7 +3925,7 @@
   },
   "goldenTriangle": {
     "period": "6月 MTD",
-    "description": "笙闆月報 P2 核心 — 流量 × 客單價 × 轉換率（黃金三指標）",
+    "description": "老闆月報 P2 核心 — 流量 × 客單價 × 轉換率（黃金三指標）",
     "platforms": [
       {
         "id": "shopline",
