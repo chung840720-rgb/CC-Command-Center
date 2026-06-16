@@ -3976,5 +3976,46 @@
       "C-2606-05"
     ],
     "sopRef": "daren-mindset.md + monthly-report-mindset.md"
+  },
+  "alertsResolution": {
+    "description": "不只找問題，更要追蹤解題進度。每個異常都標「短期已解 / 進行中 / 待提報」狀態。",
+    "items": [
+      {
+        "problem": "Meta LL10% lookalike 11 組 ROAS 不可用",
+        "shortTermFix": "已暫停其中 3 組高花費（>NT$10k）廣告組，預算移至 RT 已購買名單（ROAS 6-10x）",
+        "shortTermStatus": "done",
+        "longTermFix": "提報技術組查 Meta Pixel 購買事件歸因設定 — 預估 1 週內完成",
+        "longTermStatus": "in_progress",
+        "owner": "Johnny → 技術組",
+        "kpiImpact": "預估省 NT$15k 花費 / 補回 5x ROAS"
+      },
+      {
+        "problem": "官網 ROAS 偏低（5月 MTD 1.49% 轉換率）",
+        "shortTermFix": "已啟動沉睡會員喚醒（C-2606-03）— 漸強 MAAC 推播 13 萬人",
+        "shortTermStatus": "done",
+        "longTermFix": "6/15 結算喚醒 ROAS — 若 < 2.5x 則 6/16 恢復常規廣告",
+        "longTermStatus": "in_progress",
+        "owner": "Johnny + 宋小芳（CRM）",
+        "kpiImpact": "預估補回官網 100 萬 GMV"
+      },
+      {
+        "problem": "蝦皮 DUDA CLEAN 搶 618 預熱版位（關鍵字「洗衣精」競價飆）",
+        "shortTermFix": "已改鎖長尾「母嬰洗衣精」+ Meta「家庭/興趣」受眾分流",
+        "shortTermStatus": "done",
+        "longTermFix": "7 月月會提報「差異化定位」策略（成份透明 + 安全認證 vs 價格戰）",
+        "longTermStatus": "pending",
+        "owner": "Johnny",
+        "kpiImpact": "保住蝦皮 618 預熱 ROAS > 3x"
+      },
+      {
+        "problem": "柔濕巾 618 戰略性砍預算（預期 -10~15%）",
+        "shortTermFix": "6/8 起 Meta + Google 廣告全停（C-2606-06）",
+        "shortTermStatus": "done",
+        "longTermFix": "7 月推柔濕巾回擊檔（官網 VIP 私域促銷）— 不打公開折扣",
+        "longTermStatus": "pending",
+        "owner": "Johnny",
+        "kpiImpact": "7 月柔濕巾預估 GMV +20% MoM"
+      }
+    ]
   }
 }
