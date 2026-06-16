@@ -4551,5 +4551,230 @@
       "monthTotal": "~ 29 小時",
       "yearValueNtd": 174000
     }
+  },
+  "audiencePacks": {
+    "description": "AI 主動掃 Shopline 客戶資料 + 漸強 MAAC 推播任務 + Meta Custom Audience，跨 MCP 全自動受眾包工作流",
+    "scanTime": "2026-06-17 09:00",
+    "maturityLevel": "L2 半自動 → L3 自動轉型中",
+    "packs": [
+      {
+        "id": 1,
+        "name": "沐浴未開發者",
+        "icon": "🛁",
+        "who": "90 天買過洗衣精 ≥ 3 次 + 0 筆沐浴",
+        "brandVoice": "真安心",
+        "memberCount": 1245,
+        "estimatedGmv": 95000,
+        "expectedCvr": 11.2,
+        "pushChannel": [
+          "LINE OA",
+          "EDM"
+        ],
+        "bestTime": "早 8 點",
+        "recommendedSku": "胺基酸沐浴 SET（NT$ 799 試用）",
+        "draftSample": "王太太，您每月都選對的洗衣精給家人 — 沐浴也該用同樣標準。淨淨胺基酸沐浴 SET 今天起 NT$ 799 試用，無防腐配方，安全感延伸到全身。",
+        "status": "ready"
+      },
+      {
+        "id": 2,
+        "name": "沉睡 VIP 喚醒",
+        "icon": "😴",
+        "who": "金/白金卡 + 60 天無下單",
+        "brandVoice": "真貼心",
+        "memberCount": 47,
+        "estimatedGmv": 142000,
+        "expectedCvr": 25,
+        "pushChannel": [
+          "客服電話 Top 20",
+          "EDM 中尾 30"
+        ],
+        "bestTime": "客服早班 10:00",
+        "recommendedSku": "偏好品類專屬碼（不公開）",
+        "draftSample": "張先生您好，這是 [Brand]。您是我們的白金卡 VIP，超過兩個月沒見您下單了。我們想您 — 寄上專屬於您的回購禮，不是促銷，是想您。",
+        "status": "ready"
+      },
+      {
+        "id": 3,
+        "name": "加購未結帳搶救",
+        "icon": "🛒",
+        "who": "cart 30 天未轉換 + 排除已下單",
+        "brandVoice": "真好用",
+        "memberCount": 320,
+        "estimatedGmv": 35000,
+        "expectedCvr": 12.5,
+        "pushChannel": [
+          "LINE OA"
+        ],
+        "bestTime": "加購後 48hr 內",
+        "recommendedSku": "48hr 限時 95 折碼",
+        "draftSample": "李小姐，您 30 天前選的「真濃縮洗衣精 SET」還在購物車。48 小時內結帳享 95 折，過期不候。— 淨淨",
+        "status": "ready"
+      },
+      {
+        "id": 4,
+        "name": "首購除黴 → 變愛用者",
+        "icon": "🫧",
+        "who": "首購是除黴 + 30 天內",
+        "brandVoice": "真好用",
+        "memberCount": 89,
+        "estimatedGmv": 48000,
+        "expectedCvr": 32,
+        "pushChannel": [
+          "EDM",
+          "LINE OA"
+        ],
+        "bestTime": "首購後 7-14 天",
+        "recommendedSku": "除黴 SET 組合 + 居家清潔指南",
+        "draftSample": "謝謝您信任淨淨除黴噴霧。下一步建議：搭配除黴凝膠 + 浴室清潔組合，省事一次到位。隨包附「居家療癒清潔指南」。",
+        "status": "ready"
+      },
+      {
+        "id": 5,
+        "name": "生日月 VIP 個人化",
+        "icon": "🎂",
+        "who": "birthday 在當月 + 任何 VIP 等級",
+        "brandVoice": "真貼心",
+        "memberCount": 612,
+        "estimatedGmv": 280000,
+        "expectedCvr": 28.5,
+        "pushChannel": [
+          "EDM",
+          "LINE OA"
+        ],
+        "bestTime": "生日當月 1 號自動",
+        "recommendedSku": "雙倍購物金 + 個人化品類推薦",
+        "draftSample": "吳小姐，6 月生日快樂 🎂 為您準備了：雙倍購物金 + 您最愛的胺基酸沐浴試用包。生日這一個月都適用，不疾不徐。— 淨淨",
+        "status": "ready"
+      },
+      {
+        "id": 6,
+        "name": "母嬰高頻 → 訂閱制",
+        "icon": "👶",
+        "who": "90 天買母嬰品類 ≥ 3 次",
+        "brandVoice": "真安心",
+        "memberCount": 215,
+        "estimatedGmv": 480000,
+        "expectedCvr": 9.8,
+        "pushChannel": [
+          "EDM",
+          "LINE OA"
+        ],
+        "bestTime": "每月底",
+        "recommendedSku": "月卡會員制（自動補貨）",
+        "draftSample": "陳媽媽，您 3 個月買了 4 次柔濕巾。訂閱月卡的話：每月自動到府，省 12%、不斷貨。隨時可暫停。",
+        "status": "ready"
+      },
+      {
+        "id": 7,
+        "name": "購物金重度 → 任務",
+        "icon": "💰",
+        "who": "6 個月 user_credit 抵扣 > 50%",
+        "brandVoice": "真好用",
+        "memberCount": 168,
+        "estimatedGmv": 65000,
+        "expectedCvr": 7.5,
+        "pushChannel": [
+          "EDM"
+        ],
+        "bestTime": "每月底結算",
+        "recommendedSku": "邀請好友 + 寫評論任務",
+        "draftSample": "感謝您一直使用購物金。本月任務：邀請好友首購得 NT$ 100、寫評論得 NT$ 50。任務累積 NT$ 200 可換新品試用。",
+        "status": "pending"
+      },
+      {
+        "id": 8,
+        "name": "APP-only → 推官網限定",
+        "icon": "📱",
+        "who": "shopper_app 訂單 > 5 + storefront = 0",
+        "brandVoice": "真貼心",
+        "memberCount": 478,
+        "estimatedGmv": 180000,
+        "expectedCvr": 16,
+        "pushChannel": [
+          "App 推播",
+          "LINE OA"
+        ],
+        "bestTime": "每月初",
+        "recommendedSku": "官網限定 SKU + 私域社群",
+        "draftSample": "您是 App 用戶 VIP — 我們在官網準備了 5 款只在 web 限定的 SKU，加入官網 LINE OA 私域社群獨家拿到。",
+        "status": "pending"
+      }
+    ],
+    "workflow": [
+      {
+        "step": 1,
+        "name": "Shopline MCP 自動掃",
+        "tool": "shopline_get_orders + customers",
+        "frequency": "每日 9 am"
+      },
+      {
+        "step": 2,
+        "name": "AI 條件配對",
+        "tool": "Claude + brand-voice + cleanclean-pm",
+        "frequency": "即時"
+      },
+      {
+        "step": 3,
+        "name": "產推播 draft",
+        "tool": "Claude (3 種通路 draft)",
+        "frequency": "每包 1 次"
+      },
+      {
+        "step": 4,
+        "name": "PM/CRM 審核",
+        "tool": "人工 review（30 秒/包）",
+        "frequency": "每天"
+      },
+      {
+        "step": 5,
+        "name": "漸強 MAAC 推播",
+        "tool": "漸強 MAAC + LINE OA + EDM",
+        "frequency": "自動排程"
+      },
+      {
+        "step": 6,
+        "name": "Meta MCP 廣告投放",
+        "tool": "Meta MCP + Custom Audience",
+        "frequency": "同步啟動"
+      },
+      {
+        "step": 7,
+        "name": "3/7/30 天回看",
+        "tool": "Shopline MCP cohort 回購率",
+        "frequency": "每週週訊"
+      },
+      {
+        "step": 8,
+        "name": "AI 迭代條件",
+        "tool": "Claude 分析 + 調整下次受眾包條件",
+        "frequency": "每月"
+      }
+    ],
+    "maturityLevels": [
+      {
+        "level": "L1",
+        "name": "手動",
+        "desc": "Excel 切 cohort + 手寫推播",
+        "status": "past"
+      },
+      {
+        "level": "L2",
+        "name": "半自動",
+        "desc": "MCP 拉 cohort + AI 產 draft + 人工審核 + 漸強推",
+        "status": "current"
+      },
+      {
+        "level": "L3",
+        "name": "自動",
+        "desc": "AI 主動掃 + 自動產 draft + PM 審核 + 漸強自動推",
+        "status": "target_6mo"
+      },
+      {
+        "level": "L4",
+        "name": "智能",
+        "desc": "AI 跨 cohort 學習 + 自動微調條件 + 個人化",
+        "status": "target_1y"
+      }
+    ]
   }
 }
