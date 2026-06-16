@@ -30,7 +30,8 @@ const PLATFORM_COLOR: Record<string, string> = {
   官網: 'bg-amber-50 text-amber-800 border-amber-200',
   蝦皮: 'bg-orange-50 text-orange-800 border-orange-200',
   MoMo: 'bg-red-50 text-red-800 border-red-200',
-  全通路: 'bg-violet-50 text-violet-800 border-violet-200',
+  蝦皮直營: 'bg-violet-50 text-violet-800 border-violet-200',
+  全通路: 'bg-stone-50 text-stone-800 border-stone-200',
 };
 
 export default function Campaign() {
@@ -48,10 +49,10 @@ export default function Campaign() {
             <CalendarClock className="w-7 h-7" strokeWidth={2.2} />
           </div>
           <div>
-            <p className="text-[11px] text-muted-foreground font-bold mb-1.5">行動與活動</p>
-            <h1 className="text-3xl font-black tracking-tight">電商導購活動</h1>
-            <p className="text-sm text-muted-foreground mt-2 max-w-prose">
-              集中管理官網、蝦皮、MoMo 的促銷活動：規劃、進行、完成、業績、客單價與復盤報告放在同一頁。
+            <p className="text-[11px] text-muted-foreground font-bold mb-1.5">做行動 · 執行操盤手 + 內部關係官視角</p>
+            <h1 className="text-3xl font-black tracking-tight">📅 電商導購活動</h1>
+            <p className="text-sm text-muted-foreground mt-2 max-w-prose leading-relaxed">
+              集中管理 4 平台（官網、蝦皮商城、MoMo、蝦皮直營）的促銷活動：規劃、進行、完成、業績、客單價與復盤報告放在同一頁。套 <code className="px-1 bg-secondary rounded text-[10px]">cross-team-campaign-sop.md v1.0</code> 八階段協作流程。
             </p>
           </div>
         </div>

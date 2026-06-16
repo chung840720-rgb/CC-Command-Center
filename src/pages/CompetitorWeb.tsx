@@ -20,7 +20,7 @@ export default function CompetitorWeb() {
             <Globe2 className="w-7 h-7" strokeWidth={2.2} />
           </div>
           <div>
-            <p className="text-[11px] text-muted-foreground font-bold mb-1.5">觀察分析</p>
+            <p className="text-[11px] text-muted-foreground font-bold mb-1.5">找問題 · 外部雷達官視角</p>
             <h1 className="text-3xl font-black tracking-tight">競品網站分析</h1>
             <p className="text-sm text-muted-foreground mt-2 max-w-prose">{c.summary}</p>
             <p className="text-xs text-muted-foreground mt-2">最後更新：{c.lastUpdated}</p>

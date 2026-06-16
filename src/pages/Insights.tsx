@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
 import { toast } from 'sonner';
 import { SopBadge } from '@/components/dashboard/SopBadge';
+import { DateRangeSwitcher } from '@/components/dashboard/DateRangeSwitcher';
 import {
   RefreshCw,
   ThumbsUp,
@@ -39,23 +40,34 @@ export default function Insights() {
 
   return (
     <div className="space-y-6">
-      <header className="space-y-2">
-        <div className="flex items-center gap-2">
-          <h1 className="text-2xl font-bold">AI 決策建議</h1>
-          <Badge variant="secondary" className="gap-1 bg-emerald-100 text-emerald-700 border-emerald-200">
-            <Sparkles className="w-3 h-3" />
-            Demo Only
-          </Badge>
+      <section className="card-soft p-6 flex flex-col lg:flex-row lg:items-start gap-5 justify-between">
+        <div className="flex gap-4 flex-1">
+          <div className="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
+            <Brain className="w-7 h-7" strokeWidth={2.2} />
+          </div>
+          <div className="flex-1">
+            <p className="text-[11px] text-muted-foreground font-bold mb-1.5">找問題 · 策略軍師視角</p>
+            <div className="flex items-center gap-2 flex-wrap">
+              <h1 className="text-3xl font-black tracking-tight">🧠 AI 決策建議</h1>
+              <Badge variant="secondary" className="gap-1 bg-emerald-100 text-emerald-700 border-emerald-200">
+                <Sparkles className="w-3 h-3" />
+                Demo Only
+              </Badge>
+            </div>
+            <p className="text-sm text-muted-foreground mt-2 max-w-prose leading-relaxed">
+              每個異常自動套用 daily-report.md + cleanclean-pm.md + daren-mindset.md 三個 SOP Skill，AI 產出「解讀 → 建議 → 升級判斷」三段式分析。
+            </p>
+            <div className="mt-3 flex items-center gap-2 flex-wrap">
+              <SopBadge skills={[
+                { name: 'daily-report.md', version: 'v2.10' },
+                { name: 'cleanclean-pm.md', version: 'v7.3' },
+                { name: 'daren-mindset.md', version: 'v1.0' },
+              ]} />
+              <DateRangeSwitcher value="yesterday" compact />
+            </div>
+          </div>
         </div>
-        <p className="text-sm text-muted-foreground">
-          每個異常自動套用 daily-report + ecommerce-pm SOP Skill，AI 產出「解讀 → 建議 → 升級判斷」三段式分析。
-        </p>
-        <SopBadge skills={[
-          { name: 'daily-report.md', version: 'v2.10' },
-          { name: 'cleanclean-pm.md', version: 'v7.3' },
-          { name: 'daren-mindset.md', version: 'v1.0' },
-        ]} className="mt-2" />
-      </header>
+      </section>
 
       <div className="space-y-4">
         {data.alerts.map((alert) => (

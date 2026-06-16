@@ -64,13 +64,13 @@ export default function Analytics() {
             <TrendingUp className="w-7 h-7" strokeWidth={2.2} />
           </div>
           <div>
-            <p className="text-[11px] text-muted-foreground font-bold mb-1.5">行動與活動</p>
+            <p className="text-[11px] text-muted-foreground font-bold mb-1.5">看戰情 · 數據觀測員視角</p>
             <h1 className="text-3xl font-black tracking-tight">官網分析</h1>
             <p className="text-sm text-muted-foreground mt-2 max-w-prose">
               查看 GA4 流量、來源、頁面與裝置表現，支援官網轉換診斷。更新：{a.updatedAt}
             </p>
             <Badge variant="secondary" className="mt-3 bg-amber-100 text-amber-800 border-amber-200 rounded-md text-xs font-bold">
-              GA4 已連線
+              GA4 Demo 架構
             </Badge>
           </div>
         </div>

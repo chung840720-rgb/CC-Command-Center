@@ -8,84 +8,64 @@ import {
 } from '@/components/ui/dropdown-menu';
 import {
   ChevronDown,
-  Pencil,
-  Gauge,
-  Store,
-  Megaphone,
-  Calendar,
-  Search,
-  Settings,
-  BarChart3,
+  Eye,
+  AlertTriangle,
+  Rocket,
+  Brain,
+  Sparkles,
+  Home,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
+// 4 父分類，對應 6-perspectives PM 思考框架（非老闆 dashboard 結構）
+// 看戰情按通路切（每通路內分自然/付費）— 一個畫面把通路全貌看完
 const navConfig = [
   {
     type: 'dropdown' as const,
-    label: '作戰總覽',
-    icon: Gauge,
+    label: '看戰情',
+    icon: Eye,
+    perspective: '數據觀測員',
     items: [
-      { label: '作戰中心', subtitle: '總覽、今日重點與行動入口', to: '/' },
-      { label: '銷售戰情', subtitle: '三通路業績與目標缺口', to: '/sales-battle' },
+      { label: '戰情總覽', subtitle: '跨通路 KPI + 月度視角', to: '/' },
+      { label: '官網', subtitle: '自然 + 付費拆分（Shopline）', to: '/shopline' },
+      { label: '蝦皮', subtitle: '自然 + 付費拆分', to: '/shopee' },
+      { label: 'MoMo', subtitle: '自然 + 付費拆分', to: '/momo' },
+      { label: '蝦皮直營', subtitle: '新通路卡位戰', to: '/shopee-direct' },
     ],
   },
   {
     type: 'dropdown' as const,
-    label: '電商通路',
-    icon: Store,
+    label: '找問題',
+    icon: AlertTriangle,
+    perspective: '策略軍師 + 外部雷達官',
     items: [
-      { label: '官網 Shopline', subtitle: '流量轉換看商品頁', to: '/shopline' },
-      { label: '蝦皮旗艦', subtitle: '活動與排名觀察', to: '/shopee' },
-      { label: 'MoMo+', subtitle: '檔期與量體', to: '/momo' },
-      { label: '蝦皮直營', subtitle: '戰略卡位', to: '/shopee-direct' },
-    ],
-  },
-  {
-    type: 'dropdown' as const,
-    label: '數位廣告',
-    icon: Megaphone,
-    items: [
-      { label: 'Meta 廣告', subtitle: 'Meta 投放數據與素材判斷', to: '/ads/meta' },
-      { label: 'Google 廣告', subtitle: 'Google 搜尋與廣告表現', to: '/ads/google' },
-      { label: '素材成效', subtitle: '素材 CTR、CPM、ROAS 比較', to: '/ads/creatives' },
-      { label: '競品廣告分析', subtitle: '競品廣告投放觀察', to: '/ads/competitor' },
-    ],
-  },
-  {
-    type: 'dropdown' as const,
-    label: '行動與活動',
-    icon: Calendar,
-    items: [
-      { label: '活動規劃', subtitle: '檔期 timeline', to: '/campaign' },
       { label: '異常監測', subtitle: '今日要關注的事', to: '/alerts' },
-      { label: '上傳報表', subtitle: '手動補資料入口', to: '/upload' },
+      { label: 'AI 決策建議', subtitle: '套 SOP 給三段式分析', to: '/insights' },
+      { label: '競品雷達', subtitle: '廣告 + 官網 AI 解析', to: '/ads/competitor' },
     ],
   },
   {
     type: 'dropdown' as const,
-    label: '觀察分析',
-    icon: Search,
+    label: '做行動',
+    icon: Rocket,
+    perspective: '執行操盤手 + 內部關係官',
     items: [
-      { label: 'AI 決策建議', subtitle: '異常 + 行動建議', to: '/insights' },
-      { label: '行銷漏斗', subtitle: '全鏈路 funnel', to: '/funnel' },
-      { label: '品類熱度', subtitle: '跨平台品類', to: '/category' },
-      { label: '競品網站', subtitle: 'AI 解析競品', to: '/competitor-web' },
-      { label: 'GA 分析', subtitle: 'GA4 流量行為', to: '/analytics' },
+      { label: '🏷️ 品類貢獻度', subtitle: 'PM 撥動業績的核心 — 廣告動作 ↔ 品類反應', to: '/category' },
+      { label: '📘 廣告效率', subtitle: 'Meta MCP + Google + 素材分析 + AI 行動建議', to: '/ads/meta' },
+      { label: '商品 SKU', subtitle: '品類分布 + SKU 級資料', to: '/products' },
+      { label: '活動規劃', subtitle: 'Kanban + 5 階段 SOP', to: '/campaign' },
     ],
   },
   {
     type: 'dropdown' as const,
-    label: '資料與設定',
-    icon: Settings,
+    label: '沉澱與信任',
+    icon: Brain,
+    perspective: '成長觀察員',
     items: [
-      { label: '商品資料', subtitle: 'SKU 級別 ETL', to: '/products' },
-      { label: '操作日誌', subtitle: 'team 互動紀錄', to: '/log' },
-      { label: '願池', subtitle: '許願清單', to: '/wishpool' },
-      { label: '平台串接', subtitle: 'API auth 管理', to: '/connect' },
-      { label: '資料管線架構', subtitle: '🚀 Playwright + CDP 反向工程', to: '/data-pipeline' },
-      { label: 'SOP Skills 索引', subtitle: '📚 20 份 SOP — Johnny 的真實工作沉澱', to: '/skills' },
-      { label: '迭代軌跡 Changelog', subtitle: '📝 單日 ship 14 個版本', to: '/changelog' },
-      { label: '🛡 信任聲明', subtitle: '為什麼這是 Demo Only — 商業道德承諾', to: '/trust' },
+      { label: '📚 SOP Skills 索引', subtitle: '21 份個人能力沉澱', to: '/skills' },
+      { label: '🚀 資料管線架構', subtitle: '4 平台反向工程（過去沉澱）', to: '/data-pipeline' },
+      { label: '📝 迭代軌跡', subtitle: '單日 14+ 個版本', to: '/changelog' },
+      { label: '🛡 信任聲明', subtitle: '為什麼 Demo Only — 商業道德承諾', to: '/trust' },
     ],
   },
 ];
@@ -99,11 +79,11 @@ export function TopNav() {
       <div className="mx-auto max-w-7xl px-6 h-16 flex items-center gap-2">
         <Link to="/" className="flex items-center gap-2 mr-4 shrink-0">
           <div className="w-9 h-9 rounded-full bg-gradient-to-br from-primary/20 to-primary/40 ring-1 ring-primary/30 flex items-center justify-center shadow-sm">
-            <Gauge className="w-5 h-5 text-primary" strokeWidth={2.4} />
+            <Sparkles className="w-5 h-5 text-primary" strokeWidth={2.4} />
           </div>
           <div className="flex flex-col leading-tight">
-            <span className="text-sm font-extrabold tracking-tight">電商作戰中心</span>
-            <span className="text-[10px] tracking-[2px] text-muted-foreground font-bold">JOHNNY DEMO</span>
+            <span className="text-sm font-extrabold tracking-tight">Johnny PM 工作台</span>
+            <span className="text-[10px] tracking-[2px] text-muted-foreground font-bold">6-PERSPECTIVES · ECOMMERCE</span>
           </div>
         </Link>
 
@@ -127,7 +107,13 @@ export function TopNav() {
                     <ChevronDown className="w-3 h-3 opacity-60" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="start" className="rounded-xl p-2 min-w-[260px]">
+                <DropdownMenuContent align="start" className="rounded-xl p-2 min-w-[280px]">
+                  {item.perspective && (
+                    <div className="px-3 py-2 mb-1 rounded-md bg-primary/5 border border-primary/10">
+                      <p className="text-[9px] text-muted-foreground font-bold uppercase tracking-wider">6 切角視角</p>
+                      <p className="text-xs font-bold text-primary mt-0.5">{item.perspective}</p>
+                    </div>
+                  )}
                   {item.items.map((sub) => (
                     <DropdownMenuItem key={sub.to} asChild className="rounded-lg p-0">
                       <Link
@@ -155,9 +141,11 @@ export function TopNav() {
         </nav>
 
         <div className="ml-auto">
-          <Button variant="outline" size="sm" className="h-10 rounded-full font-semibold text-xs gap-1.5">
-            <Pencil className="w-3 h-3" />
-            編輯模式
+          <Button asChild variant="outline" size="sm" className="h-10 rounded-full font-semibold text-xs gap-1.5">
+            <Link to="/">
+              <Home className="w-3.5 h-3.5" />
+              首頁
+            </Link>
           </Button>
         </div>
       </div>

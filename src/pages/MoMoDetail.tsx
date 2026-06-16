@@ -13,7 +13,7 @@ export default function MoMoDetail() {
       <PlatformDetailView
         data={data?.momoDetail}
         monthlyData={data?.monthlyByPlatform?.momo}
-        title="MoMo+" icon={Store} iconColor="red"
+        title="MoMo" icon={Store} iconColor="red"
       />
     </div>
   );

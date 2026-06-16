@@ -1,20 +1,13 @@
 import { useState } from 'react';
 import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  ResponsiveContainer,
-  Tooltip,
-} from 'recharts';
-import {
-  TrendingUp,
-  TrendingDown,
   Link2,
   ArrowRight,
-  Activity,
-  CalendarClock,
-  Search,
+  Leaf,
+  Megaphone,
+  Trophy,
+  Target,
+  ArrowUpRight,
+  ArrowDownRight,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -22,13 +15,11 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { formatNumber, cn } from '@/lib/utils';
 
-const PRIMARY = 'hsl(31 29% 56%)';
-const PRIMARY_DARK = 'hsl(31 35% 46%)';
 const MONTHS = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
 
 interface Props {
   data: any;
-  monthlyData?: Record<string, any>;  // monthlyByPlatform[platformKey] = { '1月': {...}, ..., '5月': {...} }
+  monthlyData?: Record<string, any>;
   title: string;
   icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
   iconColor?: 'amber' | 'orange' | 'red' | 'violet';
@@ -42,37 +33,35 @@ const ICON_BG = {
 };
 
 export function PlatformDetailView({ data: sdRaw, monthlyData, title, icon: Icon, iconColor = 'amber' }: Props) {
-  const [activeMonthIdx, setActiveMonthIdx] = useState(4);  // 預設 5月
+  const [activeMonthIdx, setActiveMonthIdx] = useState(4);
 
   if (!sdRaw) return <Skeleton className="h-96 rounded-2xl" />;
 
   const monthKey = MONTHS[activeMonthIdx];
   const mData = monthlyData?.[monthKey];
 
-  // 動態 sd：若該月有 monthlyData 則 swap kpiGrid + achievement，否則用原始 sd
   const sd = mData ? {
     ...sdRaw,
     monthlyGmv: mData.gmv,
     target: mData.target,
     achievement: mData.achievement,
     achievementStatus: mData.achievement >= 100 ? '達標' : mData.achievement >= 80 ? '符合節奏' : '落後',
-    kpiGrid: [
-      { label: '月業績', value: `NT$${formatNumber(mData.gmv)}`, mom: mData.mom },
-      { label: '訂單數', value: `${formatNumber(mData.orders)} 筆`, mom: mData.mom },
-      { label: '客單價 AOV', value: `NT$${formatNumber(mData.aov)}` },
-      { label: '流量訪客', value: formatNumber(mData.traffic) },
-      { label: '廣告費', value: `NT$${formatNumber(mData.adSpend)}` },
-      { label: 'ROAS', value: `${mData.roas}x` },
-      { label: 'CPA', value: `NT$${formatNumber(mData.cpa)}` },
-      { label: '占比', value: `${mData.sharePct}%` },
-    ],
+    monthlyOrders: mData.orders,
+    monthlyAov: mData.aov,
+    monthlyTraffic: mData.traffic,
+    monthlyAdSpend: mData.adSpend,
+    monthlyRoas: mData.roas,
   } : sdRaw;
 
+  const organic = sd.split?.organic;
+  const paid = sd.split?.paid;
+  const isLow = sd.achievement < 80;
+
   return (
-    <div className="space-y-6">
-      {/* Header */}
+    <div className="space-y-5">
+      {/* ━━━ Section 1: Header + 業績總覽 ━━━ */}
       <section className="card-soft p-6">
-        <div className="flex flex-col lg:flex-row lg:items-start gap-5 justify-between">
+        <div className="flex flex-col lg:flex-row lg:items-start gap-5 justify-between mb-5">
           <div className="flex gap-4 flex-1">
             <div className={cn('w-14 h-14 rounded-2xl flex items-center justify-center shrink-0', ICON_BG[iconColor])}>
               <Icon className="w-7 h-7" strokeWidth={2.2} />
@@ -94,335 +83,239 @@ export function PlatformDetailView({ data: sdRaw, monthlyData, title, icon: Icon
                   key={m}
                   onClick={() => setActiveMonthIdx(i)}
                   className={cn(
-                    'h-8 px-3 rounded-full text-xs font-semibold transition-colors flex items-center gap-1',
+                    'h-7 px-2.5 rounded-full text-[11px] font-semibold transition-colors',
                     isActive
                       ? 'bg-primary text-primary-foreground shadow-sm shadow-primary/30'
                       : hasData
                         ? 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
-                        : 'bg-secondary/40 text-muted-foreground/60 hover:bg-secondary/60'
+                        : 'bg-secondary/30 text-muted-foreground/50'
                   )}
                 >
                   {m}
-                  {isActive && hasData && <span className="text-[8px] bg-primary-foreground/20 px-1 rounded">MTD</span>}
-                  {!hasData && <span className="text-[8px] opacity-60">待匯入</span>}
                 </button>
               );
             })}
           </div>
         </div>
 
-        <div className="flex items-center gap-1 mt-5 border-b border-border -mx-6 px-6 pb-0">
-          {sd.internalTabs.map((tab: any) => (
-            <button
-              key={tab.key}
-              className={cn(
-                'h-10 px-4 text-sm font-bold transition-colors relative -mb-px',
-                tab.active
-                  ? 'text-primary border-b-2 border-primary'
-                  : 'text-muted-foreground hover:text-foreground border-b-2 border-transparent'
-              )}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
-      </section>
-
-      {/* 目標達成率 */}
-      <section className="card-soft p-6">
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center gap-3">
-            <h2 className="text-base font-bold">目標達成率</h2>
-            <Badge
-              variant="secondary"
-              className={cn(
-                'text-xs font-bold',
-                sd.achievementStatus === '落後' ? 'bg-red-100 text-red-700' : 'bg-emerald-100 text-emerald-700'
-              )}
-            >
-              {sd.achievementStatus}
-            </Badge>
-          </div>
-          <p className={cn('text-3xl font-black', sd.achievementStatus === '落後' ? 'text-red-500' : 'text-emerald-600')}>
-            {sd.achievement}%
-          </p>
-        </div>
-        <div className="h-3 rounded-full bg-secondary overflow-hidden">
-          <div
-            className={cn(
-              'h-full rounded-full',
-              sd.achievementStatus === '落後'
-                ? 'bg-gradient-to-r from-red-300 to-red-500'
-                : 'bg-gradient-to-r from-primary to-amber-400'
-            )}
-            style={{ width: `${Math.min(sd.achievement, 100)}%` }}
+        {/* 4 KPI: GMV / 達成率 / 訂單 / AOV */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+          <KpiTile label={`${monthKey}業績`} value={`NT$${formatNumber(sd.monthlyGmv)}`} sub={`目標 NT$${formatNumber(sd.target)}`} />
+          <KpiTile
+            label="目標達成"
+            value={`${sd.achievement}%`}
+            sub={isLow ? `落後 ${(80 - sd.achievement).toFixed(0)}pp` : '符合節奏'}
+            highlight={isLow ? 'red' : 'green'}
           />
+          <KpiTile label="月訂單" value={`${formatNumber(sd.monthlyOrders || 0)} 筆`} />
+          <KpiTile label="客單價" value={`NT$${formatNumber(sd.monthlyAov || 0)}`} />
         </div>
-        <div className="flex items-center justify-between mt-3 text-sm">
-          <span className="text-muted-foreground">目標 <strong className="text-foreground">NT${formatNumber(sd.target)}</strong></span>
-          <span className="text-muted-foreground">實際 <strong className="text-foreground">NT${formatNumber(sd.monthlyGmv)}</strong></span>
-        </div>
-      </section>
 
-      {/* YTD */}
-      <section className="card-soft p-6">
-        <div className="flex items-center justify-between mb-4">
-          <div>
-            <p className="text-[11px] text-muted-foreground font-bold uppercase tracking-wider">YTD</p>
-            <h2 className="text-base font-bold mt-0.5">年度累計</h2>
+        {/* 達成率 bar */}
+        <div className="mt-5">
+          <div className="h-2.5 rounded-full bg-secondary overflow-hidden">
+            <div
+              className={cn(
+                'h-full rounded-full',
+                isLow ? 'bg-gradient-to-r from-red-300 to-red-500' : 'bg-gradient-to-r from-primary to-amber-400'
+              )}
+              style={{ width: `${Math.min(sd.achievement, 100)}%` }}
+            />
           </div>
-          <p className="text-xs text-muted-foreground">{sd.ytd.note}</p>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
-          <YtdTile label="累計業績" value={`NT$${formatNumber(sd.ytd.gmv)}`} />
-          <YtdTile label="累計達成" value={`${sd.ytd.achievement}%`} highlight="primary" />
-          <YtdTile label="累計訂單" value={`${formatNumber(sd.ytd.orders)} 筆`} />
-          <YtdTile label="累計 ROAS" value={`${sd.ytd.roas}x`} />
-        </div>
-
-        <div className="h-2.5 rounded-full bg-secondary overflow-hidden">
-          <div className="h-full bg-gradient-to-r from-primary to-amber-400 rounded-full" style={{ width: `${sd.ytd.achievement}%` }} />
-        </div>
-        <div className="flex items-center justify-between mt-3 text-sm">
-          <span className="text-muted-foreground">年度目標 <strong className="text-foreground">NT${formatNumber(sd.ytd.target)}</strong></span>
-          <span className="text-muted-foreground">還差 <strong className="text-red-500">NT${formatNumber(sd.ytd.gap)}</strong></span>
         </div>
       </section>
 
-      {/* KPI Grid */}
-      <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-        {sd.kpiGrid.map((k: any) => (
-          <KpiCardWithMoM key={k.label} data={k} />
-        ))}
-      </section>
-
-      {/* 4 small trend charts */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <TrendChart title="月業績趨勢" data={sd.trends.gmv} unit="萬" />
-        <TrendChart title="訂單數趨勢" data={sd.trends.orders} unit="筆" />
-        <TrendChart title="客單價趨勢" data={sd.trends.aov} unit="$" />
-        <TrendChart title="ROAS 趨勢" data={sd.trends.roas} unit="x" />
-      </section>
-
-      {/* UV trend (if exists) */}
-      {sd.trends.uv && (
-        <section className="card-soft p-6">
-          <h3 className="text-base font-bold mb-4">月 UV 流量趨勢</h3>
-          <div style={{ width: '100%', height: 220 }}>
-            <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={sd.trends.uv} margin={{ top: 8, right: 16, left: 8, bottom: 4 }}>
-                <XAxis dataKey="month" axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#94a3b8' }} />
-                <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#94a3b8' }} width={50} />
-                <Tooltip
-                  contentStyle={{ borderRadius: 10, border: '1px solid #e5e7eb', fontSize: 12 }}
-                  formatter={(v: any) => [Number(v).toLocaleString(), 'UV']}
-                />
-                <Line
-                  type="monotone"
-                  dataKey="value"
-                  stroke={PRIMARY}
-                  strokeWidth={2.5}
-                  isAnimationActive={false}
-                  dot={{ r: 4, fill: PRIMARY, stroke: 'white', strokeWidth: 2 }}
-                  activeDot={{ r: 6, fill: PRIMARY_DARK }}
-                />
-              </LineChart>
-            </ResponsiveContainer>
-          </div>
-        </section>
-      )}
-
-      {/* GA4 漏斗（only Shopline）*/}
-      {sd.ga4Funnel && (
+      {/* ━━━ Section 2: 自然流量 ━━━ */}
+      {organic && (
         <section className="card-soft p-6">
           <div className="flex items-center justify-between mb-5">
-            <h3 className="text-base font-bold flex items-center gap-2">
-              <Activity className="w-4 h-4 text-primary" />
-              {sd.ga4Funnel.label}
-            </h3>
-            <Badge variant="outline" className="text-[10px] gap-1 border-emerald-200 text-emerald-700 bg-emerald-50">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-              已串接
-            </Badge>
-          </div>
-          <div className="space-y-3">
-            {sd.ga4Funnel.stages.map((stage: any) => {
-              const max = Math.max(...sd.ga4Funnel.stages.map((s: any) => s.value));
-              const widthPct = max > 0 ? (stage.value / max) * 100 : 0;
-              return (
-                <div key={stage.label} className="grid grid-cols-[100px_1fr_60px] items-center gap-3">
-                  <span className="text-xs text-muted-foreground">{stage.label}</span>
-                  <div className="relative h-6 bg-secondary rounded-md overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-primary to-amber-400 rounded-md transition-all" style={{ width: `${widthPct}%` }} />
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-bold text-foreground">{formatNumber(stage.value)}</span>
-                  </div>
-                  <span className="text-xs font-bold text-right">{stage.pct}%</span>
-                </div>
-              );
-            })}
-          </div>
-        </section>
-      )}
-
-      {/* 活動排程（only Shopee）*/}
-      {sd.campaigns && (
-        <section className="card-soft p-6">
-          <h3 className="text-base font-bold mb-4 flex items-center gap-2">
-            <CalendarClock className="w-4 h-4 text-primary" />
-            檔期排程
-          </h3>
-          <div className="space-y-2">
-            {sd.campaigns.map((c: any) => (
-              <div key={c.name} className="flex items-center gap-3 p-3 rounded-xl bg-secondary/40">
-                <Badge
-                  variant="secondary"
-                  className={cn(
-                    'text-[10px] font-bold shrink-0',
-                    c.status === '進行中' && 'bg-emerald-100 text-emerald-700',
-                    c.status === '排程中' && 'bg-amber-100 text-amber-700',
-                    c.status === '已結束' && 'bg-zinc-100 text-zinc-600'
-                  )}
-                >
-                  {c.status}
-                </Badge>
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-bold">{c.name}</p>
-                  <p className="text-[10px] text-muted-foreground mt-0.5">{c.start} ~ {c.end}</p>
-                </div>
-                <div className="text-right">
-                  <p className="text-sm font-extrabold text-primary">{c.performance}</p>
-                  <p className="text-[10px] text-muted-foreground">業績影響</p>
-                </div>
+            <div className="flex items-center gap-2.5">
+              <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+                <Leaf className="w-5 h-5" strokeWidth={2.2} />
               </div>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* 站內排名（only MoMo）*/}
-      {sd.searchRanking && (
-        <section className="card-soft p-6">
-          <h3 className="text-base font-bold mb-4 flex items-center gap-2">
-            <Search className="w-4 h-4 text-primary" />
-            站內關鍵字排名
-          </h3>
-          <div className="space-y-2">
-            {sd.searchRanking.map((r: any) => (
-              <div key={r.keyword} className="flex items-center gap-3 p-3 rounded-xl bg-secondary/40">
-                <div className="w-10 h-10 rounded-full bg-primary/15 text-primary flex items-center justify-center font-extrabold text-sm shrink-0">
-                  #{r.rank}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-bold">{r.keyword}</p>
-                </div>
-                <Badge
-                  variant="outline"
-                  className={cn(
-                    'text-xs font-bold',
-                    r.delta.includes('+') && 'bg-emerald-50 text-emerald-700 border-emerald-200',
-                    r.delta.includes('-') && 'bg-red-50 text-red-700 border-red-200',
-                    r.delta === '—' && 'bg-zinc-50 text-zinc-600 border-zinc-200'
-                  )}
-                >
-                  {r.delta}
-                </Badge>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Top 商品 */}
-      <section className="card-soft p-6 space-y-4">
-        <div className="flex items-center justify-between">
-          <div>
-            <h3 className="text-base font-bold">熱銷商品（本月）</h3>
-            <p className="text-xs text-muted-foreground mt-1">本月熱銷商品排行 / Top 5 / 含 GMV 與佔比</p>
-          </div>
-          <Button asChild variant="ghost" size="sm" className="text-xs gap-1 text-primary">
-            <Link to="/insights">看 AI 分析 <ArrowRight className="w-3 h-3" /></Link>
-          </Button>
-        </div>
-        <div className="space-y-2">
-          {sd.topProducts.map((p: any, i: number) => (
-            <div key={p.name} className="flex items-center gap-3 p-3 rounded-xl bg-secondary/40">
-              <div className="w-7 h-7 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xs font-bold shrink-0">{i + 1}</div>
-              <div className="flex-1 min-w-0">
-                <p className="text-sm font-bold truncate">{p.name}</p>
-                <div className="h-1.5 rounded-full bg-secondary mt-1.5 overflow-hidden">
-                  <div className="h-full bg-gradient-to-r from-primary to-amber-400 rounded-full" style={{ width: `${p.share * 2.5}%` }} />
-                </div>
-              </div>
-              <div className="text-right shrink-0">
-                <p className="text-sm font-extrabold">NT${formatNumber(p.gmv)}</p>
-                <p className="text-[10px] text-muted-foreground">佔 {p.share}%</p>
+              <div>
+                <h2 className="text-lg font-extrabold tracking-tight">自然流量</h2>
+                <p className="text-[11px] text-muted-foreground mt-0.5">不靠廣告的免費業績 — 反映品牌力與 CRM 深耕</p>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
-    </div>
-  );
-}
+            <Badge variant="secondary" className="bg-emerald-100 text-emerald-700 text-xs font-bold">
+              占 {organic.sharePct}%
+            </Badge>
+          </div>
 
-function YtdTile({ label, value, highlight }: { label: string; value: string; highlight?: 'primary' }) {
-  return (
-    <div className="rounded-xl bg-secondary/40 px-4 py-3.5">
-      <p className="text-[11px] text-muted-foreground mb-1">{label}</p>
-      <p className={cn('text-xl font-extrabold tracking-tight', highlight === 'primary' && 'text-primary')}>{value}</p>
-    </div>
-  );
-}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-5">
+            <KpiTile label="自然訪客" value={formatNumber(organic.uv)} accent="emerald" />
+            <KpiTile label="自然訂單" value={`${formatNumber(organic.orders)} 筆`} accent="emerald" />
+            <KpiTile label="自然 GMV" value={`NT$${formatNumber(organic.gmv)}`} accent="emerald" />
+            <KpiTile label="自然 AOV" value={`NT$${formatNumber(organic.aov)}`} accent="emerald" />
+          </div>
 
-function KpiCardWithMoM({ data }: { data: any }) {
-  const momUp = data.mom != null && data.mom > 0;
-  const yoyUp = data.yoy != null && data.yoy > 0;
-  return (
-    <div className="card-soft p-5">
-      <p className="text-xs text-muted-foreground font-medium mb-2">{data.label}</p>
-      <p className="text-2xl font-extrabold tracking-tight">{data.value}</p>
-      <div className="flex items-center gap-3 mt-2 text-[11px]">
-        {data.mom != null && (
-          <span className={cn('flex items-center gap-0.5 font-bold', momUp ? 'text-emerald-600' : 'text-red-500')}>
-            {momUp ? <TrendingUp className="w-3 h-3" /> : <TrendingDown className="w-3 h-3" />}
-            {data.mom > 0 ? '+' : ''}{data.mom}%
-            <span className="text-muted-foreground font-medium ml-0.5">MoM</span>
-          </span>
-        )}
-        {data.yoy != null && (
-          <span className={cn('flex items-center gap-0.5 font-bold', yoyUp ? 'text-emerald-600' : 'text-red-500')}>
-            {yoyUp ? <TrendingUp className="w-3 h-3" /> : <TrendingDown className="w-3 h-3" />}
-            {data.yoy > 0 ? '+' : ''}{data.yoy}%
-            <span className="text-muted-foreground font-medium ml-0.5">YoY</span>
-          </span>
-        )}
-      </div>
-    </div>
-  );
-}
+          {sd.organicSources && (
+            <div>
+              <p className="text-[11px] text-muted-foreground font-bold uppercase tracking-wider mb-3">流量來源拆解</p>
+              <div className="space-y-2">
+                {sd.organicSources.map((src: any) => (
+                  <div key={src.name} className="grid grid-cols-[130px_1fr_50px] items-center gap-3">
+                    <span className="text-xs text-foreground">{src.name}</span>
+                    <div className="h-5 rounded bg-secondary overflow-hidden">
+                      <div className="h-full bg-gradient-to-r from-emerald-400 to-emerald-500 rounded" style={{ width: `${src.share * 2}%` }} />
+                    </div>
+                    <span className="text-xs font-bold text-right">{src.share}%</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </section>
+      )}
 
-function TrendChart({ title, data, unit }: { title: string; data: any[]; unit: string }) {
-  return (
-    <div className="card-soft p-5">
-      <h4 className="text-sm font-bold mb-3">{title}</h4>
-      <div style={{ width: '100%', height: 160 }}>
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={data} margin={{ top: 8, right: 12, left: 0, bottom: 4 }}>
-            <XAxis dataKey="month" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#94a3b8' }} />
-            <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#94a3b8' }} unit={unit} width={36} />
-            <Tooltip contentStyle={{ borderRadius: 10, border: '1px solid #e5e7eb', fontSize: 11 }} />
-            <Line
-              type="monotone"
-              dataKey="value"
-              stroke={PRIMARY}
-              strokeWidth={2}
-              isAnimationActive={false}
-              dot={{ r: 3, fill: PRIMARY, stroke: 'white', strokeWidth: 1.5 }}
+      {/* ━━━ Section 3: 付費流量 ━━━ */}
+      {paid && (
+        <section className="card-soft p-6">
+          <div className="flex items-center justify-between mb-5">
+            <div className="flex items-center gap-2.5">
+              <div className="w-10 h-10 rounded-xl bg-violet-100 text-violet-700 flex items-center justify-center">
+                <Megaphone className="w-5 h-5" strokeWidth={2.2} />
+              </div>
+              <div>
+                <h2 className="text-lg font-extrabold tracking-tight">付費流量</h2>
+                <p className="text-[11px] text-muted-foreground mt-0.5">廣告投放帶來的業績 — 效率 = ROAS 與 CPA</p>
+              </div>
+            </div>
+            <Badge variant="secondary" className="bg-violet-100 text-violet-700 text-xs font-bold">
+              占 {paid.sharePct}%
+            </Badge>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-5">
+            <KpiTile label="廣告花費" value={`NT$${formatNumber(paid.spend)}`} accent="violet" />
+            <KpiTile label="付費訂單" value={`${formatNumber(paid.orders)} 筆`} accent="violet" />
+            <KpiTile
+              label="ROAS"
+              value={`${paid.roas}x`}
+              sub={paid.roas >= 3 ? '健康' : paid.roas >= 2 ? '可接受' : '需檢討'}
+              highlight={paid.roas >= 3 ? 'green' : paid.roas >= 2 ? undefined : 'red'}
+              accent="violet"
             />
-          </LineChart>
-        </ResponsiveContainer>
-      </div>
+            <KpiTile label="CPA" value={`NT$${formatNumber(paid.cpa)}`} accent="violet" />
+          </div>
+
+          {sd.paidChannels && (
+            <div>
+              <p className="text-[11px] text-muted-foreground font-bold uppercase tracking-wider mb-3">廣告通路效率</p>
+              <div className="space-y-2">
+                {sd.paidChannels.map((ch: any) => {
+                  const healthy = ch.roas >= 2.5;
+                  return (
+                    <div key={ch.name} className="flex items-center justify-between p-3 rounded-lg bg-violet-50/40 border border-violet-100/40">
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-bold">{ch.name}</p>
+                        <p className="text-[10px] text-muted-foreground mt-0.5">花費 NT${formatNumber(ch.spend)} · 占廣告預算 {ch.share}%</p>
+                      </div>
+                      <div className="flex items-center gap-2 shrink-0">
+                        <span className={cn('text-base font-extrabold', healthy ? 'text-emerald-600' : 'text-amber-600')}>
+                          {ch.roas}x
+                        </span>
+                        {healthy ? <ArrowUpRight className="w-4 h-4 text-emerald-600" /> : <ArrowDownRight className="w-4 h-4 text-amber-600" />}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </section>
+      )}
+
+      {/* ━━━ Section 4: 熱銷 Top 5 ━━━ */}
+      {sd.topProducts && (
+        <section className="card-soft p-6">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-2.5">
+              <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center">
+                <Trophy className="w-5 h-5" strokeWidth={2.2} />
+              </div>
+              <div>
+                <h2 className="text-lg font-extrabold tracking-tight">本月熱銷 Top 5</h2>
+                <p className="text-[11px] text-muted-foreground mt-0.5">看 SKU 集中度 · 是否倚賴單一商品</p>
+              </div>
+            </div>
+            <Button asChild variant="ghost" size="sm" className="text-xs gap-1 text-primary">
+              <Link to="/insights">看 AI 分析 <ArrowRight className="w-3 h-3" /></Link>
+            </Button>
+          </div>
+          <div className="space-y-2">
+            {sd.topProducts.slice(0, 5).map((p: any, i: number) => (
+              <div key={p.name} className="flex items-center gap-3 p-3 rounded-lg bg-secondary/40">
+                <div className="w-7 h-7 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xs font-bold shrink-0">{i + 1}</div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-bold truncate">{p.name}</p>
+                  <div className="h-1.5 rounded-full bg-secondary mt-1.5 overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-primary to-amber-400 rounded-full" style={{ width: `${p.share * 2.5}%` }} />
+                  </div>
+                </div>
+                <div className="text-right shrink-0">
+                  <p className="text-sm font-extrabold">NT${formatNumber(p.gmv)}</p>
+                  <p className="text-[10px] text-muted-foreground">佔 {p.share}%</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* YTD 小區塊（次要資訊收底）*/}
+      {sd.ytd && (
+        <section className="card-soft p-5">
+          <div className="flex items-center gap-2 mb-3">
+            <Target className="w-4 h-4 text-muted-foreground" />
+            <h3 className="text-sm font-bold text-muted-foreground">YTD 年度累計</h3>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            <div className="text-sm">
+              <p className="text-[10px] text-muted-foreground">累計業績</p>
+              <p className="font-extrabold mt-0.5">NT${formatNumber(sd.ytd.gmv)}</p>
+            </div>
+            <div className="text-sm">
+              <p className="text-[10px] text-muted-foreground">累計達成</p>
+              <p className="font-extrabold text-primary mt-0.5">{sd.ytd.achievement}%</p>
+            </div>
+            <div className="text-sm">
+              <p className="text-[10px] text-muted-foreground">累計訂單</p>
+              <p className="font-extrabold mt-0.5">{formatNumber(sd.ytd.orders)} 筆</p>
+            </div>
+            <div className="text-sm">
+              <p className="text-[10px] text-muted-foreground">年度目標缺口</p>
+              <p className="font-extrabold text-red-500 mt-0.5">NT${formatNumber(sd.ytd.gap)}</p>
+            </div>
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+
+function KpiTile({
+  label, value, sub, highlight, accent
+}: {
+  label: string;
+  value: string;
+  sub?: string;
+  highlight?: 'red' | 'green';
+  accent?: 'emerald' | 'violet';
+}) {
+  const accentBg = accent === 'emerald' ? 'bg-emerald-50/40 border-emerald-100/50'
+                 : accent === 'violet' ? 'bg-violet-50/40 border-violet-100/50'
+                 : 'bg-secondary/40 border-border';
+  return (
+    <div className={cn('rounded-xl px-4 py-3.5 border', accentBg)}>
+      <p className="text-[11px] text-muted-foreground mb-1.5 font-medium">{label}</p>
+      <p className={cn(
+        'text-xl font-extrabold tracking-tight',
+        highlight === 'red' && 'text-red-500',
+        highlight === 'green' && 'text-emerald-600',
+      )}>{value}</p>
+      {sub && <p className="text-[10px] text-muted-foreground mt-1">{sub}</p>}
     </div>
   );
 }

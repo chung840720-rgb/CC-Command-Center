@@ -32,8 +32,8 @@ export default function Log() {
           <ScrollText className="w-7 h-7" strokeWidth={2.2} />
         </div>
         <div>
-          <p className="text-[11px] text-muted-foreground font-bold mb-1.5">資料與設定</p>
-          <h1 className="text-3xl font-black tracking-tight">操作日誌</h1>
+          <p className="text-[11px] text-muted-foreground font-bold mb-1.5">沉澱與信任 · 成長觀察員視角</p>
+          <h1 className="text-3xl font-black tracking-tight">📋 操作日誌</h1>
           <p className="text-sm text-muted-foreground mt-2 max-w-prose">所有 AI 分析、編輯、上傳、系統行為的時序紀錄，跨成員共用。</p>
         </div>
       </section>

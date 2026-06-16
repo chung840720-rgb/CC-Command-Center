@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Meta MCP raw output (contains un-anonymized real BM data)
+scripts/meta/raw-meta-entities.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

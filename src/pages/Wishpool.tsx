@@ -32,7 +32,7 @@ export default function Wishpool() {
             <Lightbulb className="w-7 h-7" strokeWidth={2.2} />
           </div>
           <div>
-            <p className="text-[11px] text-muted-foreground font-bold mb-1.5">資料與設定</p>
+            <p className="text-[11px] text-muted-foreground font-bold mb-1.5">沉澱與信任 · 成長觀察員視角</p>
             <h1 className="text-3xl font-black tracking-tight">願池</h1>
             <p className="text-sm text-muted-foreground mt-2 max-w-prose">團隊許願清單 — 想要的功能、想自動化的事、想試的新工具，按讚投票推進。</p>
           </div>

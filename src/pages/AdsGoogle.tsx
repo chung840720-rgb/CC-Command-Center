@@ -25,10 +25,10 @@ export default function AdsGoogle() {
           <Search className="w-7 h-7" strokeWidth={2.2} />
         </div>
         <div>
-          <p className="text-[11px] text-muted-foreground font-bold mb-1.5">數位廣告</p>
+          <p className="text-[11px] text-muted-foreground font-bold mb-1.5">做行動 · 執行操盤手視角</p>
           <h1 className="text-3xl font-black tracking-tight">Google 廣告</h1>
           <p className="text-sm text-muted-foreground mt-2 max-w-prose">Search + Display + YouTube 廣告整合分析、關鍵字成效、預算分配。</p>
-          <Badge variant="secondary" className="mt-3 bg-emerald-100 text-emerald-700 rounded-md text-xs font-bold">Google Ads API 已連線</Badge>
+          <Badge variant="secondary" className="mt-3 bg-emerald-100 text-emerald-700 rounded-md text-xs font-bold">Google Ads Demo 架構</Badge>
         </div>
       </section>
 

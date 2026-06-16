@@ -3,6 +3,8 @@ import { Package, Search, TrendingUp, TrendingDown } from 'lucide-react';
 import { getSnapshot } from '@/lib/api';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Badge } from '@/components/ui/badge';
+import { SopBadge } from '@/components/dashboard/SopBadge';
+import { DateRangeSwitcher } from '@/components/dashboard/DateRangeSwitcher';
 import { formatNumber, cn } from '@/lib/utils';
 
 const CAT_COLOR: Record<string, string> = {
@@ -27,17 +29,26 @@ export default function Products() {
 
   return (
     <div className="space-y-6">
-      <section className="card-soft p-6 flex gap-4">
-        <div className="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
-          <Package className="w-7 h-7" strokeWidth={2.2} />
-        </div>
-        <div>
-          <p className="text-[11px] text-muted-foreground font-bold mb-1.5">資料與設定</p>
-          <h1 className="text-3xl font-black tracking-tight">商品資料</h1>
-          <p className="text-sm text-muted-foreground mt-2 max-w-prose">SKU 級別商品 + 品類分類 v4.1 ETL + GMV 趨勢，跨平台對齊度 99%+。</p>
-          <div className="flex gap-2 mt-3">
-            <Badge variant="secondary" className="bg-emerald-100 text-emerald-700 rounded-md text-xs font-bold">SKU {p.totalSku} 個</Badge>
-            <Badge variant="secondary" className="bg-primary/15 text-primary rounded-md text-xs font-bold">每日自動同步</Badge>
+      <section className="card-soft p-6 flex flex-col lg:flex-row lg:items-start gap-5 justify-between">
+        <div className="flex gap-4 flex-1">
+          <div className="w-14 h-14 rounded-2xl bg-violet-100 text-violet-700 flex items-center justify-center shrink-0">
+            <Package className="w-7 h-7" strokeWidth={2.2} />
+          </div>
+          <div className="flex-1">
+            <p className="text-[11px] text-muted-foreground font-bold mb-1.5">做行動 · 執行操盤手視角</p>
+            <h1 className="text-3xl font-black tracking-tight">📦 商品 SKU</h1>
+            <p className="text-sm text-muted-foreground mt-2 max-w-prose leading-relaxed">
+              SKU 級別商品 + 品類分類 v4.2 ETL + GMV 趨勢。4 平台（官網/蝦皮商城/MoMo/蝦皮直營）對齊度 99%+。
+            </p>
+            <div className="flex gap-2 mt-3 items-center flex-wrap">
+              <Badge variant="secondary" className="bg-emerald-100 text-emerald-700 rounded-md text-xs font-bold">SKU {p.totalSku} 個</Badge>
+              <Badge variant="secondary" className="bg-primary/15 text-primary rounded-md text-xs font-bold">每日自動同步</Badge>
+              <SopBadge skills={[
+                { name: '品類分類規格_v4_1.md', version: 'v4.2' },
+                { name: 'products.md', version: 'v1.0' },
+              ]} />
+              <DateRangeSwitcher value="last30" compact />
+            </div>
           </div>
         </div>
       </section>

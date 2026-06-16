@@ -103,7 +103,7 @@ export default function Connect() {
             <Settings className="w-7 h-7" strokeWidth={2.2} />
           </div>
           <div>
-            <p className="text-[11px] text-muted-foreground font-bold mb-1.5">資料與設定</p>
+            <p className="text-[11px] text-muted-foreground font-bold mb-1.5">沉澱與信任 · 成長觀察員視角</p>
             <h1 className="text-3xl font-black tracking-tight">串接設定</h1>
             <p className="text-sm text-muted-foreground mt-2">
               展示 UI 設計 — 此 dashboard 為 Demo Only，不會串接真實系統（職業道德選擇，<a href="#/trust" className="text-primary underline">詳見 /trust</a>）

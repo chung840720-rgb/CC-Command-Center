@@ -74,9 +74,9 @@ export default function SalesBattle() {
       <PageHeader
         icon={BarChart3}
         iconBg="bg-amber-100 text-amber-700"
-        breadcrumb="作戰總覽"
+        breadcrumb="看戰情 · 數據觀測員視角"
         title="銷售戰情"
-        subtitle="集中查看官網、蝦皮、MoMo 的業績、目標達成、訂單、客單價與廣告回收。"
+        subtitle="集中查看 4 平台（官網、蝦皮商城、MoMo、蝦皮直營）的業績、目標達成、訂單、客單價與廣告回收。"
         callout="目前為月中數據，適合看方向，不適合直接與整月比較。"
         rightSlot={
           <div className="grid grid-cols-6 gap-1.5">
@@ -121,7 +121,7 @@ export default function SalesBattle() {
       {/* 5 KPI grid */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
         <KpiTile
-          label="三平台合計業績"
+          label="4 平台合計業績"
           value={`${(kpi.monthlyGmv.value / 10000).toFixed(0)}萬`}
           subValue={`NT$${formatNumber(kpi.monthlyGmv.value)}`}
           badge={`${monthKey} 業績`}
@@ -139,7 +139,7 @@ export default function SalesBattle() {
         <KpiTile
           label="合計訂單數"
           value={`${formatNumber(kpi.monthlyOrders)} 筆`}
-          subValue="三平台加總"
+          subValue="4 平台加總"
           badge="月中數據 (MTD)"
           icon={ShoppingCart}
           iconColor="purple"
@@ -147,7 +147,7 @@ export default function SalesBattle() {
         <KpiTile
           label="廣告整體 ROAS"
           value={`${kpi.roas} x`}
-          subValue="三平台加權平均"
+          subValue="4 平台加權平均"
           badge="月中數據 (MTD)"
           icon={Wallet}
           iconColor="amber"
@@ -166,7 +166,7 @@ export default function SalesBattle() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         <div className="card-soft p-6 lg:col-span-2">
           <div className="flex items-center justify-between mb-1">
-            <h3 className="text-base font-bold">三平台合計趨勢（萬元）</h3>
+            <h3 className="text-base font-bold">4 平台合計趨勢（萬元）</h3>
             <div className="flex items-center gap-3 text-xs">
               <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm bg-zinc-300" />2025</span>
               <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm bg-primary" />2026</span>
@@ -188,7 +188,7 @@ export default function SalesBattle() {
             <h3 className="text-base font-bold">{monthKey} 達成率</h3>
             <Badge variant="outline" className="text-[10px]">{hasMonthData ? 'MTD' : '待匯入'}</Badge>
           </div>
-          <p className="text-xs text-muted-foreground mb-4">三平台合計 vs 月目標</p>
+          <p className="text-xs text-muted-foreground mb-4">4 平台合計 vs 月目標</p>
           <div className="relative w-44 h-44 mx-auto">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>

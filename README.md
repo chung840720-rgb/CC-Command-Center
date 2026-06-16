@@ -4,9 +4,25 @@
 >
 > 🌐 **Live**: [chung840720-rgb.github.io/CC-Command-Center](https://chung840720-rgb.github.io/CC-Command-Center/)
 > 🛡 **信任聲明**: [/trust](https://chung840720-rgb.github.io/CC-Command-Center/#/trust) — 為什麼這是 Demo Only
-> 📚 **20 份 SOP 索引**: [/skills](https://chung840720-rgb.github.io/CC-Command-Center/#/skills)
+> 📚 **21 份 SOP 索引**: [/skills](https://chung840720-rgb.github.io/CC-Command-Center/#/skills)
 > 🚀 **資料管線架構**: [/data-pipeline](https://chung840720-rgb.github.io/CC-Command-Center/#/data-pipeline)
 > 📝 **單日迭代軌跡**: [/changelog](https://chung840720-rgb.github.io/CC-Command-Center/#/changelog)
+
+---
+
+## ⚠️ 為什麼新公司「不需要」這個 dashboard（先誠實的 5 點）
+
+如果你是來考察一份履歷作品，請先看這 5 個侷限：
+
+1. **它是「履歷展品」不是「可部署工具」** — Demo Only 永久，無法接你的系統、解決你明天的問題。
+2. **業務脈絡 100% 綁定淨淨 CleanClean** — 母嬰清潔品牌 + 台灣 4 平台組合（Shopline / Shopee 商城 / MoMo / Shopee 直營）。換產業要重寫 80%。
+3. **大公司有 BI 系統，小公司不需要這個複雜度** — Tableau / Looker / PowerBI 已成熟，這份卡在「太重沒辦法當主系統 / 太輕沒辦法跟 BI 競爭」。
+4. **6 切角 + cleanclean-pm 是個人思考工具，不是團隊框架** — 強推會跟你既有節奏摩擦。
+5. **維護成本超出新公司願意支付** — 21 SOP + Playwright + CDP + Claude Code 依賴，平台 UI 改版就壞。
+
+**為什麼我還做？** 因為這 5 個侷限我都清楚 — 這代表我懂得分辨「**可移轉的能力（PM 思考方法 + 沉澱 SOP 的習慣 + 把 AI 落地的能力）**」vs「**綁定的成果（這份 dashboard 本身）**」。
+
+**你雇用的不是這個 dashboard，是寫出這個 dashboard 的人。** 我可以給你的團隊重寫一份，但只有 3 個月內就能交付的人才會這樣對自己作品坦白。
 
 ---
 
