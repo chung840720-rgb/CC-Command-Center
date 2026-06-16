@@ -1660,101 +1660,228 @@
     ]
   },
   "adsMeta": {
-    "kpi": {
-      "spend": 320000,
-      "impressions": 4200000,
-      "clicks": 28500,
-      "ctr": 0.68,
-      "cpc": 11.2,
-      "roas": 3.24,
-      "reach": 1450000
+    "source": {
+      "method": "Meta Ads MCP via Claude.ai",
+      "mcpUrl": "https://mcp.facebook.com/ads",
+      "pulledAt": "2026-06-16",
+      "realPeriod": "2026-06-09 ~ 2026-06-15 (近 7 天)",
+      "adAccount": "act_REDACTED（淨淨 CleanClean，幣別 TWD）",
+      "note": "Demo Only — 數字已 anonymize（保留 ROAS/CTR/CPM/分布比例），原始數字為公司資產"
     },
-    "campaigns": [
+    "kpi": {
+      "spend": 114800,
+      "impressions": 2870000,
+      "clicks": 18040,
+      "ctr": 0.63,
+      "cpm": 40,
+      "cpc": 6.4,
+      "roas": 4.18,
+      "conversions": 279,
+      "period": "last_7d"
+    },
+    "topAdSets": [
       {
-        "name": "618 預熱檔 - 廣泛受眾",
-        "objective": "轉換",
-        "status": "進行中",
-        "spend": 86000,
-        "roas": 4.12,
-        "ctr": 0.82,
-        "orders": 287
+        "rank": 1,
+        "name": "常態｜加入購物車30天未購買",
+        "campaign": "00：目錄銷售_DPA",
+        "roas": 10.66,
+        "spend": 3460,
+        "ctr": 1.37,
+        "cpm": 111,
+        "conversions": 27,
+        "audience": "RT"
       },
       {
-        "name": "三三補貨日 - VIP 再行銷",
-        "objective": "轉換",
-        "status": "進行中",
-        "spend": 64000,
-        "roas": 5.21,
-        "ctr": 1.45,
-        "orders": 245
+        "rank": 2,
+        "name": "全站已購買名單_排：已購買清潔皂",
+        "campaign": "01：清潔皂_RT(已購買名單)_CPA",
+        "roas": 8.45,
+        "spend": 4098,
+        "ctr": 0.41,
+        "cpm": 78,
+        "conversions": 21,
+        "audience": "RT"
       },
       {
-        "name": "母嬰節組合包 - Lookalike 1%",
-        "objective": "轉換",
-        "status": "進行中",
-        "spend": 58000,
-        "roas": 3.85,
-        "ctr": 0.92,
-        "orders": 215
+        "rank": 3,
+        "name": "全站已購買名單_排：已購買潔顏三部曲",
+        "campaign": "09：洗面乳_RT(已購買名單)_CPA",
+        "roas": 8.09,
+        "spend": 5812,
+        "ctr": 0.42,
+        "cpm": 75,
+        "conversions": 36,
+        "audience": "RT"
       },
       {
-        "name": "新客體驗組 - 興趣母嬰",
-        "objective": "轉換",
-        "status": "已暫停",
-        "spend": 42000,
-        "roas": 1.45,
-        "ctr": 0.55,
-        "orders": 89
+        "rank": 4,
+        "name": "全站已購買名單_排：已購買胺基酸沐浴",
+        "campaign": "02：胺基酸沐浴_RT(已購買名單)_CPA",
+        "roas": 7.67,
+        "spend": 4045,
+        "ctr": 1.42,
+        "cpm": 130,
+        "conversions": 24,
+        "audience": "RT"
       },
       {
-        "name": "品牌曝光 - Reels Boost",
-        "objective": "曝光",
-        "status": "進行中",
-        "spend": 32000,
-        "roas": null,
-        "ctr": 1.85,
-        "orders": 0
+        "rank": 5,
+        "name": "全站已購買名單_排：已購買水凝乳",
+        "campaign": "11：身體乳_RT(已購買名單)_CPA",
+        "roas": 6.41,
+        "spend": 11484,
+        "ctr": 0.96,
+        "cpm": 122,
+        "conversions": 50,
+        "audience": "RT"
       },
       {
-        "name": "Lookalike 5% - 寬鬆受眾",
-        "objective": "轉換",
-        "status": "已暫停",
-        "spend": 38000,
-        "roas": 1.12,
-        "ctr": 0.45,
-        "orders": 72
+        "rank": 6,
+        "name": "(喬伊)洗衣精_影片10秒_排：已購買洗衣精",
+        "campaign": "07：洗衣精_RT(溫+熱)_CPA",
+        "roas": 4.6,
+        "spend": 6508,
+        "ctr": 2.94,
+        "cpm": 287,
+        "conversions": 26,
+        "audience": "RT-溫熱"
+      },
+      {
+        "rank": 7,
+        "name": "(達人推薦)母嬰節清潔組_排：站內互動",
+        "campaign": "07：洗衣精_RT(溫+熱)_CPA",
+        "roas": 4.21,
+        "spend": 5084,
+        "ctr": 2.1,
+        "cpm": 245,
+        "conversions": 23,
+        "audience": "RT-溫熱"
+      },
+      {
+        "rank": 8,
+        "name": "(媽媽推薦)沐浴乳_影片15秒_排：已加購未買",
+        "campaign": "02：胺基酸沐浴_RT(已購買名單)_CPA",
+        "roas": 3.92,
+        "spend": 3936,
+        "ctr": 1.75,
+        "cpm": 195,
+        "conversions": 18,
+        "audience": "RT"
+      },
+      {
+        "rank": 9,
+        "name": "(菌落+貼膚+小赫+圓+KOC)洗衣精_排：已購買",
+        "campaign": "07：洗衣精_RT(溫+熱)_CPA",
+        "roas": 3.35,
+        "spend": 2546,
+        "ctr": 0.76,
+        "cpm": 100,
+        "conversions": 9,
+        "audience": "RT-溫熱"
+      },
+      {
+        "rank": 10,
+        "name": "(沒有太陽也不怕)洗衣精_排：已購買洗衣精",
+        "campaign": "07：洗衣精_RT(溫+熱)_CPA",
+        "roas": 2.98,
+        "spend": 4673,
+        "ctr": 1.49,
+        "cpm": 119,
+        "conversions": 13,
+        "audience": "RT-溫熱"
       }
     ],
-    "audiences": [
+    "audienceBreakdown": [
       {
-        "name": "VIP 再行銷（90 日）",
-        "size": 12500,
-        "ctr": 1.45,
-        "cvr": 4.2,
-        "rating": "優秀"
+        "type": "RT 已購買名單",
+        "count": 22,
+        "totalSpend": 47560,
+        "avgRoas": 6.85,
+        "note": "Mid-funnel 主力 — ROAS 最穩 5-10x"
       },
       {
-        "name": "Lookalike 1% (母嬰購買)",
-        "size": 280000,
-        "ctr": 0.92,
-        "cvr": 2.1,
-        "rating": "良好"
+        "type": "RT 溫熱站內互動",
+        "count": 6,
+        "totalSpend": 22960,
+        "avgRoas": 3.42,
+        "note": "次主力 — 補回 Top of mind"
       },
       {
-        "name": "興趣 - 母嬰用品",
-        "size": 1200000,
-        "ctr": 0.68,
-        "cvr": 1.2,
-        "rating": "普通"
+        "type": "NEW 冷受眾 互動型",
+        "count": 8,
+        "totalSpend": 36900,
+        "avgRoas": null,
+        "note": "11 組 ROAS 無回傳（互動型 ≠ 購買歸因）— 觀察 reach + CPM"
       },
       {
-        "name": "Lookalike 5%",
-        "size": 1400000,
-        "ctr": 0.45,
-        "cvr": 0.6,
-        "rating": "偏低"
+        "type": "實體門市導流",
+        "count": 3,
+        "totalSpend": 7380,
+        "avgRoas": null,
+        "note": "線下歸因，不入排序"
       }
-    ]
+    ],
+    "redFlags": [
+      {
+        "adSet": "(廣告 KOL)洗衣精 RT_L1000",
+        "campaign": "07：洗衣精_RT(冷+互動型影片)_CPA",
+        "spend": 32828,
+        "roas": 0.02,
+        "ctr": 0.17,
+        "issue": "7 天最大單組花費 + ROAS 0.02 + CTR 0.17%",
+        "action": "建議立刻暫停 / 切素材重投",
+        "severity": "critical"
+      }
+    ],
+    "insight": {
+      "summary": "近 7 天 Meta 廣告組 Top 10 全為 RT（再行銷），符合預期 — RT 受眾本來 ROAS 就高於冷受眾。如要評估真正「拉新效率」，建議把這份榜單跟冷受眾（NEW）廣告組分開看。",
+      "traceTo": [
+        "C-2606-01",
+        "C-2606-06"
+      ],
+      "actionItems": [
+        {
+          "text": "暫停 RT_L1000（NT$40k 花費 / ROAS 0.02）",
+          "linkedAd": "AD-006"
+        },
+        {
+          "text": "07：洗衣精 RT(溫+熱) 5 組全進 Top 10 — 建議下週把這組擴大投放",
+          "linkedAd": "AD-001"
+        },
+        {
+          "text": "11：身體乳 RT 單組 NT$14k 但 ROAS 6.41 — 預算還能往上加，建議下週 +30%",
+          "linkedAd": null
+        }
+      ]
+    },
+    "namingConvention": {
+      "pattern": "{流水號}：{品類}_{受眾類型}({細分})_{出價策略}",
+      "examples": [
+        {
+          "name": "00：目錄銷售_DPA",
+          "meaning": "DPA 動態商品廣告"
+        },
+        {
+          "name": "01：清潔皂_RT(已購買名單)_CPA",
+          "meaning": "清潔皂 再行銷已購買 CPA 出價"
+        },
+        {
+          "name": "07：洗衣精_RT(溫+熱)_CPA",
+          "meaning": "洗衣精 RT 溫熱受眾 CPA"
+        },
+        {
+          "name": "07：洗衣精_NEW(冷+互動型影片)_CPA",
+          "meaning": "洗衣精 冷受眾 互動型素材 CPA"
+        }
+      ],
+      "audienceLayers": [
+        "NEW 冷受眾",
+        "溫(站內互動)",
+        "熱(已加購)",
+        "RT(已購買名單)",
+        "DPA(目錄)"
+      ]
+    }
   },
   "adsGoogle": {
     "kpi": {
