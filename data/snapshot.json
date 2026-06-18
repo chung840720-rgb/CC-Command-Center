@@ -262,7 +262,7 @@
       "task": "確認蝦皮高效品項是否可加碼"
     },
     {
-      "owner": "雨昕",
+      "owner": "蝦皮 Owner",
       "status": "復盤中",
       "task": "把母親節活動整理成復盤紀錄"
     }
@@ -1182,7 +1182,9 @@
         "latestMove": "5/30 上「新一代消毒系列」新品，Meta 影片素材主打實驗室畫面（科學感）",
         "strategy": "技術敘事 + 認證背書 + 媽嬰部落客深度合作",
         "threat": "medium",
-        "ourCounter": "我們的母嬰級認證更多（多項母嬰級安全認證），素材可突顯「PR50+ 競品」優勢"
+        "ourCounter": "我們的母嬰級認證更多（多項母嬰級安全認證），素材可突顯「PR50+ 競品」優勢",
+        "why": "科學感／實驗室畫面打中媽媽「安全焦慮」，認證敘事降低決策風險",
+        "minTest": "先做 1 支「成份透明×實測對比」短影音，投 RT 已購買名單測 7 天、日預算 NT$2k；CVR 高於現有素材再放大到冷受眾"
       },
       {
         "name": "競品 B",
@@ -1193,7 +1195,9 @@
         "latestMove": "6/1 推「家事香氛系列」， KOL Reels 重押（某頭部網紅剛接他們的業配）",
         "strategy": "視覺包裝 + KOL 生活情境 + IG 重投",
         "threat": "high",
-        "ourCounter": "我們也有頭部網紅合作，且品牌承諾「真療癒」更貼合 — 可加強 IG/Threads 投放"
+        "ourCounter": "我們也有頭部網紅合作，且品牌承諾「真療癒」更貼合 — 可加強 IG/Threads 投放",
+        "why": "療癒香氛＋頭部網紅生活情境，打中疲憊媽媽的情緒補償需求",
+        "minTest": "Threads/IG 先測 1 組頭部網紅貼文＋自家素材，跑 7 天看互動→加購；CTR>2% 再加預算擴量"
       },
       {
         "name": "競品 C",
@@ -1204,7 +1208,9 @@
         "latestMove": "6/3 起蝦皮關鍵字「洗衣精」競價狂飆（搶我們 618 預熱版位）",
         "strategy": "蝦皮關鍵字壟斷 + 折扣戰 + 微型 KOL 鋪量",
         "threat": "high",
-        "ourCounter": "我們不打價格戰，改攻「成份透明 + 安全認證」差異化；蝦皮關鍵字改鎖「母嬰洗衣精」長尾"
+        "ourCounter": "我們不打價格戰，改攻「成份透明 + 安全認證」差異化；蝦皮關鍵字改鎖「母嬰洗衣精」長尾",
+        "why": "蝦皮關鍵字壟斷＋折扣，攔截高購買意圖的比價型搜尋流量",
+        "minTest": "蝦皮投「母嬰洗衣精」長尾字組測 7 天、日預算 NT$2k；CPA 低於目標再擴關鍵字池，不打價格戰"
       },
       {
         "name": "競品 D",
@@ -1215,7 +1221,9 @@
         "latestMove": "5/28 MoMo 首頁買版主打「競品新包裝皂品」新包裝，Google 品牌字加碼",
         "strategy": "中老年信任 + MoMo 站內深耕 + 包裝重設計",
         "threat": "low",
-        "ourCounter": "TA 重疊度低（競品 D偏 40+）；我們持續鎖 25-40 年輕媽媽"
+        "ourCounter": "TA 重疊度低（競品 D偏 40+）；我們持續鎖 25-40 年輕媽媽",
+        "why": "中老年信任＋老牌包裝，TA 與我方 25-40 年輕媽媽重疊度低",
+        "minTest": "TA 重疊低先不對打；僅在 MoMo 守自家品牌字測 14 天，觀察被搶量幅度再決定是否反制"
       }
     ],
     "actions": [
@@ -1550,7 +1558,7 @@
       },
       {
         "time": "2026/06/11 09:18",
-        "actor": "雨昕",
+        "actor": "蝦皮 Owner",
         "action": "完成「母親節活動復盤」",
         "page": "/campaign",
         "type": "edit"
@@ -1600,7 +1608,7 @@
       },
       {
         "title": "Slack 日報能直接帶圖",
-        "author": "雨昕",
+        "author": "蝦皮 Owner",
         "date": "2026/06/08",
         "description": "目前 Slack draft 都是純文字，希望可以自動帶截圖（KPI ring + 三通路卡），主管能一眼看完。",
         "likes": 8,
@@ -4827,5 +4835,106 @@
       }
     ],
     "keywordSection": "賣場廣告-手動 ｜ 關鍵字操作明細"
+  },
+  "teamContext": {
+    "weekStart": "2026-06-15",
+    "weekFocus": [
+      {
+        "role": "組長（本人）",
+        "platform": "官網",
+        "load": "中",
+        "task": "618 主檔統籌 + 官網付費效率盤點",
+        "note": "本週重心：官網 ROAS 診斷"
+      },
+      {
+        "role": "蝦皮 Owner",
+        "platform": "蝦皮",
+        "load": "滿載",
+        "task": "618 預熱關鍵字 + 聯盟加碼排期",
+        "note": "本週滿載，新任務建議排到下週"
+      },
+      {
+        "role": "MoMo Owner",
+        "platform": "MoMo",
+        "load": "中",
+        "task": "MoMo 站內競價 + 檔期商審",
+        "note": "MoMo 檔期商審需提前 7 天"
+      },
+      {
+        "role": "CRM 窗口",
+        "platform": "官網私域",
+        "load": "中",
+        "task": "沉睡會員喚醒推播 draft",
+        "note": "AI 產 draft，需本人審核才送（道德底線）"
+      }
+    ],
+    "crossTeam": [
+      {
+        "team": "蝦皮商城 PM",
+        "topic": "618 主檔資源對焦",
+        "status": "已對焦"
+      },
+      {
+        "team": "物流組",
+        "topic": "大檔出貨備量",
+        "status": "進行中"
+      }
+    ],
+    "bossFocus": "618 五平台齊發的達成節奏；官網付費效率是否拖累整體"
+  },
+  "growthTimeline": {
+    "sopCumulative": [
+      {
+        "month": "2024-12",
+        "count": 2
+      },
+      {
+        "month": "2025-02",
+        "count": 5
+      },
+      {
+        "month": "2025-05",
+        "count": 9
+      },
+      {
+        "month": "2025-09",
+        "count": 13
+      },
+      {
+        "month": "2026-01",
+        "count": 16
+      },
+      {
+        "month": "2026-06",
+        "count": 19
+      }
+    ],
+    "platformConnect": [
+      {
+        "platform": "官網 Shopline",
+        "date": "2024 Q4",
+        "note": "首個串接 + GA4 漏斗"
+      },
+      {
+        "platform": "蝦皮",
+        "date": "2025 Q1",
+        "note": "背景 Chrome + CDP 反偵測 ETL"
+      },
+      {
+        "platform": "MoMo",
+        "date": "2025 Q2",
+        "note": "session 保活 + 日/月雙用途"
+      },
+      {
+        "platform": "PCHOME",
+        "date": "2025 Q4",
+        "note": "品類對齊"
+      },
+      {
+        "platform": "Meta Ads MCP",
+        "date": "2026 Q2",
+        "note": "完成站外廣告 ETL 拼圖"
+      }
+    ]
   }
 }
