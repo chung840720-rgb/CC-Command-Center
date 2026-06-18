@@ -2,138 +2,110 @@
   "_meta": {
     "generatedAt": "2026-06-11T10:00:00+08:00",
     "currency": "TWD",
-    "synthetic": true,
-    "note": "完全虛構之合成資料（fictional demo）— 品牌/通路/產品/數字皆為展示虛構，不對應任何真實公司。廣告明細僅官網，外網平台廣告於各平台後台（下一階段）。",
+    "anonymizationFactor": 0.8,
+    "note": "Demo snapshot — 1-5月趨勢結構來自真實電商運營經驗，數字已 anonymize（per platform per month 單一 factor，保留 achievement / ROAS / 占比等所有 ratio）",
     "dateRange": {
       "start": "2026-05-13",
       "end": "2026-06-11"
-    }
+    },
+    "dataPattern": "real-shape-anonymized-ratio-preserved",
+    "lastSync": "2026-06-11T05:59:43.658Z"
   },
   "kpi": {
     "monthlyGmv": {
-      "value": 118555752,
+      "value": 8485524,
       "currency": "TWD",
-      "target": 129404958,
-      "achievement": 92
+      "target": 9636108,
+      "achievement": 88
     },
     "ytdGmv": {
-      "value": 475760904,
-      "target": 1500000000,
-      "achievement": 31.7
+      "value": 34524034,
+      "target": 100000000,
+      "achievement": 34.5
     },
-    "monthlyOrders": 108164,
-    "roas": 5.5,
-    "adSpend": 21555591
+    "monthlyOrders": 6293,
+    "roas": 4.4,
+    "adSpend": 1920229
   },
   "alerts": [
     {
       "id": "alert-1",
       "level": "red",
-      "title": "官網廣告 ROAS 偏低（3.4x，目標 4x）",
-      "platform": "shopline",
+      "title": "蝦皮商城 GMV 環比 -18%",
+      "platform": "shopee",
       "tag": "優先修正",
       "metric": {
-        "name": "ROAS",
-        "current": 3.4,
-        "target": 4
+        "name": "GMV",
+        "current": 78200,
+        "previous": 95400,
+        "deltaPct": -18
       }
     },
     {
       "id": "alert-2",
       "level": "yellow",
-      "title": "蝦皮 GMV 環比 -8%（618 預熱前淡段）",
-      "platform": "shopee",
+      "title": "官網 ROAS 偏低（2.03 倍）",
+      "platform": "shopline",
       "tag": "持續觀察",
       "metric": {
-        "name": "GMV(週)",
-        "current": 9682053,
-        "previous": 10523971,
-        "deltaPct": -8
+        "name": "ROAS",
+        "current": 2.03,
+        "target": 3
       }
     },
     {
       "id": "alert-3",
       "level": "green",
-      "title": "酷澎戰略卡位達成率穩定（82%）",
-      "platform": "shopee-direct",
+      "title": "MOMO 回收效率最高（18.07 倍）",
+      "platform": "momo",
       "tag": "加碼候選",
       "metric": {
-        "name": "達成率",
-        "current": 82,
-        "target": 80
+        "name": "ROAS",
+        "current": 18.07,
+        "previous": 16.2,
+        "deltaPct": 11.5
       }
     }
   ],
   "channels": [
     {
       "id": "shopline",
-      "label": "官網",
+      "label": "官網 Shopline",
       "icon": "globe",
-      "monthlyGmv": 23711150,
+      "monthlyGmv": 4742230,
       "achievement": 74,
-      "yearlyGmv": 95152180,
+      "yearlyGmv": 19030436,
       "roas": 3.4,
-      "hasAd": true,
-      "orders": 15103,
-      "ytdShare": 20,
-      "characteristic": "官網反映品牌自有轉換能力，廣告數據完整可追。",
-      "recommendation": "內養舊主場；廣告效率與商品頁轉換是優先課題。"
+      "orders": 3021,
+      "ytdShare": 62,
+      "characteristic": "官網反映品牌自有轉換能力，優先看投放與商品頁。",
+      "recommendation": "目前量體最大，但 ROAS 與每筆訂單成本需要優先修正。"
     },
     {
       "id": "shopee",
-      "label": "蝦皮",
+      "label": "蝦皮旗艦",
       "icon": "shopping-bag",
-      "monthlyGmv": 41494513,
+      "monthlyGmv": 2122298,
       "achievement": 118,
-      "yearlyGmv": 166516316,
-      "roas": null,
-      "hasAd": false,
-      "orders": 44332,
-      "ytdShare": 35,
-      "characteristic": "蝦皮是外拉新主引擎，廣告數據於蝦皮後台。",
-      "recommendation": "量體最大、外拉新主戰場；站內活動與排名持續放大。"
-    },
-    {
-      "id": "pchome",
-      "label": "PCHOME",
-      "icon": "package",
-      "monthlyGmv": 5927788,
-      "achievement": 92,
-      "yearlyGmv": 23788046,
-      "roas": null,
-      "hasAd": false,
-      "orders": 5700,
-      "ytdShare": 5,
-      "characteristic": "PCHOME 客單偏理性比價，廣告於 PCHOME 後台。",
-      "recommendation": "量體小，適合組合包與高單價品；廣告另於平台檢視。"
+      "yearlyGmv": 10871917,
+      "roas": 7.1,
+      "orders": 2266,
+      "ytdShare": 28,
+      "characteristic": "蝦皮重點是活動、排名與爆品庫存能不能放大。",
+      "recommendation": "效率穩，適合用上傳報表追蹤可加碼品項。"
     },
     {
       "id": "momo",
-      "label": "MOMO",
+      "label": "MoMo",
       "icon": "store",
-      "monthlyGmv": 29638938,
+      "monthlyGmv": 440372,
       "achievement": 87,
-      "yearlyGmv": 118940226,
-      "roas": null,
-      "hasAd": false,
-      "orders": 25246,
-      "ytdShare": 25,
-      "characteristic": "MoMo 客單中高，廣告數據於 MoMo 後台。",
-      "recommendation": "重點找可放大的檔期與組合；廣告效率另於平台檢視。"
-    },
-    {
-      "id": "conpang",
-      "label": "酷澎 Conpang",
-      "icon": "zap",
-      "monthlyGmv": 17783363,
-      "achievement": 82,
-      "yearlyGmv": 71364136,
-      "roas": null,
-      "hasAd": false,
-      "orders": 17783,
-      "ytdShare": 15,
-      "characteristic": "酷澎為新進戰略卡位通路，順應平台風不過度操作。",
-      "recommendation": "戰略卡位、控制節奏；廣告另於酷澎後台檢視。"
+      "yearlyGmv": 1543915,
+      "roas": 15.9,
+      "orders": 375,
+      "ytdShare": 5,
+      "characteristic": "MoMo 要同時看效率與量體，不只看回收倍數。",
+      "recommendation": "效率高但量體小，重點是找可放大的活動與商品。"
     }
   ],
   "funnel": {
@@ -183,54 +155,36 @@
   },
   "categories": [
     {
-      "name": "織物衣物清潔",
-      "shopline": 20,
+      "name": "洗衣精",
+      "shopline": 28,
       "shopee": 35,
-      "pchome": 5,
-      "momo": 25,
-      "conpang": 15,
+      "momo": 22,
       "trend": "up",
-      "summary": "織物衣物清潔：跨 5 通路分佈，依占比與檔期推力波動"
+      "summary": "跨平台領跑，母嬰節檔期推升"
     },
     {
-      "name": "居家空間清潔",
-      "shopline": 20,
-      "shopee": 35,
-      "pchome": 5,
-      "momo": 25,
-      "conpang": 15,
-      "trend": "up",
-      "summary": "居家空間清潔：跨 5 通路分佈，依占比與檔期推力波動"
-    },
-    {
-      "name": "個人潔淨",
-      "shopline": 20,
-      "shopee": 35,
-      "pchome": 5,
-      "momo": 25,
-      "conpang": 15,
-      "trend": "up",
-      "summary": "個人潔淨：跨 5 通路分佈，依占比與檔期推力波動"
-    },
-    {
-      "name": "廚房清潔",
-      "shopline": 20,
-      "shopee": 35,
-      "pchome": 5,
-      "momo": 25,
-      "conpang": 15,
+      "name": "柔濕巾",
+      "shopline": -12,
+      "shopee": -8,
+      "momo": -15,
       "trend": "down",
-      "summary": "廚房清潔：跨 5 通路分佈，依占比與檔期推力波動"
+      "summary": "618 排除策略導致衰退（預期內）"
     },
     {
-      "name": "抗蟎除臭噴霧",
-      "shopline": 20,
-      "shopee": 35,
-      "pchome": 5,
-      "momo": 25,
-      "conpang": 15,
+      "name": "除黴",
+      "shopline": 5,
+      "shopee": 12,
+      "momo": 8,
       "trend": "up",
-      "summary": "抗蟎除臭噴霧：跨 5 通路分佈，依占比與檔期推力波動"
+      "summary": "穩定成長，無大檔期驅動"
+    },
+    {
+      "name": "沐浴",
+      "shopline": 15,
+      "shopee": 20,
+      "momo": 18,
+      "trend": "up",
+      "summary": "夏季旺季，蝦皮加碼有效"
     }
   ],
   "ads": {
@@ -270,28 +224,28 @@
   "monthlyTrend": [
     {
       "month": "1月",
-      "y2025": 8609,
-      "y2026": 10129
+      "y2025": 554,
+      "y2026": 652
     },
     {
       "month": "2月",
-      "y2025": 8254,
-      "y2026": 9711
+      "y2025": 567,
+      "y2026": 667
     },
     {
       "month": "3月",
-      "y2025": 6848,
-      "y2026": 8057
+      "y2025": 618,
+      "y2026": 727
     },
     {
       "month": "4月",
-      "y2025": 6651,
-      "y2026": 7824
+      "y2025": 474,
+      "y2026": 558
     },
     {
       "month": "5月",
-      "y2025": 10077,
-      "y2026": 11856
+      "y2025": 721,
+      "y2026": 849
     },
     {
       "month": "6月",
@@ -331,185 +285,110 @@
   ],
   "platformDetail": [
     {
-      "id": "shopline",
-      "label": "官網",
-      "color": "cyan",
-      "achievementPct": 74,
-      "gmv": 23711150,
-      "achievementBar": 74,
-      "target": 32042095,
-      "uv": 709061,
-      "orders": 15103,
-      "aov": 1570,
-      "adSpend": 6973868,
-      "roas": 3.4,
-      "hasAd": true,
-      "rating": "落後",
-      "ratingColor": "red",
-      "adShareRatio": 29.4,
-      "cpa": 462,
-      "note": "內養舊主場；廣告效率與商品頁轉換是優先課題。"
+      "id": "momo",
+      "label": "MoMo",
+      "color": "red",
+      "achievementPct": 87,
+      "gmv": 440372,
+      "achievementBar": 87,
+      "target": 505769,
+      "uv": 12453,
+      "orders": 375,
+      "aov": 1174,
+      "adSpend": 27692,
+      "roas": 15.9,
+      "rating": "優秀",
+      "ratingColor": "green",
+      "adShareRatio": 1.4,
+      "cpa": 74,
+      "note": "效率高但量體小，重點是找可放大的活動與商品。"
     },
     {
       "id": "shopee",
       "label": "蝦皮",
       "color": "orange",
       "achievementPct": 118,
-      "gmv": 41494513,
+      "gmv": 2122298,
       "achievementBar": 118,
-      "target": 35164842,
-      "uv": 1343394,
-      "orders": 44332,
+      "target": 1795952,
+      "uv": 68149,
+      "orders": 2266,
       "aov": 936,
-      "adSpend": null,
-      "roas": null,
-      "hasAd": false,
-      "rating": "優秀",
-      "ratingColor": "green",
-      "adShareRatio": null,
-      "cpa": null,
-      "note": "量體最大、外拉新主戰場；站內活動與排名持續放大。"
-    },
-    {
-      "id": "pchome",
-      "label": "PCHOME",
-      "color": "sky",
-      "achievementPct": 92,
-      "gmv": 5927788,
-      "achievementBar": 92,
-      "target": 6443248,
-      "uv": 320225,
-      "orders": 5700,
-      "aov": 1040,
-      "adSpend": null,
-      "roas": null,
-      "hasAd": false,
+      "adSpend": 299902,
+      "roas": 7.1,
       "rating": "良好",
       "ratingColor": "amber",
-      "adShareRatio": null,
-      "cpa": null,
-      "note": "量體小，適合組合包與高單價品；廣告另於平台檢視。"
+      "adShareRatio": 15.6,
+      "cpa": 132,
+      "note": "效率穩，適合用上傳報表追蹤可加碼品項。"
     },
     {
-      "id": "momo",
-      "label": "MOMO",
-      "color": "red",
-      "achievementPct": 87,
-      "gmv": 29638938,
-      "achievementBar": 87,
-      "target": 34067745,
-      "uv": 1262300,
-      "orders": 25246,
-      "aov": 1174,
-      "adSpend": null,
-      "roas": null,
-      "hasAd": false,
+      "id": "shopline",
+      "label": "官網",
+      "color": "cyan",
+      "achievementPct": 74,
+      "gmv": 4742230,
+      "achievementBar": 74,
+      "target": 6373776,
+      "uv": 141734,
+      "orders": 3021,
+      "aov": 1570,
+      "adSpend": 1391399,
+      "roas": 3.4,
       "rating": "良好",
       "ratingColor": "amber",
-      "adShareRatio": null,
-      "cpa": null,
-      "note": "重點找可放大的檔期與組合；廣告效率另於平台檢視。"
-    },
-    {
-      "id": "conpang",
-      "label": "酷澎 Conpang",
-      "color": "violet",
-      "achievementPct": 82,
-      "gmv": 17783363,
-      "achievementBar": 82,
-      "target": 21687028,
-      "uv": 1046059,
-      "orders": 17783,
-      "aov": 1000,
-      "adSpend": null,
-      "roas": null,
-      "hasAd": false,
-      "rating": "良好",
-      "ratingColor": "amber",
-      "adShareRatio": null,
-      "cpa": null,
-      "note": "戰略卡位、控制節奏；廣告另於酷澎後台檢視。"
+      "adShareRatio": 72.5,
+      "cpa": 461,
+      "note": "目前量體最大，但 ROAS 與每筆訂單成本需要優先修正。"
     }
   ],
   "platformMoM": {
     "shopline": {
-      "y2026": [
-        2026,
-        1942,
-        1611,
-        1565,
-        2371
-      ],
       "y2025": [
-        1722,
-        1651,
-        1370,
-        1330,
-        2015
+        344,
+        330,
+        274,
+        266,
+        403
+      ],
+      "y2026": [
+        405,
+        388,
+        322,
+        313,
+        474
       ]
     },
     "shopee": {
-      "y2026": [
-        3545,
-        3399,
-        2820,
-        2739,
-        4149
-      ],
       "y2025": [
-        3013,
-        2889,
-        2397,
-        2328,
-        3527
-      ]
-    },
-    "pchome": {
-      "y2026": [
-        506,
-        486,
-        403,
-        391,
-        593
+        181,
+        167,
+        177,
+        219,
+        180
       ],
-      "y2025": [
-        430,
-        413,
-        342,
-        333,
-        504
+      "y2026": [
+        213,
+        196,
+        208,
+        258,
+        212
       ]
     },
     "momo": {
-      "y2026": [
-        2532,
-        2428,
-        2014,
-        1956,
-        2964
-      ],
       "y2025": [
-        2152,
-        2064,
-        1712,
-        1663,
-        2519
-      ]
-    },
-    "conpang": {
-      "y2026": [
-        1519,
-        1457,
-        1209,
-        1174,
-        1778
+        17,
+        20,
+        30,
+        27,
+        37
       ],
-      "y2025": [
-        1291,
-        1238,
-        1027,
-        998,
-        1512
+      "y2026": [
+        20,
+        24,
+        35,
+        32,
+        44
       ]
     }
   },
@@ -857,29 +736,29 @@
     },
     "topProducts": [
       {
-        "name": "洗衣精 4L",
-        "gmv": 7113345,
-        "share": 22.7
+        "name": "洗衣精 1.5L 補充包",
+        "gmv": 156000,
+        "share": 24.1
       },
       {
-        "name": "洗衣膠囊 盒",
-        "gmv": 4268007,
-        "share": 13.6
+        "name": "柔濕巾 80 抽 x3",
+        "gmv": 98000,
+        "share": 15.1
       },
       {
-        "name": "除黴凝膠 條",
-        "gmv": 4030896,
-        "share": 12.9
+        "name": "除黴噴霧 500ml",
+        "gmv": 87000,
+        "share": 13.4
       },
       {
-        "name": "沐浴露 瓶",
-        "gmv": 3556673,
-        "share": 11.3
+        "name": "沐浴乳 450ml",
+        "gmv": 76000,
+        "share": 11.7
       },
       {
-        "name": "手洗精 瓶",
-        "gmv": 474223,
-        "share": 1.5
+        "name": "洗手液 250ml",
+        "gmv": 54000,
+        "share": 8.3
       }
     ],
     "split": {
@@ -1247,29 +1126,29 @@
     ],
     "topProducts": [
       {
-        "name": "洗衣精 4L",
-        "gmv": 12448354,
-        "share": 22.7
+        "name": "洗衣精 1.5L x3 組",
+        "gmv": 142000,
+        "share": 23.1
       },
       {
-        "name": "洗衣膠囊 盒",
-        "gmv": 7469012,
-        "share": 13.6
+        "name": "母嬰清潔旅行組",
+        "gmv": 95000,
+        "share": 15.4
       },
       {
-        "name": "除黴凝膠 條",
-        "gmv": 7054067,
-        "share": 12.9
+        "name": "柔濕巾 80 抽 x6 箱",
+        "gmv": 86000,
+        "share": 14
       },
       {
-        "name": "沐浴露 瓶",
-        "gmv": 6224177,
-        "share": 11.3
+        "name": "除黴噴霧 500ml x2",
+        "gmv": 72000,
+        "share": 11.7
       },
       {
-        "name": "手洗精 瓶",
-        "gmv": 829890,
-        "share": 1.5
+        "name": "全館滿千折百券",
+        "gmv": 60000,
+        "share": 9.7
       }
     ],
     "split": {
@@ -1602,7 +1481,7 @@
     },
     "searchRanking": [
       {
-        "keyword": "居家清潔",
+        "keyword": "母嬰清潔",
         "rank": 3,
         "delta": "+2"
       },
@@ -1612,7 +1491,7 @@
         "delta": "+1"
       },
       {
-        "keyword": "洗衣膠囊",
+        "keyword": "柔濕巾",
         "rank": 12,
         "delta": "—"
       },
@@ -1624,29 +1503,29 @@
     ],
     "topProducts": [
       {
-        "name": "洗衣精 4L",
-        "gmv": 8891681,
-        "share": 22.7
+        "name": "洗衣精 1.5L x2 箱購",
+        "gmv": 28000,
+        "share": 29.2
       },
       {
-        "name": "洗衣膠囊 盒",
-        "gmv": 5335009,
-        "share": 13.6
+        "name": "母嬰旅行組",
+        "gmv": 21000,
+        "share": 21.9
       },
       {
-        "name": "除黴凝膠 條",
-        "gmv": 5038619,
-        "share": 12.9
+        "name": "柔濕巾 80 抽 x4 箱",
+        "gmv": 18500,
+        "share": 19.3
       },
       {
-        "name": "沐浴露 瓶",
-        "gmv": 4445841,
-        "share": 11.3
+        "name": "除黴噴霧 500ml",
+        "gmv": 12000,
+        "share": 12.5
       },
       {
-        "name": "手洗精 瓶",
-        "gmv": 592779,
-        "share": 1.5
+        "name": "沐浴乳 450ml x2",
+        "gmv": 9500,
+        "share": 9.9
       }
     ],
     "split": {
@@ -1812,7 +1691,7 @@
       },
       {
         "rank": 2,
-        "name": "全站已購買名單_排：已購買碗盤精名單",
+        "name": "全站已購買名單_排：已購買清潔皂名單",
         "audience": "RT",
         "roas": 8.45,
         "spend": 4098,
@@ -1824,7 +1703,7 @@
       },
       {
         "rank": 3,
-        "name": "全站已購買名單_排：已購買洗面乳",
+        "name": "全站已購買名單_排：已購買潔顏三部曲",
         "audience": "RT",
         "roas": 8.09,
         "spend": 5812,
@@ -1836,7 +1715,7 @@
       },
       {
         "rank": 4,
-        "name": "全站已購買名單_排：已購買沐浴露系列",
+        "name": "全站已購買名單_排：已購買胺基酸沐浴系列",
         "audience": "RT",
         "roas": 7.67,
         "spend": 4045,
@@ -1848,7 +1727,7 @@
       },
       {
         "rank": 5,
-        "name": "全站已購買名單_排：已購買沐浴露名單",
+        "name": "全站已購買名單_排：已購買水凝乳名單",
         "audience": "RT",
         "roas": 6.41,
         "spend": 11484,
@@ -1908,7 +1787,7 @@
       },
       {
         "rank": 10,
-        "name": "(KOC 素材)廚房慕斯_影片10秒_排：已購買廚房慕斯",
+        "name": "(KOC 素材)家事皂_影片10秒_排：已購買家事皂",
         "audience": "RT-溫熱",
         "roas": 2.92,
         "spend": 3418,
@@ -1968,8 +1847,8 @@
         "severity": "critical"
       },
       {
-        "adSet": "購買除黴凝膠名單_LL10%＿排：全 RT",
-        "campaign": "07：除黴凝膠_NEW(LL10%)_CPA",
+        "adSet": "購買除黴名單_LL10%＿排：全 RT",
+        "campaign": "07：除黴_NEW(LL10%)_CPA",
         "spend": 11174,
         "roas": 0.0572,
         "ctr": 1.02,
@@ -2072,7 +1951,7 @@
     ],
     "keywords": [
       {
-        "keyword": "居家清潔",
+        "keyword": "母嬰清潔",
         "matchType": "完全比對",
         "impressions": 28000,
         "clicks": 1840,
@@ -2099,7 +1978,7 @@
         "cvr": 2.5
       },
       {
-        "keyword": "洗衣膠囊推薦",
+        "keyword": "柔濕巾推薦",
         "matchType": "完全比對",
         "impressions": 12000,
         "clicks": 720,
@@ -2108,7 +1987,7 @@
         "cvr": 3.2
       },
       {
-        "keyword": "除黴凝膠",
+        "keyword": "除黴噴霧",
         "matchType": "詞組比對",
         "impressions": 8500,
         "clicks": 425,
@@ -2238,219 +2117,99 @@
     ]
   },
   "productsPage": {
-    "totalSku": 18,
+    "totalSku": 32,
     "categoryBreakdown": [
       {
-        "name": "織物衣物清潔",
-        "sku": 4,
-        "gmv": 61056212,
-        "sharePct": 52
+        "name": "洗衣精",
+        "count": 8,
+        "gmv": 285000,
+        "color": "amber"
       },
       {
-        "name": "居家空間清潔",
-        "sku": 3,
-        "gmv": 24303929,
-        "sharePct": 21
+        "name": "柔濕巾",
+        "count": 6,
+        "gmv": 158000,
+        "color": "primary"
       },
       {
-        "name": "個人潔淨",
-        "sku": 4,
-        "gmv": 22525593,
-        "sharePct": 19
+        "name": "除黴",
+        "count": 5,
+        "gmv": 142000,
+        "color": "violet"
       },
       {
-        "name": "廚房清潔",
-        "sku": 3,
-        "gmv": 4742230,
-        "sharePct": 4
+        "name": "沐浴",
+        "count": 7,
+        "gmv": 196000,
+        "color": "rose"
       },
       {
-        "name": "抗蟎除臭噴霧",
-        "sku": 4,
-        "gmv": 5927788,
-        "sharePct": 5
+        "name": "洗手",
+        "count": 4,
+        "gmv": 86000,
+        "color": "emerald"
+      },
+      {
+        "name": "其他",
+        "count": 2,
+        "gmv": 32000,
+        "color": "zinc"
       }
     ],
     "list": [
       {
-        "rank": 1,
-        "name": "洗衣精 4L",
-        "series": "織物衣物清潔",
-        "gmv": 35566726,
-        "units": 71133,
-        "aov": 500,
-        "sharePct": 30,
-        "trend": "up"
+        "sku": "CC-LD-001",
+        "name": "洗衣精 1.5L 補充包",
+        "category": "洗衣精",
+        "price": 380,
+        "stock": 1450,
+        "gmv": 156000,
+        "trend": 28
       },
       {
-        "rank": 2,
-        "name": "洗衣膠囊 盒",
-        "series": "織物衣物清潔",
-        "gmv": 21340035,
-        "units": 49860,
-        "aov": 428,
-        "sharePct": 18,
-        "trend": "up"
+        "sku": "CC-WT-003",
+        "name": "柔濕巾 80 抽 x3",
+        "category": "柔濕巾",
+        "price": 450,
+        "stock": 820,
+        "gmv": 98000,
+        "trend": -12
       },
       {
-        "rank": 3,
-        "name": "除黴凝膠 條",
-        "series": "居家空間清潔",
-        "gmv": 20154478,
-        "units": 47759,
-        "aov": 422,
-        "sharePct": 17,
-        "trend": "up"
+        "sku": "CC-MD-002",
+        "name": "除黴噴霧 500ml",
+        "category": "除黴",
+        "price": 320,
+        "stock": 620,
+        "gmv": 87000,
+        "trend": 5
       },
       {
-        "rank": 4,
-        "name": "沐浴露 瓶",
-        "series": "個人潔淨",
-        "gmv": 17783363,
-        "units": 43374,
-        "aov": 410,
-        "sharePct": 15,
-        "trend": "up"
+        "sku": "CC-SH-005",
+        "name": "沐浴乳 450ml",
+        "category": "沐浴",
+        "price": 280,
+        "stock": 1180,
+        "gmv": 76000,
+        "trend": 15
       },
       {
-        "rank": 5,
-        "name": "手洗精 瓶",
-        "series": "織物衣物清潔",
-        "gmv": 2371115,
-        "units": 7142,
-        "aov": 332,
-        "sharePct": 2,
-        "trend": "flat"
+        "sku": "CC-HW-001",
+        "name": "洗手液 250ml",
+        "category": "洗手",
+        "price": 180,
+        "stock": 950,
+        "gmv": 54000,
+        "trend": 8
       },
       {
-        "rank": 6,
-        "name": "浴室清潔 瓶",
-        "series": "居家空間清潔",
-        "gmv": 2371115,
-        "units": 7142,
-        "aov": 332,
-        "sharePct": 2,
-        "trend": "flat"
-      },
-      {
-        "rank": 7,
-        "name": "洗衣槽清潔 盒",
-        "series": "織物衣物清潔",
-        "gmv": 1778336,
-        "units": 5405,
-        "aov": 329,
-        "sharePct": 1.5,
-        "trend": "flat"
-      },
-      {
-        "rank": 8,
-        "name": "地板清潔 瓶",
-        "series": "居家空間清潔",
-        "gmv": 1778336,
-        "units": 5405,
-        "aov": 329,
-        "sharePct": 1.5,
-        "trend": "flat"
-      },
-      {
-        "rank": 9,
-        "name": "洗髮精 瓶",
-        "series": "個人潔淨",
-        "gmv": 1778336,
-        "units": 5405,
-        "aov": 329,
-        "sharePct": 1.5,
-        "trend": "flat"
-      },
-      {
-        "rank": 10,
-        "name": "洗面乳 瓶",
-        "series": "個人潔淨",
-        "gmv": 1778336,
-        "units": 5405,
-        "aov": 329,
-        "sharePct": 1.5,
-        "trend": "flat"
-      },
-      {
-        "rank": 11,
-        "name": "蔬果清潔 瓶",
-        "series": "廚房清潔",
-        "gmv": 1778336,
-        "units": 5405,
-        "aov": 329,
-        "sharePct": 1.5,
-        "trend": "flat"
-      },
-      {
-        "rank": 12,
-        "name": "碗盤精 瓶",
-        "series": "廚房清潔",
-        "gmv": 1778336,
-        "units": 5405,
-        "aov": 329,
-        "sharePct": 1.5,
-        "trend": "flat"
-      },
-      {
-        "rank": 13,
-        "name": "驅蟎噴霧 瓶",
-        "series": "抗蟎除臭噴霧",
-        "gmv": 1778336,
-        "units": 5405,
-        "aov": 329,
-        "sharePct": 1.5,
-        "trend": "flat"
-      },
-      {
-        "rank": 14,
-        "name": "抗菌噴霧 瓶",
-        "series": "抗蟎除臭噴霧",
-        "gmv": 1778336,
-        "units": 5405,
-        "aov": 329,
-        "sharePct": 1.5,
-        "trend": "flat"
-      },
-      {
-        "rank": 15,
-        "name": "洗手露 瓶",
-        "series": "個人潔淨",
-        "gmv": 1185558,
-        "units": 3637,
-        "aov": 326,
-        "sharePct": 1,
-        "trend": "down"
-      },
-      {
-        "rank": 16,
-        "name": "廚房慕斯 瓶",
-        "series": "廚房清潔",
-        "gmv": 1185558,
-        "units": 3637,
-        "aov": 326,
-        "sharePct": 1,
-        "trend": "down"
-      },
-      {
-        "rank": 17,
-        "name": "除臭噴霧 瓶",
-        "series": "抗蟎除臭噴霧",
-        "gmv": 1185558,
-        "units": 3637,
-        "aov": 326,
-        "sharePct": 1,
-        "trend": "down"
-      },
-      {
-        "rank": 18,
-        "name": "淨化噴霧 瓶",
-        "series": "抗蟎除臭噴霧",
-        "gmv": 1185558,
-        "units": 3637,
-        "aov": 326,
-        "sharePct": 1,
-        "trend": "down"
+        "sku": "CC-LD-005",
+        "name": "洗衣精補充包 x3 組",
+        "category": "洗衣精",
+        "price": 980,
+        "stock": 320,
+        "gmv": 142000,
+        "trend": 35
       }
     ]
   },
@@ -2846,29 +2605,24 @@
     },
     "topProducts": [
       {
-        "name": "洗衣精 4L",
-        "gmv": 5335009,
-        "share": 22.7
+        "name": "洗衣精 1.5L（戰略品）",
+        "gmv": 16000,
+        "share": 38.1
       },
       {
-        "name": "洗衣膠囊 盒",
-        "gmv": 3201005,
-        "share": 13.6
+        "name": "除黴噴霧 500ml",
+        "gmv": 11000,
+        "share": 26.2
       },
       {
-        "name": "除黴凝膠 條",
-        "gmv": 3023172,
-        "share": 12.9
+        "name": "柔濕巾 80 抽",
+        "gmv": 8500,
+        "share": 20.2
       },
       {
-        "name": "沐浴露 瓶",
-        "gmv": 2667504,
-        "share": 11.3
-      },
-      {
-        "name": "手洗精 瓶",
-        "gmv": 355667,
-        "share": 1.5
+        "name": "沐浴乳 450ml",
+        "gmv": 6500,
+        "share": 15.5
       }
     ],
     "split": {
@@ -3118,7 +2872,7 @@
           "platforms": [
             "全通路"
           ],
-          "description": "酷澎 Conpang轉換超預期，MoMo 需要爭取版位曝光，官網組合包前 3 天表現強。",
+          "description": "蝦皮直營轉換超預期，MoMo 需要爭取版位曝光，官網組合包前 3 天表現強。",
           "gmv": 129,
           "aov": 1392
         },
@@ -3560,526 +3314,344 @@
   "monthlyByPlatform": {
     "shopline": {
       "1月": {
-        "gmv": 20257430,
-        "target": 27374905,
-        "achievement": 74,
-        "orders": 12903,
-        "traffic": 605775,
-        "aov": 1570,
-        "sharePct": 20,
-        "adSpend": 5958068,
-        "roas": 3.4,
-        "cpa": 462,
-        "mom": 0,
-        "yoy": 4
+        "gmv": 4051486,
+        "target": 5023826,
+        "achievement": 81,
+        "orders": 2814,
+        "traffic": 208122,
+        "aov": 1440,
+        "adSpend": 1350480,
+        "roas": 3,
+        "cpa": 480,
+        "sharePct": 61,
+        "mom": 11,
+        "yoy": -31
       },
       "2月": {
-        "gmv": 19421245,
-        "target": 26244926,
-        "achievement": 74,
-        "orders": 12370,
-        "traffic": 580751,
-        "aov": 1570,
-        "sharePct": 20,
-        "adSpend": 5712131,
-        "roas": 3.4,
-        "cpa": 462,
+        "gmv": 3884249,
+        "target": 4166349,
+        "achievement": 93,
+        "orders": 2698,
+        "traffic": 95864,
+        "aov": 1440,
+        "adSpend": 1012808,
+        "roas": 3.8,
+        "cpa": 375,
+        "sharePct": 64,
         "mom": -4,
-        "yoy": 8
+        "yoy": -17
       },
       "3月": {
-        "gmv": 16113535,
-        "target": 21775047,
-        "achievement": 74,
-        "orders": 10263,
-        "traffic": 481831,
-        "aov": 1570,
-        "sharePct": 20,
-        "adSpend": 4739275,
-        "roas": 3.4,
-        "cpa": 462,
-        "mom": -17,
-        "yoy": 12
+        "gmv": 3222707,
+        "target": 5253289,
+        "achievement": 61,
+        "orders": 2251,
+        "traffic": 123103,
+        "aov": 1431,
+        "adSpend": 1125094,
+        "roas": 2.9,
+        "cpa": 500,
+        "sharePct": 60,
+        "mom": -8,
+        "yoy": -33
       },
       "4月": {
-        "gmv": 15648820,
-        "target": 21147054,
-        "achievement": 74,
-        "orders": 9967,
-        "traffic": 467934,
-        "aov": 1570,
-        "sharePct": 20,
-        "adSpend": 4602594,
-        "roas": 3.4,
-        "cpa": 462,
-        "mom": -3,
-        "yoy": 16
+        "gmv": 3129764,
+        "target": 4024153,
+        "achievement": 78,
+        "orders": 2233,
+        "traffic": 128810,
+        "aov": 1402,
+        "adSpend": 1277541,
+        "roas": 2.4,
+        "cpa": 572,
+        "sharePct": 51,
+        "mom": -9,
+        "yoy": -25
       },
       "5月": {
-        "gmv": 23711150,
-        "target": 32042095,
+        "gmv": 4742230,
+        "target": 6373776,
         "achievement": 74,
-        "orders": 15103,
-        "traffic": 709061,
+        "orders": 3021,
+        "traffic": 141734,
         "aov": 1570,
-        "sharePct": 20,
-        "adSpend": 6973868,
+        "adSpend": 1391399,
         "roas": 3.4,
-        "cpa": 462,
-        "mom": 52,
-        "yoy": 20
+        "cpa": 461,
+        "sharePct": 62,
+        "mom": 53,
+        "yoy": -10
       }
     },
     "shopee": {
       "1月": {
-        "gmv": 35450503,
-        "target": 30042799,
-        "achievement": 118,
-        "orders": 37874,
-        "traffic": 1147697,
-        "aov": 936,
+        "gmv": 2133222,
+        "target": 2095451,
+        "achievement": 102,
+        "orders": 2374,
+        "traffic": 82235,
+        "aov": 899,
+        "adSpend": 316517,
+        "roas": 6.7,
+        "cpa": 133,
         "sharePct": 35,
-        "adSpend": null,
-        "roas": null,
-        "cpa": null,
-        "mom": 0,
-        "yoy": 4
+        "mom": -1,
+        "yoy": 173
       },
       "2月": {
-        "gmv": 33987179,
-        "target": 28802694,
-        "achievement": 118,
-        "orders": 36311,
-        "traffic": 1100333,
-        "aov": 936,
-        "sharePct": 35,
-        "adSpend": null,
-        "roas": null,
-        "cpa": null,
-        "mom": -4,
-        "yoy": 8
+        "gmv": 1958189,
+        "target": 1534694,
+        "achievement": 128,
+        "orders": 2037,
+        "traffic": 91789,
+        "aov": 962,
+        "adSpend": 286172,
+        "roas": 6.8,
+        "cpa": 141,
+        "sharePct": 32,
+        "mom": -16,
+        "yoy": 137
       },
       "3月": {
-        "gmv": 28198686,
-        "target": 23897192,
-        "achievement": 118,
-        "orders": 30127,
-        "traffic": 912939,
-        "aov": 936,
-        "sharePct": 35,
-        "adSpend": null,
-        "roas": null,
-        "cpa": null,
-        "mom": -17,
-        "yoy": 12
-      },
-      "4月": {
-        "gmv": 27385435,
-        "target": 23207996,
-        "achievement": 118,
-        "orders": 29258,
-        "traffic": 886606,
-        "aov": 936,
-        "sharePct": 35,
-        "adSpend": null,
-        "roas": null,
-        "cpa": null,
-        "mom": -3,
-        "yoy": 16
-      },
-      "5月": {
-        "gmv": 41494513,
-        "target": 35164842,
-        "achievement": 118,
-        "orders": 44332,
-        "traffic": 1343394,
-        "aov": 936,
-        "sharePct": 35,
-        "adSpend": null,
-        "roas": null,
-        "cpa": null,
-        "mom": 52,
-        "yoy": 20
-      }
-    },
-    "pchome": {
-      "1月": {
-        "gmv": 5064358,
-        "target": 5504737,
-        "achievement": 92,
-        "orders": 4870,
-        "traffic": 273596,
-        "aov": 1040,
-        "sharePct": 5,
-        "adSpend": null,
-        "roas": null,
-        "cpa": null,
+        "gmv": 2080719,
+        "target": 2031883,
+        "achievement": 102,
+        "orders": 2152,
+        "traffic": 89606,
+        "aov": 967,
+        "adSpend": 315408,
+        "roas": 6.6,
+        "cpa": 147,
+        "sharePct": 33,
         "mom": 0,
-        "yoy": 4
-      },
-      "2月": {
-        "gmv": 4855311,
-        "target": 5277512,
-        "achievement": 92,
-        "orders": 4669,
-        "traffic": 262303,
-        "aov": 1040,
-        "sharePct": 5,
-        "adSpend": null,
-        "roas": null,
-        "cpa": null,
-        "mom": -4,
-        "yoy": 8
-      },
-      "3月": {
-        "gmv": 4028384,
-        "target": 4378678,
-        "achievement": 92,
-        "orders": 3873,
-        "traffic": 217584,
-        "aov": 1040,
-        "sharePct": 5,
-        "adSpend": null,
-        "roas": null,
-        "cpa": null,
-        "mom": -17,
-        "yoy": 12
+        "yoy": 121
       },
       "4月": {
-        "gmv": 3912205,
-        "target": 4252397,
-        "achievement": 92,
-        "orders": 3762,
-        "traffic": 211348,
-        "aov": 1040,
-        "sharePct": 5,
-        "adSpend": null,
-        "roas": null,
-        "cpa": null,
-        "mom": -3,
-        "yoy": 16
+        "gmv": 2577489,
+        "target": 2947386,
+        "achievement": 87,
+        "orders": 2769,
+        "traffic": 94669,
+        "aov": 931,
+        "adSpend": 357517,
+        "roas": 7.2,
+        "cpa": 129,
+        "sharePct": 37,
+        "mom": 20,
+        "yoy": 120
       },
       "5月": {
-        "gmv": 5927788,
-        "target": 6443248,
-        "achievement": 92,
-        "orders": 5700,
-        "traffic": 320225,
-        "aov": 1040,
-        "sharePct": 5,
-        "adSpend": null,
-        "roas": null,
-        "cpa": null,
-        "mom": 52,
-        "yoy": 20
+        "gmv": 2122298,
+        "target": 1795952,
+        "achievement": 118,
+        "orders": 2266,
+        "traffic": 68149,
+        "aov": 936,
+        "adSpend": 299902,
+        "roas": 7.1,
+        "cpa": 132,
+        "sharePct": 28,
+        "mom": -3,
+        "yoy": 131
       }
     },
     "momo": {
       "1月": {
-        "gmv": 25321788,
-        "target": 29105503,
-        "achievement": 87,
-        "orders": 21569,
-        "traffic": 1078450,
-        "aov": 1174,
-        "sharePct": 25,
-        "adSpend": null,
-        "roas": null,
-        "cpa": null,
-        "mom": 0,
-        "yoy": 4
+        "gmv": 197843,
+        "target": 234487,
+        "achievement": 84,
+        "orders": 189,
+        "traffic": 5712,
+        "aov": 1047,
+        "adSpend": 4966,
+        "roas": 39.8,
+        "cpa": 26,
+        "sharePct": 3,
+        "mom": -25,
+        "yoy": null
       },
       "2月": {
-        "gmv": 24276556,
-        "target": 27904087,
-        "achievement": 87,
-        "orders": 20678,
-        "traffic": 1033900,
-        "aov": 1174,
-        "sharePct": 25,
-        "adSpend": null,
-        "roas": null,
-        "cpa": null,
-        "mom": -4,
-        "yoy": 8
+        "gmv": 242766,
+        "target": 221358,
+        "achievement": 110,
+        "orders": 228,
+        "traffic": 7592,
+        "aov": 1063,
+        "adSpend": 15163,
+        "roas": 16,
+        "cpa": 66,
+        "sharePct": 3,
+        "mom": -7,
+        "yoy": 7173
       },
       "3月": {
-        "gmv": 20141919,
-        "target": 23151631,
-        "achievement": 87,
-        "orders": 17157,
-        "traffic": 857850,
-        "aov": 1174,
-        "sharePct": 25,
-        "adSpend": null,
-        "roas": null,
-        "cpa": null,
-        "mom": -17,
-        "yoy": 12
+        "gmv": 347815,
+        "target": 572746,
+        "achievement": 61,
+        "orders": 307,
+        "traffic": 9758,
+        "aov": 1134,
+        "adSpend": 29272,
+        "roas": 11.9,
+        "cpa": 95,
+        "sharePct": 5,
+        "mom": 44,
+        "yoy": 22
       },
       "4月": {
-        "gmv": 19561025,
-        "target": 22483937,
-        "achievement": 87,
-        "orders": 16662,
-        "traffic": 833100,
-        "aov": 1174,
-        "sharePct": 25,
-        "adSpend": null,
-        "roas": null,
-        "cpa": null,
-        "mom": -3,
-        "yoy": 16
-      },
-      "5月": {
-        "gmv": 29638938,
-        "target": 34067745,
-        "achievement": 87,
-        "orders": 25246,
-        "traffic": 1262300,
-        "aov": 1174,
-        "sharePct": 25,
-        "adSpend": null,
-        "roas": null,
-        "cpa": null,
-        "mom": 52,
-        "yoy": 20
-      }
-    },
-    "conpang": {
-      "1月": {
-        "gmv": 15193073,
-        "target": 18528138,
-        "achievement": 82,
-        "orders": 15193,
-        "traffic": 893706,
-        "aov": 1000,
-        "sharePct": 15,
-        "adSpend": null,
-        "roas": null,
-        "cpa": null,
-        "mom": 0,
-        "yoy": 4
-      },
-      "2月": {
-        "gmv": 14565934,
-        "target": 17763334,
-        "achievement": 82,
-        "orders": 14566,
-        "traffic": 856824,
-        "aov": 1000,
-        "sharePct": 15,
-        "adSpend": null,
-        "roas": null,
-        "cpa": null,
-        "mom": -4,
+        "gmv": 315119,
+        "target": 296918,
+        "achievement": 106,
+        "orders": 261,
+        "traffic": 8690,
+        "aov": 1209,
+        "adSpend": 24525,
+        "roas": 12.8,
+        "cpa": 94,
+        "sharePct": 5,
+        "mom": 8,
         "yoy": 8
       },
-      "3月": {
-        "gmv": 12085151,
-        "target": 14737989,
-        "achievement": 82,
-        "orders": 12085,
-        "traffic": 710882,
-        "aov": 1000,
-        "sharePct": 15,
-        "adSpend": null,
-        "roas": null,
-        "cpa": null,
-        "mom": -17,
-        "yoy": 12
-      },
-      "4月": {
-        "gmv": 11736615,
-        "target": 14312945,
-        "achievement": 82,
-        "orders": 11737,
-        "traffic": 690412,
-        "aov": 1000,
-        "sharePct": 15,
-        "adSpend": null,
-        "roas": null,
-        "cpa": null,
-        "mom": -3,
-        "yoy": 16
-      },
       "5月": {
-        "gmv": 17783363,
-        "target": 21687028,
-        "achievement": 82,
-        "orders": 17783,
-        "traffic": 1046059,
-        "aov": 1000,
-        "sharePct": 15,
-        "adSpend": null,
-        "roas": null,
-        "cpa": null,
-        "mom": 52,
-        "yoy": 20
+        "gmv": 440372,
+        "target": 505769,
+        "achievement": 87,
+        "orders": 375,
+        "traffic": 12453,
+        "aov": 1174,
+        "adSpend": 27692,
+        "roas": 15.9,
+        "cpa": 74,
+        "sharePct": 5,
+        "mom": 23,
+        "yoy": 91
       }
     }
   },
   "monthlyTotal": {
     "1月": {
-      "gmv": 101287152,
-      "target": 110556082,
-      "achievement": 92,
-      "orders": 92409,
-      "traffic": 3999224,
-      "aov": 1096,
-      "adSpend": 18415846,
-      "roas": 5.5,
-      "cpa": 199
+      "gmv": 6517757,
+      "target": 7478303,
+      "achievement": 87,
+      "orders": 5545,
+      "traffic": 300393,
+      "aov": 1175,
+      "adSpend": 1679604,
+      "roas": 3.9,
+      "cpa": 303
     },
     "2月": {
-      "gmv": 97106225,
-      "target": 105992553,
-      "achievement": 92,
-      "orders": 88594,
-      "traffic": 3834111,
-      "aov": 1096,
-      "adSpend": 17655677,
-      "roas": 5.5,
-      "cpa": 199
+      "gmv": 6667983,
+      "target": 6497233,
+      "achievement": 103,
+      "orders": 5427,
+      "traffic": 213564,
+      "aov": 1229,
+      "adSpend": 1447895,
+      "roas": 4.6,
+      "cpa": 267
     },
     "3月": {
-      "gmv": 80567675,
-      "target": 87940537,
-      "achievement": 92,
-      "orders": 73505,
-      "traffic": 3181086,
-      "aov": 1096,
-      "adSpend": 14648668,
-      "roas": 5.5,
-      "cpa": 199
+      "gmv": 7270770,
+      "target": 10064310,
+      "achievement": 72,
+      "orders": 5840,
+      "traffic": 279910,
+      "aov": 1245,
+      "adSpend": 1920473,
+      "roas": 3.8,
+      "cpa": 329
     },
     "4月": {
-      "gmv": 78244100,
-      "target": 85404329,
-      "achievement": 92,
-      "orders": 71386,
-      "traffic": 3089400,
-      "aov": 1096,
-      "adSpend": 14226200,
-      "roas": 5.5,
-      "cpa": 199
+      "gmv": 5582000,
+      "target": 6308722,
+      "achievement": 88,
+      "orders": 4491,
+      "traffic": 201461,
+      "aov": 1243,
+      "adSpend": 1478969,
+      "roas": 3.8,
+      "cpa": 329
     },
     "5月": {
-      "gmv": 118555752,
-      "target": 129404958,
-      "achievement": 92,
-      "orders": 108164,
-      "traffic": 4681039,
-      "aov": 1096,
-      "adSpend": 21555591,
-      "roas": 5.5,
-      "cpa": 199
+      "gmv": 8485524,
+      "target": 9636108,
+      "achievement": 88,
+      "orders": 6293,
+      "traffic": 247238,
+      "aov": 1348,
+      "adSpend": 1920229,
+      "roas": 4.4,
+      "cpa": 305
     }
   },
   "weekOverWeek": {
     "shopline": {
       "last7": {
-        "gmv": 5532602,
-        "traffic": 165446,
-        "cr": 2.13,
-        "aov": 1570,
-        "roas": 3.4
+        "gmv": 712017,
+        "traffic": 36212,
+        "cr": 1.49,
+        "aov": 1302,
+        "roas": 2
       },
       "prev7": {
-        "gmv": 5089994,
-        "traffic": 155519,
-        "cr": 2.04,
-        "aov": 1570,
-        "roas": 3.2
+        "gmv": 931817,
+        "traffic": 46482,
+        "cr": 1.73,
+        "aov": 1318,
+        "roas": 2.4
       },
-      "insight": "官網近 7 天廣告效率待修，私域回購是補量重點。",
+      "insight": "🚨 流量與轉換率同步下滑，主因 5/25 起預算移轉到沉睡會員喚醒（AD-004），常規廣告降溫。建議：若 6/15 前喚醒 ROAS 沒回到 2.5x，6/16 起恢復常規廣告",
       "actionPriority": "red",
       "traceTo": [
-        "C-2606-01"
+        "C-2606-03",
+        "AD-004"
       ]
     },
     "shopee": {
       "last7": {
-        "gmv": 9682053,
-        "traffic": 313455,
-        "cr": 3.3,
-        "aov": 936,
-        "roas": null
+        "gmv": 593886,
+        "traffic": 22147,
+        "cr": 5.5,
+        "aov": 921,
+        "roas": 6.6
       },
       "prev7": {
-        "gmv": 8907489,
-        "traffic": 294648,
-        "cr": 3.17,
-        "aov": 936,
-        "roas": null
+        "gmv": 674982,
+        "traffic": 26512,
+        "cr": 4.96,
+        "aov": 966,
+        "roas": 6.5
       },
-      "insight": "蝦皮：近 7 天 vs 前 7 天依檔期波動；廣告數據於平台後台。",
-      "actionPriority": "green",
-      "traceTo": [
-        "C-2606-01"
-      ]
-    },
-    "pchome": {
-      "last7": {
-        "gmv": 1383151,
-        "traffic": 74719,
-        "cr": 1.78,
-        "aov": 1040,
-        "roas": null
-      },
-      "prev7": {
-        "gmv": 1272499,
-        "traffic": 70236,
-        "cr": 1.71,
-        "aov": 1040,
-        "roas": null
-      },
-      "insight": "PCHOME：近 7 天 vs 前 7 天依檔期波動；廣告數據於平台後台。",
+      "insight": "🎯 轉換率↑因「沐浴 SET」廣告（AD-002）精準命中，建議於 6/8 起聯盟分潤加碼（AD-005）已啟動，預期下週流量回升",
       "actionPriority": "amber",
       "traceTo": [
-        "C-2606-01"
+        "C-2606-02",
+        "AD-002",
+        "AD-005"
       ]
     },
     "momo": {
       "last7": {
-        "gmv": 6915752,
-        "traffic": 294550,
-        "cr": 2,
-        "aov": 1174,
-        "roas": null
+        "gmv": 102295,
+        "traffic": 2132,
+        "cr": 7.81,
+        "aov": 1203,
+        "roas": 23.9
       },
       "prev7": {
-        "gmv": 6362492,
-        "traffic": 276877,
-        "cr": 1.92,
-        "aov": 1174,
-        "roas": null
+        "gmv": 107620,
+        "traffic": 2240,
+        "cr": 7.04,
+        "aov": 1157,
+        "roas": 22
       },
-      "insight": "MOMO：近 7 天 vs 前 7 天依檔期波動；廣告數據於平台後台。",
-      "actionPriority": "amber",
+      "insight": "🚀 「除黴噴霧」競價提升（AD-003）效果顯著，ROAS 23.9x，建議將相同策略複製到 MoMo「洗衣精」關鍵字測試（提報下次週會）",
+      "actionPriority": "green",
       "traceTo": [
-        "C-2606-01"
-      ]
-    },
-    "conpang": {
-      "last7": {
-        "gmv": 4149451,
-        "traffic": 244059,
-        "cr": 1.7,
-        "aov": 1000,
-        "roas": null
-      },
-      "prev7": {
-        "gmv": 3817495,
-        "traffic": 229415,
-        "cr": 1.63,
-        "aov": 1000,
-        "roas": null
-      },
-      "insight": "酷澎 Conpang：近 7 天 vs 前 7 天依檔期波動；廣告數據於平台後台。",
-      "actionPriority": "amber",
-      "traceTo": [
-        "C-2606-01"
+        "C-2606-04",
+        "AD-003"
       ]
     }
   },
@@ -4090,99 +3662,96 @@
     "prevWeekEnd": "2026-06-04",
     "categories": [
       {
-        "name": "織物衣物清潔",
+        "name": "洗衣精",
         "icon": "🧺",
-        "totalGmv": 14199119,
-        "sharePct": 52,
-        "wowPct": 24,
+        "totalGmv": 1248000,
+        "sharePct": 38,
+        "wowPct": 28,
         "platforms": {
-          "shopline": 2839824,
-          "shopee": 4969692,
-          "pchome": 709956,
-          "momo": 3549780,
-          "conpang": 2129868
+          "shopline": 480000,
+          "shopee": 520000,
+          "momo": 168000,
+          "shopeeDirect": 80000
         },
-        "adAction": "官網私域洗衣精 SET 主推 + 蝦皮 618 預熱",
-        "reaction": "蝦皮 +31% / 官網 +24% / MOMO +18%",
+        "adAction": "【C-2606-01】Meta 加碼母嬰節廣告組（5/28 起）、洗衣精 SET 主推",
+        "reaction": "蝦皮 +35% / 官網 +28% / MoMo +22%",
         "traceTo": [
-          "C-2606-01"
+          "C-2606-01",
+          "AD-001"
         ]
       },
       {
-        "name": "居家空間清潔",
-        "icon": "🏠",
-        "totalGmv": 5652077,
-        "sharePct": 21,
-        "wowPct": 11,
-        "platforms": {
-          "shopline": 1130415,
-          "shopee": 1978227,
-          "pchome": 282604,
-          "momo": 1413019,
-          "conpang": 847812
-        },
-        "adAction": "除黴凝膠夏季旺季鋪量（蝦皮/MOMO）",
-        "reaction": "蝦皮 +18% / MOMO +12%",
-        "traceTo": [
-          "C-2606-01"
-        ]
-      },
-      {
-        "name": "個人潔淨",
+        "name": "沐浴用品",
         "icon": "🧴",
-        "totalGmv": 5238510,
-        "sharePct": 19,
-        "wowPct": 16,
+        "totalGmv": 758000,
+        "sharePct": 23,
+        "wowPct": 18,
         "platforms": {
-          "shopline": 1047702,
-          "shopee": 1833479,
-          "pchome": 261926,
-          "momo": 1309628,
-          "conpang": 785777
+          "shopline": 220000,
+          "shopee": 380000,
+          "momo": 120000,
+          "shopeeDirect": 38000
         },
-        "adAction": "沐浴露 SET 夏季檔 + 官網私域推播",
-        "reaction": "官網 +16% / 蝦皮 +20%",
+        "adAction": "【C-2606-02】蝦皮關鍵字加碼「沐浴 SET」（6/1 起）、聯盟分潤 +5%",
+        "reaction": "蝦皮 +20% / MoMo +12% / 官網 +8%",
         "traceTo": [
-          "C-2606-01"
+          "C-2606-02",
+          "AD-002"
         ]
       },
       {
-        "name": "廚房清潔",
-        "icon": "🍽️",
-        "totalGmv": 1102844,
-        "sharePct": 4,
-        "wowPct": -6,
+        "name": "柔濕巾",
+        "icon": "🧻",
+        "totalGmv": 412000,
+        "sharePct": 12,
+        "wowPct": -13,
         "platforms": {
-          "shopline": 220569,
-          "shopee": 385995,
-          "pchome": 55142,
-          "momo": 275711,
-          "conpang": 165427
+          "shopline": 168000,
+          "shopee": 152000,
+          "momo": 72000,
+          "shopeeDirect": 20000
         },
-        "adAction": "無主推（自然動能）",
-        "reaction": "平台普遍持平至小幅下滑",
+        "adAction": "【C-2606-06】618 主動排除廣告（節省預算移至洗衣精+沐浴，策略性）",
+        "reaction": "官網 -12% / 蝦皮 -15% / MoMo -10%（預期內）",
         "traceTo": [
-          "C-2606-01"
+          "C-2606-06",
+          "AD-006"
         ]
       },
       {
-        "name": "抗蟎除臭噴霧",
-        "icon": "💨",
-        "totalGmv": 1378555,
-        "sharePct": 5,
-        "wowPct": 8,
+        "name": "除黴/清潔",
+        "icon": "🫧",
+        "totalGmv": 528000,
+        "sharePct": 16,
+        "wowPct": 14,
         "platforms": {
-          "shopline": 275711,
-          "shopee": 482494,
-          "pchome": 68928,
-          "momo": 344639,
-          "conpang": 206783
+          "shopline": 145000,
+          "shopee": 220000,
+          "momo": 110000,
+          "shopeeDirect": 53000
         },
-        "adAction": "驅蟎噴霧新品上市測試（PCHOME + 酷澎）",
-        "reaction": "PCHOME 首購帶量 / 整體 +8%",
+        "adAction": "【C-2606-04】MoMo 關鍵字「除黴噴霧」競價提升 25%、首頁推薦",
+        "reaction": "蝦皮 +12% / 整體 +14%",
         "traceTo": [
-          "C-2606-01"
+          "C-2606-04",
+          "AD-003"
         ]
+      },
+      {
+        "name": "其他/配件",
+        "icon": "📦",
+        "totalGmv": 354000,
+        "sharePct": 11,
+        "wowPct": 4,
+        "platforms": {
+          "shopline": 95000,
+          "shopee": 145000,
+          "momo": 78000,
+          "shopeeDirect": 36000
+        },
+        "adAction": "無重大廣告動作（保留 618 主檔 C-2606-05 預算）",
+        "reaction": "緩升 +4%",
+        "traceTo": []
       }
     ]
   },
@@ -4218,16 +3787,16 @@
     },
     {
       "id": "C-2606-03",
-      "name": "沉睡會員喚醒（洗衣膠囊免費試用）",
+      "name": "沉睡會員喚醒（柔濕巾免費試用）",
       "period": "5/25 ~ 6/15",
       "status": "進行中",
       "owner": "Johnny+宋小芳(CRM)",
       "platform": [
         "shopline"
       ],
-      "mainCategory": "洗衣膠囊",
-      "action": "漸強 MAAC 推送 13 萬沉睡會員，1 包洗衣膠囊免費試用、自付運費 $60",
-      "expectedImpact": "官網洗衣膠囊保留水位，回購率 +12%"
+      "mainCategory": "柔濕巾",
+      "action": "漸強 MAAC 推送 13 萬沉睡會員，1 包柔濕巾免費試用、自付運費 $60",
+      "expectedImpact": "官網柔濕巾保留水位，回購率 +12%"
     },
     {
       "id": "C-2606-04",
@@ -4238,9 +3807,9 @@
       "platform": [
         "momo"
       ],
-      "mainCategory": "除黴凝膠/清潔",
-      "action": "MoMo 關鍵字「除黴凝膠」競價 +25%、首頁推薦版位加購",
-      "expectedImpact": "MoMo 除黴凝膠品類 +15%"
+      "mainCategory": "除黴/清潔",
+      "action": "MoMo 關鍵字「除黴噴霧」競價 +25%、首頁推薦版位加購",
+      "expectedImpact": "MoMo 除黴品類 +15%"
     },
     {
       "id": "C-2606-05",
@@ -4260,7 +3829,7 @@
     },
     {
       "id": "C-2606-06",
-      "name": "洗衣膠囊 618 排除策略",
+      "name": "柔濕巾 618 排除策略",
       "period": "6/8 ~ 6/20",
       "status": "進行中",
       "owner": "Johnny",
@@ -4269,9 +3838,9 @@
         "shopee",
         "momo"
       ],
-      "mainCategory": "洗衣膠囊",
-      "action": "洗衣膠囊 618 不投廣告、預算移轉至洗衣精+沐浴",
-      "expectedImpact": "洗衣膠囊預期 -10~15%（策略性，非異常）"
+      "mainCategory": "柔濕巾",
+      "action": "柔濕巾 618 不投廣告、預算移轉至洗衣精+沐浴",
+      "expectedImpact": "柔濕巾預期 -10~15%（策略性，非異常）"
     }
   ],
   "adActionsMaster": [
@@ -4293,14 +3862,14 @@
       "id": "AD-003",
       "platform": "MoMo 站內",
       "date": "6/1",
-      "action": "「除黴凝膠」競價 +25%、首頁推薦",
+      "action": "「除黴噴霧」競價 +25%、首頁推薦",
       "linkedCampaign": "C-2606-04"
     },
     {
       "id": "AD-004",
       "platform": "漸強 MAAC",
       "date": "5/25",
-      "action": "13 萬沉睡 + 7 萬 LINE UID 推洗衣膠囊試用",
+      "action": "13 萬沉睡 + 7 萬 LINE UID 推柔濕巾試用",
       "linkedCampaign": "C-2606-03"
     },
     {
@@ -4314,7 +3883,7 @@
       "id": "AD-006",
       "platform": "Meta + Google",
       "date": "6/8 起暫停",
-      "action": "洗衣膠囊 618 廣告全停（策略性）",
+      "action": "柔濕巾 618 廣告全停（策略性）",
       "linkedCampaign": "C-2606-06"
     }
   ],
@@ -4434,13 +4003,13 @@
         "kpiImpact": "保住蝦皮 618 預熱 ROAS > 3x"
       },
       {
-        "problem": "洗衣膠囊 618 戰略性砍預算（預期 -10~15%）",
+        "problem": "柔濕巾 618 戰略性砍預算（預期 -10~15%）",
         "shortTermFix": "6/8 起 Meta + Google 廣告全停（C-2606-06）",
         "shortTermStatus": "done",
-        "longTermFix": "7 月推洗衣膠囊回擊檔（官網 VIP 私域促銷）— 不打公開折扣",
+        "longTermFix": "7 月推柔濕巾回擊檔（官網 VIP 私域促銷）— 不打公開折扣",
         "longTermStatus": "pending",
         "owner": "Johnny",
-        "kpiImpact": "7 月洗衣膠囊預估 GMV +20% MoM"
+        "kpiImpact": "7 月柔濕巾預估 GMV +20% MoM"
       }
     ]
   },
@@ -4456,8 +4025,8 @@
         "creditUsageRate": 22,
         "preferredCategories": [
           "洗衣精",
-          "洗衣膠囊",
-          "廚房慕斯"
+          "柔濕巾",
+          "家事皂"
         ],
         "avgLTV": 4920,
         "color": "stone"
@@ -4472,7 +4041,7 @@
         "preferredCategories": [
           "洗衣精 SET",
           "沐浴用品",
-          "洗面乳"
+          "潔顏三部曲"
         ],
         "avgLTV": 18650,
         "color": "amber"
@@ -4539,7 +4108,7 @@
           "tier": "白金",
           "daysSinceOrder": 76,
           "ltv": 65800,
-          "preferredCategory": "洗面乳"
+          "preferredCategory": "潔顏三部曲"
         },
         {
           "id": "VIP-C",
@@ -4553,14 +4122,14 @@
           "tier": "金",
           "daysSinceOrder": 68,
           "ltv": 38900,
-          "preferredCategory": "廚房慕斯"
+          "preferredCategory": "家事皂"
         },
         {
           "id": "VIP-E",
           "tier": "金",
           "daysSinceOrder": 84,
           "ltv": 35200,
-          "preferredCategory": "洗衣膠囊"
+          "preferredCategory": "柔濕巾"
         }
       ]
     },
@@ -4635,10 +4204,10 @@
         "discountRate": 8,
         "reuseTimes": 4,
         "verdict": "top3",
-        "insight": "除黴凝膠長期王牌，搭配首頁 banner 效果穩"
+        "insight": "除黴噴霧長期王牌，搭配首頁 banner 效果穩"
       },
       {
-        "name": "沉睡會員喚醒（洗衣膠囊試用）",
+        "name": "沉睡會員喚醒（柔濕巾試用）",
         "period": "5/25 ~ 6/15",
         "spend": 48000,
         "gmv": 198000,
@@ -4684,7 +4253,7 @@
   },
   "productInventory": {
     "period": "當下",
-    "totalSku": 18,
+    "totalSku": 47,
     "summary": {
       "critical": 3,
       "healthy": 18,
@@ -4693,187 +4262,117 @@
     },
     "items": [
       {
-        "name": "洗衣精 4L",
-        "series": "織物衣物清潔",
-        "stock": 11856,
-        "dailyAvg": 2371.1,
-        "inventoryDays": 5,
-        "status": "缺貨警示",
-        "statusColor": "red",
-        "suggestion": "立即補貨"
+        "sku": "WSH-001",
+        "name": "真濃縮洗衣精 800ML",
+        "category": "洗衣精",
+        "stock": 42,
+        "daily30d": 28,
+        "daysLeft": 1.5,
+        "status": "critical",
+        "action": "⚡ 立即補貨 800 瓶"
       },
       {
-        "name": "洗衣膠囊 盒",
-        "series": "織物衣物清潔",
-        "stock": 8310,
-        "dailyAvg": 1662,
-        "inventoryDays": 5,
-        "status": "缺貨警示",
-        "statusColor": "red",
-        "suggestion": "立即補貨"
+        "sku": "WSH-008",
+        "name": "洗衣精補充瓶 1L",
+        "category": "洗衣精",
+        "stock": 65,
+        "daily30d": 18,
+        "daysLeft": 3.6,
+        "status": "critical",
+        "action": "⚡ 補貨 500 瓶"
       },
       {
-        "name": "手洗精 瓶",
-        "series": "織物衣物清潔",
-        "stock": 10713,
-        "dailyAvg": 238.1,
-        "inventoryDays": 45,
-        "status": "偏多",
-        "statusColor": "amber",
-        "suggestion": "觀察"
+        "sku": "BTH-003",
+        "name": "胺基酸沐浴乳 500ML",
+        "category": "沐浴",
+        "stock": 88,
+        "daily30d": 22,
+        "daysLeft": 4,
+        "status": "critical",
+        "action": "⚡ 補貨 600 瓶"
       },
       {
-        "name": "洗衣槽清潔 盒",
-        "series": "織物衣物清潔",
-        "stock": 21621,
-        "dailyAvg": 180.2,
-        "inventoryDays": 120,
-        "status": "滯銷",
-        "statusColor": "stone",
-        "suggestion": "清倉/改組合"
+        "sku": "WSH-002",
+        "name": "洗衣精 SET 2 入",
+        "category": "洗衣精",
+        "stock": 320,
+        "daily30d": 18,
+        "daysLeft": 17.8,
+        "status": "healthy",
+        "action": "✓ 健康"
       },
       {
-        "name": "除黴凝膠 條",
-        "series": "居家空間清潔",
-        "stock": 7960,
-        "dailyAvg": 1592,
-        "inventoryDays": 5,
-        "status": "缺貨警示",
-        "statusColor": "red",
-        "suggestion": "立即補貨"
+        "sku": "FAC-005",
+        "name": "潔顏三部曲",
+        "category": "洗面乳",
+        "stock": 285,
+        "daily30d": 14,
+        "daysLeft": 20.4,
+        "status": "healthy",
+        "action": "✓ 健康"
       },
       {
-        "name": "浴室清潔 瓶",
-        "series": "居家空間清潔",
-        "stock": 4285,
-        "dailyAvg": 238.1,
-        "inventoryDays": 18,
-        "status": "健康",
-        "statusColor": "green",
-        "suggestion": "健康"
+        "sku": "BTH-001",
+        "name": "沐浴 SET",
+        "category": "沐浴",
+        "stock": 198,
+        "daily30d": 11,
+        "daysLeft": 18,
+        "status": "healthy",
+        "action": "✓ 健康"
       },
       {
-        "name": "地板清潔 瓶",
-        "series": "居家空間清潔",
-        "stock": 8108,
-        "dailyAvg": 180.2,
-        "inventoryDays": 45,
-        "status": "偏多",
-        "statusColor": "amber",
-        "suggestion": "觀察"
+        "sku": "WET-002",
+        "name": "柔濕巾旅行裝",
+        "category": "柔濕巾",
+        "stock": 450,
+        "daily30d": 8,
+        "daysLeft": 56.3,
+        "status": "excess",
+        "action": "⚠ 庫存偏多，考慮促銷"
       },
       {
-        "name": "沐浴露 瓶",
-        "series": "個人潔淨",
-        "stock": 7229,
-        "dailyAvg": 1445.8,
-        "inventoryDays": 5,
-        "status": "缺貨警示",
-        "statusColor": "red",
-        "suggestion": "立即補貨"
+        "sku": "FAC-008",
+        "name": "溫和洗面乳 200ML",
+        "category": "洗面乳",
+        "stock": 380,
+        "daily30d": 6,
+        "daysLeft": 63.3,
+        "status": "excess",
+        "action": "⚠ 庫存偏多"
       },
       {
-        "name": "洗髮精 瓶",
-        "series": "個人潔淨",
-        "stock": 901,
-        "dailyAvg": 180.2,
-        "inventoryDays": 5,
-        "status": "缺貨警示",
-        "statusColor": "red",
-        "suggestion": "立即補貨"
+        "sku": "WET-007",
+        "name": "柔濕巾經典包 (舊版)",
+        "category": "柔濕巾",
+        "stock": 1240,
+        "daily30d": 0,
+        "daysLeft": 999,
+        "status": "dead",
+        "action": "💀 30 天無訂單 — 清倉 / 下架"
       },
       {
-        "name": "洗面乳 瓶",
-        "series": "個人潔淨",
-        "stock": 3243,
-        "dailyAvg": 180.2,
-        "inventoryDays": 18,
-        "status": "健康",
-        "statusColor": "green",
-        "suggestion": "健康"
+        "sku": "OLD-003",
+        "name": "家事皂禮盒 2025 春",
+        "category": "家事皂",
+        "stock": 680,
+        "daily30d": 0,
+        "daysLeft": 999,
+        "status": "dead",
+        "action": "💀 30 天無訂單 — 清倉"
       },
       {
-        "name": "洗手露 瓶",
-        "series": "個人潔淨",
-        "stock": 5455,
-        "dailyAvg": 121.2,
-        "inventoryDays": 45,
-        "status": "偏多",
-        "statusColor": "amber",
-        "suggestion": "觀察"
-      },
-      {
-        "name": "蔬果清潔 瓶",
-        "series": "廚房清潔",
-        "stock": 21621,
-        "dailyAvg": 180.2,
-        "inventoryDays": 120,
-        "status": "滯銷",
-        "statusColor": "stone",
-        "suggestion": "清倉/改組合"
-      },
-      {
-        "name": "碗盤精 瓶",
-        "series": "廚房清潔",
-        "stock": 901,
-        "dailyAvg": 180.2,
-        "inventoryDays": 5,
-        "status": "缺貨警示",
-        "statusColor": "red",
-        "suggestion": "立即補貨"
-      },
-      {
-        "name": "廚房慕斯 瓶",
-        "series": "廚房清潔",
-        "stock": 2182,
-        "dailyAvg": 121.2,
-        "inventoryDays": 18,
-        "status": "健康",
-        "statusColor": "green",
-        "suggestion": "健康"
-      },
-      {
-        "name": "驅蟎噴霧 瓶",
-        "series": "抗蟎除臭噴霧",
-        "stock": 8108,
-        "dailyAvg": 180.2,
-        "inventoryDays": 45,
-        "status": "偏多",
-        "statusColor": "amber",
-        "suggestion": "觀察"
-      },
-      {
-        "name": "抗菌噴霧 瓶",
-        "series": "抗蟎除臭噴霧",
-        "stock": 21621,
-        "dailyAvg": 180.2,
-        "inventoryDays": 120,
-        "status": "滯銷",
-        "statusColor": "stone",
-        "suggestion": "清倉/改組合"
-      },
-      {
-        "name": "除臭噴霧 瓶",
-        "series": "抗蟎除臭噴霧",
-        "stock": 606,
-        "dailyAvg": 121.2,
-        "inventoryDays": 5,
-        "status": "缺貨警示",
-        "statusColor": "red",
-        "suggestion": "立即補貨"
-      },
-      {
-        "name": "淨化噴霧 瓶",
-        "series": "抗蟎除臭噴霧",
-        "stock": 2182,
-        "dailyAvg": 121.2,
-        "inventoryDays": 18,
-        "status": "健康",
-        "statusColor": "green",
-        "suggestion": "健康"
+        "sku": "OLD-005",
+        "name": "節慶限定洗衣精",
+        "category": "洗衣精",
+        "stock": 520,
+        "daily30d": 1,
+        "daysLeft": 520,
+        "status": "dead",
+        "action": "💀 庫存日數 > 90 天"
       }
     ],
-    "totalDeadStockValue": 22702050,
+    "totalDeadStockValue": 1180000,
     "recommendation": "本月清倉 3 個滯銷 SKU 可回收 NT$ 118 萬庫存價值。同時補 3 個缺貨 SKU。"
   },
   "pmPrompts": {
@@ -5072,8 +4571,8 @@
           "EDM"
         ],
         "bestTime": "早 8 點",
-        "recommendedSku": "沐浴露 SET（NT$ 799 試用）",
-        "draftSample": "王太太，您每月都選對的洗衣精給家人 — 沐浴也該用同樣標準。淨淨沐浴露 SET 今天起 NT$ 799 試用，無防腐配方，安全感延伸到全身。",
+        "recommendedSku": "胺基酸沐浴 SET（NT$ 799 試用）",
+        "draftSample": "王太太，您每月都選對的洗衣精給家人 — 沐浴也該用同樣標準。淨淨胺基酸沐浴 SET 今天起 NT$ 799 試用，無防腐配方，安全感延伸到全身。",
         "status": "ready"
       },
       {
@@ -5113,9 +4612,9 @@
       },
       {
         "id": 4,
-        "name": "首購除黴凝膠 → 變愛用者",
+        "name": "首購除黴 → 變愛用者",
         "icon": "🫧",
-        "who": "首購是除黴凝膠 + 30 天內",
+        "who": "首購是除黴 + 30 天內",
         "brandVoice": "真好用",
         "memberCount": 89,
         "estimatedGmv": 48000,
@@ -5125,8 +4624,8 @@
           "LINE OA"
         ],
         "bestTime": "首購後 7-14 天",
-        "recommendedSku": "除黴凝膠 SET 組合 + 居家清潔指南",
-        "draftSample": "謝謝您信任淨淨除黴凝膠。下一步建議：搭配除黴凝膠 + 浴室清潔組合，省事一次到位。隨包附「居家療癒清潔指南」。",
+        "recommendedSku": "除黴 SET 組合 + 居家清潔指南",
+        "draftSample": "謝謝您信任淨淨除黴噴霧。下一步建議：搭配除黴凝膠 + 浴室清潔組合，省事一次到位。隨包附「居家療癒清潔指南」。",
         "status": "ready"
       },
       {
@@ -5144,7 +4643,7 @@
         ],
         "bestTime": "生日當月 1 號自動",
         "recommendedSku": "雙倍購物金 + 個人化品類推薦",
-        "draftSample": "吳小姐，6 月生日快樂 🎂 為您準備了：雙倍購物金 + 您最愛的沐浴露試用包。生日這一個月都適用，不疾不徐。— 淨淨",
+        "draftSample": "吳小姐，6 月生日快樂 🎂 為您準備了：雙倍購物金 + 您最愛的胺基酸沐浴試用包。生日這一個月都適用，不疾不徐。— 淨淨",
         "status": "ready"
       },
       {
@@ -5162,7 +4661,7 @@
         ],
         "bestTime": "每月底",
         "recommendedSku": "月卡會員制（自動補貨）",
-        "draftSample": "陳媽媽，您 3 個月買了 4 次洗衣膠囊。訂閱月卡的話：每月自動到府，省 12%、不斷貨。隨時可暫停。",
+        "draftSample": "陳媽媽，您 3 個月買了 4 次柔濕巾。訂閱月卡的話：每月自動到府，省 12%、不斷貨。隨時可暫停。",
         "status": "ready"
       },
       {
@@ -5277,219 +4776,5 @@
         "status": "target_1y"
       }
     ]
-  },
-  "rangeData": {
-    "today": {
-      "label": "今天",
-      "total": {
-        "gmv": 4109933,
-        "orders": 3750,
-        "traffic": 162286,
-        "aov": 1096,
-        "adSpend": 747261,
-        "roas": 5.5
-      },
-      "channels": {
-        "shopline": {
-          "gmv": 821987,
-          "orders": 524,
-          "traffic": 24601,
-          "aov": 1570,
-          "cr": 2.13,
-          "roas": 3.4
-        },
-        "shopee": {
-          "gmv": 1438476,
-          "orders": 1537,
-          "traffic": 46576,
-          "aov": 936,
-          "cr": 3.3,
-          "roas": null
-        },
-        "pchome": {
-          "gmv": 205497,
-          "orders": 198,
-          "traffic": 11124,
-          "aov": 1040,
-          "cr": 1.78,
-          "roas": null
-        },
-        "momo": {
-          "gmv": 1027483,
-          "orders": 875,
-          "traffic": 43750,
-          "aov": 1174,
-          "cr": 2,
-          "roas": null
-        },
-        "conpang": {
-          "gmv": 616490,
-          "orders": 616,
-          "traffic": 36235,
-          "aov": 1000,
-          "cr": 1.7,
-          "roas": null
-        }
-      }
-    },
-    "yesterday": {
-      "label": "昨天",
-      "total": {
-        "gmv": 3898508,
-        "orders": 3574,
-        "traffic": 154991,
-        "aov": 1091,
-        "adSpend": 708820,
-        "roas": 5.5
-      },
-      "channels": {
-        "shopline": {
-          "gmv": 758757,
-          "orders": 483,
-          "traffic": 22676,
-          "aov": 1570,
-          "cr": 2.13,
-          "roas": 3.4
-        },
-        "shopee": {
-          "gmv": 1383150,
-          "orders": 1478,
-          "traffic": 44788,
-          "aov": 936,
-          "cr": 3.3,
-          "roas": null
-        },
-        "pchome": {
-          "gmv": 207473,
-          "orders": 199,
-          "traffic": 11180,
-          "aov": 1040,
-          "cr": 1.78,
-          "roas": null
-        },
-        "momo": {
-          "gmv": 908927,
-          "orders": 774,
-          "traffic": 38700,
-          "aov": 1174,
-          "cr": 2,
-          "roas": null
-        },
-        "conpang": {
-          "gmv": 640201,
-          "orders": 640,
-          "traffic": 37647,
-          "aov": 1000,
-          "cr": 1.7,
-          "roas": null
-        }
-      }
-    },
-    "last7": {
-      "label": "近 7 天",
-      "total": {
-        "gmv": 27663009,
-        "orders": 25238,
-        "traffic": 1092229,
-        "aov": 1096,
-        "adSpend": 5029638,
-        "roas": 5.5
-      },
-      "channels": {
-        "shopline": {
-          "gmv": 5532602,
-          "orders": 3524,
-          "traffic": 165446,
-          "aov": 1570,
-          "cr": 2.13,
-          "roas": 3.4
-        },
-        "shopee": {
-          "gmv": 9682053,
-          "orders": 10344,
-          "traffic": 313455,
-          "aov": 936,
-          "cr": 3.3,
-          "roas": null
-        },
-        "pchome": {
-          "gmv": 1383151,
-          "orders": 1330,
-          "traffic": 74719,
-          "aov": 1040,
-          "cr": 1.78,
-          "roas": null
-        },
-        "momo": {
-          "gmv": 6915752,
-          "orders": 5891,
-          "traffic": 294550,
-          "aov": 1174,
-          "cr": 2,
-          "roas": null
-        },
-        "conpang": {
-          "gmv": 4149451,
-          "orders": 4149,
-          "traffic": 244059,
-          "aov": 1000,
-          "cr": 1.7,
-          "roas": null
-        }
-      }
-    },
-    "last30": {
-      "label": "近 30 天",
-      "total": {
-        "gmv": 118555752,
-        "orders": 108164,
-        "traffic": 4681039,
-        "aov": 1096,
-        "adSpend": 21555591,
-        "roas": 5.5
-      },
-      "channels": {
-        "shopline": {
-          "gmv": 23711150,
-          "orders": 15103,
-          "traffic": 709061,
-          "aov": 1570,
-          "cr": 2.13,
-          "roas": 3.4
-        },
-        "shopee": {
-          "gmv": 41494513,
-          "orders": 44332,
-          "traffic": 1343394,
-          "aov": 936,
-          "cr": 3.3,
-          "roas": null
-        },
-        "pchome": {
-          "gmv": 5927788,
-          "orders": 5700,
-          "traffic": 320225,
-          "aov": 1040,
-          "cr": 1.78,
-          "roas": null
-        },
-        "momo": {
-          "gmv": 29638938,
-          "orders": 25246,
-          "traffic": 1262300,
-          "aov": 1174,
-          "cr": 2,
-          "roas": null
-        },
-        "conpang": {
-          "gmv": 17783363,
-          "orders": 17783,
-          "traffic": 1046059,
-          "aov": 1000,
-          "cr": 1.7,
-          "roas": null
-        }
-      }
-    }
   }
 }
