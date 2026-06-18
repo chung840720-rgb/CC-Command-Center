@@ -4606,5 +4606,502 @@
         "share": 1.5
       }
     ]
+  },
+  "momoAds": {
+    "synthetic": true,
+    "budget": {
+      "monthlyCap": 1500000,
+      "spent": 1182400,
+      "remaining": 317600,
+      "usedPct": 78.8,
+      "dailyBase": 45000,
+      "paceStatus": "正常配速"
+    },
+    "kpi": {
+      "spend": 576180,
+      "impressions": 11758775,
+      "clicks": 92848,
+      "orders": 4772,
+      "orderValue": 5601822,
+      "roas": 9.72,
+      "cpa": 121,
+      "cpc": 6,
+      "cpm": 49,
+      "ctr": 0.79
+    },
+    "adTypes": [
+      {
+        "type": "關鍵字廣告",
+        "spend": 364000,
+        "roas": 10.4,
+        "orders": 2959,
+        "note": "搜尋意圖明確、主力回收來源"
+      },
+      {
+        "type": "推薦廣告（曝光型）",
+        "spend": 212180,
+        "roas": 7.1,
+        "cpc": 25,
+        "orders": 1813,
+        "note": "固定 $25 CPC、衝曝光與新客觸及"
+      }
+    ],
+    "daily": [
+      {
+        "date": "5/20",
+        "type": "平日",
+        "dayBudget": 45000,
+        "kwSpend": 26780,
+        "recSpend": 16480,
+        "totalSpend": 43260,
+        "orderValue": 380688,
+        "roas": 8.8,
+        "orders": 324,
+        "impressions": 882857,
+        "ctr": 0.7,
+        "cpc": 7,
+        "cpm": 49,
+        "cpa": 134
+      },
+      {
+        "date": "5/21",
+        "type": "平日",
+        "dayBudget": 45000,
+        "kwSpend": 24700,
+        "recSpend": 15200,
+        "totalSpend": 39900,
+        "orderValue": 359100,
+        "roas": 9,
+        "orders": 306,
+        "impressions": 814286,
+        "ctr": 0.76,
+        "cpc": 6,
+        "cpm": 49,
+        "cpa": 130
+      },
+      {
+        "date": "5/22",
+        "type": "平日",
+        "dayBudget": 45000,
+        "kwSpend": 27300,
+        "recSpend": 16800,
+        "totalSpend": 44100,
+        "orderValue": 405720,
+        "roas": 9.2,
+        "orders": 346,
+        "impressions": 900000,
+        "ctr": 0.82,
+        "cpc": 6,
+        "cpm": 49,
+        "cpa": 127
+      },
+      {
+        "date": "5/23",
+        "type": "平日",
+        "dayBudget": 45000,
+        "kwSpend": 23920,
+        "recSpend": 14720,
+        "totalSpend": 38640,
+        "orderValue": 363216,
+        "roas": 9.4,
+        "orders": 309,
+        "impressions": 788571,
+        "ctr": 0.88,
+        "cpc": 6,
+        "cpm": 49,
+        "cpa": 125
+      },
+      {
+        "date": "5/24",
+        "type": "平日",
+        "dayBudget": 45000,
+        "kwSpend": 28080,
+        "recSpend": 17280,
+        "totalSpend": 45360,
+        "orderValue": 435456,
+        "roas": 9.6,
+        "orders": 371,
+        "impressions": 925714,
+        "ctr": 0.7,
+        "cpc": 7,
+        "cpm": 49,
+        "cpa": 122
+      },
+      {
+        "date": "5/25",
+        "type": "檔期",
+        "dayBudget": 80000,
+        "kwSpend": 52000,
+        "recSpend": 26000,
+        "totalSpend": 78000,
+        "orderValue": 858000,
+        "roas": 11,
+        "orders": 731,
+        "impressions": 1591837,
+        "ctr": 0.76,
+        "cpc": 6,
+        "cpm": 49,
+        "cpa": 107
+      },
+      {
+        "date": "5/26",
+        "type": "檔期",
+        "dayBudget": 80000,
+        "kwSpend": 50440,
+        "recSpend": 25220,
+        "totalSpend": 75660,
+        "orderValue": 854958,
+        "roas": 11.3,
+        "orders": 728,
+        "impressions": 1544082,
+        "ctr": 0.82,
+        "cpc": 6,
+        "cpm": 49,
+        "cpa": 104
+      },
+      {
+        "date": "5/27",
+        "type": "平日",
+        "dayBudget": 45000,
+        "kwSpend": 26780,
+        "recSpend": 16480,
+        "totalSpend": 43260,
+        "orderValue": 397992,
+        "roas": 9.2,
+        "orders": 339,
+        "impressions": 882857,
+        "ctr": 0.88,
+        "cpc": 6,
+        "cpm": 49,
+        "cpa": 128
+      },
+      {
+        "date": "5/28",
+        "type": "平日",
+        "dayBudget": 45000,
+        "kwSpend": 24700,
+        "recSpend": 15200,
+        "totalSpend": 39900,
+        "orderValue": 375060,
+        "roas": 9.4,
+        "orders": 319,
+        "impressions": 814286,
+        "ctr": 0.7,
+        "cpc": 7,
+        "cpm": 49,
+        "cpa": 125
+      },
+      {
+        "date": "5/29",
+        "type": "平日",
+        "dayBudget": 45000,
+        "kwSpend": 27300,
+        "recSpend": 16800,
+        "totalSpend": 44100,
+        "orderValue": 423360,
+        "roas": 9.6,
+        "orders": 361,
+        "impressions": 900000,
+        "ctr": 0.76,
+        "cpc": 6,
+        "cpm": 49,
+        "cpa": 122
+      },
+      {
+        "date": "5/30",
+        "type": "平日",
+        "dayBudget": 45000,
+        "kwSpend": 23920,
+        "recSpend": 14720,
+        "totalSpend": 38640,
+        "orderValue": 340032,
+        "roas": 8.8,
+        "orders": 290,
+        "impressions": 788571,
+        "ctr": 0.82,
+        "cpc": 6,
+        "cpm": 49,
+        "cpa": 133
+      },
+      {
+        "date": "5/31",
+        "type": "平日",
+        "dayBudget": 45000,
+        "kwSpend": 28080,
+        "recSpend": 17280,
+        "totalSpend": 45360,
+        "orderValue": 408240,
+        "roas": 9,
+        "orders": 348,
+        "impressions": 925714,
+        "ctr": 0.88,
+        "cpc": 6,
+        "cpm": 49,
+        "cpa": 130
+      }
+    ],
+    "reports": {
+      "monthly": {
+        "period": "5月",
+        "spend": 576180,
+        "revenue": 5601822,
+        "roas": 9.72,
+        "cpa": 121,
+        "orders": 4772,
+        "vsPrev": {
+          "label": "上月",
+          "spendPct": 8.2,
+          "roasPct": 4.1
+        }
+      },
+      "quarterly": {
+        "period": "Q2",
+        "spend": 1786158,
+        "revenue": 16805466,
+        "roas": 9.41,
+        "vsPrev": {
+          "label": "上季",
+          "spendPct": 15.4,
+          "roasPct": -2.3
+        }
+      },
+      "yearly": {
+        "period": "2026 YTD",
+        "spend": 2880900,
+        "revenue": 27448928,
+        "roas": 9.53,
+        "vsPrev": {
+          "label": "去年",
+          "spendPct": 42,
+          "roasPct": 11
+        }
+      }
+    }
+  },
+  "shopeeAds": {
+    "synthetic": true,
+    "overview": {
+      "spend": 2418000,
+      "sales": 5860000,
+      "roas": 2.42,
+      "conversions": 6240,
+      "wastedSpend": 1090000,
+      "wastedPct": 45,
+      "dailyAvg": 80600,
+      "period": "近 30 天"
+    },
+    "keywordGroups": [
+      {
+        "group": "品牌詞",
+        "spend": 145080,
+        "roas": 41.2,
+        "conversions": 980,
+        "sharePct": 6,
+        "note": "高效但預算嚴重不足 — 應加碼到 60%"
+      },
+      {
+        "group": "精準類別詞",
+        "spend": 531960,
+        "roas": 6.4,
+        "conversions": 1820,
+        "sharePct": 22,
+        "note": "穩定回收，可擴量"
+      },
+      {
+        "group": "泛詞",
+        "spend": 1015560,
+        "roas": 2.1,
+        "conversions": 2540,
+        "sharePct": 42,
+        "note": "花費最多、競品觸發多，需收斂"
+      },
+      {
+        "group": "競品詞（無效）",
+        "spend": 725400,
+        "roas": 0.5,
+        "conversions": 900,
+        "sharePct": 30,
+        "note": "廣泛比對誤觸競品、低回報 — 多數已刪"
+      }
+    ],
+    "keywords": [
+      {
+        "kw": "品牌詞-官方",
+        "type": "品牌",
+        "spend": 1100,
+        "roas": 58,
+        "cvr": 42,
+        "conv": 36,
+        "cpc": 70,
+        "recBid": 4,
+        "status": "正常"
+      },
+      {
+        "kw": "剋菌噴霧",
+        "type": "品牌",
+        "spend": 4200,
+        "roas": 27,
+        "cvr": 28,
+        "conv": 16,
+        "cpc": 90,
+        "recBid": 86,
+        "status": "正常"
+      },
+      {
+        "kw": "除黴凝膠",
+        "type": "精準",
+        "spend": 3400,
+        "roas": 4.9,
+        "cvr": 12,
+        "conv": 37,
+        "cpc": 20,
+        "recBid": 19,
+        "status": "正常"
+      },
+      {
+        "kw": "洗面乳",
+        "type": "精準",
+        "spend": 196,
+        "roas": 30.9,
+        "cvr": 18,
+        "conv": 6,
+        "cpc": 15,
+        "recBid": 44,
+        "status": "需修正"
+      },
+      {
+        "kw": "除水垢",
+        "type": "精準",
+        "spend": 430,
+        "roas": 19.7,
+        "cvr": 14,
+        "conv": 9,
+        "cpc": 15,
+        "recBid": 47,
+        "status": "需修正"
+      },
+      {
+        "kw": "洗衣精",
+        "type": "泛詞",
+        "spend": 52700,
+        "roas": 2.4,
+        "cvr": 5,
+        "conv": 151,
+        "cpc": 40,
+        "recBid": 25,
+        "status": "正常"
+      },
+      {
+        "kw": "清潔劑",
+        "type": "泛詞",
+        "spend": 31200,
+        "roas": 1.1,
+        "cvr": 2,
+        "conv": 28,
+        "cpc": 18,
+        "recBid": 17,
+        "status": "觀察"
+      },
+      {
+        "kw": "競品A（泛詞觸發）",
+        "type": "競品",
+        "spend": 14430,
+        "roas": 0.47,
+        "cvr": 1,
+        "conv": 5,
+        "cpc": 22,
+        "recBid": 20,
+        "status": "建議刪除"
+      },
+      {
+        "kw": "競品B（泛詞觸發）",
+        "type": "競品",
+        "spend": 3792,
+        "roas": 0,
+        "cvr": 0,
+        "conv": 0,
+        "cpc": 16,
+        "recBid": 15,
+        "status": "建議刪除"
+      }
+    ],
+    "wastedTop": [
+      {
+        "competitor": "競品A",
+        "wasted": 14430,
+        "roas": 0.47,
+        "trigger": "清潔劑、廣泛比對"
+      },
+      {
+        "competitor": "競品B",
+        "wasted": 3792,
+        "roas": 0,
+        "trigger": "洗衣精、廣泛比對"
+      },
+      {
+        "competitor": "競品C",
+        "wasted": 2907,
+        "roas": 0,
+        "trigger": "泛詞外溢"
+      },
+      {
+        "competitor": "競品D",
+        "wasted": 2447,
+        "roas": 0.46,
+        "trigger": "洗面乳"
+      }
+    ],
+    "searchTerms": [
+      {
+        "term": "濃縮洗衣精",
+        "roas": 12.7,
+        "conv": 9,
+        "suggestBid": 20,
+        "note": "已有轉換、建議獨立投放"
+      },
+      {
+        "term": "奶瓶清潔劑",
+        "roas": 16.5,
+        "conv": 16,
+        "suggestBid": 40,
+        "note": "精準客群、AOV 高"
+      },
+      {
+        "term": "速效除垢慕斯",
+        "roas": 25.7,
+        "conv": 19,
+        "suggestBid": 22,
+        "note": "搜尋詞高效"
+      },
+      {
+        "term": "洗面乳推薦",
+        "roas": 30.9,
+        "conv": 6,
+        "suggestBid": 18,
+        "note": "ROAS 高但花費少"
+      }
+    ],
+    "budgetAllocation": [
+      {
+        "category": "品牌詞",
+        "current": 6,
+        "target": 60
+      },
+      {
+        "category": "精準類別詞",
+        "current": 22,
+        "target": 25
+      },
+      {
+        "category": "泛詞",
+        "current": 42,
+        "target": 15
+      },
+      {
+        "category": "競品詞",
+        "current": 30,
+        "target": 0
+      }
+    ]
   }
 }
