@@ -2242,215 +2242,197 @@
     "categoryBreakdown": [
       {
         "name": "織物衣物清潔",
-        "sku": 4,
-        "gmv": 61056212,
-        "sharePct": 52
+        "count": 4,
+        "color": "primary",
+        "gmv": 61056212
       },
       {
         "name": "居家空間清潔",
-        "sku": 3,
-        "gmv": 24303929,
-        "sharePct": 21
+        "count": 3,
+        "color": "violet",
+        "gmv": 24303929
       },
       {
         "name": "個人潔淨",
-        "sku": 4,
-        "gmv": 22525593,
-        "sharePct": 19
+        "count": 4,
+        "color": "rose",
+        "gmv": 22525593
       },
       {
         "name": "廚房清潔",
-        "sku": 3,
-        "gmv": 4742230,
-        "sharePct": 4
+        "count": 3,
+        "color": "amber",
+        "gmv": 4742230
       },
       {
         "name": "抗蟎除臭噴霧",
-        "sku": 4,
-        "gmv": 5927788,
-        "sharePct": 5
+        "count": 4,
+        "color": "emerald",
+        "gmv": 5927788
       }
     ],
     "list": [
       {
-        "rank": 1,
+        "sku": "SKU-001",
         "name": "洗衣精 4L",
-        "series": "織物衣物清潔",
+        "category": "織物衣物清潔",
+        "price": 500,
+        "stock": 14227,
         "gmv": 35566726,
-        "units": 71133,
-        "aov": 500,
-        "sharePct": 30,
-        "trend": "up"
+        "trend": 17
       },
       {
-        "rank": 2,
+        "sku": "SKU-002",
         "name": "洗衣膠囊 盒",
-        "series": "織物衣物清潔",
+        "category": "織物衣物清潔",
+        "price": 428,
+        "stock": 9972,
         "gmv": 21340035,
-        "units": 49860,
-        "aov": 428,
-        "sharePct": 18,
-        "trend": "up"
+        "trend": 13
       },
       {
-        "rank": 3,
+        "sku": "SKU-003",
         "name": "除黴凝膠 條",
-        "series": "居家空間清潔",
+        "category": "居家空間清潔",
+        "price": 422,
+        "stock": 9552,
         "gmv": 20154478,
-        "units": 47759,
-        "aov": 422,
-        "sharePct": 17,
-        "trend": "up"
+        "trend": 13
       },
       {
-        "rank": 4,
+        "sku": "SKU-004",
         "name": "沐浴露 瓶",
-        "series": "個人潔淨",
+        "category": "個人潔淨",
+        "price": 410,
+        "stock": 8675,
         "gmv": 17783363,
-        "units": 43374,
-        "aov": 410,
-        "sharePct": 15,
-        "trend": "up"
+        "trend": 13
       },
       {
-        "rank": 5,
+        "sku": "SKU-005",
         "name": "手洗精 瓶",
-        "series": "織物衣物清潔",
+        "category": "織物衣物清潔",
+        "price": 332,
+        "stock": 10713,
         "gmv": 2371115,
-        "units": 7142,
-        "aov": 332,
-        "sharePct": 2,
-        "trend": "flat"
+        "trend": 2
       },
       {
-        "rank": 6,
+        "sku": "SKU-006",
         "name": "浴室清潔 瓶",
-        "series": "居家空間清潔",
+        "category": "居家空間清潔",
+        "price": 332,
+        "stock": 10713,
         "gmv": 2371115,
-        "units": 7142,
-        "aov": 332,
-        "sharePct": 2,
-        "trend": "flat"
+        "trend": 2
       },
       {
-        "rank": 7,
+        "sku": "SKU-007",
         "name": "洗衣槽清潔 盒",
-        "series": "織物衣物清潔",
+        "category": "織物衣物清潔",
+        "price": 329,
+        "stock": 8108,
         "gmv": 1778336,
-        "units": 5405,
-        "aov": 329,
-        "sharePct": 1.5,
-        "trend": "flat"
+        "trend": 2
       },
       {
-        "rank": 8,
+        "sku": "SKU-008",
         "name": "地板清潔 瓶",
-        "series": "居家空間清潔",
+        "category": "居家空間清潔",
+        "price": 329,
+        "stock": 8108,
         "gmv": 1778336,
-        "units": 5405,
-        "aov": 329,
-        "sharePct": 1.5,
-        "trend": "flat"
+        "trend": 2
       },
       {
-        "rank": 9,
+        "sku": "SKU-009",
         "name": "洗髮精 瓶",
-        "series": "個人潔淨",
+        "category": "個人潔淨",
+        "price": 329,
+        "stock": 8108,
         "gmv": 1778336,
-        "units": 5405,
-        "aov": 329,
-        "sharePct": 1.5,
-        "trend": "flat"
+        "trend": 2
       },
       {
-        "rank": 10,
+        "sku": "SKU-010",
         "name": "洗面乳 瓶",
-        "series": "個人潔淨",
+        "category": "個人潔淨",
+        "price": 329,
+        "stock": 8108,
         "gmv": 1778336,
-        "units": 5405,
-        "aov": 329,
-        "sharePct": 1.5,
-        "trend": "flat"
+        "trend": 2
       },
       {
-        "rank": 11,
+        "sku": "SKU-011",
         "name": "蔬果清潔 瓶",
-        "series": "廚房清潔",
+        "category": "廚房清潔",
+        "price": 329,
+        "stock": 8108,
         "gmv": 1778336,
-        "units": 5405,
-        "aov": 329,
-        "sharePct": 1.5,
-        "trend": "flat"
+        "trend": 2
       },
       {
-        "rank": 12,
+        "sku": "SKU-012",
         "name": "碗盤精 瓶",
-        "series": "廚房清潔",
+        "category": "廚房清潔",
+        "price": 329,
+        "stock": 8108,
         "gmv": 1778336,
-        "units": 5405,
-        "aov": 329,
-        "sharePct": 1.5,
-        "trend": "flat"
+        "trend": 2
       },
       {
-        "rank": 13,
+        "sku": "SKU-013",
         "name": "驅蟎噴霧 瓶",
-        "series": "抗蟎除臭噴霧",
+        "category": "抗蟎除臭噴霧",
+        "price": 329,
+        "stock": 8108,
         "gmv": 1778336,
-        "units": 5405,
-        "aov": 329,
-        "sharePct": 1.5,
-        "trend": "flat"
+        "trend": 2
       },
       {
-        "rank": 14,
+        "sku": "SKU-014",
         "name": "抗菌噴霧 瓶",
-        "series": "抗蟎除臭噴霧",
+        "category": "抗蟎除臭噴霧",
+        "price": 329,
+        "stock": 8108,
         "gmv": 1778336,
-        "units": 5405,
-        "aov": 329,
-        "sharePct": 1.5,
-        "trend": "flat"
+        "trend": 2
       },
       {
-        "rank": 15,
+        "sku": "SKU-015",
         "name": "洗手露 瓶",
-        "series": "個人潔淨",
+        "category": "個人潔淨",
+        "price": 326,
+        "stock": 5455,
         "gmv": 1185558,
-        "units": 3637,
-        "aov": 326,
-        "sharePct": 1,
-        "trend": "down"
+        "trend": -4
       },
       {
-        "rank": 16,
+        "sku": "SKU-016",
         "name": "廚房慕斯 瓶",
-        "series": "廚房清潔",
+        "category": "廚房清潔",
+        "price": 326,
+        "stock": 5455,
         "gmv": 1185558,
-        "units": 3637,
-        "aov": 326,
-        "sharePct": 1,
-        "trend": "down"
+        "trend": -4
       },
       {
-        "rank": 17,
+        "sku": "SKU-017",
         "name": "除臭噴霧 瓶",
-        "series": "抗蟎除臭噴霧",
+        "category": "抗蟎除臭噴霧",
+        "price": 326,
+        "stock": 5455,
         "gmv": 1185558,
-        "units": 3637,
-        "aov": 326,
-        "sharePct": 1,
-        "trend": "down"
+        "trend": -4
       },
       {
-        "rank": 18,
+        "sku": "SKU-018",
         "name": "淨化噴霧 瓶",
-        "series": "抗蟎除臭噴霧",
+        "category": "抗蟎除臭噴霧",
+        "price": 326,
+        "stock": 5455,
         "gmv": 1185558,
-        "units": 3637,
-        "aov": 326,
-        "sharePct": 1,
-        "trend": "down"
+        "trend": -4
       }
     ]
   },
@@ -4686,195 +4668,195 @@
     "period": "當下",
     "totalSku": 18,
     "summary": {
-      "critical": 3,
-      "healthy": 18,
-      "excess": 14,
-      "dead": 12
+      "critical": 1,
+      "healthy": 10,
+      "excess": 4,
+      "dead": 3
     },
     "items": [
       {
+        "sku": "SKU-001",
         "name": "洗衣精 4L",
-        "series": "織物衣物清潔",
+        "category": "織物衣物清潔",
         "stock": 11856,
-        "dailyAvg": 2371.1,
-        "inventoryDays": 5,
-        "status": "缺貨警示",
-        "statusColor": "red",
-        "suggestion": "立即補貨"
+        "daily30d": 2371.1,
+        "daysLeft": 5,
+        "status": "critical",
+        "action": "立即補貨"
       },
       {
+        "sku": "SKU-002",
         "name": "洗衣膠囊 盒",
-        "series": "織物衣物清潔",
-        "stock": 8310,
-        "dailyAvg": 1662,
-        "inventoryDays": 5,
-        "status": "缺貨警示",
-        "statusColor": "red",
-        "suggestion": "立即補貨"
+        "category": "織物衣物清潔",
+        "stock": 29916,
+        "daily30d": 1662,
+        "daysLeft": 18,
+        "status": "healthy",
+        "action": "維持節奏"
       },
       {
-        "name": "手洗精 瓶",
-        "series": "織物衣物清潔",
-        "stock": 10713,
-        "dailyAvg": 238.1,
-        "inventoryDays": 45,
-        "status": "偏多",
-        "statusColor": "amber",
-        "suggestion": "觀察"
-      },
-      {
-        "name": "洗衣槽清潔 盒",
-        "series": "織物衣物清潔",
-        "stock": 21621,
-        "dailyAvg": 180.2,
-        "inventoryDays": 120,
-        "status": "滯銷",
-        "statusColor": "stone",
-        "suggestion": "清倉/改組合"
-      },
-      {
+        "sku": "SKU-003",
         "name": "除黴凝膠 條",
-        "series": "居家空間清潔",
-        "stock": 7960,
-        "dailyAvg": 1592,
-        "inventoryDays": 5,
-        "status": "缺貨警示",
-        "statusColor": "red",
-        "suggestion": "立即補貨"
+        "category": "居家空間清潔",
+        "stock": 28656,
+        "daily30d": 1592,
+        "daysLeft": 18,
+        "status": "healthy",
+        "action": "維持節奏"
       },
       {
-        "name": "浴室清潔 瓶",
-        "series": "居家空間清潔",
-        "stock": 4285,
-        "dailyAvg": 238.1,
-        "inventoryDays": 18,
-        "status": "健康",
-        "statusColor": "green",
-        "suggestion": "健康"
-      },
-      {
-        "name": "地板清潔 瓶",
-        "series": "居家空間清潔",
-        "stock": 8108,
-        "dailyAvg": 180.2,
-        "inventoryDays": 45,
-        "status": "偏多",
-        "statusColor": "amber",
-        "suggestion": "觀察"
-      },
-      {
+        "sku": "SKU-004",
         "name": "沐浴露 瓶",
-        "series": "個人潔淨",
-        "stock": 7229,
-        "dailyAvg": 1445.8,
-        "inventoryDays": 5,
-        "status": "缺貨警示",
-        "statusColor": "red",
-        "suggestion": "立即補貨"
+        "category": "個人潔淨",
+        "stock": 26024,
+        "daily30d": 1445.8,
+        "daysLeft": 18,
+        "status": "healthy",
+        "action": "維持節奏"
       },
       {
-        "name": "洗髮精 瓶",
-        "series": "個人潔淨",
-        "stock": 901,
-        "dailyAvg": 180.2,
-        "inventoryDays": 5,
-        "status": "缺貨警示",
-        "statusColor": "red",
-        "suggestion": "立即補貨"
+        "sku": "SKU-005",
+        "name": "手洗精 瓶",
+        "category": "織物衣物清潔",
+        "stock": 4285,
+        "daily30d": 238.1,
+        "daysLeft": 18,
+        "status": "healthy",
+        "action": "維持節奏"
       },
       {
-        "name": "洗面乳 瓶",
-        "series": "個人潔淨",
+        "sku": "SKU-006",
+        "name": "浴室清潔 瓶",
+        "category": "居家空間清潔",
+        "stock": 13094,
+        "daily30d": 238.1,
+        "daysLeft": 55,
+        "status": "excess",
+        "action": "暫停下單觀察"
+      },
+      {
+        "sku": "SKU-007",
+        "name": "洗衣槽清潔 盒",
+        "category": "織物衣物清潔",
+        "stock": 23423,
+        "daily30d": 180.2,
+        "daysLeft": 130,
+        "status": "dead",
+        "action": "清倉/改組合"
+      },
+      {
+        "sku": "SKU-008",
+        "name": "地板清潔 瓶",
+        "category": "居家空間清潔",
         "stock": 3243,
-        "dailyAvg": 180.2,
-        "inventoryDays": 18,
-        "status": "健康",
-        "statusColor": "green",
-        "suggestion": "健康"
+        "daily30d": 180.2,
+        "daysLeft": 18,
+        "status": "healthy",
+        "action": "維持節奏"
       },
       {
-        "name": "洗手露 瓶",
-        "series": "個人潔淨",
-        "stock": 5455,
-        "dailyAvg": 121.2,
-        "inventoryDays": 45,
-        "status": "偏多",
-        "statusColor": "amber",
-        "suggestion": "觀察"
+        "sku": "SKU-009",
+        "name": "洗髮精 瓶",
+        "category": "個人潔淨",
+        "stock": 3243,
+        "daily30d": 180.2,
+        "daysLeft": 18,
+        "status": "healthy",
+        "action": "維持節奏"
       },
       {
+        "sku": "SKU-010",
+        "name": "洗面乳 瓶",
+        "category": "個人潔淨",
+        "stock": 9910,
+        "daily30d": 180.2,
+        "daysLeft": 55,
+        "status": "excess",
+        "action": "暫停下單觀察"
+      },
+      {
+        "sku": "SKU-011",
         "name": "蔬果清潔 瓶",
-        "series": "廚房清潔",
-        "stock": 21621,
-        "dailyAvg": 180.2,
-        "inventoryDays": 120,
-        "status": "滯銷",
-        "statusColor": "stone",
-        "suggestion": "清倉/改組合"
+        "category": "廚房清潔",
+        "stock": 23423,
+        "daily30d": 180.2,
+        "daysLeft": 130,
+        "status": "dead",
+        "action": "清倉/改組合"
       },
       {
+        "sku": "SKU-012",
         "name": "碗盤精 瓶",
-        "series": "廚房清潔",
-        "stock": 901,
-        "dailyAvg": 180.2,
-        "inventoryDays": 5,
-        "status": "缺貨警示",
-        "statusColor": "red",
-        "suggestion": "立即補貨"
+        "category": "廚房清潔",
+        "stock": 3243,
+        "daily30d": 180.2,
+        "daysLeft": 18,
+        "status": "healthy",
+        "action": "維持節奏"
       },
       {
-        "name": "廚房慕斯 瓶",
-        "series": "廚房清潔",
-        "stock": 2182,
-        "dailyAvg": 121.2,
-        "inventoryDays": 18,
-        "status": "健康",
-        "statusColor": "green",
-        "suggestion": "健康"
-      },
-      {
+        "sku": "SKU-013",
         "name": "驅蟎噴霧 瓶",
-        "series": "抗蟎除臭噴霧",
-        "stock": 8108,
-        "dailyAvg": 180.2,
-        "inventoryDays": 45,
-        "status": "偏多",
-        "statusColor": "amber",
-        "suggestion": "觀察"
+        "category": "抗蟎除臭噴霧",
+        "stock": 3243,
+        "daily30d": 180.2,
+        "daysLeft": 18,
+        "status": "healthy",
+        "action": "維持節奏"
       },
       {
+        "sku": "SKU-014",
         "name": "抗菌噴霧 瓶",
-        "series": "抗蟎除臭噴霧",
-        "stock": 21621,
-        "dailyAvg": 180.2,
-        "inventoryDays": 120,
-        "status": "滯銷",
-        "statusColor": "stone",
-        "suggestion": "清倉/改組合"
+        "category": "抗蟎除臭噴霧",
+        "stock": 9910,
+        "daily30d": 180.2,
+        "daysLeft": 55,
+        "status": "excess",
+        "action": "暫停下單觀察"
       },
       {
-        "name": "除臭噴霧 瓶",
-        "series": "抗蟎除臭噴霧",
-        "stock": 606,
-        "dailyAvg": 121.2,
-        "inventoryDays": 5,
-        "status": "缺貨警示",
-        "statusColor": "red",
-        "suggestion": "立即補貨"
+        "sku": "SKU-015",
+        "name": "洗手露 瓶",
+        "category": "個人潔淨",
+        "stock": 15759,
+        "daily30d": 121.2,
+        "daysLeft": 130,
+        "status": "dead",
+        "action": "清倉/改組合"
       },
       {
-        "name": "淨化噴霧 瓶",
-        "series": "抗蟎除臭噴霧",
+        "sku": "SKU-016",
+        "name": "廚房慕斯 瓶",
+        "category": "廚房清潔",
         "stock": 2182,
-        "dailyAvg": 121.2,
-        "inventoryDays": 18,
-        "status": "健康",
-        "statusColor": "green",
-        "suggestion": "健康"
+        "daily30d": 121.2,
+        "daysLeft": 18,
+        "status": "healthy",
+        "action": "維持節奏"
+      },
+      {
+        "sku": "SKU-017",
+        "name": "除臭噴霧 瓶",
+        "category": "抗蟎除臭噴霧",
+        "stock": 2182,
+        "daily30d": 121.2,
+        "daysLeft": 18,
+        "status": "healthy",
+        "action": "維持節奏"
+      },
+      {
+        "sku": "SKU-018",
+        "name": "淨化噴霧 瓶",
+        "category": "抗蟎除臭噴霧",
+        "stock": 6667,
+        "daily30d": 121.2,
+        "daysLeft": 55,
+        "status": "excess",
+        "action": "暫停下單觀察"
       }
     ],
-    "totalDeadStockValue": 22702050,
-    "recommendation": "本月清倉 3 個滯銷 SKU 可回收 NT$ 118 萬庫存價值。同時補 3 個缺貨 SKU。"
+    "totalDeadStockValue": 21911750,
+    "recommendation": "滯銷品優先綁熱銷做加價購出清；缺貨主力今日補單，暫緩加碼廣告。"
   },
   "pmPrompts": {
     "description": "50 個經實戰驗證的 Shopline MCP × PM 提問範本（對應 skills/shopline-pm-prompts.md v1.0）",
@@ -5491,5 +5473,89 @@
         }
       }
     }
+  },
+  "pchomeDetail": {
+    "url": "pchome.com.tw/store/demo-mm",
+    "achievement": 92,
+    "achievementStatus": "符合節奏",
+    "monthlyGmv": 5927788,
+    "target": 6443248,
+    "ytd": {
+      "gmv": 23788046,
+      "achievement": 92,
+      "orders": 22874,
+      "target": 25856572,
+      "gap": 2068526,
+      "note": "1 月到目前累計"
+    },
+    "topProducts": [
+      {
+        "name": "洗衣精 4L",
+        "gmv": 1778336,
+        "share": 22.7
+      },
+      {
+        "name": "洗衣膠囊 盒",
+        "gmv": 1067002,
+        "share": 13.6
+      },
+      {
+        "name": "除黴凝膠 條",
+        "gmv": 1007724,
+        "share": 12.9
+      },
+      {
+        "name": "沐浴露 瓶",
+        "gmv": 889168,
+        "share": 11.3
+      },
+      {
+        "name": "手洗精 瓶",
+        "gmv": 118556,
+        "share": 1.5
+      }
+    ]
+  },
+  "conpangDetail": {
+    "url": "tw.coupang.com/store/demo-mm",
+    "achievement": 82,
+    "achievementStatus": "戰略卡位",
+    "monthlyGmv": 17783363,
+    "target": 21687028,
+    "ytd": {
+      "gmv": 71364136,
+      "achievement": 82,
+      "orders": 71364,
+      "target": 87029434,
+      "gap": 15665298,
+      "note": "1 月到目前累計"
+    },
+    "topProducts": [
+      {
+        "name": "洗衣精 4L",
+        "gmv": 5335009,
+        "share": 22.7
+      },
+      {
+        "name": "洗衣膠囊 盒",
+        "gmv": 3201005,
+        "share": 13.6
+      },
+      {
+        "name": "除黴凝膠 條",
+        "gmv": 3023172,
+        "share": 12.9
+      },
+      {
+        "name": "沐浴露 瓶",
+        "gmv": 2667504,
+        "share": 11.3
+      },
+      {
+        "name": "手洗精 瓶",
+        "gmv": 355667,
+        "share": 1.5
+      }
+    ]
   }
 }
