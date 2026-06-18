@@ -22,8 +22,8 @@
       "achievement": 31.7
     },
     "monthlyOrders": 108164,
-    "roas": 5.5,
-    "adSpend": 21555591
+    "roas": 11.9,
+    "adSpend": 9968048
   },
   "alerts": [
     {
@@ -836,14 +836,14 @@
       "note": "Demo Only · 數字依 0.82 factor 脫敏"
     },
     "kpi": {
-      "spend": 196206,
-      "impressions": 1886000,
-      "clicks": 13940,
+      "spend": 882927,
+      "impressions": 8487000,
+      "clicks": 62730,
       "ctr": 0.74,
       "cpm": 85,
       "cpc": 14,
       "roas": 4.18,
-      "conversions": 312,
+      "conversions": 1404,
       "period": "last_7d"
     },
     "topAdSets": [
@@ -852,11 +852,11 @@
         "name": "常態｜加入購物車30天未購買",
         "audience": "RT",
         "roas": 10.66,
-        "spend": 3460,
+        "spend": 15570,
         "ctr": 1.37,
         "cpm": 91,
-        "impressions": 31286,
-        "clicks": 427,
+        "impressions": 140787,
+        "clicks": 1922,
         "campaign": "(by adset query — campaign info needs separate call)"
       },
       {
@@ -864,11 +864,11 @@
         "name": "全站已購買名單_排：已購買碗盤精名單",
         "audience": "RT",
         "roas": 8.45,
-        "spend": 4098,
+        "spend": 18441,
         "ctr": 0.41,
         "cpm": 64,
-        "impressions": 52835,
-        "clicks": 216,
+        "impressions": 237758,
+        "clicks": 972,
         "campaign": "(by adset query — campaign info needs separate call)"
       },
       {
@@ -876,11 +876,11 @@
         "name": "全站已購買名單_排：已購買洗面乳",
         "audience": "RT",
         "roas": 8.09,
-        "spend": 5812,
+        "spend": 26154,
         "ctr": 0.42,
         "cpm": 61,
-        "impressions": 77212,
-        "clicks": 327,
+        "impressions": 347454,
+        "clicks": 1472,
         "campaign": "(by adset query — campaign info needs separate call)"
       },
       {
@@ -888,11 +888,11 @@
         "name": "全站已購買名單_排：已購買沐浴露系列",
         "audience": "RT",
         "roas": 7.67,
-        "spend": 4045,
+        "spend": 18203,
         "ctr": 1.42,
         "cpm": 107,
-        "impressions": 31199,
-        "clicks": 443,
+        "impressions": 140396,
+        "clicks": 1994,
         "campaign": "(by adset query — campaign info needs separate call)"
       },
       {
@@ -900,11 +900,11 @@
         "name": "全站已購買名單_排：已購買沐浴露名單",
         "audience": "RT",
         "roas": 6.41,
-        "spend": 11484,
+        "spend": 51678,
         "ctr": 0.96,
         "cpm": 100,
-        "impressions": 94229,
-        "clicks": 908,
+        "impressions": 424031,
+        "clicks": 4086,
         "campaign": "(by adset query — campaign info needs separate call)"
       },
       {
@@ -912,11 +912,11 @@
         "name": "(KOL-A 素材)洗衣精_影片10秒_排：已購買洗衣精",
         "audience": "RT-溫熱",
         "roas": 4.6,
-        "spend": 6508,
+        "spend": 29286,
         "ctr": 2.94,
         "cpm": 235,
-        "impressions": 22647,
-        "clicks": 666,
+        "impressions": 101912,
+        "clicks": 2997,
         "campaign": "(by adset query — campaign info needs separate call)"
       },
       {
@@ -924,11 +924,11 @@
         "name": "(品牌主張+實測影片)洗衣精_影片10秒_排：已購買洗衣精_L500",
         "audience": "RT-溫熱",
         "roas": 4.4,
-        "spend": 8526,
+        "spend": 38367,
         "ctr": 0.93,
         "cpm": 96,
-        "impressions": 72762,
-        "clicks": 676,
+        "impressions": 327429,
+        "clicks": 3042,
         "campaign": "(by adset query — campaign info needs separate call)"
       },
       {
@@ -936,11 +936,11 @@
         "name": "(KOC 素材組合)洗面乳三部曲_影片10秒_排：已購買洗面乳三部曲",
         "audience": "RT-溫熱",
         "roas": 3.54,
-        "spend": 2831,
+        "spend": 12740,
         "ctr": 0.87,
         "cpm": 54,
-        "impressions": 42841,
-        "clicks": 375,
+        "impressions": 192785,
+        "clicks": 1688,
         "campaign": "(by adset query — campaign info needs separate call)"
       },
       {
@@ -948,11 +948,11 @@
         "name": "(KOL+KOC 組合)洗衣精_影片10秒_排：已購買洗衣精",
         "audience": "RT-溫熱",
         "roas": 3.35,
-        "spend": 2546,
+        "spend": 11457,
         "ctr": 0.76,
         "cpm": 82,
-        "impressions": 25396,
-        "clicks": 192,
+        "impressions": 114282,
+        "clicks": 864,
         "campaign": "(by adset query — campaign info needs separate call)"
       },
       {
@@ -960,11 +960,11 @@
         "name": "(KOC 素材)廚房慕斯_影片10秒_排：已購買廚房慕斯",
         "audience": "RT-溫熱",
         "roas": 2.92,
-        "spend": 3418,
+        "spend": 15381,
         "ctr": 0.81,
         "cpm": 71,
-        "impressions": 39290,
-        "clicks": 317,
+        "impressions": 176805,
+        "clicks": 1427,
         "campaign": "(by adset query — campaign info needs separate call)"
       }
     ],
@@ -972,35 +972,35 @@
       {
         "type": "RT 已購買名單",
         "count": 8,
-        "totalSpend": 49200,
+        "totalSpend": 221400,
         "avgRoas": 7.3,
         "note": "主力 — 5 組進 Top 10，ROAS 6-10x 穩定回收"
       },
       {
         "type": "RT 溫熱+KOC素材",
         "count": 7,
-        "totalSpend": 36900,
+        "totalSpend": 166050,
         "avgRoas": 3.5,
         "note": "次主力 — 影片素材帶動 CTR 較高（0.76-2.94%）"
       },
       {
         "type": "NEW LL10% 未轉換",
         "count": 11,
-        "totalSpend": 98400,
+        "totalSpend": 442800,
         "avgRoas": null,
         "note": "11 組 ROAS 不可用 — LL10% lookalike 拉新但購買歸因 0"
       },
       {
         "type": "地推/實體門市導流",
         "count": 2,
-        "totalSpend": 8200,
+        "totalSpend": 36900,
         "avgRoas": null,
         "note": "桃園台茂 / 竹南門市，線下導流不入 ROAS"
       },
       {
         "type": "冷受眾興趣",
         "count": 4,
-        "totalSpend": 16400,
+        "totalSpend": 73800,
         "avgRoas": 0.55,
         "note": "25+ 女性 / 20+ 全 / 住家興趣 — ROAS 偏低"
       }
@@ -1009,7 +1009,7 @@
       {
         "adSet": "(KOL-B 興趣)洗衣相關+延伸興趣＿排：全 RT_L1000",
         "campaign": "07：洗衣精_NEW(冷+興趣)_CPA",
-        "spend": 32828,
+        "spend": 147726,
         "roas": 0.02,
         "ctr": 0.17,
         "issue": "7 天最大單組花費 NT$40k / ROAS 0.02 / CTR 0.17% — 三項全紅",
@@ -1019,7 +1019,7 @@
       {
         "adSet": "購買除黴凝膠名單_LL10%＿排：全 RT",
         "campaign": "07：除黴凝膠_NEW(LL10%)_CPA",
-        "spend": 11174,
+        "spend": 50283,
         "roas": 0.0572,
         "ctr": 1.02,
         "issue": "$13k 花費但 ROAS < 0.1 — LL10% 沒轉換",
@@ -1170,11 +1170,11 @@
   "competitorAds": {
     "summary": {
       "period": "近 30 天觀察",
-      "insight": "4 家競品都在加碼母嬰節，但策略路線分歧 — 淨毒五郎主打「消毒科技敘事」、漫享主打「療癒感包裝」、DUDA CLEAN 主打「KOL 業配密度」、古寶主打「中草本天然訴求」"
+      "insight": "4 家競品都在加碼母嬰節，但策略路線分歧 — 競品 A主打「消毒科技敘事」、競品 B主打「療癒感包裝」、競品 C 主打「KOL 業配密度」、競品 D主打「中草本天然訴求」"
     },
     "competitors": [
       {
-        "name": "淨毒五郎",
+        "name": "競品 A",
         "logo": "🦠",
         "positioning": "消毒科技 / 媽嬰級認證",
         "adSpendEst": "NT$ 280 萬/月",
@@ -1185,7 +1185,7 @@
         "ourCounter": "我們的母嬰級認證更多（SNQ + Dermatest + SGS），素材可突顯「PR50+ 競品」優勢"
       },
       {
-        "name": "漫享",
+        "name": "競品 B",
         "logo": "🌸",
         "positioning": "療癒生活 / 香氛調性",
         "adSpendEst": "NT$ 180 萬/月",
@@ -1196,7 +1196,7 @@
         "ourCounter": "我們也有名人 KOL-A合作，且品牌承諾「真療癒」更貼合 — 可加強 IG/Threads 投放"
       },
       {
-        "name": "DUDA CLEAN",
+        "name": "競品 C",
         "logo": "⚡",
         "positioning": "高 CP 值 / 蝦皮第一",
         "adSpendEst": "NT$ 220 萬/月",
@@ -1207,31 +1207,31 @@
         "ourCounter": "我們不打價格戰，改攻「成份透明 + 安全認證」差異化；蝦皮關鍵字改鎖「母嬰洗衣精」長尾"
       },
       {
-        "name": "古寶",
+        "name": "競品 D",
         "logo": "🌿",
         "positioning": "中草本 / 老牌信任",
         "adSpendEst": "NT$ 120 萬/月",
         "mainPlatform": "MoMo + 官網",
-        "latestMove": "5/28 MoMo 首頁買版主打「古寶皂」新包裝，Google 品牌字加碼",
+        "latestMove": "5/28 MoMo 首頁買版主打「競品 D皂」新包裝，Google 品牌字加碼",
         "strategy": "中老年信任 + MoMo 站內深耕 + 包裝重設計",
         "threat": "low",
-        "ourCounter": "TA 重疊度低（古寶偏 40+）；我們持續鎖 25-40 年輕媽媽"
+        "ourCounter": "TA 重疊度低（競品 D偏 40+）；我們持續鎖 25-40 年輕媽媽"
       }
     ],
     "actions": [
       {
         "priority": "high",
-        "text": "【針對 DUDA CLEAN】蝦皮關鍵字改鎖「母嬰洗衣精」長尾字 — 5 天內提報",
+        "text": "【針對 競品 C】蝦皮關鍵字改鎖「母嬰洗衣精」長尾字 — 5 天內提報",
         "traceTo": "AD-002"
       },
       {
         "priority": "high",
-        "text": "【針對漫享】Threads/IG 投放預算 +20% — 利用名人 KOL-A既有合作做差異化",
+        "text": "【針對競品 B】Threads/IG 投放預算 +20% — 利用名人 KOL-A既有合作做差異化",
         "traceTo": "AD-001"
       },
       {
         "priority": "medium",
-        "text": "【針對淨毒五郎】下次月會 P5 加 1 頁「淨淨認證一覽 vs 競品」",
+        "text": "【針對競品 A】下次月會 P5 加 1 頁「本品牌認證一覽 vs 競品」",
         "traceTo": null
       }
     ]
@@ -1241,7 +1241,7 @@
     "lastUpdated": "2026-06-11",
     "competitors": [
       {
-        "name": "淨毒五郎",
+        "name": "競品 A",
         "web": "jinduwulang.com",
         "traffic": "~120K/月",
         "topPage": "/products/cl-pro",
@@ -1252,7 +1252,7 @@
         }
       },
       {
-        "name": "漫享",
+        "name": "競品 B",
         "web": "manxiang.tw",
         "traffic": "~85K/月",
         "topPage": "/scent-series",
@@ -1263,7 +1263,7 @@
         }
       },
       {
-        "name": "DUDA CLEAN",
+        "name": "競品 C",
         "web": "shopee.tw/dudaclean",
         "traffic": "~280K/月（蝦皮）",
         "topPage": "/laundry-set",
@@ -1274,7 +1274,7 @@
         }
       },
       {
-        "name": "古寶",
+        "name": "競品 D",
         "web": "gubao.com.tw",
         "traffic": "~45K/月",
         "topPage": "/products/soap",
@@ -2113,11 +2113,11 @@
   },
   "campaign": {
     "kpi": {
-      "totalGmv": 5540000,
-      "totalOrders": 4328,
+      "totalGmv": 27700000,
+      "totalOrders": 21640,
       "avgAov": 1280,
       "totalRoas": 6.34,
-      "totalSpend": 874000,
+      "totalSpend": 4370000,
       "bestCampaign": {
         "name": "5.5 活動檔",
         "roas": 11.76
@@ -2150,7 +2150,7 @@
             "全通路"
           ],
           "description": "酷澎 Conpang轉換超預期，MoMo 需要爭取版位曝光，官網組合包前 3 天表現強。",
-          "gmv": 129,
+          "gmv": 645,
           "aov": 1392
         },
         {
@@ -2160,7 +2160,7 @@
             "蝦皮"
           ],
           "description": "訂單數高但客單偏低，建議補三入組或加購品提升 AOV。",
-          "gmv": 48.6,
+          "gmv": 243,
           "aov": 938
         }
       ],
@@ -2172,7 +2172,7 @@
             "全通路"
           ],
           "description": "全通路通推，組合 SET 賣得好。賣單與回購數雙提升。",
-          "gmv": 215,
+          "gmv": 1075,
           "aov": 1398
         },
         {
@@ -2182,7 +2182,7 @@
             "蝦皮"
           ],
           "description": "轉換好，客單偏低。",
-          "gmv": 68.2,
+          "gmv": 341,
           "aov": 914
         },
         {
@@ -2192,7 +2192,7 @@
             "官網"
           ],
           "description": "客單價漂亮，但流量略不足。",
-          "gmv": 93.6,
+          "gmv": 468,
           "aov": 1550
         }
       ]
@@ -2958,9 +2958,9 @@
       "orders": 92409,
       "traffic": 3999224,
       "aov": 1096,
-      "adSpend": 18415846,
-      "roas": 5.5,
-      "cpa": 199
+      "adSpend": 8516122,
+      "roas": 11.9,
+      "cpa": 92
     },
     "2月": {
       "gmv": 97106225,
@@ -2969,9 +2969,9 @@
       "orders": 88594,
       "traffic": 3834111,
       "aov": 1096,
-      "adSpend": 17655677,
-      "roas": 5.5,
-      "cpa": 199
+      "adSpend": 8164593,
+      "roas": 11.9,
+      "cpa": 92
     },
     "3月": {
       "gmv": 80567675,
@@ -2980,9 +2980,9 @@
       "orders": 73505,
       "traffic": 3181086,
       "aov": 1096,
-      "adSpend": 14648668,
-      "roas": 5.5,
-      "cpa": 199
+      "adSpend": 6774049,
+      "roas": 11.9,
+      "cpa": 92
     },
     "4月": {
       "gmv": 78244100,
@@ -2991,9 +2991,9 @@
       "orders": 71386,
       "traffic": 3089400,
       "aov": 1096,
-      "adSpend": 14226200,
-      "roas": 5.5,
-      "cpa": 199
+      "adSpend": 6578685,
+      "roas": 11.9,
+      "cpa": 92
     },
     "5月": {
       "gmv": 118555752,
@@ -3002,9 +3002,9 @@
       "orders": 108164,
       "traffic": 4681039,
       "aov": 1096,
-      "adSpend": 21555591,
-      "roas": 5.5,
-      "cpa": 199
+      "adSpend": 9968048,
+      "roas": 11.9,
+      "cpa": 92
     }
   },
   "weekOverWeek": {
@@ -3456,7 +3456,7 @@
         "kpiImpact": "預估補回官網 100 萬 GMV"
       },
       {
-        "problem": "蝦皮 DUDA CLEAN 搶 618 預熱版位（關鍵字「洗衣精」競價飆）",
+        "problem": "蝦皮 競品 C 搶 618 預熱版位（關鍵字「洗衣精」競價飆）",
         "shortTermFix": "已改鎖長尾「母嬰洗衣精」+ Meta「家庭/興趣」受眾分流",
         "shortTermStatus": "done",
         "longTermFix": "7 月月會提報「差異化定位」策略（成份透明 + 安全認證 vs 價格戰）",
@@ -3480,7 +3480,7 @@
     "tiers": [
       {
         "name": "銀卡",
-        "memberCount": 8420,
+        "memberCount": 42100,
         "avgOrderValue": 1180,
         "monthlyOrderFreq": 1.4,
         "retention90d": 38,
@@ -3495,7 +3495,7 @@
       },
       {
         "name": "金卡",
-        "memberCount": 1340,
+        "memberCount": 6700,
         "avgOrderValue": 1850,
         "monthlyOrderFreq": 2.8,
         "retention90d": 71,
@@ -3510,7 +3510,7 @@
       },
       {
         "name": "白金卡",
-        "memberCount": 285,
+        "memberCount": 1425,
         "avgOrderValue": 2940,
         "monthlyOrderFreq": 4.2,
         "retention90d": 88,
@@ -3535,27 +3535,27 @@
         },
         {
           "threshold": 10000,
-          "eligibleSilver": 412,
-          "estimatedGmvLift": 5128400,
+          "eligibleSilver": 2060,
+          "estimatedGmvLift": 25642000,
           "note": "降 17% → 412 銀卡可升金"
         },
         {
           "threshold": 8000,
-          "eligibleSilver": 1024,
-          "estimatedGmvLift": 11890200,
+          "eligibleSilver": 5120,
+          "estimatedGmvLift": 59451000,
           "note": "降 33% → 1,024 銀卡可升金"
         },
         {
           "threshold": 6000,
-          "eligibleSilver": 2156,
-          "estimatedGmvLift": 18923400,
+          "eligibleSilver": 10780,
+          "estimatedGmvLift": 94617000,
           "note": "降 50% → ROI 邊際效益遞減"
         }
       ],
       "recommendation": "建議降至 NT$ 10,000（412 人升級 / 預期 GMV +512 萬）"
     },
     "sleepingVips": {
-      "total": 47,
+      "total": 235,
       "description": "金卡/白金卡，> 60 天無下單",
       "top5": [
         {
@@ -3629,12 +3629,12 @@
       {
         "name": "母嬰節擴大投放",
         "period": "5/28 ~ 6/12",
-        "spend": 285000,
-        "gmv": 1620000,
+        "spend": 1425000,
+        "gmv": 8100000,
         "roas": 5.68,
-        "orders": 1240,
+        "orders": 6200,
         "avgOrderValue": 1306,
-        "newCustomers": 412,
+        "newCustomers": 2060,
         "discountRate": 12,
         "reuseTimes": 3,
         "verdict": "top1",
@@ -3643,12 +3643,12 @@
       {
         "name": "蝦皮 618 預熱",
         "period": "6/8 ~ 6/18",
-        "spend": 156000,
-        "gmv": 752000,
+        "spend": 780000,
+        "gmv": 3760000,
         "roas": 4.82,
-        "orders": 815,
+        "orders": 4075,
         "avgOrderValue": 923,
-        "newCustomers": 268,
+        "newCustomers": 1340,
         "discountRate": 15,
         "reuseTimes": 2,
         "verdict": "top2",
@@ -3657,12 +3657,12 @@
       {
         "name": "MoMo 站內競價",
         "period": "6/1 ~ 6/30",
-        "spend": 95000,
-        "gmv": 420000,
+        "spend": 475000,
+        "gmv": 2100000,
         "roas": 4.42,
-        "orders": 350,
+        "orders": 1750,
         "avgOrderValue": 1200,
-        "newCustomers": 178,
+        "newCustomers": 890,
         "discountRate": 8,
         "reuseTimes": 4,
         "verdict": "top3",
@@ -3671,10 +3671,10 @@
       {
         "name": "沉睡會員喚醒（洗衣膠囊試用）",
         "period": "5/25 ~ 6/15",
-        "spend": 48000,
-        "gmv": 198000,
+        "spend": 240000,
+        "gmv": 990000,
         "roas": 4.13,
-        "orders": 220,
+        "orders": 1100,
         "avgOrderValue": 900,
         "newCustomers": 0,
         "discountRate": 38,
@@ -3685,12 +3685,12 @@
       {
         "name": "雙11 預熱（2025）",
         "period": "2025/10/20 ~ 11/10",
-        "spend": 420000,
-        "gmv": 1820000,
+        "spend": 2100000,
+        "gmv": 9100000,
         "roas": 4.33,
-        "orders": 1480,
+        "orders": 7400,
         "avgOrderValue": 1230,
-        "newCustomers": 380,
+        "newCustomers": 1900,
         "discountRate": 18,
         "reuseTimes": 5,
         "verdict": "good",
@@ -3699,12 +3699,12 @@
       {
         "name": "官網直播首場",
         "period": "3/15 一次性",
-        "spend": 35000,
-        "gmv": 42000,
+        "spend": 175000,
+        "gmv": 210000,
         "roas": 1.2,
-        "orders": 38,
+        "orders": 190,
         "avgOrderValue": 1100,
-        "newCustomers": 12,
+        "newCustomers": 60,
         "discountRate": 25,
         "reuseTimes": 0,
         "verdict": "flop",
@@ -4095,8 +4095,8 @@
         "icon": "🛁",
         "who": "90 天買過洗衣精 ≥ 3 次 + 0 筆沐浴",
         "brandVoice": "真安心",
-        "memberCount": 1245,
-        "estimatedGmv": 95000,
+        "memberCount": 6225,
+        "estimatedGmv": 475000,
         "expectedCvr": 11.2,
         "pushChannel": [
           "LINE OA",
@@ -4104,7 +4104,7 @@
         ],
         "bestTime": "早 8 點",
         "recommendedSku": "沐浴露 SET（NT$ 799 試用）",
-        "draftSample": "王太太，您每月都選對的洗衣精給家人 — 沐浴也該用同樣標準。淨淨沐浴露 SET 今天起 NT$ 799 試用，無防腐配方，安全感延伸到全身。",
+        "draftSample": "王太太，您每月都選對的洗衣精給家人 — 沐浴也該用同樣標準。本品牌沐浴露 SET 今天起 NT$ 799 試用，無防腐配方，安全感延伸到全身。",
         "status": "ready"
       },
       {
@@ -4113,8 +4113,8 @@
         "icon": "😴",
         "who": "金/白金卡 + 60 天無下單",
         "brandVoice": "真貼心",
-        "memberCount": 47,
-        "estimatedGmv": 142000,
+        "memberCount": 235,
+        "estimatedGmv": 710000,
         "expectedCvr": 25,
         "pushChannel": [
           "客服電話 Top 20",
@@ -4131,15 +4131,15 @@
         "icon": "🛒",
         "who": "cart 30 天未轉換 + 排除已下單",
         "brandVoice": "真好用",
-        "memberCount": 320,
-        "estimatedGmv": 35000,
+        "memberCount": 1600,
+        "estimatedGmv": 175000,
         "expectedCvr": 12.5,
         "pushChannel": [
           "LINE OA"
         ],
         "bestTime": "加購後 48hr 內",
         "recommendedSku": "48hr 限時 95 折碼",
-        "draftSample": "李小姐，您 30 天前選的「真濃縮洗衣精 SET」還在購物車。48 小時內結帳享 95 折，過期不候。— 淨淨",
+        "draftSample": "李小姐，您 30 天前選的「真濃縮洗衣精 SET」還在購物車。48 小時內結帳享 95 折，過期不候。— 本品牌",
         "status": "ready"
       },
       {
@@ -4148,8 +4148,8 @@
         "icon": "🫧",
         "who": "首購是除黴凝膠 + 30 天內",
         "brandVoice": "真好用",
-        "memberCount": 89,
-        "estimatedGmv": 48000,
+        "memberCount": 445,
+        "estimatedGmv": 240000,
         "expectedCvr": 32,
         "pushChannel": [
           "EDM",
@@ -4157,7 +4157,7 @@
         ],
         "bestTime": "首購後 7-14 天",
         "recommendedSku": "除黴凝膠 SET 組合 + 居家清潔指南",
-        "draftSample": "謝謝您信任淨淨除黴凝膠。下一步建議：搭配除黴凝膠 + 浴室清潔組合，省事一次到位。隨包附「居家療癒清潔指南」。",
+        "draftSample": "謝謝您信任本品牌除黴凝膠。下一步建議：搭配除黴凝膠 + 浴室清潔組合，省事一次到位。隨包附「居家療癒清潔指南」。",
         "status": "ready"
       },
       {
@@ -4166,8 +4166,8 @@
         "icon": "🎂",
         "who": "birthday 在當月 + 任何 VIP 等級",
         "brandVoice": "真貼心",
-        "memberCount": 612,
-        "estimatedGmv": 280000,
+        "memberCount": 3060,
+        "estimatedGmv": 1400000,
         "expectedCvr": 28.5,
         "pushChannel": [
           "EDM",
@@ -4175,7 +4175,7 @@
         ],
         "bestTime": "生日當月 1 號自動",
         "recommendedSku": "雙倍購物金 + 個人化品類推薦",
-        "draftSample": "吳小姐，6 月生日快樂 🎂 為您準備了：雙倍購物金 + 您最愛的沐浴露試用包。生日這一個月都適用，不疾不徐。— 淨淨",
+        "draftSample": "吳小姐，6 月生日快樂 🎂 為您準備了：雙倍購物金 + 您最愛的沐浴露試用包。生日這一個月都適用，不疾不徐。— 本品牌",
         "status": "ready"
       },
       {
@@ -4184,8 +4184,8 @@
         "icon": "👶",
         "who": "90 天買母嬰品類 ≥ 3 次",
         "brandVoice": "真安心",
-        "memberCount": 215,
-        "estimatedGmv": 480000,
+        "memberCount": 1075,
+        "estimatedGmv": 2400000,
         "expectedCvr": 9.8,
         "pushChannel": [
           "EDM",
@@ -4202,8 +4202,8 @@
         "icon": "💰",
         "who": "6 個月 user_credit 抵扣 > 50%",
         "brandVoice": "真好用",
-        "memberCount": 168,
-        "estimatedGmv": 65000,
+        "memberCount": 840,
+        "estimatedGmv": 325000,
         "expectedCvr": 7.5,
         "pushChannel": [
           "EDM"
@@ -4219,8 +4219,8 @@
         "icon": "📱",
         "who": "shopper_app 訂單 > 5 + storefront = 0",
         "brandVoice": "真貼心",
-        "memberCount": 478,
-        "estimatedGmv": 180000,
+        "memberCount": 2390,
+        "estimatedGmv": 900000,
         "expectedCvr": 16,
         "pushChannel": [
           "App 推播",
@@ -4317,8 +4317,8 @@
         "orders": 3750,
         "traffic": 162286,
         "aov": 1096,
-        "adSpend": 747261,
-        "roas": 5.5
+        "adSpend": 345373,
+        "roas": 11.9
       },
       "channels": {
         "shopline": {
@@ -4370,8 +4370,8 @@
         "orders": 3574,
         "traffic": 154991,
         "aov": 1091,
-        "adSpend": 708820,
-        "roas": 5.5
+        "adSpend": 327606,
+        "roas": 11.9
       },
       "channels": {
         "shopline": {
@@ -4423,8 +4423,8 @@
         "orders": 25238,
         "traffic": 1092229,
         "aov": 1096,
-        "adSpend": 5029638,
-        "roas": 5.5
+        "adSpend": 2324623,
+        "roas": 11.9
       },
       "channels": {
         "shopline": {
@@ -4476,8 +4476,8 @@
         "orders": 108164,
         "traffic": 4681039,
         "aov": 1096,
-        "adSpend": 21555591,
-        "roas": 5.5
+        "adSpend": 9962668,
+        "roas": 11.9
       },
       "channels": {
         "shopline": {
