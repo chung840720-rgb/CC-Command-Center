@@ -257,7 +257,7 @@
       "task": "整理官網 ROAS 偏低的廣告組與素材"
     },
     {
-      "owner": "林小美",
+      "owner": "MoMo Owner",
       "status": "可行動",
       "task": "確認蝦皮高效品項是否可加碼"
     },
@@ -568,7 +568,7 @@
         "orders": 6041,
         "uv": 283624,
         "spend": 6973868,
-        "roas": 3.4,
+        "roas": 1.36,
         "cpa": 1154,
         "sharePct": 40
       }
@@ -604,19 +604,19 @@
       {
         "name": "Meta 廣告",
         "spend": 3835627,
-        "roas": 3.8,
+        "roas": 1.55,
         "share": 55
       },
       {
         "name": "Google 廣告",
         "spend": 2301376,
-        "roas": 3.2,
+        "roas": 1.25,
         "share": 33
       },
       {
         "name": "LINE 廣告",
         "spend": 836864,
-        "roas": 1.6,
+        "roas": 0.75,
         "share": 12
       }
     ]
@@ -808,7 +808,7 @@
         "fields": [
           {
             "label": "propertyId",
-            "value": "260114136"
+            "value": "000000000"
           }
         ],
         "note": "GA4 Service Account（JSON 憑證）需由技術人員設定至 Cloudflare Pages 環境變數 GA_SERVICE_ACCOUNT，完成後流量數據即可自動同步。"
@@ -822,7 +822,7 @@
         "fields": [
           {
             "label": "adAccountId",
-            "value": "act_1322065504565230"
+            "value": "act_000000000000000"
           }
         ],
         "note": "Access Token 建議使用系統用戶 Token（System User Token）。若 Meta 顯示 appsecret_proof 錯誤，請補填 Meta App Secret，系統會自動產生 proof。"
@@ -995,7 +995,7 @@
         "count": 2,
         "totalSpend": 36900,
         "avgRoas": null,
-        "note": "桃園台茂 / 竹南門市，線下導流不入 ROAS"
+        "note": "示範門市 A / B，線下導流不入 ROAS"
       },
       {
         "type": "冷受眾興趣",
@@ -1064,7 +1064,7 @@
           "meaning": "已購買名單 RT（漏斗最深）"
         },
         {
-          "name": "(KOL名)洗衣精_影片10秒_排：已購買洗衣精",
+          "name": "(KOL-A)洗衣精_影片10秒_排：已購買洗衣精",
           "meaning": "KOL 影片素材 × 已購買 RT 排除"
         },
         {
@@ -1179,10 +1179,10 @@
         "positioning": "消毒科技 / 媽嬰級認證",
         "adSpendEst": "NT$ 280 萬/月",
         "mainPlatform": "Meta + 蝦皮",
-        "latestMove": "5/30 上「次氯酸 PRO」新品，Meta 影片素材主打實驗室畫面（科學感）",
+        "latestMove": "5/30 上「新一代消毒系列」新品，Meta 影片素材主打實驗室畫面（科學感）",
         "strategy": "技術敘事 + 認證背書 + 媽嬰部落客深度合作",
         "threat": "medium",
-        "ourCounter": "我們的母嬰級認證更多（SNQ + Dermatest + SGS），素材可突顯「PR50+ 競品」優勢"
+        "ourCounter": "我們的母嬰級認證更多（多項母嬰級安全認證），素材可突顯「PR50+ 競品」優勢"
       },
       {
         "name": "競品 B",
@@ -1190,10 +1190,10 @@
         "positioning": "療癒生活 / 香氛調性",
         "adSpendEst": "NT$ 180 萬/月",
         "mainPlatform": "Meta + Instagram",
-        "latestMove": "6/1 推「家事香氛系列」， KOL Reels 重押（名人 KOL-A剛接他們的業配）",
+        "latestMove": "6/1 推「家事香氛系列」， KOL Reels 重押（某頭部網紅剛接他們的業配）",
         "strategy": "視覺包裝 + KOL 生活情境 + IG 重投",
         "threat": "high",
-        "ourCounter": "我們也有名人 KOL-A合作，且品牌承諾「真療癒」更貼合 — 可加強 IG/Threads 投放"
+        "ourCounter": "我們也有頭部網紅合作，且品牌承諾「真療癒」更貼合 — 可加強 IG/Threads 投放"
       },
       {
         "name": "競品 C",
@@ -1212,7 +1212,7 @@
         "positioning": "中草本 / 老牌信任",
         "adSpendEst": "NT$ 120 萬/月",
         "mainPlatform": "MoMo + 官網",
-        "latestMove": "5/28 MoMo 首頁買版主打「競品 D皂」新包裝，Google 品牌字加碼",
+        "latestMove": "5/28 MoMo 首頁買版主打「競品新包裝皂品」新包裝，Google 品牌字加碼",
         "strategy": "中老年信任 + MoMo 站內深耕 + 包裝重設計",
         "threat": "low",
         "ourCounter": "TA 重疊度低（競品 D偏 40+）；我們持續鎖 25-40 年輕媽媽"
@@ -1226,7 +1226,7 @@
       },
       {
         "priority": "high",
-        "text": "【針對競品 B】Threads/IG 投放預算 +20% — 利用名人 KOL-A既有合作做差異化",
+        "text": "【針對競品 B】Threads/IG 投放預算 +20% — 利用頭部網紅既有合作做差異化",
         "traceTo": "AD-001"
       },
       {
@@ -1242,9 +1242,9 @@
     "competitors": [
       {
         "name": "競品 A",
-        "web": "jinduwulang.com",
+        "web": "competitor-a.example",
         "traffic": "~120K/月",
-        "topPage": "/products/cl-pro",
+        "topPage": "/product-line-a",
         "conversion": "2.1%",
         "social": {
           "ig": "6.2萬",
@@ -1253,9 +1253,9 @@
       },
       {
         "name": "競品 B",
-        "web": "manxiang.tw",
+        "web": "competitor-b.example",
         "traffic": "~85K/月",
-        "topPage": "/scent-series",
+        "topPage": "/series-b",
         "conversion": "2.8%",
         "social": {
           "ig": "12.4萬",
@@ -1264,9 +1264,9 @@
       },
       {
         "name": "競品 C",
-        "web": "shopee.tw/dudaclean",
+        "web": "蝦皮商城（競品C賣場）",
         "traffic": "~280K/月（蝦皮）",
-        "topPage": "/laundry-set",
+        "topPage": "/laundry-c",
         "conversion": "4.2%",
         "social": {
           "ig": "3.1萬",
@@ -1275,9 +1275,9 @@
       },
       {
         "name": "競品 D",
-        "web": "gubao.com.tw",
+        "web": "competitor-d.example",
         "traffic": "~45K/月",
-        "topPage": "/products/soap",
+        "topPage": "/product-d",
         "conversion": "1.6%",
         "social": {
           "ig": "2.8萬",
@@ -1542,7 +1542,7 @@
       },
       {
         "time": "2026/06/11 10:42",
-        "actor": "林小美",
+        "actor": "MoMo Owner",
         "action": "MoMo 報表上傳",
         "page": "/upload",
         "type": "upload",
@@ -1558,7 +1558,7 @@
       {
         "time": "2026/06/11 08:40",
         "actor": "系統",
-        "action": "三平台自動取數完成",
+        "action": "五平台自動取數完成",
         "page": "/sales-battle",
         "type": "system"
       },
@@ -1579,7 +1579,7 @@
       },
       {
         "time": "2026/06/10 09:55",
-        "actor": "林小美",
+        "actor": "MoMo Owner",
         "action": "新增願望「想要競品價格自動監控」",
         "page": "/wishpool",
         "type": "wish"
@@ -1590,7 +1590,7 @@
     "wishes": [
       {
         "title": "想要競品價格自動監控",
-        "author": "林小美",
+        "author": "MoMo Owner",
         "date": "2026/06/10",
         "description": "希望能每天自動爬蝦皮 / MoMo 競品同類商品價格，發現我方價格高於市場 5% 以上時主動 LINE 通知。",
         "likes": 12,
@@ -1627,328 +1627,6 @@
         "comments": 1,
         "status": "已採納",
         "priority": "低"
-      }
-    ]
-  },
-  "shopeeDirectDetail": {
-    "url": "shopee.tw/demo-direct",
-    "achievement": 32.5,
-    "achievementStatus": "符合節奏",
-    "monthlyGmv": 42000,
-    "target": 130000,
-    "internalTabs": [
-      {
-        "key": "dashboard",
-        "label": "業績儀錶板",
-        "active": true
-      },
-      {
-        "key": "control",
-        "label": "戰略卡位"
-      },
-      {
-        "key": "ranking",
-        "label": "商品排行"
-      },
-      {
-        "key": "ops",
-        "label": "通路經營"
-      }
-    ],
-    "ytd": {
-      "gmv": 168000,
-      "achievement": 21,
-      "orders": 165,
-      "roas": 8.5,
-      "target": 800000,
-      "gap": 632000,
-      "note": "2026/3 開賣以來累計"
-    },
-    "kpiGrid": [
-      {
-        "label": "月業績",
-        "value": "NT$42,000",
-        "mom": 18.2
-      },
-      {
-        "label": "訂單數",
-        "value": "45 筆",
-        "mom": 12.5
-      },
-      {
-        "label": "客單價 AOV",
-        "value": "NT$933",
-        "mom": 5.1
-      },
-      {
-        "label": "瀏覽量",
-        "value": "1,820",
-        "mom": 22.4
-      },
-      {
-        "label": "廣告費",
-        "value": "NT$4,940",
-        "mom": 8
-      },
-      {
-        "label": "ROAS",
-        "value": "8.50x",
-        "mom": 9.8
-      },
-      {
-        "label": "CPA",
-        "value": "NT$110",
-        "mom": -6.5
-      },
-      {
-        "label": "戰略狀態",
-        "value": "防禦卡位"
-      }
-    ],
-    "trends": {
-      "gmv": [
-        {
-          "month": "3月",
-          "value": 3.6
-        },
-        {
-          "month": "4月",
-          "value": 3.8
-        },
-        {
-          "month": "5月",
-          "value": 4.2
-        },
-        {
-          "month": "6月",
-          "value": 0
-        },
-        {
-          "month": "7月",
-          "value": 0
-        },
-        {
-          "month": "8月",
-          "value": 0
-        },
-        {
-          "month": "9月",
-          "value": 0
-        },
-        {
-          "month": "10月",
-          "value": 0
-        },
-        {
-          "month": "11月",
-          "value": 0
-        },
-        {
-          "month": "12月",
-          "value": 0
-        }
-      ],
-      "orders": [
-        {
-          "month": "3月",
-          "value": 35
-        },
-        {
-          "month": "4月",
-          "value": 40
-        },
-        {
-          "month": "5月",
-          "value": 45
-        },
-        {
-          "month": "6月",
-          "value": 0
-        },
-        {
-          "month": "7月",
-          "value": 0
-        },
-        {
-          "month": "8月",
-          "value": 0
-        },
-        {
-          "month": "9月",
-          "value": 0
-        },
-        {
-          "month": "10月",
-          "value": 0
-        },
-        {
-          "month": "11月",
-          "value": 0
-        },
-        {
-          "month": "12月",
-          "value": 0
-        }
-      ],
-      "aov": [
-        {
-          "month": "3月",
-          "value": 900
-        },
-        {
-          "month": "4月",
-          "value": 920
-        },
-        {
-          "month": "5月",
-          "value": 933
-        },
-        {
-          "month": "6月",
-          "value": 0
-        },
-        {
-          "month": "7月",
-          "value": 0
-        },
-        {
-          "month": "8月",
-          "value": 0
-        },
-        {
-          "month": "9月",
-          "value": 0
-        },
-        {
-          "month": "10月",
-          "value": 0
-        },
-        {
-          "month": "11月",
-          "value": 0
-        },
-        {
-          "month": "12月",
-          "value": 0
-        }
-      ],
-      "roas": [
-        {
-          "month": "3月",
-          "value": 7.5
-        },
-        {
-          "month": "4月",
-          "value": 8
-        },
-        {
-          "month": "5月",
-          "value": 8.5
-        },
-        {
-          "month": "6月",
-          "value": 0
-        },
-        {
-          "month": "7月",
-          "value": 0
-        },
-        {
-          "month": "8月",
-          "value": 0
-        },
-        {
-          "month": "9月",
-          "value": 0
-        },
-        {
-          "month": "10月",
-          "value": 0
-        },
-        {
-          "month": "11月",
-          "value": 0
-        },
-        {
-          "month": "12月",
-          "value": 0
-        }
-      ]
-    },
-    "topProducts": [
-      {
-        "name": "洗衣精 4L",
-        "gmv": 5335009,
-        "share": 22.7
-      },
-      {
-        "name": "洗衣膠囊 盒",
-        "gmv": 3201005,
-        "share": 13.6
-      },
-      {
-        "name": "除黴凝膠 條",
-        "gmv": 3023172,
-        "share": 12.9
-      },
-      {
-        "name": "沐浴露 瓶",
-        "gmv": 2667504,
-        "share": 11.3
-      },
-      {
-        "name": "手洗精 瓶",
-        "gmv": 355667,
-        "share": 1.5
-      }
-    ],
-    "split": {
-      "organic": {
-        "gmv": 10500,
-        "orders": 50,
-        "uv": 4200,
-        "aov": 210,
-        "sharePct": 25
-      },
-      "paid": {
-        "gmv": 31500,
-        "orders": 150,
-        "uv": 7800,
-        "spend": 120000,
-        "roas": 0.26,
-        "cpa": 800,
-        "sharePct": 75
-      }
-    },
-    "organicSources": [
-      {
-        "name": "蝦皮站內搜尋",
-        "uv": 4500,
-        "share": 50
-      },
-      {
-        "name": "蝦皮排名",
-        "uv": 2800,
-        "share": 31
-      },
-      {
-        "name": "直接進入",
-        "uv": 1700,
-        "share": 19
-      }
-    ],
-    "paidChannels": [
-      {
-        "name": "蝦皮關鍵字廣告",
-        "spend": 80000,
-        "roas": 2.6,
-        "share": 67
-      },
-      {
-        "name": "蝦皮聯盟（直營專屬）",
-        "spend": 40000,
-        "roas": 4.2,
-        "share": 33
       }
     ]
   },
@@ -3209,7 +2887,7 @@
           "momo": 344639,
           "conpang": 206783
         },
-        "adAction": "驅蟎噴霧新品上市測試（PCHOME + 酷澎）",
+        "adAction": "驅蟎噴霧新品鋪貨上架（PCHOME + 酷澎，純自然動能）",
         "reaction": "PCHOME 首購帶量 / 整體 +8%",
         "traceTo": [
           "C-2606-01"
@@ -3238,10 +2916,9 @@
       "name": "蝦皮 618 預熱",
       "period": "6/8 ~ 6/18",
       "status": "進行中",
-      "owner": "王大明",
+      "owner": "蝦皮 Owner",
       "platform": [
-        "shopee",
-        "shopeeDirect"
+        "shopee"
       ],
       "mainCategory": "沐浴用品",
       "action": "蝦皮關鍵字「沐浴 SET」+ 聯盟加碼，預算翻倍",
@@ -3252,7 +2929,7 @@
       "name": "沉睡會員喚醒（洗衣膠囊免費試用）",
       "period": "5/25 ~ 6/15",
       "status": "進行中",
-      "owner": "Johnny+宋小芳(CRM)",
+      "owner": "Johnny+CRM 窗口",
       "platform": [
         "shopline"
       ],
@@ -3265,7 +2942,7 @@
       "name": "MoMo 站內競價提升",
       "period": "6/1 ~ 6/30",
       "status": "進行中",
-      "owner": "林小美",
+      "owner": "MoMo Owner",
       "platform": [
         "momo"
       ],
@@ -3275,18 +2952,19 @@
     },
     {
       "id": "C-2606-05",
-      "name": "618 主檔（4 平台齊發）",
+      "name": "618 主檔（五平台齊發）",
       "period": "6/15 ~ 6/20",
       "status": "排程中",
       "owner": "全組",
       "platform": [
         "shopline",
         "shopee",
+        "pchome",
         "momo",
-        "shopeeDirect"
+        "conpang"
       ],
       "mainCategory": "全品類",
-      "action": "4 平台同步「滿千折百」+ Meta 主視覺 +蝦皮聯盟最大檔期擋",
+      "action": "五平台同步「滿千折百」+ Meta 主視覺 + 蝦皮聯盟最大檔期版位",
       "expectedImpact": "單檔 GMV 衝 1500 萬"
     },
     {
@@ -3357,14 +3035,14 @@
       {
         "priority": 1,
         "title": "11:00 跑日報 Cowork",
-        "detail": "王大明 + 林小美已填 Sheets，按 SOP 跑 3 份 Slack draft（群組 + DM x2）",
+        "detail": "蝦皮 Owner + MoMo Owner已填 Sheets，按 SOP 跑 3 份 Slack draft（群組 + DM x2）",
         "perspective": "數據觀測員",
         "linkedCampaign": "C-2606-02",
         "sopRef": "daily-report.md v2.10"
       },
       {
         "priority": 2,
-        "title": "跟王大明確認 618 預熱（C-2606-02）進度",
+        "title": "跟蝦皮 Owner確認 618 預熱（C-2606-02）進度",
         "detail": "蝦皮「沐浴 SET」廣告 ROAS 是否達 3.0x、聯盟分潤 +5% 是否已生效",
         "perspective": "執行操盤手 + 內部關係官",
         "linkedCampaign": "C-2606-02",
@@ -3452,7 +3130,7 @@
         "shortTermStatus": "done",
         "longTermFix": "6/15 結算喚醒 ROAS — 若 < 2.5x 則 6/16 恢復常規廣告",
         "longTermStatus": "in_progress",
-        "owner": "Johnny + 宋小芳（CRM）",
+        "owner": "Johnny + CRM 窗口",
         "kpiImpact": "預估補回官網 100 萬 GMV"
       },
       {
@@ -4034,7 +3712,7 @@
           },
           {
             "id": "G6",
-            "title": "週訊四平台戰況",
+            "title": "週訊五平台戰況",
             "prompt": "拉上週一到日 4 平台訂單，套 weekly-report-skill-v1_1.md 格式：WoW / YoY / 燈號 / 月累計達成 / 亮點警示。"
           }
         ]
@@ -4476,7 +4154,7 @@
         "orders": 108164,
         "traffic": 4681039,
         "aov": 1096,
-        "adSpend": 9962668,
+        "adSpend": 9968048,
         "roas": 11.9
       },
       "channels": {
